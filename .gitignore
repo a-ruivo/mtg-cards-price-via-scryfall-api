@@ -6,3 +6,4 @@
 *.json
 jenkins-cli.jar
 *.xlsx
+venv

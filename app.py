@@ -120,16 +120,6 @@ with aba1:
         df["padrao"] = df["padrao"].astype(int)
         df["foil"] = df["foil"].astype(int)
 
-        df["valor_total_brl"] = (
-            df["padrao"] * df["preco_brl"].astype(float) +
-            df["foil"] * df["preco_brl_foil"].astype(float)
-        )
-
-        total_cartas = df["padrao"].sum() + df["foil"].sum()
-        total_padroes = df["padrao"].sum()
-        total_foils = df["foil"].sum()
-        valor_total = df["valor_total_brl"].sum()
-
         colecao_map = {
             row["colecao"]: {
                 "nome": row["colecao_nome"],
@@ -252,6 +242,15 @@ with aba1:
 
         col1, col2, col3, col4 = st.columns(4)
 
+        df["valor_total_brl"] = (
+            df["padrao"] * df["preco_brl"].astype(float) +
+            df["foil"] * df["preco_brl_foil"].astype(float)
+        )
+
+        total_cartas = df["padrao"].sum() + df["foil"].sum()
+        total_padroes = df["padrao"].sum()
+        total_foils = df["foil"].sum()
+        valor_total = df["valor_total_brl"].sum()
         col1.metric("Total Cards:", f"{total_cartas:,}")
         col2.metric("Regular Cards:", f"{total_padroes:,}")
         col3.metric("Foil Cards:", f"{total_foils:,}")

@@ -120,6 +120,16 @@ with aba1:
         df["padrao"] = df["padrao"].astype(int)
         df["foil"] = df["foil"].astype(int)
 
+        df["valor_total_brl"] = (
+            df["padrao"] * df["preco_brl"].astype(float) +
+            df["foil"] * df["preco_brl_foil"].astype(float)
+        )
+
+        total_cartas = df["padrao"].sum() + df["foil"].sum()
+        total_padroes = df["padrao"].sum()
+        total_foils = df["foil"].sum()
+        valor_total = df["valor_total_brl"].sum()
+
         colecao_map = {
             row["colecao"]: {
                 "nome": row["colecao_nome"],
@@ -237,16 +247,6 @@ with aba1:
         elif posse_escolhida == "Ambos":
             df = df[(df["padrao"].astype(int) > 0) & (df["foil"].astype(int) > 0)]
 
-        df["valor_total_brl"] = (
-            df["padrao"] * df["preco_brl"].astype(float) +
-            df["foil"] * df["preco_brl_foil"].astype(float)
-        )
-
-        # Supondo que df seja o DataFrame original
-        total_cartas = df["padrao"].sum() + df["foil"].sum()
-        total_padroes = df["padrao"].sum()
-        total_foils = df["foil"].sum()
-        valor_total = df["valor_total_brl"].sum()
 
         st.title("Allan & Ayla MTG Cards Collection")
 

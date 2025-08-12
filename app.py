@@ -284,8 +284,8 @@ with aba1:
                         tem_segunda_face = "No" if pd.notna(getattr(carta, "nome_2", None)) else "Yes"
                         st.markdown(f"**Secondary effect or face:** {tem_segunda_face}")
 
-    except:
-        st.warning("No data available.")
+    except Exception as e:
+        st.error(f"Erro ao carregar dados: {e}")
 
 with aba2:
     st.header("Login to add cards")

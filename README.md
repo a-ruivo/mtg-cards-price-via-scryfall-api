@@ -1,5 +1,7 @@
 # Project 2 - MTG cards price via Scryfall API
 
+Link: https://allan-and-ayla-mtg-card-collection.streamlit.app/
+
 This project aims to extract the price (and other data) of magic cards from an Excel file using the Scryfall platform API and then convert the values to dollars. In a future stage, this data will be displayed in some way.
 
 1. Create a list with the numeric codes of each card, the collection code, and the quantity of each card you have.

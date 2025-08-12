@@ -10,11 +10,11 @@ st.set_page_config(page_title="Cartas Magic", layout="wide")
 # Verificação de senha
 def autenticar():
     senha_correta = st.secrets["senha_app"]
-    senha_digitada = st.text_input("Digite a senha para editar o app", type="password")
+    senha_digitada = st.text_input("Enter the password to edit the collection", type="password")
     if senha_digitada == senha_correta:
         st.session_state["autenticado"] = True
     elif senha_digitada:
-        st.error("Senha incorreta.")
+        st.error("Wrong password.")
 
 # Configurações do GitHub
 GITHUB_TOKEN = st.secrets["github_token"]
@@ -344,6 +344,11 @@ with aba2:
 
 with aba3:
     st.header("Import cards using Excel")
+
+    if "autenticado" not in st.session_state or not st.session_state["autenticado"]:
+        autenticar()
+        st.stop()
+
     arquivo = st.file_uploader("Select the excel file", type=["xlsx"])
     if arquivo:
         df = pd.read_excel(arquivo)
@@ -404,6 +409,11 @@ with aba3:
 
 with aba4:
     st.header("Card Manager")
+
+    if "autenticado" not in st.session_state or not st.session_state["autenticado"]:
+        autenticar()
+        st.stop()
+        
     try:
         df = pd.read_csv(CSV_PATH)
         df["padrao"] = df["padrao"].astype(int)

@@ -101,6 +101,18 @@ mana_map = {
 
 st.sidebar.title("Filters")
 
+# Ordenação
+ordenar_por = st.sidebar.selectbox("Ordenar por", ["Nome", "Cor", "Valor"])
+ordem = st.sidebar.radio("Ordem", ["Ascendente", "Descendente"])
+
+coluna_ordem = {
+    "Nome": "nome",
+    "Cor": "cores",
+    "Valor": "valor_total_brl"
+}[ordenar_por]
+
+df = df.sort_values(by=coluna_ordem, ascending=(ordem == "Ascendente"))
+
 colecao_opcoes = sorted(df["colecao"].unique())
 colecao_labels = ["All"] + [colecao_map[c]["nome"] for c in colecao_opcoes]
 colecao_escolhida_label = st.sidebar.multiselect("Coleção", colecao_labels, default=["All"])
@@ -125,6 +137,32 @@ for cor in cor_escolhida:
     if cor in mana_map:
         st.sidebar.image(mana_map[cor], width=40)
 
+# Filtro por nome da carta
+nome_busca = st.sidebar.text_input("Buscar por nome da carta")
+if nome_busca:
+    df = df[df["nome"].str.contains(nome_busca, case=False, na=False)]
+
+# Filtro por tipo
+tipos_disponiveis = sorted(df["tipo"].dropna().unique())
+tipo_escolhido = st.sidebar.multiselect("Tipo", ["All"] + tipos_disponiveis, default=["All"])
+if "All" not in tipo_escolhido:
+    df = df[df["tipo"].isin(tipo_escolhido)]
+
+# Filtro por valor
+valor_min, valor_max = st.sidebar.slider("Filtrar por valor total (BRL)", 0.0, float(df["valor_total_brl"].max()), (0.0, float(df["valor_total_brl"].max())))
+df = df[(df["valor_total_brl"] >= valor_min) & (df["valor_total_brl"] <= valor_max)]
+
+# Filtro por tipo de posse
+opcoes_posse = ["Todos", "Apenas Regular", "Apenas Foil", "Ambos"]
+posse_escolhida = st.sidebar.selectbox("Tipo de posse", opcoes_posse)
+if posse_escolhida == "Apenas Regular":
+    df = df[df["padrao"].astype(int) > 0]
+elif posse_escolhida == "Apenas Foil":
+    df = df[df["foil"].astype(int) > 0]
+elif posse_escolhida == "Ambos":
+    df = df[(df["padrao"].astype(int) > 0) & (df["foil"].astype(int) > 0)]
+
+
 st.title("Allan & Ayla MTG Cards Collection")
 
 col1, col2, col3, col4 = st.columns(4)
@@ -136,23 +174,21 @@ col4.metric("Total Value (BRL)", f"R$ {valor_total:,.2f}")
 st.markdown("---")
 
 num_colunas = 4
-cartas_por_linha = [df.iloc[i:i+num_colunas] for i in range(0, len(df), num_colunas)]
-
-for linha in cartas_por_linha:
-    cols = st.columns(num_colunas)
-    for i, carta in linha.iterrows():
-        with cols[i % num_colunas]:
-            if pd.notna(carta["imagem"]):
-                st.image(carta["imagem"], use_container_width = True, caption=carta["nome"])
+for i in range(0, len(df), num_colunas):
+    linha = df.iloc[i:i+num_colunas]
+    cols = st.columns(len(linha))  # só cria o número necessário de colunas
+    for idx, carta in enumerate(linha.itertuples()):
+        with cols[idx]:
+            if pd.notna(carta.imagem):
+                st.image(carta.imagem, use_container_width=True, caption=carta.nome)
             with st.expander("Details", expanded=False):
-                st.markdown(f"**Type:** {carta['tipo']}")
-                st.markdown("**Mana Cost:** " + gerar_icones(carta["mana_cost"], mana_map), unsafe_allow_html=True)
-                st.markdown("**Colors:** " + gerar_icones(carta["cores"], mana_map), unsafe_allow_html=True)
-                st.markdown(f"**Collection:** {carta['colecao_nome']}")
-                st.markdown(f"**Rarity:** {carta['raridade'].capitalize()}")
-                st.markdown(f"**Price (BRL):** R${carta['preco_brl']}")
-                st.markdown(f"**Quantity (Regular):** {carta['padrao']}")
-                st.markdown(f"**Quantity (Foil):** {carta['foil']}")
-                tem_segunda_face = "No" if pd.notna(carta.get("nome_2")) else "Yes"
+                st.markdown(f"**Type:** {carta.tipo}")
+                st.markdown("**Mana Cost:** " + gerar_icones(carta.mana_cost, mana_map), unsafe_allow_html=True)
+                st.markdown("**Colors:** " + gerar_icones(carta.cores, mana_map), unsafe_allow_html=True)
+                st.markdown(f"**Collection:** {carta.colecao_nome}")
+                st.markdown(f"**Rarity:** {carta.raridade.capitalize()}")
+                st.markdown(f"**Price (BRL):** R${carta.preco_brl}")
+                st.markdown(f"**Quantity (Regular):** {carta.padrao}")
+                st.markdown(f"**Quantity (Foil):** {carta.foil}")
+                tem_segunda_face = "No" if pd.notna(getattr(carta, "nome_2", None)) else "Yes"
                 st.markdown(f"**Secondary effect or face:** {tem_segunda_face}")
-             

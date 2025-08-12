@@ -7,6 +7,7 @@ This Streamlit app helps users upload Magic: The Gathering card data from Excel 
 How It Works – Step by Step
 1. Upload Excel File or add cards mannualy
 Users upload an .xlsx file containing a list of Magic cards. The app reads the file using pandas.read_excel().
+![alt text](doc/card_list.png)
 2. Extract Card Names 
 The app parses the card names from the uploaded file and prepares them for API requests.
 3. Fetch Card Details via Scryfall API 
@@ -33,16 +34,16 @@ GitHub API – Remote CSV storage and versioning
 Base64 & Requests – Encoding and HTTP communication
 
 Page 1:
-![alt text](page1.png)
+![alt text](doc/page1.png)
 
 Page 2:
-![alt text](page2.png)
+![alt text](doc/page2.png)
 
 Page 3:
-![alt text](page3.png)
+![alt text](doc/page3.png)
 
 Page 4:
-![alt text](page4.png)
+![alt text](doc/page4.png)
 
 Page 5:
-![alt text](page5.png)
+![alt text](doc/page5.png)

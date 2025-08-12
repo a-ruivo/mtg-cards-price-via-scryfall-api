@@ -1,0 +1,10 @@
+*.env
+project1/env_project1/
+*.csv
+*.db
+*.terraform*
+*.tfstate*
+*.db
+*.json
+jenkins-cli.jar
+*.xlsx

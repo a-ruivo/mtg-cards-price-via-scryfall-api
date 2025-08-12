@@ -23,7 +23,6 @@ def buscar_detalhes_em_lote(identificadores):
     url = "https://api.scryfall.com/cards/collection"
     payload = {"identifiers": identificadores}
     resposta = requests.post(url, json=payload)
-    
     if resposta.status_code == 200:
         return resposta.json()["data"]
     else:
@@ -38,14 +37,12 @@ def get_usd_to_brl():
         return float(data["USDBRL"]["bid"])
     except Exception as e:
         print("Erro ao obter cotação:", e)
-        return None
+        return 5.0  # fallback
 
-# Obter cotação antes de processar os dados
+# Obter cotação
 cotacao_usd_brl = get_usd_to_brl()
-if cotacao_usd_brl is None:
-    cotacao_usd_brl = 5.0  # fallback
 
-# Processar todos os lotes com feedback
+# Processar todos os lotes
 todos_detalhes = []
 lotes = list(dividir_em_lotes(identificadores, 75))
 print(f"Total de lotes: {len(lotes)}")
@@ -57,42 +54,96 @@ for i, lote in enumerate(lotes, start=1):
     time.sleep(0.5)
 
 # Montar dicionário com os dados
-detalhes_dict = {
-    (carta["set"], carta["collector_number"]): {
-        "nome": carta.get("name"),
-        "mana_cost": carta.get("mana_cost"),
-        "cores": ", ".join(carta.get("colors", [])),
-        "cmc": carta.get("cmc"),
-        "descricao": carta.get("oracle_text"),
-        "power": carta.get("power"),
-        "toughness": carta.get("toughness"),
-        "imagem": carta.get("image_uris", {}).get("normal"),
-        "colecao_nome": carta.get("set_name"),
-        "data_lancamento": carta.get("released_at"),
-        "raridade": carta.get("rarity"),
-        "preco_usd": carta.get("prices", {}).get("usd"),
-        "preco_brl": round(float(carta.get("prices", {}).get("usd") or 0) * cotacao_usd_brl, 2),
-        "preco_usd_foil": carta.get("prices", {}).get("usd_foil"),
-        "preco_brl_foil": round(float(carta.get("prices", {}).get("usd_foil") or 0) * cotacao_usd_brl, 2)
-    }
-    for carta in todos_detalhes
-}
+detalhes_dict = {}
+for carta in todos_detalhes:
+    preco_usd = float(carta.get("prices", {}).get("usd") or 0)
+    preco_usd_foil = float(carta.get("prices", {}).get("usd_foil") or 0)
+
+    faces = carta.get("card_faces")
+    if faces:
+        face1 = faces[0]
+        face2 = faces[1] if len(faces) > 1 else {}
+
+        detalhes_dict[(carta["set"], carta["collector_number"])] = {
+            "nome": face1.get("name"),
+            "mana_cost": face1.get("mana_cost"),
+            "cores": ", ".join(face1.get("colors", [])),
+            "cmc": carta.get("cmc"),
+            "descricao": face1.get("oracle_text"),
+            "power": face1.get("power"),
+            "toughness": face1.get("toughness"),
+            "imagem": face1.get("image_uris", {}).get("normal"),
+
+            "nome_2": face2.get("name"),
+            "mana_cost_2": face2.get("mana_cost"),
+            "cores_2": ", ".join(face2.get("colors", [])),
+            "descricao_2": face2.get("oracle_text"),
+            "power_2": face2.get("power"),
+            "toughness_2": face2.get("toughness"),
+            "imagem_2": face2.get("image_uris", {}).get("normal"),
+
+            "colecao_nome": carta.get("set_name"),
+            "icone_colecao": carta.get("set_icon_svg_uri"),
+            "data_lancamento": carta.get("released_at"),
+            "raridade": carta.get("rarity"),
+            "tipo": carta.get("type_line"),
+            "preco_usd": preco_usd,
+            "preco_brl": round(preco_usd * cotacao_usd_brl, 2),
+            "preco_usd_foil": preco_usd_foil,
+            "preco_brl_foil": round(preco_usd_foil * cotacao_usd_brl, 2)
+        }
+    else:
+        detalhes_dict[(carta["set"], carta["collector_number"])] = {
+            "nome": carta.get("name"),
+            "mana_cost": carta.get("mana_cost"),
+            "cores": ", ".join(carta.get("colors", [])),
+            "cmc": carta.get("cmc"),
+            "descricao": carta.get("oracle_text"),
+            "power": carta.get("power"),
+            "toughness": carta.get("toughness"),
+            "imagem": carta.get("image_uris", {}).get("normal"),
+
+            "nome_2": None,
+            "mana_cost_2": None,
+            "cores_2": None,
+            "descricao_2": None,
+            "power_2": None,
+            "toughness_2": None,
+            "imagem_2": None,
+
+            "colecao_nome": carta.get("set_name"),
+            "icone_colecao": carta.get("set_icon_svg_uri"),
+            "data_lancamento": carta.get("released_at"),
+            "raridade": carta.get("rarity"),
+            "tipo": carta.get("type_line"),
+            "preco_usd": preco_usd,
+            "preco_brl": round(preco_usd * cotacao_usd_brl, 2),
+            "preco_usd_foil": preco_usd_foil,
+            "preco_brl_foil": round(preco_usd_foil * cotacao_usd_brl, 2)
+        }
+
+# Lista de chaves esperadas
+chaves_detalhes = [
+    "nome", "mana_cost", "cores", "cmc", "descricao", "power", "toughness", "imagem",
+    "nome_2", "mana_cost_2", "cores_2", "descricao_2", "power_2", "toughness_2", "imagem_2",
+    "colecao_nome", "icone_colecao", "data_lancamento", "raridade", "tipo",
+    "preco_usd", "preco_brl", "preco_usd_foil", "preco_brl_foil"
+]
 
 # Adicionar colunas ao DataFrame
 df_detalhes = df.apply(
     lambda linha: pd.Series(
         detalhes_dict.get(
             (linha["colecao"], str(linha["numero"])),
-            {chave: None for chave in [
-                "nome", "mana_cost", "cores", "cmc", "descricao", "power", "toughness",
-                "imagem", "colecao_nome", "data_lancamento", "raridade",
-                "preco_usd", "preco_brl", "preco_usd_foil", "preco_brl_foil"
-            ]}
+            {chave: None for chave in chaves_detalhes}
         )
     ),
     axis=1
 )
 
 df_final = pd.concat([df, df_detalhes], axis=1)
+
+# Salvar em Excel e CSV
 df_final.to_excel("cartas_magic_detalhadas.xlsx", index=False)
-print("Arquivo final gerado com sucesso!")
+df_final.to_csv("cartas_magic_detalhadas.csv", index=False)
+print("Arquivos final gerados com sucesso: XLSX e CSV!")

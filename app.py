@@ -46,7 +46,12 @@ def salvar_csv_em_github(df, repo, path, token):
     conteudo_base64 = base64.b64encode(conteudo_csv.encode()).decode()
     data = {"message": "Atualização via Streamlit", "content": conteudo_base64, "branch": "main"}
     r = requests.put(url, headers=headers, json=data)
-    return r.status_code in [200, 201]
+     # Retorna status e mensagem de erro (se houver)
+    if r.status_code in [200, 201]:
+        return True, "Arquivo salvo com sucesso!"
+    else:
+        erro = r.json().get("message", "Erro desconhecido")
+        return False, f"Erro ao salvar no GitHub: {erro}"
 
 # Abas principais
 aba1, aba2, aba3, aba4, aba5 = st.tabs(["Collection", "Login", "Add Card", "Import File", "Card Manager"])
@@ -338,11 +343,12 @@ with aba3:
             except:
                 df_final = nova_carta
 
-            sucesso = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+            sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+
             if sucesso:
-                st.success("Card add!")
+                st.success("Cards add!")
             else:
-                st.error("Error.")
+                st.error(f"Erro ao salvar no GitHub: {mensagem}")
 
 with aba4:
     st.header("Import cards using Excel")
@@ -399,11 +405,12 @@ with aba4:
         ), axis=1)
 
         df_final = pd.concat([df, df_detalhes], axis=1)
-        sucesso = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+        sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+
         if sucesso:
             st.success("Cards add!")
         else:
-            st.error("Error.")
+            st.error(f"Erro ao salvar no GitHub: {mensagem}")
 
 with aba5:
     st.header("Card Manager")

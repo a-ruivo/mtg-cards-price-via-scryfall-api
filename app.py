@@ -49,7 +49,7 @@ def salvar_csv_em_github(df, repo, path, token):
     return r.status_code in [200, 201]
 
 # Abas principais
-aba1, aba2, aba3, aba4 = st.tabs(["Collection", "Add Card", "Import File", "Card Manager"])
+aba1, aba2, aba3, aba4, aba5 = st.tabs(["Collection", "Login", "Add Card", "Import File", "Card Manager"])
 
 with aba1:
     try:
@@ -247,11 +247,13 @@ with aba1:
         st.warning("No data available.")
 
 with aba2:
-    st.header("Add card mannualy or by code")
-
+    st.header("Login to add cards")
     if "autenticado" not in st.session_state or not st.session_state["autenticado"]:
         autenticar()
         st.stop()
+
+with aba3:
+    st.header("Add card mannualy or by code")
 
     modo = st.radio("Mode", ["Manual", "Search by code"])
 
@@ -342,12 +344,8 @@ with aba2:
             else:
                 st.error("Error.")
 
-with aba3:
+with aba4:
     st.header("Import cards using Excel")
-
-    if "autenticado" not in st.session_state or not st.session_state["autenticado"]:
-        autenticar()
-        st.stop()
 
     arquivo = st.file_uploader("Select the excel file", type=["xlsx"])
     if arquivo:
@@ -407,13 +405,9 @@ with aba3:
         else:
             st.error("Error.")
 
-with aba4:
+with aba5:
     st.header("Card Manager")
 
-    if "autenticado" not in st.session_state or not st.session_state["autenticado"]:
-        autenticar()
-        st.stop()
-        
     try:
         df = pd.read_csv(CSV_PATH)
         df["padrao"] = df["padrao"].astype(int)

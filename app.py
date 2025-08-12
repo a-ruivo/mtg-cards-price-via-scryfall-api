@@ -39,6 +39,19 @@ def buscar_detalhes_em_lote(identificadores):
     r = requests.post(url, json={"identifiers": identificadores})
     return r.json()["data"] if r.status_code == 200 else []
 
+def calcular_big_numbers(df):
+    df["valor_total_brl"] = (
+        df["padrao"].astype(int) * df["preco_brl"].astype(float) +
+        df["foil"].astype(int) * df["preco_brl_foil"].astype(float)
+    )
+    return {
+        "total_cartas": df["padrao"].sum() + df["foil"].sum(),
+        "total_padroes": df["padrao"].sum(),
+        "total_foils": df["foil"].sum(),
+        "valor_total": df["valor_total_brl"].sum()
+    }
+
+
 def salvar_csv_em_github(df_novo, repo, path, token):
     import base64, requests, pandas as pd
     from io import StringIO
@@ -242,19 +255,13 @@ with aba1:
 
         col1, col2, col3, col4 = st.columns(4)
 
-        df["valor_total_brl"] = (
-            df["padrao"] * df["preco_brl"].astype(float) +
-            df["foil"] * df["preco_brl_foil"].astype(float)
-        )
+        big_numbers = calcular_big_numbers(df)
 
-        total_cartas = df["padrao"].sum() + df["foil"].sum()
-        total_padroes = df["padrao"].sum()
-        total_foils = df["foil"].sum()
-        valor_total = df["valor_total_brl"].sum()
-        col1.metric("Total Cards:", f"{total_cartas:,}")
-        col2.metric("Regular Cards:", f"{total_padroes:,}")
-        col3.metric("Foil Cards:", f"{total_foils:,}")
-        col4.metric("Total Value (BRL)", f"R$ {valor_total:,.2f}")
+        col1.metric("Total Cards:", f"{big_numbers['total_cartas']:,}")
+        col2.metric("Regular Cards:", f"{big_numbers['total_padroes']:,}")
+        col3.metric("Foil Cards:", f"{big_numbers['total_foils']:,}")
+        col4.metric("Total Value (BRL)", f"R$ {big_numbers['valor_total']:,.2f}")
+
         st.markdown("---")
 
         num_colunas = 4

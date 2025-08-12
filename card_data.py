@@ -177,6 +177,25 @@ df_detalhes = df.apply(
 df_final = pd.concat([df, df_detalhes], axis=1)
 
 # Salvar em Excel e CSV
-df_final.to_excel("cartas_magic_detalhadas.xlsx", index=False)
-df_final.to_csv("cartas_magic_detalhadas.csv", index=False)
+import os
+
+arquivo_csv = "cartas_magic_detalhadas.csv"
+arquivo_xlsx = "cartas_magic_detalhadas.xlsx"
+
+# Verificar se já existe
+if os.path.exists(arquivo_csv):
+    df_existente = pd.read_csv(arquivo_csv)
+    df_final = pd.concat([df_existente, df_final], ignore_index=True)
+
+    # Remover duplicatas com base em colecao + numero
+    df_final["numero"] = df_final["numero"].astype(str)
+    df_final["colecao"] = df_final["colecao"].astype(str).str.lower()
+    df_final = df_final.groupby(["colecao", "numero"], as_index=False).agg({
+        "padrao": "sum",
+        "foil": "sum",
+        **{col: "first" for col in df_final.columns if col not in ["colecao", "numero", "padrao", "foil"]}
+    })
+
+df_final.to_excel(arquivo_xlsx, index=False)
+df_final.to_csv(arquivo_csv, index=False)
 print("Arquivos final gerados com sucesso: XLSX e CSV!")

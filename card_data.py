@@ -7,6 +7,28 @@ df = pd.read_excel("cartas_magic.xlsx")
 df = df.dropna(subset=["colecao", "numero"])
 df["colecao"] = df["colecao"].astype(str).str.lower()
 
+# Carregar o Excel
+df = pd.read_excel("cartas_magic.xlsx")
+df = df.dropna(subset=["colecao", "numero"])
+df["colecao"] = df["colecao"].astype(str).str.lower()
+df["numero"] = df["numero"].astype(str)
+
+# Preencher valores padrão se não existirem
+if "padrao" not in df.columns:
+    df["padrao"] = 1
+if "foil" not in df.columns:
+    df["foil"] = 0
+
+# Consolidar duplicatas somando padrao e foil, mantendo outras colunas
+df = df.groupby(["colecao", "numero"], as_index=False).agg({
+    "padrao": "sum",
+    "foil": "sum",
+    **{col: "first" for col in df.columns if col not in ["colecao", "numero", "padrao", "foil"]}
+})
+
+# Calcular total de cópias e valor estimado em BRL (será preenchido depois)
+df["total_copias"] = df["padrao"] + df["foil"]
+
 # Preparar lista de identificadores
 identificadores = [
     {"set": linha["colecao"], "collector_number": str(linha["numero"])}
@@ -54,12 +76,23 @@ for i, lote in enumerate(lotes, start=1):
     time.sleep(0.5)
 
 # Montar dicionário com os dados
+# Montar dicionário com os dados
 detalhes_dict = {}
 for carta in todos_detalhes:
     preco_usd = float(carta.get("prices", {}).get("usd") or 0)
     preco_usd_foil = float(carta.get("prices", {}).get("usd_foil") or 0)
 
     faces = carta.get("card_faces")
+    printed_faces = carta.get("printed_card_faces", [])
+
+    # Função auxiliar para buscar imagem
+    def buscar_imagem(face_index):
+        return (
+            (faces[face_index].get("image_uris", {}).get("normal") if faces and len(faces) > face_index else None)
+            or (printed_faces[face_index].get("image_uris", {}).get("normal") if len(printed_faces) > face_index else None)
+            or carta.get("image_uris", {}).get("normal")
+        )
+
     if faces:
         face1 = faces[0]
         face2 = faces[1] if len(faces) > 1 else {}
@@ -72,7 +105,7 @@ for carta in todos_detalhes:
             "descricao": face1.get("oracle_text"),
             "power": face1.get("power"),
             "toughness": face1.get("toughness"),
-            "imagem": face1.get("image_uris", {}).get("normal"),
+            "imagem": buscar_imagem(0),
 
             "nome_2": face2.get("name"),
             "mana_cost_2": face2.get("mana_cost"),
@@ -80,7 +113,7 @@ for carta in todos_detalhes:
             "descricao_2": face2.get("oracle_text"),
             "power_2": face2.get("power"),
             "toughness_2": face2.get("toughness"),
-            "imagem_2": face2.get("image_uris", {}).get("normal"),
+            "imagem_2": buscar_imagem(1),
 
             "colecao_nome": carta.get("set_name"),
             "icone_colecao": carta.get("set_icon_svg_uri"),
@@ -101,7 +134,7 @@ for carta in todos_detalhes:
             "descricao": carta.get("oracle_text"),
             "power": carta.get("power"),
             "toughness": carta.get("toughness"),
-            "imagem": carta.get("image_uris", {}).get("normal"),
+            "imagem": buscar_imagem(0),
 
             "nome_2": None,
             "mana_cost_2": None,

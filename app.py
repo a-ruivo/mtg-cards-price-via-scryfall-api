@@ -39,19 +39,49 @@ def buscar_detalhes_em_lote(identificadores):
     r = requests.post(url, json={"identifiers": identificadores})
     return r.json()["data"] if r.status_code == 200 else []
 
-def salvar_csv_em_github(df, repo, path, token):
+def salvar_csv_em_github(df_novo, repo, path, token):
+    import base64, requests, pandas as pd
+    from io import StringIO
+
     url = f"https://api.github.com/repos/{repo}/contents/{path}"
     headers = {"Authorization": f"token {token}"}
-    conteudo_csv = df.to_csv(index=False)
+
+    # Verifica se o arquivo já existe
+    r_get = requests.get(url, headers=headers)
+    if r_get.status_code == 200:
+        conteudo_atual = base64.b64decode(r_get.json()["content"]).decode()
+        sha = r_get.json()["sha"]
+        df_atual = pd.read_csv(StringIO(conteudo_atual))
+
+        # Junta os dados novos com os existentes
+        df_final = pd.concat([df_atual, df_novo], ignore_index=True)
+    else:
+        sha = None
+        df_final = df_novo
+
+    # Prepara conteúdo para upload
+    conteudo_csv = df_final.to_csv(index=False)
     conteudo_base64 = base64.b64encode(conteudo_csv.encode()).decode()
-    data = {"message": "Atualização via Streamlit", "content": conteudo_base64, "branch": "main"}
-    r = requests.put(url, headers=headers, json=data)
-     # Retorna status e mensagem de erro (se houver)
-    if r.status_code in [200, 201]:
+
+    data = {
+        "message": "Atualização incremental via Streamlit",
+        "content": conteudo_base64,
+        "branch": "main"
+    }
+    if sha:
+        data["sha"] = sha
+
+    r_put = requests.put(url, headers=headers, json=data)
+
+    if r_put.status_code in [200, 201]:
         return True, "Arquivo salvo com sucesso!"
     else:
-        erro = r.json().get("message", "Erro desconhecido")
-        return False, f"Erro ao salvar no GitHub: {erro}"
+        try:
+            erro = r_put.json().get("message", "Erro desconhecido")
+        except Exception:
+            erro = "Erro ao decodificar resposta da API"
+        return False, erro
+
 
 # Abas principais
 aba1, aba2, aba3, aba4, aba5 = st.tabs(["Collection", "Login", "Add Card", "Import File", "Card Manager"])

@@ -432,94 +432,94 @@ with aba3:
             else:
                 st.error(f"Erro ao salvar no GitHub: {mensagem}")
 
-with aba4:
-    st.header("Import cards using Excel")
+    with aba4:
+        st.header("Import cards using Excel")
 
-    arquivo = st.file_uploader("Select the excel file", type=["xlsx"])
-    if arquivo:
-        df = pd.read_excel(arquivo)
-        df = df.dropna(subset=["colecao", "numero"])
-        df["colecao"] = df["colecao"].astype(str).str.lower()
-        df["numero"] = df["numero"].astype(str)
-        df["padrao"] = df.get("padrao", 1)
-        df["foil"] = df.get("foil", 0)
+        arquivo = st.file_uploader("Select the excel file", type=["xlsx"])
+        if arquivo:
+            df = pd.read_excel(arquivo)
+            df = df.dropna(subset=["colecao", "numero"])
+            df["colecao"] = df["colecao"].astype(str).str.lower()
+            df["numero"] = df["numero"].astype(str)
+            df["padrao"] = df.get("padrao", 1)
+            df["foil"] = df.get("foil", 0)
 
-        df = df.groupby(["colecao", "numero"], as_index=False).agg({
-            "padrao": "sum",
-            "foil": "sum",
-            **{col: "first" for col in df.columns if col not in ["colecao", "numero", "padrao", "foil"]}
-        })
+            df = df.groupby(["colecao", "numero"], as_index=False).agg({
+                "padrao": "sum",
+                "foil": "sum",
+                **{col: "first" for col in df.columns if col not in ["colecao", "numero", "padrao", "foil"]}
+            })
 
-        cotacao = get_usd_to_brl()
-        identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]
-        todos_detalhes = []
-        for lote in dividir_em_lotes(identificadores, 75):
-            todos_detalhes.extend(buscar_detalhes_em_lote(lote))
-            time.sleep(0.5)
+            cotacao = get_usd_to_brl()
+            identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]
+            todos_detalhes = []
+            for lote in dividir_em_lotes(identificadores, 75):
+                todos_detalhes.extend(buscar_detalhes_em_lote(lote))
+                time.sleep(0.5)
 
-        detalhes_dict = {}
-        for carta in todos_detalhes:
-            preco_usd = float(carta.get("prices", {}).get("usd") or 0)
-            preco_foil = float(carta.get("prices", {}).get("usd_foil") or 0)
-            preco_brl = round(preco_usd * cotacao, 2)
-            preco_brl_foil = round(preco_foil * cotacao, 2)
-            faces = carta.get("card_faces", [])
-            face1 = faces[0] if faces else carta
-            face2 = faces[1] if len(faces) > 1 else {}
+            detalhes_dict = {}
+            for carta in todos_detalhes:
+                preco_usd = float(carta.get("prices", {}).get("usd") or 0)
+                preco_foil = float(carta.get("prices", {}).get("usd_foil") or 0)
+                preco_brl = round(preco_usd * cotacao, 2)
+                preco_brl_foil = round(preco_foil * cotacao, 2)
+                faces = carta.get("card_faces", [])
+                face1 = faces[0] if faces else carta
+                face2 = faces[1] if len(faces) > 1 else {}
 
-            detalhes_dict[(carta["set"], carta["collector_number"])] = {
-                "nome": face1.get("name"),
-                "mana_cost": face1.get("mana_cost"),
-                "cores": ", ".join(face1.get("colors", [])),
-                "imagem": face1.get("image_uris", {}).get("normal") or carta.get("image_uris", {}).get("normal"),
-                "nome_2": face2.get("name"),
-                "imagem_2": face2.get("image_uris", {}).get("normal"),
-                "colecao_nome": carta.get("set_name"),
-                "icone_colecao": carta.get("set_icon_svg_uri"),
-                "raridade": carta.get("rarity"),
-                "tipo": carta.get("type_line"),
-                "preco_brl": preco_brl,
-                "preco_brl_foil": preco_brl_foil
-            }
+                detalhes_dict[(carta["set"], carta["collector_number"])] = {
+                    "nome": face1.get("name"),
+                    "mana_cost": face1.get("mana_cost"),
+                    "cores": ", ".join(face1.get("colors", [])),
+                    "imagem": face1.get("image_uris", {}).get("normal") or carta.get("image_uris", {}).get("normal"),
+                    "nome_2": face2.get("name"),
+                    "imagem_2": face2.get("image_uris", {}).get("normal"),
+                    "colecao_nome": carta.get("set_name"),
+                    "icone_colecao": carta.get("set_icon_svg_uri"),
+                    "raridade": carta.get("rarity"),
+                    "tipo": carta.get("type_line"),
+                    "preco_brl": preco_brl,
+                    "preco_brl_foil": preco_brl_foil
+                }
 
-        df_detalhes = df.apply(lambda linha: pd.Series(
-            detalhes_dict.get((linha["colecao"], linha["numero"]), {})
-        ), axis=1)
+            df_detalhes = df.apply(lambda linha: pd.Series(
+                detalhes_dict.get((linha["colecao"], linha["numero"]), {})
+            ), axis=1)
 
-        df_final = pd.concat([df, df_detalhes], axis=1)
-        sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+            df_final = pd.concat([df, df_detalhes], axis=1)
+            sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
 
-        if sucesso:
-            st.success("Cards add!")
-        else:
-            st.error(f"Erro ao salvar no GitHub: {mensagem}")
+            if sucesso:
+                st.success("Cards add!")
+            else:
+                st.error(f"Erro ao salvar no GitHub: {mensagem}")
 
-with aba5:
-    st.header("Card Manager")
+    with aba5:
+        st.header("Card Manager")
 
-try:
-    df = pd.read_csv(CSV_PATH)
+    try:
+        df = pd.read_csv(CSV_PATH)
 
-    # Converte colunas numéricas com segurança
-    df["padrao"] = pd.to_numeric(df["padrao"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int) 
-    df["foil"] = pd.to_numeric(df["foil"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int)
+        # Converte colunas numéricas com segurança
+        df["padrao"] = pd.to_numeric(df["padrao"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int) 
+        df["foil"] = pd.to_numeric(df["foil"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int)
 
 
-    # Editor completo
-    df_editado = st.data_editor(
-        df,
-        num_rows="dynamic",
-        use_container_width=True,
-        key="editor"
-    )
+        # Editor completo
+        df_editado = st.data_editor(
+            df,
+            num_rows="dynamic",
+            use_container_width=True,
+            key="editor"
+        )
 
-    # Botão de salvar
-    if st.button("Save"):
-        sucesso, mensagem = alterar_csv_em_github(df_editado, REPO, CSV_PATH, GITHUB_TOKEN)
-        if sucesso:
-            st.success("Changes saved!")
-        else:
-            st.error(f"Erro ao salvar no GitHub: {mensagem}")
+        # Botão de salvar
+        if st.button("Save"):
+            sucesso, mensagem = alterar_csv_em_github(df_editado, REPO, CSV_PATH, GITHUB_TOKEN)
+            if sucesso:
+                st.success("Changes saved!")
+            else:
+                st.error(f"Erro ao salvar no GitHub: {mensagem}")
 
-except:
-    st.warning("Data not found.")
+    except:
+        st.warning("Data not found.")

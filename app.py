@@ -427,7 +427,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     col1, col2 = st.columns([1, 1])  # proporções iguais
 
     with col1:
-        st.pyplot(fig1, use_container_width=True)
+        st.plotly_chart(fig1, use_container_width=True)
         st.pyplot(fig2, use_container_width=True)
 
     with col2:

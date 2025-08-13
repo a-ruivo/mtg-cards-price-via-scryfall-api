@@ -339,7 +339,14 @@ elif st.session_state["aba_atual"] == "Dashboard":
     st.pyplot(fig3)
 
     # Cartas por tipo
-    df["tipo_sem_traco"] = df["tipo"].apply(lambda x: x.split("–")[0].strip() if "–" in x else x.strip())
+    def extrair_antes_do_traco(texto):
+        if pd.isna(texto):
+            return ""
+        # Tenta dividir por em dash (—) ou en dash (–)
+        partes = re.split(r"—|–", texto)
+        return partes[0].strip() if partes else texto.strip()
+
+    df["tipo_sem_traco"] = df["tipo"].apply(extrair_antes_do_traco)
     tipo_contagem = df.groupby("tipo_sem_traco")["quantidade_total"].sum().sort_values(ascending=False)
     fig4, ax4 = plt.subplots()
     ax4.barh(tipo_contagem.index, tipo_contagem.values, color="salmon")

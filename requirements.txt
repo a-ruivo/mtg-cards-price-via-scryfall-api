@@ -1,4 +1,4 @@
-openpyxl
-pandas
 streamlit
+pandas
 requests
+openpyxl

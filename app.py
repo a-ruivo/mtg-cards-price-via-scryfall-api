@@ -185,25 +185,6 @@ elif st.session_state["aba_atual"] == "Dashboard":
     df, colecao_map = limpar_e_enriquecer_dataframe(df)
     mana_map = get_mana_map()
 
-    # Ordenação
-    ordenar_por = st.sidebar.selectbox("Order by", ["Name", "Color", "Value", "Mana Cost","Collection", "Type", "Rarity", "Card Number", "Quantity Regular", "Quantity Foil"])
-    ordem = st.sidebar.radio("Order", ["Ascending", "Decreasing"])
-
-    coluna_ordem = {
-        "Name": "nome",
-        "Color": "cores",
-        "Value": "valor_total_brl",
-        "Mana Cost": "mana_cost",
-        "Collection": "colecao",
-        "Type": "tipo",
-        "Rarity": "raridade",
-        "Card Number": "numero",
-        "Quantity Regular": "padrao",
-        "Quantity Foil": "foil"
-    }[ordenar_por]
-
-    df = df.sort_values(by=coluna_ordem, ascending=(ordem == "Ascending"))
-
     colecao_opcoes = sorted(df["colecao"].unique())
     colecao_labels = ["All"] + [colecao_map[c]["nome"] for c in colecao_opcoes]
     colecao_escolhida_label = st.sidebar.multiselect("Collection", colecao_labels, default=["All"])
@@ -346,7 +327,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     mana_total_contagem = df.groupby("mana_total")["quantidade_total"].sum().sort_index()
 
     # Gráfico horizontal
-    fig3, ax3 = plt.subplots(figsize=(8, 4))
+    fig3, ax3 = plt.subplots(figsize=(8, 6))
     ax3.barh(mana_total_contagem.index.astype(str), mana_total_contagem.values, color="lightgreen")
     # Fundo transparente
     fig3.patch.set_alpha(0.0)  # fundo da figura
@@ -372,7 +353,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     df["tipo_sem_traco"] = df["tipo"].apply(extrair_antes_do_traco)
     tipo_contagem = df.groupby("tipo_sem_traco")["quantidade_total"].sum().sort_values(ascending=False)
-    fig4, ax4 = plt.subplots(figsize=(8, 4))
+    fig4, ax4 = plt.subplots(figsize=(8, 6))
     ax4.barh(tipo_contagem.index, tipo_contagem.values, color="salmon")
     # Fundo transparente
     fig4.patch.set_alpha(0.0)  # fundo da figura

@@ -4,7 +4,7 @@ import time
 
 from config import CSV_PATH, REPO, GITHUB_TOKEN
 from utils.api import buscar_detalhes_com_lotes, get_usd_to_brl
-from utils.github import carregar_csv, salvar_csv_em_github, alterar_csv_em_github
+from utils.github import carregar_csv, salvar_csv_em_github, alterar_csv_em_github, carregar_csv_sem_cache
 from utils.helpers import gerar_icones, preparar_dataframe, limpar_e_enriquecer_dataframe, autenticar, get_mana_map, extrair_detalhes_cartas
 
 if "aba_atual" not in st.session_state:
@@ -20,7 +20,7 @@ st.title("Allan & Ayla MTG Cards Collection")
 reprocessar = st.button("Reprocessar dados da coleção")
 
 if reprocessar:
-    df = carregar_csv()
+    df = carregar_csv_sem_cache()
     df = df.loc[:, ["colecao", "numero", "padrao", "foil", "obs"]]
     df = preparar_dataframe(df)
     cotacao = get_usd_to_brl()
@@ -29,9 +29,8 @@ if reprocessar:
 
     df_detalhes = extrair_detalhes_cartas(df, todos_detalhes, cotacao)
 
-    df_final = pd.concat([df, df_detalhes], axis=1)
-    alterar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
-    df = df_final
+    alterar_csv_em_github(df_detalhes, REPO, CSV_PATH, GITHUB_TOKEN)
+    df = df_detalhes
     st.success("Dados reprocessados com sucesso!")
 else:
     df = carregar_csv()

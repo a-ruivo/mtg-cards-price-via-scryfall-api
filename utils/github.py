@@ -7,6 +7,9 @@ from config import CSV_PATH, REPO, GITHUB_TOKEN, TTL
 def carregar_csv():
     return pd.read_csv(CSV_PATH)
 
+def carregar_csv_sem_cache():
+    return pd.read_csv(CSV_PATH)
+
 def salvar_csv_em_github(df_novo, repo, path, token):
     import base64, requests, pandas as pd
     from io import StringIO

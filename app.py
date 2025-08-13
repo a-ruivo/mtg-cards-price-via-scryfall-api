@@ -15,6 +15,7 @@ reprocessar = st.button("Reprocessar dados da coleção")
 
 if reprocessar:
     df = carregar_csv()
+    df = df.loc[:, ["colecao", "numero", "padrao", "foil", "obs"]]
     df = preparar_dataframe(df)
     cotacao = get_usd_to_brl()
     identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]
@@ -29,7 +30,13 @@ if reprocessar:
 else:
     df = carregar_csv()
 
-aba1, aba2, aba3, aba4, aba5 = st.tabs(["Collection", "Login", "Add Card", "Import File", "Card Manager"])
+# Executa autenticação uma vez
+if "autenticado" not in st.session_state:
+    autenticar()
+
+acesso_restrito = not st.session_state.get("autenticado", False)
+
+aba1, aba2, aba3, aba4, aba5 = st.tabs(["Collection", "Dashboard", "Add Card", "Import File", "Card Manager"])
 
 with aba1:
 
@@ -147,13 +154,14 @@ with aba1:
                     st.markdown(f"**Secondary effect or face:** {tem_segunda_face}")
 
 with aba2:
-    st.header("Login to add cards")
-    if "autenticado" not in st.session_state or not st.session_state["autenticado"]:
-        autenticar()
-        st.stop()
+    st.header("Dashboard")
 
 with aba3:
     st.header("Add card mannualy or by code")
+
+    if acesso_restrito:
+        st.warning("Você precisa estar autenticado para acessar esta aba.")
+        st.stop()
 
     modo = st.radio("Mode", ["Manual", "Search by code"])
 
@@ -247,6 +255,11 @@ with aba3:
 
 with aba4:
     st.header("Importar cartas via Excel")
+    
+    if acesso_restrito:
+        st.warning("Você precisa estar autenticado para acessar esta aba.")
+        st.stop()
+
     arquivo = st.file_uploader("Selecione o arquivo Excel", type=["xlsx"])
     executar_importacao = st.button("Executar importação")
 
@@ -280,6 +293,10 @@ with aba4:
 
 with aba5:
         st.header("Card Manager")
+
+        if acesso_restrito:
+            st.warning("Você precisa estar autenticado para acessar esta aba.")
+        st.stop()
 
         try:
             def csv(path):

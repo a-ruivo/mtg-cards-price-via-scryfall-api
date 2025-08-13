@@ -150,6 +150,8 @@ if st.session_state["aba_atual"] == "Collection":
                     st.markdown("**Mana Cost:** " + gerar_icones(carta.mana_cost, mana_map), unsafe_allow_html=True)
                     st.markdown("**Colors:** " + gerar_icones(carta.cores, mana_map), unsafe_allow_html=True)
                     st.markdown(f"**Collection:** {carta.colecao_nome}")
+                    st.markdown(f"**Collection Code:** {carta.colecao}")
+                    st.markdown(f"**Card Number:** {carta.numero}")
                     st.markdown(f"**Rarity:** {carta.raridade.capitalize()}")
                     st.markdown(f"**Price (BRL):** R${carta.preco_brl}")
                     st.markdown(f"**Quantity (Regular):** {carta.padrao}")

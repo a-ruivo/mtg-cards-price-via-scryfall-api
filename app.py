@@ -185,21 +185,21 @@ elif st.session_state["aba_atual"] == "Add Card":
             dados = buscar_detalhes_com_lotes(identificador)
             if dados:
                 carta = dados[0]
-                cotacao = get_usd_to_brl()
-                preco_usd = float(carta.get("prices", {}).get("usd") or 0)
-                preco_foil = float(carta.get("prices", {}).get("usd_foil") or 0)
-                preco_brl = round(preco_usd * cotacao, 2)
-                preco_brl_foil = round(preco_foil * cotacao, 2)
-                imagem = carta.get("image_uris", {}).get("normal")
+                cotacao_add = get_usd_to_brl()
+                preco_usd_add = float(carta.get("prices", {}).get("usd") or 0)
+                preco_foil_add = float(carta.get("prices", {}).get("usd_foil") or 0)
+                preco_brl_add = round(preco_usd_add * cotacao_add, 2)
+                preco_brl_foil_add = round(preco_foil_add * cotacao_add, 2)
+                imagem_add = carta.get("image_uris", {}).get("normal")
 
                 nova = pd.DataFrame([{
                     "nome": carta.get("name"),
                     "tipo": carta.get("type_line"),
-                    "preco_brl": preco_brl,
-                    "preco_brl_foil": preco_brl_foil,
+                    "preco_brl": preco_brl_add,
+                    "preco_brl_foil": preco_brl_foil_add,
                     "padrao": padrao_add,
                     "foil": foil_add,
-                    "imagem": imagem,
+                    "imagem": imagem_add,
                     "colecao": codigo_colecao_add.lower(),
                     "numero": numero_carta_add,
                     "colecao_nome": carta.get("set_name"),
@@ -218,8 +218,8 @@ elif st.session_state["aba_atual"] == "Add Card":
                 if ja_existe:
                     st.warning("Essa carta já existe na coleção.")
                 else:
-                    df_final = pd.concat([df_existente, nova], ignore_index=True)
-                    sucesso = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+                    df_add = pd.concat([df_existente, nova], ignore_index=True)
+                    sucesso = salvar_csv_em_github(df_add, REPO, CSV_PATH, GITHUB_TOKEN)
                     if sucesso:
                         st.success("Card added!")
                     else:
@@ -261,8 +261,8 @@ elif st.session_state["aba_atual"] == "Add Card":
             if ja_existe:
                 st.warning("Essa carta já existe na coleção.")
             else:
-                df_final = pd.concat([df_existente, nova_carta], ignore_index=True)
-                sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+                df_form = pd.concat([df_existente, nova_carta], ignore_index=True)
+                sucesso, mensagem = salvar_csv_em_github(df_form, REPO, CSV_PATH, GITHUB_TOKEN)
                 if sucesso:
                     st.success("Card added!")
                 else:
@@ -270,8 +270,7 @@ elif st.session_state["aba_atual"] == "Add Card":
 
 elif st.session_state["aba_atual"] == "Import File":
     st.header("Importar cartas via Excel")
-    df = st.session_state["df"]
-    
+
     if acesso_restrito:
         st.warning("Você precisa estar autenticado para acessar esta aba.")
         st.stop()
@@ -280,26 +279,26 @@ elif st.session_state["aba_atual"] == "Import File":
     executar_importacao = st.button("Executar importação")
 
     if executar_importacao and arquivo:
-        df = pd.read_excel(arquivo)
-        df = df.dropna(subset=["colecao", "numero"])
-        df["colecao"] = df["colecao"].astype(str).str.lower()
-        df["numero"] = df["numero"].astype(str)
-        df["padrao"] = df.get("padrao", 1)
-        df["foil"] = df.get("foil", 0)
+        df_file = pd.read_excel(arquivo)
+        df_file = df_file.dropna(subset=["colecao", "numero"])
+        df_file["colecao"] = df_file["colecao"].astype(str).str.lower()
+        df_file["numero"] = df_file["numero"].astype(str)
+        df_file["padrao"] = df_file.get("padrao", 1)
+        df_file["foil"] = df_file.get("foil", 0)
 
-        df = df.groupby(["colecao", "numero"], as_index=False).agg({
+        df_file = df_file.groupby(["colecao", "numero"], as_index=False).agg({
             "padrao": "sum",
             "foil": "sum",
-            **{col: "first" for col in df.columns if col not in ["colecao", "numero", "padrao", "foil"]}
+            **{col: "first" for col in df_file.columns if col not in ["colecao", "numero", "padrao", "foil"]}
         })
 
-        cotacao = get_usd_to_brl()
-        identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]
-        todos_detalhes = buscar_detalhes_com_lotes(identificadores)
+        cotacao_file = get_usd_to_brl()
+        identificadore2 = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df_file.iterrows()]
+        todos_detalhes2 = buscar_detalhes_com_lotes(identificadore2)
 
-        df_detalhes = extrair_detalhes_cartas(df, todos_detalhes, cotacao)
+        df_manager = extrair_detalhes_cartas(df_file, todos_detalhes2, cotacao_file)
 
-        df_final = pd.concat([df, df_detalhes], axis=1)
+        df_final = pd.concat([df_file, df_manager], axis=1)
         sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
 
         if sucesso:
@@ -309,7 +308,7 @@ elif st.session_state["aba_atual"] == "Import File":
 
 elif st.session_state["aba_atual"] == "Card Manager":
         st.header("Card Manager")
-        df = st.session_state["df"]
+        df_manager = st.session_state["df"]
 
         if acesso_restrito:
             st.warning("Você precisa estar autenticado para acessar esta aba.")
@@ -319,16 +318,16 @@ elif st.session_state["aba_atual"] == "Card Manager":
             def csv(path):
                 return pd.read_csv(path)
 
-            df = csv(CSV_PATH)
+            df_manager = csv(CSV_PATH)
 
             # Converte colunas numéricas com segurança
-            df["padrao"] = pd.to_numeric(df["padrao"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int) 
-            df["foil"] = pd.to_numeric(df["foil"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int)
+            df_manager["padrao"] = pd.to_numeric(df_manager["padrao"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int) 
+            df_manager["foil"] = pd.to_numeric(df_manager["foil"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int)
 
 
             # Editor completo
             df_editado = st.data_editor(
-                df,
+                df_manager,
                 num_rows="dynamic",
                 use_container_width=True,
                 key="editor"

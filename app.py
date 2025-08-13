@@ -21,17 +21,29 @@ reprocessar = st.button("Reprocessar dados da coleção")
 
 if reprocessar:
     df = carregar_csv_sem_cache()
+
+    # Remove duplicatas antes de qualquer processamento
+    df = df.drop_duplicates(subset=["colecao", "numero"], keep="last")
+
+    # Mantém apenas as colunas relevantes
     df = df.loc[:, ["colecao", "numero", "padrao", "foil", "obs"]]
+
+    # Prepara o DataFrame (se necessário)
     df = preparar_dataframe(df)
+
+    # Atualiza cotação e busca detalhes
     cotacao = get_usd_to_brl()
     identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]
     todos_detalhes = buscar_detalhes_com_lotes(identificadores)
 
+    # Extrai os detalhes sem duplicar colunas
     df_detalhes = extrair_detalhes_cartas(df, todos_detalhes, cotacao)
 
+    # Salva no GitHub e atualiza o estado
     alterar_csv_em_github(df_detalhes, REPO, CSV_PATH, GITHUB_TOKEN)
     st.session_state["df"] = df_detalhes
     st.success("Dados reprocessados com sucesso!")
+
 else:
     if "df" not in st.session_state:
         st.session_state["df"] = carregar_csv()

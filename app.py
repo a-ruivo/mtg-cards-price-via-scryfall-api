@@ -138,7 +138,7 @@ with aba1:
 
         # Carregar dados
         df = carregar_dados()
-        
+
         df = df.dropna(subset=["colecao", "numero"])
         df["colecao"] = df["colecao"].astype(str).str.lower()
         df["numero"] = df["numero"].astype(str)
@@ -188,7 +188,7 @@ with aba1:
             ), axis=1)
 
             df_final = pd.concat([df, df_detalhes], axis=1)
-            sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+            sucesso, mensagem = alterar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
 
             if sucesso:
                 st.success("Cards updated!")

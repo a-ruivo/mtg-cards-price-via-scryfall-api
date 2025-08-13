@@ -43,7 +43,7 @@ if "autenticado" not in st.session_state:
 acesso_restrito = not st.session_state.get("autenticado", False)
 
 if st.session_state["aba_atual"] == "Collection":
-
+    df = st.session_state["df"]
     df, colecao_map = limpar_e_enriquecer_dataframe(df)
     mana_map = get_mana_map()
 
@@ -159,9 +159,11 @@ if st.session_state["aba_atual"] == "Collection":
 
 elif st.session_state["aba_atual"] == "Dashboard":
     st.header("Dashboard")
+    df = st.session_state["df"]
 
 elif st.session_state["aba_atual"] == "Add Card":
     st.header("Add card mannualy or by code")
+    df = st.session_state["df"]
 
     if acesso_restrito:
         st.warning("Você precisa estar autenticado para acessar esta aba.")
@@ -259,6 +261,7 @@ elif st.session_state["aba_atual"] == "Add Card":
 
 elif st.session_state["aba_atual"] == "Import File":
     st.header("Importar cartas via Excel")
+    df = st.session_state["df"]
     
     if acesso_restrito:
         st.warning("Você precisa estar autenticado para acessar esta aba.")
@@ -297,6 +300,7 @@ elif st.session_state["aba_atual"] == "Import File":
 
 elif st.session_state["aba_atual"] == "Card Manager":
         st.header("Card Manager")
+        df = st.session_state["df"]
 
         if acesso_restrito:
             st.warning("Você precisa estar autenticado para acessar esta aba.")

@@ -291,7 +291,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     # Cartas por coleção
     colecao_contagem = df.groupby("colecao_nome")["quantidade_total"].sum().sort_values(ascending=False)
-    fig2, ax2 = plt.subplots(figsize=(8, 4))
+    fig2, ax2 = plt.subplots(figsize=(8, 6))
     ax2.barh(colecao_contagem.index[:15], colecao_contagem.values[:15], color="skyblue")
     # Fundo transparente
     fig2.patch.set_alpha(0.0)  # fundo da figura
@@ -327,7 +327,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     mana_total_contagem = df.groupby("mana_total")["quantidade_total"].sum().sort_index()
 
     # Gráfico horizontal
-    fig3, ax3 = plt.subplots(figsize=(8, 6))
+    fig3, ax3 = plt.subplots(figsize=(8, 4))
     ax3.barh(mana_total_contagem.index.astype(str), mana_total_contagem.values, color="lightgreen")
     # Fundo transparente
     fig3.patch.set_alpha(0.0)  # fundo da figura

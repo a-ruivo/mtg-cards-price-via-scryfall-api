@@ -9,28 +9,29 @@ from utils.helpers import dividir_em_lotes, gerar_icones, preparar_dataframe, li
 
 st.set_page_config(page_title="MTG Card Collection", layout="wide")
 
+st.title("Allan & Ayla MTG Cards Collection")
+
+reprocessar = st.button("Reprocessar dados da coleção")
+
+if reprocessar:
+    df = carregar_csv()
+    df = preparar_dataframe(df)
+    cotacao = get_usd_to_brl()
+    identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]
+    todos_detalhes = buscar_detalhes_com_lotes(identificadores)
+
+    df_detalhes = extrair_detalhes_cartas(df, todos_detalhes, cotacao)
+
+    df_final = pd.concat([df, df_detalhes], axis=1)
+    alterar_csv_em_github(df_final)
+    df = df_final
+    st.success("Dados reprocessados com sucesso!")
+else:
+    df = carregar_csv()
+
 aba1, aba2, aba3, aba4, aba5 = st.tabs(["Collection", "Login", "Add Card", "Import File", "Card Manager"])
 
 with aba1:
-    st.title("Allan & Ayla MTG Cards Collection")
-
-    reprocessar = st.button("Reprocessar dados da coleção")
-
-    if reprocessar:
-        df = carregar_csv()
-        df = preparar_dataframe(df)
-        cotacao = get_usd_to_brl()
-        identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]
-        todos_detalhes = buscar_detalhes_com_lotes(identificadores)
-
-        df_detalhes = extrair_detalhes_cartas(df, todos_detalhes, cotacao)
-
-        df_final = pd.concat([df, df_detalhes], axis=1)
-        alterar_csv_em_github(df_final)
-        df = df_final
-        st.success("Dados reprocessados com sucesso!")
-    else:
-        df = carregar_csv()
 
     df, colecao_map = limpar_e_enriquecer_dataframe(df)
     mana_map = get_mana_map()

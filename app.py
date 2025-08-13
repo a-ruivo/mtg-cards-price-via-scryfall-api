@@ -151,8 +151,9 @@ with aba1:
         df["mana_cost"] = df["mana_cost"].str.replace("//", "/", regex=False)
         df["mana_cost"] = df["mana_cost"].str.replace("{", "", regex=False)
         df["mana_cost"] = df["mana_cost"].str.replace("}", "", regex=False)
-        df["padrao"] = df["padrao"].astype(float).astype(int)
-        df["foil"] = df["foil"].astype(float).astype(int)
+        df["padrao"] = pd.to_numeric(df["padrao"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int)
+        df["foil"] = pd.to_numeric(df["foil"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int)
+
 
         df["preco_brl"] = df["preco_brl"].replace("nan", "0").astype(float)
         df["preco_brl_foil"] = df["preco_brl_foil"].replace("nan", "0").astype(float)
@@ -500,8 +501,9 @@ try:
     df = pd.read_csv(CSV_PATH)
 
     # Converte colunas numéricas com segurança
-    df["padrao"] = pd.to_numeric(df["padrao"], errors="coerce").fillna(0).astype(int)
-    df["foil"] = pd.to_numeric(df["foil"], errors="coerce").fillna(0).astype(int)
+    df["padrao"] = pd.to_numeric(df["padrao"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int) 
+    df["foil"] = pd.to_numeric(df["foil"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int)
+
 
     # Editor completo
     df_editado = st.data_editor(

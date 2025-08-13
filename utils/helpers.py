@@ -22,8 +22,9 @@ def preparar_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     df = df.dropna(subset=["colecao", "numero"])
     df["colecao"] = df["colecao"].astype(str).str.lower()
     df["numero"] = df["numero"].astype(str)
-    df["padrao"] = df.get("padrao", 1)
-    df["foil"] = df.get("foil", 0)
+    df["padrao"] = pd.to_numeric(df["padrao"], errors="coerce").fillna(1)
+    df["foil"] = pd.to_numeric(df["foil"], errors="coerce").fillna(0)
+
 
     df = df.groupby(["colecao", "numero"], as_index=False).agg({
         "padrao": "sum",

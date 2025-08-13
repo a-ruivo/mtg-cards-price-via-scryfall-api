@@ -174,14 +174,14 @@ elif st.session_state["aba_atual"] == "Add Card":
     modo = st.radio("Mode", ["Manual", "Search by code"])
 
     if modo == "Search by code":
-        codigo_colecao = st.text_input("Collection code")
-        numero_carta = st.text_input("Card number")
-        padrao = st.number_input("Regular quantity", min_value=0)
-        foil = st.number_input("Foil quantity", min_value=0)
+        codigo_colecao_add = st.text_input("Collection code")
+        numero_carta_add = st.text_input("Card number")
+        padrao_add = st.number_input("Regular quantity", min_value=0)
+        foil_add = st.number_input("Foil quantity", min_value=0)
         buscar = st.button("Search and save")
 
-        if buscar and codigo_colecao and numero_carta:
-            identificador = [{"set": codigo_colecao.lower(), "collector_number": numero_carta}]
+        if buscar and codigo_colecao_add and numero_carta_add:
+            identificador = [{"set": codigo_colecao_add.lower(), "collector_number": numero_carta_add}]
             dados = buscar_detalhes_com_lotes(identificador)
             if dados:
                 carta = dados[0]
@@ -197,11 +197,11 @@ elif st.session_state["aba_atual"] == "Add Card":
                     "tipo": carta.get("type_line"),
                     "preco_brl": preco_brl,
                     "preco_brl_foil": preco_brl_foil,
-                    "padrao": padrao,
-                    "foil": foil,
+                    "padrao": padrao_add,
+                    "foil": foil_add,
                     "imagem": imagem,
-                    "colecao": codigo_colecao.lower(),
-                    "numero": numero_carta,
+                    "colecao": codigo_colecao_add.lower(),
+                    "numero": numero_carta_add,
                     "colecao_nome": carta.get("set_name"),
                     "icone_colecao": carta.get("set_icon_svg_uri"),
                     "raridade": carta.get("rarity"),
@@ -229,29 +229,29 @@ elif st.session_state["aba_atual"] == "Add Card":
                 st.error("Card not found in API.")
     else:
         with st.form("form_carta"):
-            nome = st.text_input("Card name")
-            tipo = st.text_input("Type")
-            preco_brl = st.number_input("Price (BRL)", min_value=0.0)
-            preco_brl_foil = st.number_input("Price Foil (BRL)", min_value=0.0)
-            padrao = st.number_input("Regular quantity", min_value=0)
-            foil = st.number_input("Foil quantity", min_value=0)
-            imagem = st.text_input("Image URL")
-            colecao = st.text_input("Collection code")
-            numero = st.text_input("Card number")
-            colecao_nome = st.text_input("Collection name")
-            icone_colecao = st.text_input("Collection icon URL")
-            raridade = st.selectbox("Rarity", ["common", "uncommon", "rare", "mythic"])
-            cores = st.text_input("Colors (ex: W, U, B, R, G, C, L)")
-            mana_cost = st.text_input("Mana cost (ex: {1}{G}{G})")
-            nome_2 = st.text_input("Alternative name or secondary face (optional)")
+            nome_form = st.text_input("Card name")
+            tipo_form = st.text_input("Type")
+            preco_brl_form = st.number_input("Price (BRL)", min_value=0.0)
+            preco_brl_foil_form = st.number_input("Price Foil (BRL)", min_value=0.0)
+            padrao_form = st.number_input("Regular quantity", min_value=0)
+            foil_form = st.number_input("Foil quantity", min_value=0)
+            imagem_form = st.text_input("Image URL")
+            colecao_form = st.text_input("Collection code")
+            numero_form = st.text_input("Card number")
+            colecao_nome_form = st.text_input("Collection name")
+            icone_colecao_form = st.text_input("Collection icon URL")
+            raridade_form = st.selectbox("Rarity", ["common", "uncommon", "rare", "mythic"])
+            cores_form = st.text_input("Colors (ex: W, U, B, R, G, C, L)")
+            mana_cost_form = st.text_input("Mana cost (ex: {1}{G}{G})")
+            nome_2_form = st.text_input("Alternative name or secondary face (optional)")
             enviado = st.form_submit_button("Add card")
 
         if enviado:
             nova_carta = pd.DataFrame([{
-                "nome": nome, "tipo": tipo, "preco_brl": preco_brl, "preco_brl_foil": preco_brl_foil,
-                "padrao": padrao, "foil": foil, "imagem": imagem, "colecao": colecao,
-                "numero": numero, "colecao_nome": colecao_nome, "icone_colecao": icone_colecao,
-                "raridade": raridade, "cores": cores, "mana_cost": mana_cost, "nome_2": nome_2
+                "nome": nome_form, "tipo": tipo_form, "preco_brl": preco_brl_form, "preco_brl_foil": preco_brl_foil_form,
+                "padrao": padrao_form, "foil": foil_form, "imagem": imagem_form, "colecao": colecao_form,
+                "numero": numero_form, "colecao_nome": colecao_nome_form, "icone_colecao": icone_colecao_form,
+                "raridade": raridade_form, "cores": cores_form, "mana_cost": mana_cost_form, "nome_2": nome_2_form
             }])
 
             ja_existe = (

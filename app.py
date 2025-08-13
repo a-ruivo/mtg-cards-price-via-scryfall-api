@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
 import time
 
 from config import CSV_PATH, REPO, GITHUB_TOKEN
@@ -17,7 +18,12 @@ st.session_state["aba_atual"] = aba_atual
 
 st.title("Allan & Ayla MTG Cards Collection")
 
-reprocessar = st.button("Reprocessar dados da coleção")
+st.markdown("""
+**Made by Allan Ruivo Wildner | https://github.com/a-ruivo**  
+""")
+
+
+reprocessar = st.button("Refresh Data", help="Reprocess the data from the CSV file and update the collection.")
 
 if reprocessar:
     df = carregar_csv_sem_cache()
@@ -42,7 +48,7 @@ if reprocessar:
     # Salva no GitHub e atualiza o estado
     alterar_csv_em_github(df_detalhes, REPO, CSV_PATH, GITHUB_TOKEN)
     st.session_state["df"] = df_detalhes
-    st.success("Dados reprocessados com sucesso!")
+    st.success("Data updated!")
 
 else:
     if "df" not in st.session_state:
@@ -59,23 +65,28 @@ if st.session_state["aba_atual"] == "Collection":
     df, colecao_map = limpar_e_enriquecer_dataframe(df)
     mana_map = get_mana_map()
 
-    st.sidebar.title("Filters")
-
     # Ordenação
-    ordenar_por = st.sidebar.selectbox("Ordenar por", ["Nome", "Cor", "Valor"])
-    ordem = st.sidebar.radio("Ordem", ["Ascendente", "Descendente"])
+    ordenar_por = st.sidebar.selectbox("Order by", ["Name", "Color", "Value", "Mana Cost","Collection", "Type", "Rarity", "Card Number", "Quantity Regular", "Quantity Foil"])
+    ordem = st.sidebar.radio("Order", ["Ascending", "Decreasing"])
 
     coluna_ordem = {
-        "Nome": "nome",
-        "Cor": "cores",
-        "Valor": "valor_total_brl"
+        "Name": "nome",
+        "Color": "cores",
+        "Value": "valor_total_brl",
+        "Mana Cost": "mana_cost",
+        "Collection": "colecao",
+        "Type": "tipo",
+        "Rarity": "raridade",
+        "Card Number": "numero",
+        "Quantity Regular": "padrao",
+        "Quantity Foil": "foil"
     }[ordenar_por]
 
-    df = df.sort_values(by=coluna_ordem, ascending=(ordem == "Ascendente"))
+    df = df.sort_values(by=coluna_ordem, ascending=(ordem == "Ascending"))
 
     colecao_opcoes = sorted(df["colecao"].unique())
     colecao_labels = ["All"] + [colecao_map[c]["nome"] for c in colecao_opcoes]
-    colecao_escolhida_label = st.sidebar.multiselect("Coleção", colecao_labels, default=["All"])
+    colecao_escolhida_label = st.sidebar.multiselect("Collection", colecao_labels, default=["All"])
 
     if "All" not in colecao_escolhida_label:
         colecao_escolhida = [
@@ -92,19 +103,14 @@ if st.session_state["aba_atual"] == "Collection":
     if "All" not in cor_escolhida:
         df = df[df["cores"].apply(lambda x: any(c in x for c in cor_escolhida if isinstance(x, str)))]
 
-    st.sidebar.markdown("### Colors selected:")
-    for cor in cor_escolhida:
-        if cor in mana_map:
-            st.sidebar.image(mana_map[cor], width=40)
-
     # Filtro por nome da carta
-    nome_busca = st.sidebar.text_input("Buscar por nome da carta")
+    nome_busca = st.sidebar.text_input("Search by card name")
     if nome_busca:
         df = df[df["nome"].str.contains(nome_busca, case=False, na=False)]
 
     # Filtro por tipo
     tipos_disponiveis = sorted(df["tipo"].dropna().unique())
-    tipo_escolhido = st.sidebar.multiselect("Tipo", ["All"] + tipos_disponiveis, default=["All"])
+    tipo_escolhido = st.sidebar.multiselect("Card Type", ["All"] + tipos_disponiveis, default=["All"])
     if "All" not in tipo_escolhido:
         df = df[df["tipo"].isin(tipo_escolhido)]
 
@@ -113,7 +119,7 @@ if st.session_state["aba_atual"] == "Collection":
     if pd.isna(valor_maximo) or valor_maximo == 0.0:
         valor_maximo = 1.0  # fallback seguro
     valor_min, valor_max = st.sidebar.slider(
-        "Filtrar por valor total (BRL)",
+        "Card Value (BRL)",
         0.0,
         valor_maximo,
         (0.0, valor_maximo)
@@ -127,13 +133,13 @@ if st.session_state["aba_atual"] == "Collection":
 
 
     # Filtro por tipo de posse
-    opcoes_posse = ["Todos", "Apenas Regular", "Apenas Foil", "Ambos"]
-    posse_escolhida = st.sidebar.selectbox("Tipo de posse", opcoes_posse)
-    if posse_escolhida == "Apenas Regular":
+    opcoes_posse = ["All", "Only Regular", "Only Foil", "Both"]
+    posse_escolhida = st.sidebar.selectbox("Face Type", opcoes_posse)
+    if posse_escolhida == "Only Regular":
         df = df[df["padrao"].astype(int) > 0]
-    elif posse_escolhida == "Apenas Foil":
+    elif posse_escolhida == "Only Foil":
         df = df[df["foil"].astype(int) > 0]
-    elif posse_escolhida == "Ambos":
+    elif posse_escolhida == "Both":
         df = df[(df["padrao"].astype(int) > 0) & (df["foil"].astype(int) > 0)]
 
     col1, col2, col3, col4 = st.columns(4)
@@ -173,14 +179,163 @@ if st.session_state["aba_atual"] == "Collection":
 
 elif st.session_state["aba_atual"] == "Dashboard":
     st.header("Dashboard")
+    
     df = st.session_state["df"]
+
+    df, colecao_map = limpar_e_enriquecer_dataframe(df)
+    mana_map = get_mana_map()
+
+    # Ordenação
+    ordenar_por = st.sidebar.selectbox("Order by", ["Name", "Color", "Value", "Mana Cost","Collection", "Type", "Rarity", "Card Number", "Quantity Regular", "Quantity Foil"])
+    ordem = st.sidebar.radio("Order", ["Ascending", "Decreasing"])
+
+    coluna_ordem = {
+        "Name": "nome",
+        "Color": "cores",
+        "Value": "valor_total_brl",
+        "Mana Cost": "mana_cost",
+        "Collection": "colecao",
+        "Type": "tipo",
+        "Rarity": "raridade",
+        "Card Number": "numero",
+        "Quantity Regular": "padrao",
+        "Quantity Foil": "foil"
+    }[ordenar_por]
+
+    df = df.sort_values(by=coluna_ordem, ascending=(ordem == "Ascending"))
+
+    colecao_opcoes = sorted(df["colecao"].unique())
+    colecao_labels = ["All"] + [colecao_map[c]["nome"] for c in colecao_opcoes]
+    colecao_escolhida_label = st.sidebar.multiselect("Collection", colecao_labels, default=["All"])
+
+    if "All" not in colecao_escolhida_label:
+        colecao_escolhida = [
+            c for c in colecao_opcoes if colecao_map[c]["nome"] in colecao_escolhida_label
+        ]
+        df = df[df["colecao"].isin(colecao_escolhida)]
+
+    cores_disponiveis = sorted(set(
+        cor.strip() for lista in df["cores"].dropna().str.split(",") for cor in lista
+    ))
+    opcoes_cores = ["All"] + cores_disponiveis
+    cor_escolhida = st.sidebar.multiselect("Cor", opcoes_cores, default=["All"])
+
+    if "All" not in cor_escolhida:
+        df = df[df["cores"].apply(lambda x: any(c in x for c in cor_escolhida if isinstance(x, str)))]
+
+    # Filtro por nome da carta
+    nome_busca = st.sidebar.text_input("Search by card name")
+    if nome_busca:
+        df = df[df["nome"].str.contains(nome_busca, case=False, na=False)]
+
+    # Filtro por tipo
+    tipos_disponiveis = sorted(df["tipo"].dropna().unique())
+    tipo_escolhido = st.sidebar.multiselect("Card Type", ["All"] + tipos_disponiveis, default=["All"])
+    if "All" not in tipo_escolhido:
+        df = df[df["tipo"].isin(tipo_escolhido)]
+
+    # Filtro por valor
+    valor_maximo = float(df["valor_total_brl"].dropna().max())
+    if pd.isna(valor_maximo) or valor_maximo == 0.0:
+        valor_maximo = 1.0  # fallback seguro
+    valor_min, valor_max = st.sidebar.slider(
+        "Card Value (BRL)",
+        0.0,
+        valor_maximo,
+        (0.0, valor_maximo)
+    )
+
+    # Corrige caso os valores sejam iguais
+    if valor_min == valor_max:
+        valor_max += 1.0
+
+    df = df[(df["valor_total_brl"] >= valor_min) & (df["valor_total_brl"] <= valor_max)]
+
+
+    # Filtro por tipo de posse
+    opcoes_posse = ["All", "Only Regular", "Only Foil", "Both"]
+    posse_escolhida = st.sidebar.selectbox("Face Type", opcoes_posse)
+    if posse_escolhida == "Only Regular":
+        df = df[df["padrao"].astype(int) > 0]
+    elif posse_escolhida == "Only Foil":
+        df = df[df["foil"].astype(int) > 0]
+    elif posse_escolhida == "Both":
+        df = df[(df["padrao"].astype(int) > 0) & (df["foil"].astype(int) > 0)]
+
+    col1, col2, col3, col4 = st.columns(4)
+
+    total_cartas = df["padrao"].sum() + df["foil"].sum()
+    total_padroes = df["padrao"].sum()
+    total_foils = df["foil"].sum()
+    valor_total = df["valor_total_brl"].sum()
+
+    col1.metric("Total Cards:", f"{total_cartas:,}")
+    col2.metric("Regular Cards:", f"{total_padroes:,}")
+    col3.metric("Foil Cards:", f"{total_foils:,}")
+    col4.metric("Total Value (BRL)", f"R$ {valor_total:,.2f}")
+    st.markdown("---")
+
+    # Paleta de cores das manas
+    mana_colors = {
+        "W": "#fffdd0",  # branco
+        "U": "#1e90ff",  # azul
+        "B": "#2f2f2f",  # preto
+        "R": "#ff4500",  # vermelho
+        "G": "#228b22",  # verde
+        "C": "#808080",  # incolor
+        "L": "#dda0dd"   # land
+    }
+
+    # Cartas por cor
+    df_cores = df.copy()
+    df_cores["cores"] = df_cores["cores"].fillna("").str.split(", ")
+    df_cores = df_cores.explode("cores")
+    quantidade_total = df["padrao"].sum() + df["foil"].sum()
+    cores_contagem = df_cores.groupby("cores")["quantidade_total"].sum().sort_values(ascending=False)
+
+    fig1, ax1 = plt.subplots()
+    ax1.bar(cores_contagem.index, cores_contagem.values, color=[mana_colors.get(c, "#999999") for c in cores_contagem.index])
+    ax1.set_title("Card quantity by color")
+    ax1.set_xlabel("Color")
+    ax1.set_ylabel("Card Quantity")
+    st.pyplot(fig1)
+
+    # Cartas por coleção
+    colecao_contagem = df.groupby("colecao_nome")["quantidade_total"].sum().sort_values(ascending=False)
+    fig2, ax2 = plt.subplots()
+    ax2.barh(colecao_contagem.index[:15], colecao_contagem.values[:15], color="skyblue")
+    ax2.set_title("Top 15 collections by card quantity")
+    ax2.set_xlabel("Card Quantity")
+    ax2.set_ylabel("Collection")
+    ax2.invert_yaxis()
+    st.pyplot(fig2)
+
+    # Cartas por custo de mana
+    mana_cost_contagem = df.groupby("mana_cost")["quantidade_total"].sum().sort_values(ascending=False)
+    fig3, ax3 = plt.subplots()
+    ax3.bar(mana_cost_contagem.index, mana_cost_contagem.values, color="lightgreen")
+    ax3.set_title("Mana cost distribution")
+    ax3.set_xlabel("Mana Cost")
+    ax3.set_ylabel("Card Quantity")
+    plt.xticks(rotation=45)
+    st.pyplot(fig3)
+
+    # Cartas por tipo
+    tipo_contagem = df.groupby("tipo")["quantidade_total"].sum().sort_values(ascending=False)
+    fig4, ax4 = plt.subplots()
+    ax4.barh(tipo_contagem.index, tipo_contagem.values, color="salmon")
+    ax4.set_title("Card type distribution")
+    ax4.set_xlabel("Card Quantity")
+    ax4.set_ylabel("Type")
+    ax4.invert_yaxis()
+    st.pyplot(fig4)
 
 elif st.session_state["aba_atual"] == "Add Card":
     st.header("Add card manually or by code")
     df_existente = st.session_state["df"]
 
     if acesso_restrito:
-        st.warning("Você precisa estar autenticado para acessar esta aba.")
+        st.warning("Enter the password to access this page.")
         st.stop()
 
     modo = st.radio("Mode", ["Manual", "Search by code"])
@@ -194,7 +349,7 @@ elif st.session_state["aba_atual"] == "Add Card":
 
         if buscar and codigo_colecao_add and numero_carta_add:
             if padrao_add == 0 and foil_add == 0:
-                st.warning("Informe pelo menos uma quantidade (Regular ou Foil) para adicionar a carta.")
+                st.warning("At least one of the quantitys must be different then 0.")
             else:
                 identificador = [{"set": codigo_colecao_add.lower(), "collector_number": numero_carta_add}]
                 dados = buscar_detalhes_com_lotes(identificador)
@@ -231,7 +386,7 @@ elif st.session_state["aba_atual"] == "Add Card":
                     ).any()
 
                     if ja_existe:
-                        st.warning("Essa carta já existe na coleção.")
+                        st.warning("This card already is in the collection.")
                     else:
                         df_add = pd.concat([df_existente, nova], ignore_index=True)
                         sucesso = salvar_csv_em_github(df_add, REPO, CSV_PATH, GITHUB_TOKEN)
@@ -239,7 +394,7 @@ elif st.session_state["aba_atual"] == "Add Card":
                             st.session_state["df"] = df_add
                             st.success("Card added!")
                         else:
-                            st.error("Error saving to GitHub.")
+                            st.error("Error saving in GitHub.")
                 else:
                     st.error("Card not found in API.")
     else:
@@ -263,7 +418,7 @@ elif st.session_state["aba_atual"] == "Add Card":
 
         if enviado:
             if padrao_form == 0 and foil_form == 0:
-                st.warning("Informe pelo menos uma quantidade (Regular ou Foil) para adicionar a carta.")
+                st.warning("At least one of the quantitys must be different then 0.")
             else:
                 nova_carta = pd.DataFrame([{
                     "nome": nome_form, "tipo": tipo_form, "preco_brl": preco_brl_form, "preco_brl_foil": preco_brl_foil_form,
@@ -278,7 +433,7 @@ elif st.session_state["aba_atual"] == "Add Card":
                 ).any()
 
                 if ja_existe:
-                    st.warning("Essa carta já existe na coleção.")
+                    st.warning("This card already is in the collection.")
                 else:
                     df_form = pd.concat([df_existente, nova_carta], ignore_index=True)
                     sucesso, mensagem = salvar_csv_em_github(df_form, REPO, CSV_PATH, GITHUB_TOKEN)
@@ -286,17 +441,17 @@ elif st.session_state["aba_atual"] == "Add Card":
                         st.session_state["df"] = df_form
                         st.success("Card added!")
                     else:
-                        st.error(f"Erro ao salvar no GitHub: {mensagem}")
+                        st.error(f"Error saving in GitHub: {mensagem}")
 
 elif st.session_state["aba_atual"] == "Import File":
-    st.header("Importar cartas via Excel")
+    st.header("Import cards from Excel file")
 
     if acesso_restrito:
-        st.warning("Você precisa estar autenticado para acessar esta aba.")
+        st.warning("Enter the password to access this page.")
         st.stop()
 
-    arquivo = st.file_uploader("Selecione o arquivo Excel", type=["xlsx"])
-    executar_importacao = st.button("Executar importação")
+    arquivo = st.file_uploader("Select the Excel file", type=["xlsx"])
+    executar_importacao = st.button("Import")
 
     if executar_importacao and arquivo:
         df_file = pd.read_excel(arquivo)
@@ -324,14 +479,14 @@ elif st.session_state["aba_atual"] == "Import File":
         if sucesso:
             st.success("Cards add!")
         else:
-            st.error(f"Erro ao salvar no GitHub: {mensagem}")
+            st.error(f"Error saving in GitHub: {mensagem}")
 
 elif st.session_state["aba_atual"] == "Card Manager":
         st.header("Card Manager")
         df_manager = st.session_state["df"]
 
         if acesso_restrito:
-            st.warning("Você precisa estar autenticado para acessar esta aba.")
+            st.warning("Enter the password to access this page.")
             st.stop()
 
         try:
@@ -359,7 +514,7 @@ elif st.session_state["aba_atual"] == "Card Manager":
                 if sucesso:
                     st.success("Changes saved!")
                 else:
-                    st.error(f"Erro ao salvar no GitHub: {mensagem}")
+                    st.error(f"Error saving in GitHub: {mensagem}")
 
         except:
             st.warning("Data not found.")

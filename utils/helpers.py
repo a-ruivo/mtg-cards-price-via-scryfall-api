@@ -156,8 +156,9 @@ def extrair_detalhes_cartas(df: pd.DataFrame, todos_detalhes: list, cotacao: flo
             "preco_brl_foil": preco_brl_foil
         }
 
-    df_detalhes = df.apply(lambda linha: pd.Series(
-        detalhes_dict.get((linha["colecao"], linha["numero"]), {})
-    ), axis=1)
+    # Atualiza as colunas diretamente
+    for coluna in list(detalhes_dict.values())[0].keys():
+        df[coluna] = df.apply(lambda linha: detalhes_dict.get((linha["colecao"], linha["numero"]), {}).get(coluna), axis=1)
 
-    return pd.concat([df, df_detalhes], axis=1)
+    return df
+

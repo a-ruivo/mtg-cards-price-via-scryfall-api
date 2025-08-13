@@ -162,8 +162,8 @@ elif st.session_state["aba_atual"] == "Dashboard":
     df = st.session_state["df"]
 
 elif st.session_state["aba_atual"] == "Add Card":
-    st.header("Add card mannualy or by code")
-    df = st.session_state["df"]
+    st.header("Add card manually or by code")
+    df_existente = st.session_state["df"]
 
     if acesso_restrito:
         st.warning("Você precisa estar autenticado para acessar esta aba.")
@@ -207,17 +207,22 @@ elif st.session_state["aba_atual"] == "Add Card":
                     "mana_cost": carta.get("mana_cost"),
                     "nome_2": None
                 }])
-                try:
-                    df_existente = pd.read_csv(CSV_PATH)
-                    df_final = pd.concat([df_existente, nova], ignore_index=True)
-                except:
-                    df_final = nova
 
-                sucesso = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
-                if sucesso:
-                    st.success("Card add!")
+                ja_existe = (
+                    (df_existente["colecao"] == nova["colecao"].iloc[0]) &
+                    (df_existente["numero"] == nova["numero"].iloc[0])
+                ).any()
+
+                if ja_existe:
+                    st.warning("Essa carta já existe na coleção.")
                 else:
-                    st.error("Error.")
+                    df_final = pd.concat([df_existente, nova], ignore_index=True)
+                    sucesso = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+                    if sucesso:
+                        st.session_state["df"] = df_final
+                        st.success("Card added!")
+                    else:
+                        st.error("Error saving to GitHub.")
             else:
                 st.error("Card not found in API.")
     else:
@@ -236,7 +241,7 @@ elif st.session_state["aba_atual"] == "Add Card":
             raridade = st.selectbox("Rarity", ["common", "uncommon", "rare", "mythic"])
             cores = st.text_input("Colors (ex: W, U, B, R, G, C, L)")
             mana_cost = st.text_input("Mana cost (ex: {1}{G}{G})")
-            nome_2 = st.text_input("Alternative name or secundary face (optional)")
+            nome_2 = st.text_input("Alternative name or secondary face (optional)")
             enviado = st.form_submit_button("Add card")
 
         if enviado:
@@ -246,18 +251,22 @@ elif st.session_state["aba_atual"] == "Add Card":
                 "numero": numero, "colecao_nome": colecao_nome, "icone_colecao": icone_colecao,
                 "raridade": raridade, "cores": cores, "mana_cost": mana_cost, "nome_2": nome_2
             }])
-            try:
-                df_existente = pd.read_csv(CSV_PATH)
-                df_final = pd.concat([df_existente, nova_carta], ignore_index=True)
-            except:
-                df_final = nova_carta
 
-            sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+            ja_existe = (
+                (df_existente["colecao"] == nova_carta["colecao"].iloc[0]) &
+                (df_existente["numero"] == nova_carta["numero"].iloc[0])
+            ).any()
 
-            if sucesso:
-                st.success("Cards add!")
+            if ja_existe:
+                st.warning("Essa carta já existe na coleção.")
             else:
-                st.error(f"Erro ao salvar no GitHub: {mensagem}")
+                df_final = pd.concat([df_existente, nova_carta], ignore_index=True)
+                sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+                if sucesso:
+                    st.session_state["df"] = df_final
+                    st.success("Card added!")
+                else:
+                    st.error(f"Erro ao salvar no GitHub: {mensagem}")
 
 elif st.session_state["aba_atual"] == "Import File":
     st.header("Importar cartas via Excel")

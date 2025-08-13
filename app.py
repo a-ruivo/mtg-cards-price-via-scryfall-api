@@ -281,16 +281,17 @@ elif st.session_state["aba_atual"] == "Dashboard":
     ax1.set_facecolor("none")  # fundo do gráfico
     # Adicionar rótulos com os valores
     for i, (color, quantity) in enumerate(zip(mana_colors, cores_contagem.values)):
-        plt.text(quantity + 5, i, str(quantity), va='center')
+        plt.text(quantity + 5, i, str(quantity), va='center' ,color='white')
     ax1.tick_params(colors="white")         # cor dos ticks
-    ax1.xaxis.label.set_color("white")      # cor do label do eixo X
+    # Remover eixo x
+    plt.gca().axes.get_xaxis().set_visible(False)
     ax1.yaxis.label.set_color("white")      # cor do label do eixo Y
     ax1.title.set_color("white")            # cor do título
     for spine in plt.gca().spines.values():
         spine.set_visible(False)
-    ax1.set_title("Card quantity by mana color", loc="left")
-    ax1.set_xlabel("Color")
-    ax1.set_ylabel("")
+    ax1.set_title("Card quantity by mana color", loc="left", color='white')
+    ax1.set_xlabel("")
+    ax1.set_ylabel("Mana color")
 
     # Cartas por coleção
     colecao_contagem = df.groupby("colecao_nome")["quantidade_total"].sum().sort_values(ascending=False)

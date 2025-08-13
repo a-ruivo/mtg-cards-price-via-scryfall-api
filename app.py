@@ -339,7 +339,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     st.pyplot(fig3)
 
     # Cartas por tipo
-    df["tipo_sem_traco"] = df["tipo"].apply(lambda x: x.split("-")[0] if "-" in x else x)
+    df["tipo_sem_traco"] = df["tipo"].apply(lambda x: x.split("–")[0].strip() if "–" in x else x.strip())
     tipo_contagem = df.groupby("tipo_sem_traco")["quantidade_total"].sum().sort_values(ascending=False)
     fig4, ax4 = plt.subplots()
     ax4.barh(tipo_contagem.index, tipo_contagem.values, color="salmon")

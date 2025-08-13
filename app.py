@@ -30,10 +30,11 @@ if reprocessar:
     df_detalhes = extrair_detalhes_cartas(df, todos_detalhes, cotacao)
 
     alterar_csv_em_github(df_detalhes, REPO, CSV_PATH, GITHUB_TOKEN)
-    df = df_detalhes
+    st.session_state["df"] = df_detalhes
     st.success("Dados reprocessados com sucesso!")
 else:
-    df = carregar_csv()
+    if "df" not in st.session_state:
+        st.session_state["df"] = carregar_csv()
 
 # Executa autenticação uma vez
 if "autenticado" not in st.session_state:

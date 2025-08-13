@@ -7,7 +7,13 @@ from utils.api import buscar_detalhes_com_lotes, get_usd_to_brl
 from utils.github import carregar_csv, salvar_csv_em_github, alterar_csv_em_github
 from utils.helpers import gerar_icones, preparar_dataframe, limpar_e_enriquecer_dataframe, autenticar, get_mana_map, extrair_detalhes_cartas
 
+if "aba_atual" not in st.session_state:
+    st.session_state["aba_atual"] = "Coleção"
+
 st.set_page_config(page_title="MTG Card Collection", layout="wide")
+
+aba_atual = st.sidebar.radio("Pages", ["Collection", "Dashboard", "Add Card", "Import File", "Card Manager"])
+st.session_state["aba_atual"] = aba_atual
 
 st.title("Allan & Ayla MTG Cards Collection")
 
@@ -36,9 +42,7 @@ if "autenticado" not in st.session_state:
 
 acesso_restrito = not st.session_state.get("autenticado", False)
 
-aba1, aba2, aba3, aba4, aba5 = st.tabs(["Collection", "Dashboard", "Add Card", "Import File", "Card Manager"])
-
-with aba1:
+if st.session_state["aba_atual"] == "Collection":
 
     df, colecao_map = limpar_e_enriquecer_dataframe(df)
     mana_map = get_mana_map()
@@ -153,10 +157,10 @@ with aba1:
                     tem_segunda_face = "No" if pd.notna(getattr(carta, "nome_2", None)) else "Yes"
                     st.markdown(f"**Secondary effect or face:** {tem_segunda_face}")
 
-with aba2:
+elif st.session_state["aba_atual"] == "Dashboard":
     st.header("Dashboard")
 
-with aba3:
+elif st.session_state["aba_atual"] == "Add Card":
     st.header("Add card mannualy or by code")
 
     if acesso_restrito:
@@ -253,7 +257,7 @@ with aba3:
             else:
                 st.error(f"Erro ao salvar no GitHub: {mensagem}")
 
-with aba4:
+elif st.session_state["aba_atual"] == "Import File":
     st.header("Importar cartas via Excel")
     
     if acesso_restrito:
@@ -291,12 +295,12 @@ with aba4:
         else:
             st.error(f"Erro ao salvar no GitHub: {mensagem}")
 
-with aba5:
+elif st.session_state["aba_atual"] == "Card Manager":
         st.header("Card Manager")
 
         if acesso_restrito:
             st.warning("Você precisa estar autenticado para acessar esta aba.")
-        st.stop()
+            st.stop()
 
         try:
             def csv(path):

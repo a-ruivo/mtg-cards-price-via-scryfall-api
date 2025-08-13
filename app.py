@@ -311,9 +311,27 @@ elif st.session_state["aba_atual"] == "Dashboard":
     st.pyplot(fig2)
 
     # Cartas por custo de mana
-    mana_cost_contagem = df.groupby("mana_cost")["quantidade_total"].sum().sort_values(ascending=False)
+    import re
+
+    def calcular_mana_total(mana_cost):
+        if pd.isna(mana_cost):
+            return 0
+        # Extrai números e letras
+        partes = re.findall(r'\d+|[WUBRGCL]', mana_cost)
+        total = 0
+        for p in partes:
+            if p.isdigit():
+                total += int(p)
+            else:
+                total += 1
+        return total
+    
+    df["mana_total"] = df["mana_cost"].apply(calcular_mana_total)
+    mana_total_contagem = df.groupby("mana_total")["quantidade_total"].sum().sort_index()
+
+    # Gráfico horizontal
     fig3, ax3 = plt.subplots()
-    ax3.barh(mana_cost_contagem.index, mana_cost_contagem.values, color="lightgreen")
+    ax3.barh(mana_total_contagem.index.astype(str), mana_total_contagem.values, color="lightgreen")
     ax3.set_title("Mana cost distribution")
     ax3.set_xlabel("Mana Cost")
     ax3.set_ylabel("Card Quantity")
@@ -321,7 +339,8 @@ elif st.session_state["aba_atual"] == "Dashboard":
     st.pyplot(fig3)
 
     # Cartas por tipo
-    tipo_contagem = df.groupby("tipo")["quantidade_total"].sum().sort_values(ascending=False)
+    df["tipo_sem_traco"] = df["tipo"].apply(lambda x: x.split("-")[0] if "-" in x else x)
+    tipo_contagem = df.groupby("tipo_sem_traco")["quantidade_total"].sum().sort_values(ascending=False)
     fig4, ax4 = plt.subplots()
     ax4.barh(tipo_contagem.index, tipo_contagem.values, color="salmon")
     ax4.set_title("Card type distribution")

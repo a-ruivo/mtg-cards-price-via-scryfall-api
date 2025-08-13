@@ -257,7 +257,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     st.markdown("---")
 
     # Paleta de cores das manas
-    mana_colors_soft = {
+    mana_colors = {
         "W": "#ffffe0",
         "U": "#87cefa",
         "B": "#696969",
@@ -277,8 +277,8 @@ elif st.session_state["aba_atual"] == "Dashboard":
     fig1, ax1 = plt.subplots(figsize=(8, 3))
 
 # Adiciona barras com cantos arredondados
-for i, (color, quantity) in enumerate(zip(cores_contagem.index, cores_contagem.values)):
-    bar_color = mana_colors.get(color, "#999999")
+    for i, (color, quantity) in enumerate(zip(cores_contagem.index, cores_contagem.values)):
+        bar_color = mana_colors.get(color, "#999999")
     rounded_bar = FancyBboxPatch((0, i - 0.4), quantity, 0.8,
                                  boxstyle="round,pad=0.02",
                                  linewidth=0,

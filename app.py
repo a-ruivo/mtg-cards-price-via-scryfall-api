@@ -22,7 +22,6 @@ reprocessar = st.button("Reprocessar dados da coleção")
 if reprocessar:
     df = carregar_csv_sem_cache()
     df = df.loc[:, ["colecao", "numero", "padrao", "foil", "obs"]]
-    df = preparar_dataframe(df)
     cotacao = get_usd_to_brl()
     identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]
     todos_detalhes = buscar_detalhes_com_lotes(identificadores)

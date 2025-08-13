@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
+import plotly.graph_objects as go
 
 from config import CSV_PATH, REPO, GITHUB_TOKEN
 from utils.api import buscar_detalhes_com_lotes, get_usd_to_brl
@@ -274,38 +275,75 @@ elif st.session_state["aba_atual"] == "Dashboard":
     df_cores = df_cores.explode("cores")
     cores_contagem = df_cores.groupby("cores")["quantidade_total"].sum().sort_values(ascending=False)
 
-    fig1, ax1 = plt.subplots(figsize=(8, 3))
+    
 
-# Adiciona barras com cantos arredondados
-    for i, (color, quantity) in enumerate(zip(cores_contagem.index, cores_contagem.values)):
-        bar_color = mana_colors.get(color, "#999999")
-        rounded_bar = FancyBboxPatch((0, i - 0.4), quantity, 0.8,
-                                    boxstyle="round,pad=0.02",
-                                    linewidth=0,
-                                    facecolor=bar_color)
-        ax1.add_patch(rounded_bar)
-        # Rótulo branco dentro da barra
-        ax1.text(quantity - 10, i, str(quantity), va='center', ha='right', color='white')
+    # Cores suaves
+    mana_colors_soft = {
+        "W": "#fdfd96",   # amarelo claro
+        "U": "#add8e6",   # azul claro
+        "B": "#a9a9a9",   # cinza médio
+        "R": "#ffb6b6",   # vermelho claro
+        "G": "#90ee90",   # verde claro
+        "C": "#d3d3d3",   # cinza claro
+        "L": "#e6e6fa"    # lavanda
+    }
 
-    # Fundo transparente
-    fig1.patch.set_alpha(0.0)
-    ax1.set_facecolor("none")
+    # Ícones de mana (SVGs hospedados)
+    mana_icons = {
+        "W": "https://mtgimage.com/mana/w.svg",
+        "U": "https://mtgimage.com/mana/u.svg",
+        "B": "https://mtgimage.com/mana/b.svg",
+        "R": "https://mtgimage.com/mana/r.svg",
+        "G": "https://mtgimage.com/mana/g.svg",
+        "C": "https://mtgimage.com/mana/c.svg",
+        "L": "https://mtgimage.com/mana/l.svg"
+    }
 
-    # Ajustes visuais
-    ax1.set_yticks(range(len(cores_contagem.index)))
-    ax1.set_yticklabels(cores_contagem.index, color='white')
-    ax1.set_xlim(0, max(cores_contagem.values) + 30)
-    ax1.tick_params(colors="white")
-    ax1.xaxis.set_visible(False)
-    ax1.yaxis.label.set_color("white")
-    ax1.title.set_color("white")
-    for spine in ax1.spines.values():
-        spine.set_visible(False)
+    fig1 = go.Figure()
 
-    # Título e rótulos
-    ax1.set_title("Card quantity by mana color", loc="left", color='white')
-    ax1.set_xlabel("")
-    ax1.set_ylabel("Mana color", color='white')
+    # Adiciona barras e ícones
+    for cor, valor in cores_contagem.items():
+        fig1.add_trace(go.Bar(
+            x=[valor],
+            y=[cor],
+            orientation='h',
+            marker=dict(
+                color=mana_colors_soft.get(cor, "#999999"),
+                line=dict(color='white', width=1),
+            ),
+            text=str(valor),
+            textposition='inside',
+            insidetextanchor='end',
+            hoverinfo='none'
+        ))
+
+        # Adiciona ícone ao lado da barra
+        fig1.add_layout_image(
+            dict(
+                source=mana_icons.get(cor),
+                xref="paper",
+                yref="y",
+                x=0.01,
+                y=cor,
+                sizex=0.04,
+                sizey=0.4,
+                xanchor="left",
+                yanchor="middle",
+                layer="above"
+            )
+        )
+
+    # Layout do gráfico
+    fig1.update_layout(
+        title_text='Card quantity by mana color',
+        title_x=0.0,
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        font=dict(color='white'),
+        xaxis=dict(visible=False),
+        yaxis=dict(title='Mana color', showticklabels=True),
+        margin=dict(l=60, r=30, t=40, b=30)
+    )
 
     # Cartas por coleção
     colecao_contagem = df.groupby("colecao_nome")["quantidade_total"].sum().sort_values(ascending=False)

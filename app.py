@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import time
+from matplotlib.patches import FancyBboxPatch
 
 from config import CSV_PATH, REPO, GITHUB_TOKEN
 from utils.api import buscar_detalhes_com_lotes, get_usd_to_brl
@@ -257,14 +257,14 @@ elif st.session_state["aba_atual"] == "Dashboard":
     st.markdown("---")
 
     # Paleta de cores das manas
-    mana_colors = {
-        "W": "#fffdd0",  # branco
-        "U": "#1e90ff",  # azul
-        "B": "#2f2f2f",  # preto
-        "R": "#ff4500",  # vermelho
-        "G": "#228b22",  # verde
-        "C": "#808080",  # incolor
-        "L": "#dda0dd"   # land
+    mana_colors_soft = {
+        "W": "#ffffe0",
+        "U": "#87cefa",
+        "B": "#696969",
+        "R": "#ff7f50",
+        "G": "#7cfc00",
+        "C": "#d3d3d3",
+        "L": "#e6e6fa"
     }
 
     # Cartas por cor
@@ -275,23 +275,37 @@ elif st.session_state["aba_atual"] == "Dashboard":
     cores_contagem = df_cores.groupby("cores")["quantidade_total"].sum().sort_values(ascending=False)
 
     fig1, ax1 = plt.subplots(figsize=(8, 3))
-    ax1.barh(cores_contagem.index, cores_contagem.values, color=[mana_colors.get(c, "#999999") for c in cores_contagem.index])
+
+# Adiciona barras com cantos arredondados
+for i, (color, quantity) in enumerate(zip(cores_contagem.index, cores_contagem.values)):
+    bar_color = mana_colors.get(color, "#999999")
+    rounded_bar = FancyBboxPatch((0, i - 0.4), quantity, 0.8,
+                                 boxstyle="round,pad=0.02",
+                                 linewidth=0,
+                                 facecolor=bar_color)
+    ax1.add_patch(rounded_bar)
+    # Rótulo branco dentro da barra
+    ax1.text(quantity - 10, i, str(quantity), va='center', ha='right', color='white')
+
     # Fundo transparente
-    fig1.patch.set_alpha(0.0)  # fundo da figura
-    ax1.set_facecolor("none")  # fundo do gráfico
-    # Adicionar rótulos com os valores
-    for i, (color, quantity) in enumerate(zip(mana_colors, cores_contagem.values)):
-        plt.text(quantity + 5, i, str(quantity), va='center' ,color='white')
-    ax1.tick_params(colors="white")         # cor dos ticks
-    # Remover eixo x
-    plt.gca().axes.get_xaxis().set_visible(False)
-    ax1.yaxis.label.set_color("white")      # cor do label do eixo Y
-    ax1.title.set_color("white")            # cor do título
-    for spine in plt.gca().spines.values():
+    fig1.patch.set_alpha(0.0)
+    ax1.set_facecolor("none")
+
+    # Ajustes visuais
+    ax1.set_yticks(range(len(cores_contagem.index)))
+    ax1.set_yticklabels(cores_contagem.index, color='white')
+    ax1.set_xlim(0, max(cores_contagem.values) + 30)
+    ax1.tick_params(colors="white")
+    ax1.xaxis.set_visible(False)
+    ax1.yaxis.label.set_color("white")
+    ax1.title.set_color("white")
+    for spine in ax1.spines.values():
         spine.set_visible(False)
+
+    # Título e rótulos
     ax1.set_title("Card quantity by mana color", loc="left", color='white')
     ax1.set_xlabel("")
-    ax1.set_ylabel("Mana color")
+    ax1.set_ylabel("Mana color", color='white')
 
     # Cartas por coleção
     colecao_contagem = df.groupby("colecao_nome")["quantidade_total"].sum().sort_values(ascending=False)

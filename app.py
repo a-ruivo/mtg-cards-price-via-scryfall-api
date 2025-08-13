@@ -552,7 +552,12 @@ with aba3:
         st.header("Card Manager")
 
         try:
-            df = pd.read_csv(CSV_PATH)
+            @st.cache_data
+
+            def csv(path):
+                return pd.read_csv(path)
+
+            df = csv(CSV_PATH)
 
             # Converte colunas numéricas com segurança
             df["padrao"] = pd.to_numeric(df["padrao"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int) 

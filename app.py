@@ -290,7 +290,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     df_cores = df.copy()
     df_cores["cores"] = df_cores["cores"].fillna("").str.split(", ")
     df_cores = df_cores.explode("cores")
-    df["quantidade_total"] = df["padrao"] + df["foil"]
+    df_cores["quantidade_total"] = df["padrao"] + df["foil"]
     cores_contagem = df_cores.groupby("cores")["quantidade_total"].sum().sort_values(ascending=False)
 
     fig1, ax1 = plt.subplots()

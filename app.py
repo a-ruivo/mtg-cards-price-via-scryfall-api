@@ -196,17 +196,17 @@ elif st.session_state["aba_atual"] == "Add Card":
             identificador = [{"set": codigo_colecao_add.lower(), "collector_number": numero_carta_add}]
             dados = buscar_detalhes_com_lotes(identificador)
             if dados:
-                carta = dados[0]
+                carta_add = dados[0]
                 cotacao_add = get_usd_to_brl()
-                preco_usd_add = float(carta.get("prices", {}).get("usd") or 0)
-                preco_foil_add = float(carta.get("prices", {}).get("usd_foil") or 0)
+                preco_usd_add = float(carta_add.get("prices", {}).get("usd") or 0)
+                preco_foil_add = float(carta_add.get("prices", {}).get("usd_foil") or 0)
                 preco_brl_add = round(preco_usd_add * cotacao_add, 2)
                 preco_brl_foil_add = round(preco_foil_add * cotacao_add, 2)
-                imagem_add = carta.get("image_uris", {}).get("normal")
+                imagem_add = carta_add.get("image_uris", {}).get("normal")
 
                 nova = pd.DataFrame([{
-                    "nome": carta.get("name"),
-                    "tipo": carta.get("type_line"),
+                    "nome": carta_add.get("name"),
+                    "tipo": carta_add.get("type_line"),
                     "preco_brl": preco_brl_add,
                     "preco_brl_foil": preco_brl_foil_add,
                     "padrao": padrao_add,
@@ -214,11 +214,11 @@ elif st.session_state["aba_atual"] == "Add Card":
                     "imagem": imagem_add,
                     "colecao": codigo_colecao_add.lower(),
                     "numero": numero_carta_add,
-                    "colecao_nome": carta.get("set_name"),
-                    "icone_colecao": carta.get("set_icon_svg_uri"),
-                    "raridade": carta.get("rarity"),
-                    "cores": ", ".join(carta.get("colors", [])),
-                    "mana_cost": carta.get("mana_cost"),
+                    "colecao_nome": carta_add.get("set_name"),
+                    "icone_colecao": carta_add.get("set_icon_svg_uri"),
+                    "raridade": carta_add.get("rarity"),
+                    "cores": ", ".join(carta_add.get("colors", [])),
+                    "mana_cost": carta_add.get("mana_cost"),
                     "nome_2": None
                 }])
 

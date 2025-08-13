@@ -279,13 +279,13 @@ elif st.session_state["aba_atual"] == "Dashboard":
 # Adiciona barras com cantos arredondados
     for i, (color, quantity) in enumerate(zip(cores_contagem.index, cores_contagem.values)):
         bar_color = mana_colors.get(color, "#999999")
-    rounded_bar = FancyBboxPatch((0, i - 0.4), quantity, 0.8,
-                                 boxstyle="round,pad=0.02",
-                                 linewidth=0,
-                                 facecolor=bar_color)
-    ax1.add_patch(rounded_bar)
-    # Rótulo branco dentro da barra
-    ax1.text(quantity - 10, i, str(quantity), va='center', ha='right', color='white')
+        rounded_bar = FancyBboxPatch((0, i - 0.4), quantity, 0.8,
+                                    boxstyle="round,pad=0.02",
+                                    linewidth=0,
+                                    facecolor=bar_color)
+        ax1.add_patch(rounded_bar)
+        # Rótulo branco dentro da barra
+        ax1.text(quantity - 10, i, str(quantity), va='center', ha='right', color='white')
 
     # Fundo transparente
     fig1.patch.set_alpha(0.0)

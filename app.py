@@ -138,6 +138,18 @@ with aba1:
 
         # Carregar dados
         df = carregar_dados()
+        
+        df = df.dropna(subset=["colecao", "numero"])
+        df["colecao"] = df["colecao"].astype(str).str.lower()
+        df["numero"] = df["numero"].astype(str)
+        df["padrao"] = df.get("padrao", 1)
+        df["foil"] = df.get("foil", 0)
+
+        df = df.groupby(["colecao", "numero"], as_index=False).agg({
+            "padrao": "sum",
+            "foil": "sum",
+            **{col: "first" for col in df.columns if col not in ["colecao", "numero", "padrao", "foil"]}
+        })
 
         cotacao = get_usd_to_brl()
         identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]

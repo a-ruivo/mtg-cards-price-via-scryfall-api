@@ -287,14 +287,14 @@ elif st.session_state["aba_atual"] == "Dashboard":
     }
 
     # Cartas por cor
+    df["quantidade_total"] = df["padrao"] + df["foil"]
     df_cores = df.copy()
     df_cores["cores"] = df_cores["cores"].fillna("").str.split(", ")
     df_cores = df_cores.explode("cores")
-    df_cores["quantidade_total"] = df["padrao"] + df["foil"]
     cores_contagem = df_cores.groupby("cores")["quantidade_total"].sum().sort_values(ascending=False)
 
     fig1, ax1 = plt.subplots()
-    ax1.bar(cores_contagem.index, cores_contagem.values, color=[mana_colors.get(c, "#999999") for c in cores_contagem.index])
+    ax1.barh(cores_contagem.index, cores_contagem.values, color=[mana_colors.get(c, "#999999") for c in cores_contagem.index])
     ax1.set_title("Card quantity by color")
     ax1.set_xlabel("Color")
     ax1.set_ylabel("Card Quantity")
@@ -313,7 +313,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     # Cartas por custo de mana
     mana_cost_contagem = df.groupby("mana_cost")["quantidade_total"].sum().sort_values(ascending=False)
     fig3, ax3 = plt.subplots()
-    ax3.bar(mana_cost_contagem.index, mana_cost_contagem.values, color="lightgreen")
+    ax3.barh(mana_cost_contagem.index, mana_cost_contagem.values, color="lightgreen")
     ax3.set_title("Mana cost distribution")
     ax3.set_xlabel("Mana Cost")
     ax3.set_ylabel("Card Quantity")
@@ -329,6 +329,16 @@ elif st.session_state["aba_atual"] == "Dashboard":
     ax4.set_ylabel("Type")
     ax4.invert_yaxis()
     st.pyplot(fig4)
+
+    col1, col2 = st.columns([1, 1])  # proporções iguais
+
+    with col1:
+        st.pyplot(fig1, use_container_width=True)
+        st.pyplot(fig3, use_container_width=True)
+
+    with col2:
+        st.pyplot(fig2, use_container_width=True)
+        st.pyplot(fig4, use_container_width=True)
 
 elif st.session_state["aba_atual"] == "Add Card":
     st.header("Add card manually or by code")

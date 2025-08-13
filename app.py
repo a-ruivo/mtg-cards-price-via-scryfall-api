@@ -83,6 +83,39 @@ def salvar_csv_em_github(df_novo, repo, path, token):
             erro = "Erro ao decodificar resposta da API"
         return False, erro
 
+def alterar_csv_em_github(df_novo, repo, path, token):
+    import base64, requests
+
+    url = f"https://api.github.com/repos/{repo}/contents/{path}"
+    headers = {"Authorization": f"token {token}"}
+
+    # Verifica se o arquivo já existe para obter o SHA
+    r_get = requests.get(url, headers=headers)
+    sha = r_get.json()["sha"] if r_get.status_code == 200 else None
+
+    # Prepara conteúdo para upload
+    conteudo_csv = df_novo.to_csv(index=False)
+    conteudo_base64 = base64.b64encode(conteudo_csv.encode()).decode()
+
+    data = {
+        "message": "Substituição completa via Streamlit",
+        "content": conteudo_base64,
+        "branch": "main"
+    }
+    if sha:
+        data["sha"] = sha
+
+    r_put = requests.put(url, headers=headers, json=data)
+
+    if r_put.status_code in [200, 201]:
+        return True, "Arquivo salvo com sucesso!"
+    else:
+        try:
+            erro = r_put.json().get("message", "Erro desconhecido")
+        except Exception:
+            erro = "Erro ao decodificar resposta da API"
+        return False, erro
+
 
 # Abas principais
 aba1, aba2, aba3, aba4, aba5 = st.tabs(["Collection", "Login", "Add Card", "Import File", "Card Manager"])
@@ -120,6 +153,9 @@ with aba1:
         df["mana_cost"] = df["mana_cost"].str.replace("}", "", regex=False)
         df["padrao"] = df["padrao"].astype(int)
         df["foil"] = df["foil"].astype(int)
+
+        df["preco_brl"] = df["preco_brl"].replace("nan", "0").astype(float)
+        df["preco_brl_foil"] = df["preco_brl_foil"].replace("nan", "0").astype(float)
 
         df["valor_total_brl"] = (
             df["padrao"] * df["preco_brl"].astype(float) +
@@ -464,10 +500,10 @@ with aba5:
                 on=["numero", "colecao"],
                 how="left"
             )
-            sucesso = salvar_csv_em_github(df_atualizado, REPO, CSV_PATH, GITHUB_TOKEN)
+            sucesso = alterar_csv_em_github(df_atualizado, REPO, CSV_PATH, GITHUB_TOKEN)
             if sucesso:
                 st.success("Changes saved!")
             else:
-                st.error("Error.")
+                st.error(f"Erro ao salvar no GitHub: {mensagem}")
     except:
         st.warning("Data not found.")

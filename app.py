@@ -22,7 +22,8 @@ REPO = "a-ruivo/mtg-cards-price-via-scryfall-api"
 CSV_PATH = "cartas_magic_detalhadas.csv"
 
 # Cotação do dólar
-def get_usd_to_brl():
+@st.cache_data(ttl=86400)
+def get_usd_to_brl_sem_cache():
     try:
         r = requests.get("https://economia.awesomeapi.com.br/json/last/USD-BRL")
         return float(r.json()["USDBRL"]["bid"])
@@ -30,17 +31,19 @@ def get_usd_to_brl():
         return 5.0
 
 # Funções auxiliares
-def dividir_em_lotes(lista, tamanho):
+@st.cache_data(ttl=86400)
+def dividir_em_lotes_sem_cache(lista, tamanho):
     for i in range(0, len(lista), tamanho):
         yield lista[i:i + tamanho]
 
-def buscar_detalhes_em_lote(identificadores):
+@st.cache_data(ttl=86400)
+def buscar_detalhes_em_lote_sem_cache(identificadores):
     url = "https://api.scryfall.com/cards/collection"
     r = requests.post(url, json={"identifiers": identificadores})
     return r.json()["data"] if r.status_code == 200 else []
 
-
-def salvar_csv_em_github(df_novo, repo, path, token):
+@st.cache_data(ttl=86400)
+def salvar_csv_em_github_sem_cache(df_novo, repo, path, token):
     import base64, requests, pandas as pd
     from io import StringIO
 
@@ -82,8 +85,108 @@ def salvar_csv_em_github(df_novo, repo, path, token):
         except Exception:
             erro = "Erro ao decodificar resposta da API"
         return False, erro
+    
+@st.cache_data(ttl=86400)
+def alterar_csv_em_github_sem_cache(df_novo, repo, path, token):
+    import base64, requests
 
-def alterar_csv_em_github(df_novo, repo, path, token):
+    url = f"https://api.github.com/repos/{repo}/contents/{path}"
+    headers = {"Authorization": f"token {token}"}
+
+    # Verifica se o arquivo já existe para obter o SHA
+    r_get = requests.get(url, headers=headers)
+    sha = r_get.json()["sha"] if r_get.status_code == 200 else None
+
+    # Prepara conteúdo para upload
+    conteudo_csv = df_novo.to_csv(index=False)
+    conteudo_base64 = base64.b64encode(conteudo_csv.encode()).decode()
+
+    data = {
+        "message": "Substituição completa via Streamlit",
+        "content": conteudo_base64,
+        "branch": "main"
+    }
+    if sha:
+        data["sha"] = sha
+
+    r_put = requests.put(url, headers=headers, json=data)
+
+    if r_put.status_code in [200, 201]:
+        return True, "Arquivo salvo com sucesso!"
+    else:
+        try:
+            erro = r_put.json().get("message", "Erro desconhecido")
+        except Exception:
+            erro = "Erro ao decodificar resposta da API"
+        return False, erro
+
+# Cotação do dólar
+@st.cache_data(ttl=86400)
+def get_usd_to_brl_com_cache():
+    try:
+        r = requests.get("https://economia.awesomeapi.com.br/json/last/USD-BRL")
+        return float(r.json()["USDBRL"]["bid"])
+    except:
+        return 5.0
+
+# Funções auxiliares
+@st.cache_data(ttl=86400)
+def dividir_em_lotes_com_cache(lista, tamanho):
+    for i in range(0, len(lista), tamanho):
+        yield lista[i:i + tamanho]
+
+@st.cache_data(ttl=86400)
+def buscar_detalhes_em_lote_com_cache(identificadores):
+    url = "https://api.scryfall.com/cards/collection"
+    r = requests.post(url, json={"identifiers": identificadores})
+    return r.json()["data"] if r.status_code == 200 else []
+
+@st.cache_data(ttl=86400)
+def salvar_csv_em_github_com_cache(df_novo, repo, path, token):
+    import base64, requests, pandas as pd
+    from io import StringIO
+
+    url = f"https://api.github.com/repos/{repo}/contents/{path}"
+    headers = {"Authorization": f"token {token}"}
+
+    # Verifica se o arquivo já existe
+    r_get = requests.get(url, headers=headers)
+    if r_get.status_code == 200:
+        conteudo_atual = base64.b64decode(r_get.json()["content"]).decode()
+        sha = r_get.json()["sha"]
+        df_atual = pd.read_csv(StringIO(conteudo_atual))
+
+        # Junta os dados novos com os existentes
+        df_final = pd.concat([df_atual, df_novo], ignore_index=True)
+    else:
+        sha = None
+        df_final = df_novo
+
+    # Prepara conteúdo para upload
+    conteudo_csv = df_final.to_csv(index=False)
+    conteudo_base64 = base64.b64encode(conteudo_csv.encode()).decode()
+
+    data = {
+        "message": "Atualização incremental via Streamlit",
+        "content": conteudo_base64,
+        "branch": "main"
+    }
+    if sha:
+        data["sha"] = sha
+
+    r_put = requests.put(url, headers=headers, json=data)
+
+    if r_put.status_code in [200, 201]:
+        return True, "Arquivo salvo com sucesso!"
+    else:
+        try:
+            erro = r_put.json().get("message", "Erro desconhecido")
+        except Exception:
+            erro = "Erro ao decodificar resposta da API"
+        return False, erro
+    
+@st.cache_data(ttl=86400)
+def alterar_csv_em_github_com_cache(df_novo, repo, path, token):
     import base64, requests
 
     url = f"https://api.github.com/repos/{repo}/contents/{path}"
@@ -122,10 +225,11 @@ aba1, aba2, aba3, aba4, aba5 = st.tabs(["Collection", "Login", "Add Card", "Impo
 
 with aba1:
     try:
-        @st.cache_data
+        @st.cache_data(ttl=86400)
         def carregar_dados():
             return pd.read_csv(CSV_PATH)
 
+        @st.cache_data(ttl=86400)
         def gerar_icones(valores, mapa):
             icones = []
             for v in str(valores).split(","):
@@ -151,11 +255,11 @@ with aba1:
             **{col: "first" for col in df.columns if col not in ["colecao", "numero", "padrao", "foil"]}
         })
 
-        cotacao = get_usd_to_brl()
+        cotacao = get_usd_to_brl_com_cache()
         identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]
         todos_detalhes = []
-        for lote in dividir_em_lotes(identificadores, 75):
-            todos_detalhes.extend(buscar_detalhes_em_lote(lote))
+        for lote in dividir_em_lotes_com_cache(identificadores, 75):
+            todos_detalhes.extend(buscar_detalhes_em_lote_com_cache(lote))
             time.sleep(0.5)
 
         detalhes_dict = {}
@@ -188,7 +292,7 @@ with aba1:
         ), axis=1)
 
         df_final = pd.concat([df, df_detalhes], axis=1)
-        sucesso, mensagem = alterar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)     
+        sucesso, mensagem = alterar_csv_em_github_com_cache(df_final, REPO, CSV_PATH, GITHUB_TOKEN)     
 
         df = carregar_dados()
 
@@ -407,10 +511,10 @@ with aba3:
 
         if buscar and codigo_colecao and numero_carta:
             identificador = [{"set": codigo_colecao.lower(), "collector_number": numero_carta}]
-            dados = buscar_detalhes_em_lote(identificador)
+            dados = buscar_detalhes_em_lote_sem_cache(identificador)
             if dados:
                 carta = dados[0]
-                cotacao = get_usd_to_brl()
+                cotacao = get_usd_to_brl_sem_cache()
                 preco_usd = float(carta.get("prices", {}).get("usd") or 0)
                 preco_foil = float(carta.get("prices", {}).get("usd_foil") or 0)
                 preco_brl = round(preco_usd * cotacao, 2)
@@ -440,7 +544,7 @@ with aba3:
                 except:
                     df_final = nova
 
-                sucesso = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+                sucesso = salvar_csv_em_github_sem_cache(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
                 if sucesso:
                     st.success("Card add!")
                 else:
@@ -479,7 +583,7 @@ with aba3:
             except:
                 df_final = nova_carta
 
-            sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+            sucesso, mensagem = salvar_csv_em_github_sem_cache(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
 
             if sucesso:
                 st.success("Cards add!")
@@ -504,11 +608,11 @@ with aba3:
                 **{col: "first" for col in df.columns if col not in ["colecao", "numero", "padrao", "foil"]}
             })
 
-            cotacao = get_usd_to_brl()
+            cotacao = get_usd_to_brl_sem_cache()
             identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]
             todos_detalhes = []
-            for lote in dividir_em_lotes(identificadores, 75):
-                todos_detalhes.extend(buscar_detalhes_em_lote(lote))
+            for lote in dividir_em_lotes_sem_cache(identificadores, 75):
+                todos_detalhes.extend(buscar_detalhes_em_lote_sem_cache(lote))
                 time.sleep(0.5)
 
             detalhes_dict = {}
@@ -541,7 +645,7 @@ with aba3:
             ), axis=1)
 
             df_final = pd.concat([df, df_detalhes], axis=1)
-            sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+            sucesso, mensagem = salvar_csv_em_github_sem_cache(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
 
             if sucesso:
                 st.success("Cards add!")
@@ -552,8 +656,7 @@ with aba3:
         st.header("Card Manager")
 
         try:
-            @st.cache_data
-
+            @st.cache_data(ttl=86400)
             def csv(path):
                 return pd.read_csv(path)
 
@@ -574,7 +677,7 @@ with aba3:
 
             # Botão de salvar
             if st.button("Save"):
-                sucesso, mensagem = alterar_csv_em_github(df_editado, REPO, CSV_PATH, GITHUB_TOKEN)
+                sucesso, mensagem = alterar_csv_em_github_sem_cache(df_editado, REPO, CSV_PATH, GITHUB_TOKEN)
                 if sucesso:
                     st.success("Changes saved!")
                 else:

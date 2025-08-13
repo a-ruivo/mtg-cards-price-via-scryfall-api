@@ -295,20 +295,36 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     fig1, ax1 = plt.subplots()
     ax1.barh(cores_contagem.index, cores_contagem.values, color=[mana_colors.get(c, "#999999") for c in cores_contagem.index])
+    # Estilo escuro
+    fig1.patch.set_facecolor("black")       # fundo da figura
+    ax1.set_facecolor("black")              # fundo do gráfico
+    ax1.tick_params(colors="white")         # cor dos ticks
+    ax1.xaxis.label.set_color("white")      # cor do label do eixo X
+    ax1.yaxis.label.set_color("white")      # cor do label do eixo Y
+    ax1.title.set_color("white")            # cor do título
+    for spine in ax1.spines.values():       # bordas do gráfico
+        spine.set_color("white")
     ax1.set_title("Card quantity by color")
     ax1.set_xlabel("Color")
     ax1.set_ylabel("Card Quantity")
-    st.pyplot(fig1)
 
     # Cartas por coleção
     colecao_contagem = df.groupby("colecao_nome")["quantidade_total"].sum().sort_values(ascending=False)
     fig2, ax2 = plt.subplots()
     ax2.barh(colecao_contagem.index[:15], colecao_contagem.values[:15], color="skyblue")
+        # Estilo escuro
+    fig2.patch.set_facecolor("black")       # fundo da figura
+    ax2.set_facecolor("black")              # fundo do gráfico
+    ax2.tick_params(colors="white")         # cor dos ticks
+    ax2.xaxis.label.set_color("white")      # cor do label do eixo X
+    ax2.yaxis.label.set_color("white")      # cor do label do eixo Y
+    ax2.title.set_color("white")            # cor do título
+    for spine in ax2.spines.values():       # bordas do gráfico
+        spine.set_color("white")
     ax2.set_title("Top 15 collections by card quantity")
     ax2.set_xlabel("Card Quantity")
     ax2.set_ylabel("Collection")
     ax2.invert_yaxis()
-    st.pyplot(fig2)
 
     # Cartas por custo de mana
     import re
@@ -332,11 +348,19 @@ elif st.session_state["aba_atual"] == "Dashboard":
     # Gráfico horizontal
     fig3, ax3 = plt.subplots()
     ax3.barh(mana_total_contagem.index.astype(str), mana_total_contagem.values, color="lightgreen")
+        # Estilo escuro
+    fig3.patch.set_facecolor("black")       # fundo da figura
+    ax3.set_facecolor("black")              # fundo do gráfico
+    ax3.tick_params(colors="white")         # cor dos ticks
+    ax3.xaxis.label.set_color("white")      # cor do label do eixo X
+    ax3.yaxis.label.set_color("white")      # cor do label do eixo Y
+    ax3.title.set_color("white")            # cor do título
+    for spine in ax3.spines.values():       # bordas do gráfico
+        spine.set_color("white")
     ax3.set_title("Mana cost distribution")
     ax3.set_xlabel("Mana Cost")
     ax3.set_ylabel("Card Quantity")
     plt.xticks(rotation=45)
-    st.pyplot(fig3)
 
     # Cartas por tipo
     def extrair_antes_do_traco(texto):
@@ -350,11 +374,19 @@ elif st.session_state["aba_atual"] == "Dashboard":
     tipo_contagem = df.groupby("tipo_sem_traco")["quantidade_total"].sum().sort_values(ascending=False)
     fig4, ax4 = plt.subplots()
     ax4.barh(tipo_contagem.index, tipo_contagem.values, color="salmon")
+        # Estilo escuro
+    fig4.patch.set_facecolor("black")       # fundo da figura
+    ax4.set_facecolor("black")              # fundo do gráfico
+    ax4.tick_params(colors="white")         # cor dos ticks
+    ax4.xaxis.label.set_color("white")      # cor do label do eixo X
+    ax4.yaxis.label.set_color("white")      # cor do label do eixo Y
+    ax4.title.set_color("white")            # cor do título
+    for spine in ax4.spines.values():       # bordas do gráfico
+        spine.set_color("white")
     ax4.set_title("Card type distribution")
     ax4.set_xlabel("Card Quantity")
     ax4.set_ylabel("Type")
     ax4.invert_yaxis()
-    st.pyplot(fig4)
 
     col1, col2 = st.columns([1, 1])  # proporções iguais
 

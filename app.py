@@ -266,8 +266,20 @@ with aba1:
             df = df[df["tipo"].isin(tipo_escolhido)]
 
         # Filtro por valor
-        valor_min, valor_max = st.sidebar.slider("Filtrar por valor total (BRL)", 0.0, float(df["valor_total_brl"].max()), (0.0, float(df["valor_total_brl"].max())))
+        valor_maximo = float(df["valor_total_brl"].dropna().max())
+        valor_min, valor_max = st.sidebar.slider(
+            "Filtrar por valor total (BRL)",
+            0.0,
+            valor_maximo,
+            (0.0, valor_maximo)
+        )
+
+        # Corrige caso os valores sejam iguais
+        if valor_min == valor_max:
+            valor_max += 1.0
+
         df = df[(df["valor_total_brl"] >= valor_min) & (df["valor_total_brl"] <= valor_max)]
+
 
         # Filtro por tipo de posse
         opcoes_posse = ["Todos", "Apenas Regular", "Apenas Foil", "Ambos"]

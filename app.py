@@ -274,7 +274,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     df_cores = df_cores.explode("cores")
     cores_contagem = df_cores.groupby("cores")["quantidade_total"].sum().sort_values(ascending=False)
 
-    fig1, ax1 = plt.subplots(figsize=(8, 2))
+    fig1, ax1 = plt.subplots(figsize=(8, 3))
     ax1.barh(cores_contagem.index, cores_contagem.values, color=[mana_colors.get(c, "#999999") for c in cores_contagem.index])
     # Fundo transparente
     fig1.patch.set_alpha(0.0)  # fundo da figura
@@ -291,7 +291,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     # Cartas por coleção
     colecao_contagem = df.groupby("colecao_nome")["quantidade_total"].sum().sort_values(ascending=False)
-    fig2, ax2 = plt.subplots(figsize=(8, 8))
+    fig2, ax2 = plt.subplots(figsize=(8, 7))
     ax2.barh(colecao_contagem.index[:15], colecao_contagem.values[:15], color="skyblue")
     # Fundo transparente
     fig2.patch.set_alpha(0.0)  # fundo da figura
@@ -327,7 +327,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     mana_total_contagem = df.groupby("mana_total")["quantidade_total"].sum().sort_index()
 
     # Gráfico horizontal
-    fig3, ax3 = plt.subplots(figsize=(8, 2))
+    fig3, ax3 = plt.subplots(figsize=(8, 3))
     ax3.barh(mana_total_contagem.index.astype(str), mana_total_contagem.values, color="lightgreen")
     # Fundo transparente
     fig3.patch.set_alpha(0.0)  # fundo da figura
@@ -353,7 +353,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     df["tipo_sem_traco"] = df["tipo"].apply(extrair_antes_do_traco)
     tipo_contagem = df.groupby("tipo_sem_traco")["quantidade_total"].sum().sort_values(ascending=False)
-    fig4, ax4 = plt.subplots(figsize=(8, 8))
+    fig4, ax4 = plt.subplots(figsize=(8, 7))
     ax4.barh(tipo_contagem.index, tipo_contagem.values, color="salmon")
     # Fundo transparente
     fig4.patch.set_alpha(0.0)  # fundo da figura

@@ -341,7 +341,6 @@ elif st.session_state["aba_atual"] == "Dashboard":
     ax3.set_title("Mana cost distribution")
     ax3.set_xlabel("Mana Cost")
     ax3.set_ylabel("Card Quantity")
-    plt.xticks(rotation=45)
 
     # Cartas por tipo
     def extrair_antes_do_traco(texto):

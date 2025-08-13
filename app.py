@@ -188,12 +188,7 @@ with aba1:
             ), axis=1)
 
             df_final = pd.concat([df, df_detalhes], axis=1)
-            sucesso, mensagem = alterar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
-
-            if sucesso:
-                st.success("Cards updated!")
-            else:
-                st.error(f"Erro ao salvar no GitHub: {mensagem}")       
+            sucesso, mensagem = alterar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)     
 
         df = carregar_dados()
 

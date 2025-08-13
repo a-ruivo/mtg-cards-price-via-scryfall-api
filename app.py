@@ -267,6 +267,8 @@ with aba1:
 
         # Filtro por valor
         valor_maximo = float(df["valor_total_brl"].dropna().max())
+        if pd.isna(valor_maximo) or valor_maximo == 0.0:
+            valor_maximo = 1.0  # fallback seguro
         valor_min, valor_max = st.sidebar.slider(
             "Filtrar por valor total (BRL)",
             0.0,

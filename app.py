@@ -151,8 +151,8 @@ with aba1:
         df["mana_cost"] = df["mana_cost"].str.replace("//", "/", regex=False)
         df["mana_cost"] = df["mana_cost"].str.replace("{", "", regex=False)
         df["mana_cost"] = df["mana_cost"].str.replace("}", "", regex=False)
-        df["padrao"] = df["padrao"].astype(int)
-        df["foil"] = df["foil"].astype(int)
+        df["padrao"] = df["padrao"].astype(float).astype(int)
+        df["foil"] = df["foil"].astype(float).astype(int)
 
         df["preco_brl"] = df["preco_brl"].replace("nan", "0").astype(float)
         df["preco_brl_foil"] = df["preco_brl_foil"].replace("nan", "0").astype(float)
@@ -496,28 +496,28 @@ with aba4:
 with aba5:
     st.header("Card Manager")
 
-    try:
-        df = pd.read_csv(CSV_PATH)
-        df["padrao"] = df["padrao"].astype(int)
-        df["foil"] = df["foil"].astype(int)
+try:
+    df = pd.read_csv(CSV_PATH)
 
-        df_editado = st.data_editor(
-            df[["nome", "numero", "colecao", "padrao", "foil"]],
-            num_rows="dynamic",
-            use_container_width=True,
-            key="editor"
-        )
+    # Converte colunas numéricas com segurança
+    df["padrao"] = pd.to_numeric(df["padrao"], errors="coerce").fillna(0).astype(int)
+    df["foil"] = pd.to_numeric(df["foil"], errors="coerce").fillna(0).astype(int)
 
-        if st.button("Save"):
-            df_atualizado = df.drop(columns=["padrao", "foil"]).merge(
-                df_editado[["numero", "colecao", "padrao", "foil"]],
-                on=["numero", "colecao"],
-                how="left"
-            )
-            sucesso = alterar_csv_em_github(df_atualizado, REPO, CSV_PATH, GITHUB_TOKEN)
-            if sucesso:
-                st.success("Changes saved!")
-            else:
-                st.error(f"Erro ao salvar no GitHub: {mensagem}")
-    except:
-        st.warning("Data not found.")
+    # Editor completo
+    df_editado = st.data_editor(
+        df,
+        num_rows="dynamic",
+        use_container_width=True,
+        key="editor"
+    )
+
+    # Botão de salvar
+    if st.button("Save"):
+        sucesso, mensagem = alterar_csv_em_github(df_editado, REPO, CSV_PATH, GITHUB_TOKEN)
+        if sucesso:
+            st.success("Changes saved!")
+        else:
+            st.error(f"Erro ao salvar no GitHub: {mensagem}")
+
+except:
+    st.warning("Data not found.")

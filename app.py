@@ -113,10 +113,6 @@ with aba1:
     elif posse_escolhida == "Ambos":
         df = df[(df["padrao"].astype(int) > 0) & (df["foil"].astype(int) > 0)]
 
-
-
-    st.markdown("---")
-
     col1, col2, col3, col4 = st.columns(4)
 
     total_cartas = df["padrao"].sum() + df["foil"].sum()

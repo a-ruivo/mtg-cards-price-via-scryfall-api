@@ -51,7 +51,7 @@ def limpar_e_enriquecer_dataframe(df: pd.DataFrame) -> tuple[pd.DataFrame, dict]
     df["mana_cost"] = df["mana_cost"].str.replace("{", "", regex=False)
     df["mana_cost"] = df["mana_cost"].str.replace("}", "", regex=False)
 
-    df["padrao"] = pd.to_numeric(df["padrao"], errors="coerce").fillna(1).replace([float("inf"), float("-inf")], 1).astype(int)
+    df["padrao"] = pd.to_numeric(df["padrao"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int)
     df["foil"] = pd.to_numeric(df["foil"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int)
 
     df["preco_brl"] = df["preco_brl"].replace("nan", "0").astype(float)

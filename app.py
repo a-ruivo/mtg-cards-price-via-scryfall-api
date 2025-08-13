@@ -185,14 +185,17 @@ elif st.session_state["aba_atual"] == "Add Card":
 
     modo = st.radio("Mode", ["Manual", "Search by code"])
 
-    if modo == "Search by code":
-        codigo_colecao_add = st.text_input("Collection code")
-        numero_carta_add = st.text_input("Card number")
-        padrao_add = st.number_input("Regular quantity", min_value=0)
-        foil_add = st.number_input("Foil quantity", min_value=0)
-        buscar = st.button("Search and save")
+   if modo == "Search by code":
+    codigo_colecao_add = st.text_input("Collection code")
+    numero_carta_add = st.text_input("Card number")
+    padrao_add = st.number_input("Regular quantity", min_value=0)
+    foil_add = st.number_input("Foil quantity", min_value=0)
+    buscar = st.button("Search and save")
 
-        if buscar and codigo_colecao_add and numero_carta_add:
+    if buscar and codigo_colecao_add and numero_carta_add:
+        if padrao_add == 0 and foil_add == 0:
+            st.warning("Informe pelo menos uma quantidade (Regular ou Foil) para adicionar a carta.")
+        else:
             identificador = [{"set": codigo_colecao_add.lower(), "collector_number": numero_carta_add}]
             dados = buscar_detalhes_com_lotes(identificador)
             if dados:
@@ -233,6 +236,7 @@ elif st.session_state["aba_atual"] == "Add Card":
                     df_add = pd.concat([df_existente, nova], ignore_index=True)
                     sucesso = salvar_csv_em_github(df_add, REPO, CSV_PATH, GITHUB_TOKEN)
                     if sucesso:
+                        st.session_state["df"] = df_add
                         st.success("Card added!")
                     else:
                         st.error("Error saving to GitHub.")
@@ -257,28 +261,32 @@ elif st.session_state["aba_atual"] == "Add Card":
             nome_2_form = st.text_input("Alternative name or secondary face (optional)")
             enviado = st.form_submit_button("Add card")
 
-        if enviado:
-            nova_carta = pd.DataFrame([{
-                "nome": nome_form, "tipo": tipo_form, "preco_brl": preco_brl_form, "preco_brl_foil": preco_brl_foil_form,
-                "padrao": padrao_form, "foil": foil_form, "imagem": imagem_form, "colecao": colecao_form,
-                "numero": numero_form, "colecao_nome": colecao_nome_form, "icone_colecao": icone_colecao_form,
-                "raridade": raridade_form, "cores": cores_form, "mana_cost": mana_cost_form, "nome_2": nome_2_form
-            }])
+       if enviado:
+    if padrao_form == 0 and foil_form == 0:
+        st.warning("Informe pelo menos uma quantidade (Regular ou Foil) para adicionar a carta.")
+    else:
+        nova_carta = pd.DataFrame([{
+            "nome": nome_form, "tipo": tipo_form, "preco_brl": preco_brl_form, "preco_brl_foil": preco_brl_foil_form,
+            "padrao": padrao_form, "foil": foil_form, "imagem": imagem_form, "colecao": colecao_form,
+            "numero": numero_form, "colecao_nome": colecao_nome_form, "icone_colecao": icone_colecao_form,
+            "raridade": raridade_form, "cores": cores_form, "mana_cost": mana_cost_form, "nome_2": nome_2_form
+        }])
 
-            ja_existe = (
-                (df_existente["colecao"] == nova_carta["colecao"].iloc[0]) &
-                (df_existente["numero"] == nova_carta["numero"].iloc[0])
-            ).any()
+        ja_existe = (
+            (df_existente["colecao"] == nova_carta["colecao"].iloc[0]) &
+            (df_existente["numero"] == nova_carta["numero"].iloc[0])
+        ).any()
 
-            if ja_existe:
-                st.warning("Essa carta já existe na coleção.")
+        if ja_existe:
+            st.warning("Essa carta já existe na coleção.")
+        else:
+            df_form = pd.concat([df_existente, nova_carta], ignore_index=True)
+            sucesso, mensagem = salvar_csv_em_github(df_form, REPO, CSV_PATH, GITHUB_TOKEN)
+            if sucesso:
+                st.session_state["df"] = df_form
+                st.success("Card added!")
             else:
-                df_form = pd.concat([df_existente, nova_carta], ignore_index=True)
-                sucesso, mensagem = salvar_csv_em_github(df_form, REPO, CSV_PATH, GITHUB_TOKEN)
-                if sucesso:
-                    st.success("Card added!")
-                else:
-                    st.error(f"Erro ao salvar no GitHub: {mensagem}")
+                st.error(f"Erro ao salvar no GitHub: {mensagem}")
 
 elif st.session_state["aba_atual"] == "Import File":
     st.header("Importar cartas via Excel")

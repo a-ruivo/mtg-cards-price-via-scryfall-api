@@ -183,12 +183,12 @@ with aba1:
                 "preco_brl_foil": preco_brl_foil
             }
 
-            df_detalhes = df.apply(lambda linha: pd.Series(
-                detalhes_dict.get((linha["colecao"], linha["numero"]), {})
-            ), axis=1)
+        df_detalhes = df.apply(lambda linha: pd.Series(
+            detalhes_dict.get((linha["colecao"], linha["numero"]), {})
+        ), axis=1)
 
-            df_final = pd.concat([df, df_detalhes], axis=1)
-            sucesso, mensagem = alterar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)     
+        df_final = pd.concat([df, df_detalhes], axis=1)
+        sucesso, mensagem = alterar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)     
 
         df = carregar_dados()
 

@@ -5,7 +5,7 @@ import time
 from config import CSV_PATH, REPO, GITHUB_TOKEN
 from utils.api import buscar_detalhes_com_lotes, get_usd_to_brl
 from utils.github import carregar_csv, salvar_csv_em_github, alterar_csv_em_github
-from utils.helpers import dividir_em_lotes, gerar_icones, preparar_dataframe, limpar_e_enriquecer_dataframe, autenticar, get_mana_map, extrair_detalhes_cartas
+from utils.helpers import gerar_icones, preparar_dataframe, limpar_e_enriquecer_dataframe, autenticar, get_mana_map, extrair_detalhes_cartas
 
 st.set_page_config(page_title="MTG Card Collection", layout="wide")
 
@@ -23,7 +23,7 @@ if reprocessar:
     df_detalhes = extrair_detalhes_cartas(df, todos_detalhes, cotacao)
 
     df_final = pd.concat([df, df_detalhes], axis=1)
-    alterar_csv_em_github(df_final)
+    alterar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
     df = df_final
     st.success("Dados reprocessados com sucesso!")
 else:
@@ -166,7 +166,7 @@ with aba3:
 
         if buscar and codigo_colecao and numero_carta:
             identificador = [{"set": codigo_colecao.lower(), "collector_number": numero_carta}]
-            dados = buscar_detalhes_em_lote(identificador)
+            dados = buscar_detalhes_com_lotes(identificador)
             if dados:
                 carta = dados[0]
                 cotacao = get_usd_to_brl()

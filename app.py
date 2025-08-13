@@ -221,7 +221,6 @@ elif st.session_state["aba_atual"] == "Add Card":
                     df_final = pd.concat([df_existente, nova], ignore_index=True)
                     sucesso = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
                     if sucesso:
-                        st.session_state["df"] = df_final
                         st.success("Card added!")
                     else:
                         st.error("Error saving to GitHub.")
@@ -265,7 +264,6 @@ elif st.session_state["aba_atual"] == "Add Card":
                 df_final = pd.concat([df_existente, nova_carta], ignore_index=True)
                 sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
                 if sucesso:
-                    st.session_state["df"] = df_final
                     st.success("Card added!")
                 else:
                     st.error(f"Erro ao salvar no GitHub: {mensagem}")

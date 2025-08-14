@@ -445,7 +445,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             showticklabels=False,
             showgrid=False,
             ticks=""
-        ),,
+        ),
         yaxis=dict(showticklabels=False, title=None),
         margin=dict(l=100, r=30, t=40, b=30),
         showlegend=False

@@ -314,7 +314,8 @@ elif st.session_state["aba_atual"] == "Dashboard":
                 line=dict(width=0)
             ),
             text=str(valor),
-            textposition='outside',
+            textposition='outside', 
+            cliponaxis=False,
             insidetextanchor='end',
             hoverinfo='none',
             textfont=dict(size=16,color="white")
@@ -374,6 +375,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             marker=dict(color="#D3D3D3", line=dict(width=0)),
             text=str(quantidade_total),
             textposition='outside',
+            cliponaxis=False,
             insidetextanchor='end',
             hoverinfo='none',
             textfont=dict(size=16,color="white")
@@ -433,6 +435,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             marker=dict(color="#D3D3D3", line=dict(width=0)),
             text=str(quantidade),
             textposition='outside',
+            cliponaxis=False,
             insidetextanchor='end',
             hoverinfo='none',
             textfont=dict(size=16,color="white")
@@ -496,6 +499,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             marker=dict(color="#D3D3D3", line=dict(width=0)),
             text=str(quantidade_total),
             textposition='outside',
+            cliponaxis=False,
             insidetextanchor='end',
             hoverinfo='none',
             textfont=dict(size=16,color="white")

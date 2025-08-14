@@ -24,49 +24,54 @@ image = Image.open("doc/capa.png")
 # Exibe a imagem no topo
 st.image(image, use_container_width=True)
 
-st.markdown("""
-**Made by Allan Ruivo Wildner | https://github.com/a-ruivo**  
-""")
+col1, col2, col3 = st.columns(3)
 
+with col1:
+    st.markdown("""
+    **Made by Allan Ruivo Wildner | https://github.com/a-ruivo**  
+    """)
 
-reprocessar = st.button("Refresh Data", help="Reprocess the data from the CSV file and update the collection.")
+with col2:
+    reprocessar = st.button("Refresh Data", help="Reprocess the data from the CSV file and update the collection.")
 
-if reprocessar:
-    df = carregar_csv_sem_cache()
+    if reprocessar:
+        df = carregar_csv_sem_cache()
 
-    # Remove duplicatas antes de qualquer processamento
-    df = df.drop_duplicates(subset=["colecao", "numero"], keep="last")
+        # Remove duplicatas antes de qualquer processamento
+        df = df.drop_duplicates(subset=["colecao", "numero"], keep="last")
 
-    # Mantém apenas as colunas relevantes
-    df = df.loc[:, ["colecao", "numero", "padrao", "foil", "obs"]]
+        # Mantém apenas as colunas relevantes
+        df = df.loc[:, ["colecao", "numero", "padrao", "foil", "obs"]]
 
-    # Prepara o DataFrame (se necessário)
-    df = preparar_dataframe(df)
+        # Prepara o DataFrame (se necessário)
+        df = preparar_dataframe(df)
 
-    # Atualiza cotação e busca detalhes
-    cotacao = get_usd_to_brl()
-    identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]
-    todos_detalhes = buscar_detalhes_com_lotes(identificadores)
+        # Atualiza cotação e busca detalhes
+        cotacao = get_usd_to_brl()
+        identificadores = [{"set": row["colecao"], "collector_number": row["numero"]} for _, row in df.iterrows()]
+        todos_detalhes = buscar_detalhes_com_lotes(identificadores)
 
-    # Extrai os detalhes sem duplicar colunas
-    df_detalhes = extrair_detalhes_cartas(df, todos_detalhes, cotacao)
+        # Extrai os detalhes sem duplicar colunas
+        df_detalhes = extrair_detalhes_cartas(df, todos_detalhes, cotacao)
 
-    # Salva no GitHub e atualiza o estado
-    alterar_csv_em_github(df_detalhes, REPO, CSV_PATH, GITHUB_TOKEN)
-    st.session_state["df"] = df_detalhes
-    st.success("Data updated!")
+        # Salva no GitHub e atualiza o estado
+        alterar_csv_em_github(df_detalhes, REPO, CSV_PATH, GITHUB_TOKEN)
+        st.session_state["df"] = df_detalhes
+        st.success("Data updated!")
 
-else:
-    if "df" not in st.session_state:
-        st.session_state["df"] = carregar_csv()
+    else:
+        if "df" not in st.session_state:
+            st.session_state["df"] = carregar_csv()
 
-# Executa autenticação uma vez
-if "autenticado" not in st.session_state:
-    autenticar()
+with col3:
+    # Executa autenticação uma vez
+    if "autenticado" not in st.session_state:
+        autenticar()
 
-acesso_restrito = not st.session_state.get("autenticado", False)
+    acesso_restrito = not st.session_state.get("autenticado", False)
 
 if st.session_state["aba_atual"] == "Collection":
+    st.header("Collection")
     df = st.session_state["df"]
     df, colecao_map = limpar_e_enriquecer_dataframe(df)
     mana_map = get_mana_map()

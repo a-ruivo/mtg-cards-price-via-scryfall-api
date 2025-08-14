@@ -24,6 +24,14 @@ image = Image.open("doc/capa.png")
 # Exibe a imagem no topo
 st.image(image, use_container_width=True)
 
+st.markdown("""
+    <style>
+        .stApp {
+            background-color: #272525;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 col1, col2, col3 = st.columns([4, 2, 2])
 
 with col1:

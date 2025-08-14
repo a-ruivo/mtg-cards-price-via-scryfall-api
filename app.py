@@ -22,7 +22,7 @@ st.session_state["aba_atual"] = aba_atual
 image = Image.open("doc/capa.png")
 
 # Exibe a imagem no topo
-st.image(image, use_column_width=True)
+st.image(image, use_container_width=True)
 
 st.markdown("""
 **Made by Allan Ruivo Wildner | https://github.com/a-ruivo**  

@@ -372,13 +372,12 @@ elif st.session_state["aba_atual"] == "Dashboard":
     ax2.set_ylabel("Collection")
     ax2.invert_yaxis()
 
-    # Cartas por custo de mana
     import re
 
+    # Função para calcular o custo total de mana
     def calcular_mana_total(mana_cost):
         if pd.isna(mana_cost):
             return 0
-        # Extrai números e letras
         partes = re.findall(r'\d+|[WUBRGCL]', mana_cost)
         total = 0
         for p in partes:
@@ -387,25 +386,60 @@ elif st.session_state["aba_atual"] == "Dashboard":
             else:
                 total += 1
         return total
-    
+
+    # Aplica a função e agrupa
     df["mana_total"] = df["mana_cost"].apply(calcular_mana_total)
     mana_total_contagem = df.groupby("mana_total")["quantidade_total"].sum().sort_index()
 
-    # Gráfico horizontal
-    fig3, ax3 = plt.subplots(figsize=(8, 3))
-    ax3.barh(mana_total_contagem.index.astype(str), mana_total_contagem.values, color="lightgreen")
-    # Fundo transparente
-    fig3.patch.set_alpha(0.0)  # fundo da figura
-    ax3.set_facecolor("none")  # fundo do gráfico
-    ax3.tick_params(colors="white")         # cor dos ticks
-    ax3.xaxis.label.set_color("white")      # cor do label do eixo X
-    ax3.yaxis.label.set_color("white")      # cor do label do eixo Y
-    ax3.title.set_color("white")            # cor do título
-    for spine in ax3.spines.values():       # bordas do gráfico
-        spine.set_color("white")
-    ax3.set_title("Mana cost distribution")
-    ax3.set_xlabel("Mana Cost")
-    ax3.set_ylabel("Card Quantity")
+    # Dicionário de ícones de custo de mana da Scryfall
+    mana_cost_icons = {
+        i: f"https://svgs.scryfall.io/card-symbols/{i}.svg" for i in mana_total_contagem.index
+    }
+
+    # Criação do gráfico
+    fig3 = go.Figure()
+
+    for custo, quantidade in mana_total_contagem.items():
+        fig3.add_trace(go.Bar(
+            x=[quantidade],
+            y=[str(custo)],
+            orientation='h',
+            marker=dict(color='lightgreen', line=dict(width=0)),
+            text=str(quantidade),
+            textposition='inside',
+            insidetextanchor='end',
+            hoverinfo='none',
+            textfont=dict(size=16)
+        ))
+
+        # Ícone no lugar do rótulo
+        fig3.add_layout_image(
+            dict(
+                source=mana_cost_icons.get(custo),
+                xref="paper",
+                yref="y",
+                x=-0.08,
+                y=str(custo),
+                sizex=0.06,
+                sizey=1.0,
+                xanchor="left",
+                yanchor="middle",
+                layer="above"
+            )
+        )
+
+    # Estilo do gráfico
+    fig3.update_layout(
+        title_text='Mana cost distribution',
+        title_x=0.0,
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        font=dict(color='white'),
+        xaxis=dict(title=None, tickfont=dict(size=14), showgrid=False),
+        yaxis=dict(showticklabels=False, title=None),
+        margin=dict(l=100, r=30, t=40, b=30),
+        showlegend=False
+    )
 
     # Cartas por tipo
     def extrair_antes_do_traco(texto):
@@ -440,7 +474,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
         st.pyplot(fig2, use_container_width=True)
 
     with col2:
-        st.pyplot(fig3, use_container_width=True)
+        st.plotly_chart(fig3, use_container_width=True)
         st.pyplot(fig4, use_container_width=True)
 
 elif st.session_state["aba_atual"] == "Add Card":

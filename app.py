@@ -346,7 +346,8 @@ elif st.session_state["aba_atual"] == "Dashboard":
             visible=False,
             showticklabels=False,
             showgrid=False,
-            ticks=""
+            ticks="",
+            categoryorder="total descending"
         ),
         yaxis=dict(
             showticklabels=False,  # ⬅ remove os rótulos de texto
@@ -361,21 +362,41 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     # Cartas por coleção
     colecao_contagem = df.groupby("colecao_nome")["quantidade_total"].sum().sort_values(ascending=False)
-    fig2, ax2 = plt.subplots(figsize=(8, 7))
-    ax2.barh(colecao_contagem.index[:15], colecao_contagem.values[:15], color="skyblue")
-    # Fundo transparente
-    fig2.patch.set_alpha(0.0)  # fundo da figura
-    ax2.set_facecolor("none")  # fundo do gráfico
-    ax2.tick_params(colors="white")         # cor dos ticks
-    ax2.xaxis.label.set_color("white")      # cor do label do eixo X
-    ax2.yaxis.label.set_color("white")      # cor do label do eixo Y
-    ax2.title.set_color("white")            # cor do título
-    for spine in ax2.spines.values():       # bordas do gráfico
-        spine.set_color("white")
-    ax2.set_title("Top 15 collections by card quantity")
-    ax2.set_xlabel("Card Quantity")
-    ax2.set_ylabel("Collection")
-    ax2.invert_yaxis()
+    
+    # Criação do gráfico
+    fig2 = go.Figure()
+
+    for colecao_nome, quantidade_total in colecao_contagem.items():
+        fig3.add_trace(go.Bar(
+            x=[quantidade_total],
+            y=[str(colecao_nome)],
+            orientation='h',
+            marker=dict(color="#D3D3D3", line=dict(width=0)),
+            text=str(quantidade_total),
+            textposition='inside',
+            insidetextanchor='end',
+            hoverinfo='none',
+            textfont=dict(size=16)
+        ))
+
+    # Estilo do gráfico
+    fig2.update_layout(
+        title_text='Collection distribution',
+        title_x=0.0,
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        font=dict(color='white'),
+        xaxis=dict(
+            visible=False,
+            showticklabels=False,
+            showgrid=False,
+            ticks="",
+            categoryorder="total descending"
+        ),
+        yaxis=dict(showticklabels=True, title=None),
+        margin=dict(l=100, r=30, t=40, b=30),
+        showlegend=False
+    )
 
     import re
 
@@ -472,7 +493,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             y=[str(tipo_sem_traco)],
             orientation='h',
             marker=dict(color="#D3D3D3", line=dict(width=0)),
-            text=str(quantidade),
+            text=str(quantidade_total),
             textposition='inside',
             insidetextanchor='end',
             hoverinfo='none',
@@ -490,7 +511,8 @@ elif st.session_state["aba_atual"] == "Dashboard":
             visible=False,
             showticklabels=False,
             showgrid=False,
-            ticks=""
+            ticks="",
+            categoryorder="total descending"
         ),
         yaxis=dict(showticklabels=True, title=None),
         margin=dict(l=100, r=30, t=40, b=30),
@@ -501,7 +523,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     with col1:
         st.plotly_chart(fig1, use_container_width=True)
-        st.pyplot(fig2, use_container_width=True)
+        st.plotly_chart(fig2, use_container_width=True)
 
     with col2:
         st.plotly_chart(fig3, use_container_width=True)

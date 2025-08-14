@@ -367,7 +367,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     fig2 = go.Figure()
 
     for colecao_nome, quantidade_total in colecao_contagem.items():
-        fig3.add_trace(go.Bar(
+        fig2.add_trace(go.Bar(
             x=[quantidade_total],
             y=[str(colecao_nome)],
             orientation='h',

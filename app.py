@@ -274,7 +274,8 @@ elif st.session_state["aba_atual"] == "Dashboard":
     df_cores["cores"] = df_cores["cores"].fillna("").str.split(", ")
     df_cores = df_cores.explode("cores")
     cores_contagem = df_cores.groupby("cores")["quantidade_total"].sum().sort_values(ascending=False)
-    cores_contagem = cores_contagem.sort_values(by="quantidade_total", ascending=False)
+    cores_contagem = cores_contagem.sort_values(ascending=False)
+
 
     
 
@@ -347,8 +348,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             visible=False,
             showticklabels=False,
             showgrid=False,
-            ticks="",
-            categoryorder="total ascending"
+            ticks=""
         ),
         yaxis=dict(
             showticklabels=False,  # ⬅ remove os rótulos de texto
@@ -363,7 +363,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     # Cartas por coleção
     colecao_contagem = df.groupby("colecao_nome")["quantidade_total"].sum().sort_values(ascending=False)
-    colecao_contagem = colecao_contagem.sort_values(by="quantidade_total", ascending=False)
+    colecao_contagem = colecao_contagem.sort_values(ascending=False)
 
     # Criação do gráfico
     fig2 = go.Figure()
@@ -384,7 +384,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     # Estilo do gráfico
     fig2.update_layout(
         title_text='Collection distribution',
-        height=600,
+        height=1200,
         title_x=0.0,
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
@@ -393,8 +393,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             visible=False,
             showticklabels=False,
             showgrid=False,
-            ticks="",
-            categoryorder="total ascending"
+            ticks=""
         ),
         yaxis=dict(showticklabels=True, title=None),
         margin=dict(l=100, r=30, t=40, b=30),
@@ -419,7 +418,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     # Aplica a função e agrupa
     df["mana_total"] = df["mana_cost"].apply(calcular_mana_total)
     mana_total_contagem = df.groupby("mana_total")["quantidade_total"].sum().sort_index()
-    mana_total_contagem = mana_total_contagem.sort_values(by="quantidade_total", ascending=False)
+    mana_total_contagem = mana_total_contagem.sort_values(ascending=False)
 
     # Dicionário de ícones de custo de mana da Scryfall
     mana_cost_icons = {
@@ -486,7 +485,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     df["tipo_sem_traco"] = df["tipo"].apply(extrair_antes_do_traco)
     tipo_contagem = df.groupby("tipo_sem_traco")["quantidade_total"].sum().sort_values(ascending=False)
-    tipo_contagem = tipo_contagem.sort_values(by="quantidade_total", ascending=False)
+    tipo_contagem = tipo_contagem.sort_values(ascending=False)
 
 
 
@@ -510,7 +509,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     fig4.update_layout(
         title_text='Card type distribution',
         title_x=0.0,
-        height=600,
+        height=1200,
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
         font=dict(color='white'),
@@ -519,7 +518,6 @@ elif st.session_state["aba_atual"] == "Dashboard":
             showticklabels=False,
             showgrid=False,
             ticks="",
-            categoryorder="total ascending"
         ),
         yaxis=dict(showticklabels=True, title=None),
         margin=dict(l=100, r=30, t=40, b=30),

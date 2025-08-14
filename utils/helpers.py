@@ -161,4 +161,3 @@ def extrair_detalhes_cartas(df: pd.DataFrame, todos_detalhes: list, cotacao: flo
         df[coluna] = df.apply(lambda linha: detalhes_dict.get((linha["colecao"], linha["numero"]), {}).get(coluna), axis=1)
 
     return df
-

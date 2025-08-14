@@ -409,7 +409,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             x=[quantidade],
             y=[str(custo)],
             orientation='h',
-            marker=dict(color='Gray', line=dict(width=0)),
+            marker=dict(color='Light Gray', line=dict(width=0)),
             text=str(quantidade),
             textposition='inside',
             insidetextanchor='end',
@@ -440,7 +440,12 @@ elif st.session_state["aba_atual"] == "Dashboard":
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
         font=dict(color='white'),
-        xaxis=dict(title=None, tickfont=dict(size=14), showgrid=False),
+        xaxis=dict(
+            visible=False,
+            showticklabels=False,
+            showgrid=False,
+            ticks=""
+        ),,
         yaxis=dict(showticklabels=False, title=None),
         margin=dict(l=100, r=30, t=40, b=30),
         showlegend=False

@@ -290,13 +290,13 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     # Ícones de mana (SVGs hospedados)
     mana_icons = {
-        "W": "https://mtg.fandom.com/wiki/Power_Nine?file=W.svg",
-        "U": "https://mtg.fandom.com/wiki/Power_Nine?file=U.svg",
-        "B": "https://mtg.fandom.com/wiki/Power_Nine?file=B.svg",
-        "R": "https://mtg.fandom.com/wiki/Power_Nine?file=R.svg",
-        "G": "https://mtg.fandom.com/wiki/Power_Nine?file=G.svg",
-        "C": "https://mtg.fandom.com/wiki/Power_Nine?file=C.svg",
-        "L": "https://mtg.fandom.com/wiki/Power_Nine?file=L.svg"
+        "W": "https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/8/8e/W.svg/revision/latest?cb=20160125094923",
+        "U": "https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/9/9f/U.svg/revision/latest?cb=20160121092256",
+        "B": "https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/2/2f/B.svg/revision/latest?cb=20160125093423",
+        "R": "https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/8/87/R.svg/revision/latest?cb=20160125094913",
+        "G": "https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/8/88/G.svg/revision/latest?cb=20160125094907",
+        "C": "https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/1/1a/C.svg/revision/latest?cb=20160121092204",
+        "L": "https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/f/f4/L.svg/revision/latest?cb=20240809040839"
     }
 
     fig1 = go.Figure()

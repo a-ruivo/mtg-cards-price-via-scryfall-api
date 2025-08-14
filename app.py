@@ -17,7 +17,19 @@ st.set_page_config(page_title="MTG Card Collection", layout="wide")
 aba_atual = st.sidebar.radio("Pages", ["Collection", "Dashboard", "Add Card", "Import File", "Card Manager"])
 st.session_state["aba_atual"] = aba_atual
 
-st.title("Allan & Ayla MTG Cards Collection")
+st.markdown(
+    """
+    <style>
+        .header-img {
+            width: 100%;
+            height: auto;
+            margin-bottom: -50px;
+        }
+    </style>
+    <img src="doc/capa.png" class="header-img">
+    """,
+    unsafe_allow_html=True
+)
 
 st.markdown("""
 **Made by Allan Ruivo Wildner | https://github.com/a-ruivo**  

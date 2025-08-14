@@ -382,7 +382,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     # Estilo do gráfico
     fig2.update_layout(
         title_text='Collection distribution',
-        height=1200,
+        height=1600,
         title_x=0.0,
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
@@ -505,7 +505,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
     fig4.update_layout(
         title_text='Card type distribution',
         title_x=0.0,
-        height=1200,
+        height=1000,
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
         font=dict(color='white'),

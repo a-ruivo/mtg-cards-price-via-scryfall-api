@@ -314,10 +314,10 @@ elif st.session_state["aba_atual"] == "Dashboard":
                 line=dict(width=0)
             ),
             text=str(valor),
-            textposition='inside',
+            textposition='outside',
             insidetextanchor='end',
             hoverinfo='none',
-            textfont=dict(size=16)  # ⬅ aumenta a fonte dos números
+            textfont=dict(size=16,color="white")
         ))
 
         # Adiciona ícone com altura proporcional à barra
@@ -373,10 +373,10 @@ elif st.session_state["aba_atual"] == "Dashboard":
             orientation='h',
             marker=dict(color="#D3D3D3", line=dict(width=0)),
             text=str(quantidade_total),
-            textposition='inside',
+            textposition='outside',
             insidetextanchor='end',
             hoverinfo='none',
-            textfont=dict(size=16)
+            textfont=dict(size=16,color="white")
         ))
 
     # Estilo do gráfico
@@ -432,10 +432,10 @@ elif st.session_state["aba_atual"] == "Dashboard":
             orientation='h',
             marker=dict(color="#D3D3D3", line=dict(width=0)),
             text=str(quantidade),
-            textposition='inside',
+            textposition='outside',
             insidetextanchor='end',
             hoverinfo='none',
-            textfont=dict(size=16)
+            textfont=dict(size=16,color="white")
         ))
 
         # Ícone no lugar do rótulo
@@ -495,10 +495,10 @@ elif st.session_state["aba_atual"] == "Dashboard":
             orientation='h',
             marker=dict(color="#D3D3D3", line=dict(width=0)),
             text=str(quantidade_total),
-            textposition='inside',
+            textposition='outside',
             insidetextanchor='end',
             hoverinfo='none',
-            textfont=dict(size=16)
+            textfont=dict(size=16,color="white")
         ))
 
     # Estilo do gráfico

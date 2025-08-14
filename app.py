@@ -353,7 +353,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             showticklabels=False,  # ⬅ remove os rótulos de texto
             title=None             # ⬅ remove o nome do eixo
         ),
-        margin=dict(l=100, r=30, t=40, b=30)  # ⬅ mais espaço à esquerda
+        margin=dict(l=100, r=80, t=40, b=30)  # ⬅ mais espaço à esquerda
     )
 
     fig1.update_layout(showlegend=False)
@@ -394,7 +394,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             ticks=""
         ),
         yaxis=dict(showticklabels=True, title=None),
-        margin=dict(l=100, r=30, t=40, b=30),
+        margin=dict(l=100, r=80, t=40, b=30),
         showlegend=False
     )
 
@@ -468,7 +468,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             ticks=""
         ),
         yaxis=dict(showticklabels=False, title=None),
-        margin=dict(l=100, r=30, t=40, b=30),
+        margin=dict(l=100, r=80, t=40, b=30),
         showlegend=False
     )
 
@@ -516,7 +516,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             ticks="",
         ),
         yaxis=dict(showticklabels=True, title=None),
-        margin=dict(l=100, r=30, t=40, b=30),
+        margin=dict(l=100, r=80, t=40, b=30),
         showlegend=False
     )
 

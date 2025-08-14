@@ -319,17 +319,17 @@ elif st.session_state["aba_atual"] == "Dashboard":
             textfont=dict(size=16)  # ⬅ aumenta a fonte dos números
         ))
 
-        # Adiciona ícone no lugar do rótulo do eixo Y
+        # Adiciona ícone com altura proporcional à barra
         fig1.add_layout_image(
             dict(
                 source=mana_icons.get(cor),
                 xref="paper",
                 yref="y",
-                x=0.0,
+                x=-0.08,  # ⬅ mais à esquerda
                 y=cor,
-                sizex=0.04,
-                sizey=0.4,
-                xanchor="right",
+                sizex=0.06,
+                sizey=1.0,  # ⬅ altura igual à faixa da barra
+                xanchor="left",
                 yanchor="middle",
                 layer="above"
             )
@@ -347,10 +347,11 @@ elif st.session_state["aba_atual"] == "Dashboard":
             showticklabels=False,  # ⬅ remove os rótulos de texto
             title=None             # ⬅ remove o nome do eixo
         ),
-        margin=dict(l=80, r=30, t=40, b=30)  # ⬅ mais espaço à esquerda para os ícones
+        margin=dict(l=100, r=30, t=40, b=30)  # ⬅ mais espaço à esquerda
     )
 
     fig1.update_layout(showlegend=False)
+
 
 
     # Cartas por coleção

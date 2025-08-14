@@ -290,13 +290,13 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     # Ícones de mana (SVGs hospedados)
     mana_icons = {
-        "W": "https://mtgimage.com/mana/w.svg",
-        "U": "https://mtgimage.com/mana/u.svg",
-        "B": "https://mtgimage.com/mana/b.svg",
-        "R": "https://mtgimage.com/mana/r.svg",
-        "G": "https://mtgimage.com/mana/g.svg",
-        "C": "https://mtgimage.com/mana/c.svg",
-        "L": "https://mtgimage.com/mana/l.svg"
+        "W": "https://mtg.fandom.com/wiki/Power_Nine?file=W.svg",
+        "U": "https://mtg.fandom.com/wiki/Power_Nine?file=U.svg",
+        "B": "https://mtg.fandom.com/wiki/Power_Nine?file=B.svg",
+        "R": "https://mtg.fandom.com/wiki/Power_Nine?file=R.svg",
+        "G": "https://mtg.fandom.com/wiki/Power_Nine?file=G.svg",
+        "C": "https://mtg.fandom.com/wiki/Power_Nine?file=C.svg",
+        "L": "https://mtg.fandom.com/wiki/Power_Nine?file=L.svg"
     }
 
     fig1 = go.Figure()
@@ -309,7 +309,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
             orientation='h',
             marker=dict(
                 color=mana_colors_soft.get(cor, "#999999"),
-                line=dict(color='white', width=1),
+                line=dict(width=0)  # sem borda
             ),
             text=str(valor),
             textposition='inside',
@@ -344,6 +344,8 @@ elif st.session_state["aba_atual"] == "Dashboard":
         yaxis=dict(title='Mana color', showticklabels=True),
         margin=dict(l=60, r=30, t=40, b=30)
     )
+
+    fig1.update_layout(showlegend=False)
 
     # Cartas por coleção
     colecao_contagem = df.groupby("colecao_nome")["quantidade_total"].sum().sort_values(ascending=False)

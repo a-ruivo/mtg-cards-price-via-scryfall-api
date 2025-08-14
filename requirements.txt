@@ -4,4 +4,4 @@ requests
 openpyxl
 matplotlib
 plotly
-PIL
+Pillow

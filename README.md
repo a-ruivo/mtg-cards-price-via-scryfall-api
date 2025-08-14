@@ -4,6 +4,21 @@ Link: https://allan-and-ayla-mtg-card-collection.streamlit.app/
 
 This Streamlit app helps users upload Magic: The Gathering card data from Excel files, fetch detailed card information via the Scryfall API, and store the enriched dataset in a GitHub repository for versioned tracking.
 
+Page 1:
+![alt text](doc/page1.png)
+
+Page 2:
+![alt text](doc/page2.png)
+
+Page 3:
+![alt text](doc/page3.png)
+
+Page 4:
+![alt text](doc/page4.png)
+
+Page 5:
+![alt text](doc/page5.png)
+
 How It Works – Step by Step
 1. Upload Excel File or add cards mannualy
 Users upload an .xlsx file containing a list of Magic cards. The app reads the file using pandas.read_excel().
@@ -32,18 +47,6 @@ Pandas – Data manipulation
 Scryfall API – Card metadata and pricing
 GitHub API – Remote CSV storage and versioning
 Base64 & Requests – Encoding and HTTP communication
+matplotlib & plotly & Pillow - Charts
 
-Page 1:
-![alt text](doc/page1.png)
 
-Page 2:
-![alt text](doc/page2.png)
-
-Page 3:
-![alt text](doc/page3.png)
-
-Page 4:
-![alt text](doc/page4.png)
-
-Page 5:
-![alt text](doc/page5.png)

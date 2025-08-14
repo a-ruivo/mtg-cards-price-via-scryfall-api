@@ -24,7 +24,7 @@ image = Image.open("doc/capa.png")
 # Exibe a imagem no topo
 st.image(image, use_container_width=True)
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([4, 2, 2])
 
 with col1:
     st.markdown("""

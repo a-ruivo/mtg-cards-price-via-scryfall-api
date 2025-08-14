@@ -461,21 +461,41 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     df["tipo_sem_traco"] = df["tipo"].apply(extrair_antes_do_traco)
     tipo_contagem = df.groupby("tipo_sem_traco")["quantidade_total"].sum().sort_values(ascending=False)
-    fig4, ax4 = plt.subplots(figsize=(8, 7))
-    ax4.barh(tipo_contagem.index, tipo_contagem.values, color="salmon")
-    # Fundo transparente
-    fig4.patch.set_alpha(0.0)  # fundo da figura
-    ax4.set_facecolor("none")  # fundo do gráfico
-    ax4.tick_params(colors="white")         # cor dos ticks
-    ax4.xaxis.label.set_color("white")      # cor do label do eixo X
-    ax4.yaxis.label.set_color("white")      # cor do label do eixo Y
-    ax4.title.set_color("white")            # cor do título
-    for spine in ax4.spines.values():       # bordas do gráfico
-        spine.set_color("white")
-    ax4.set_title("Card type distribution")
-    ax4.set_xlabel("Card Quantity")
-    ax4.set_ylabel("Type")
-    ax4.invert_yaxis()
+
+
+    # Criação do gráfico
+    fig4 = go.Figure()
+
+    for tipo_sem_traco, quantidade_total in tipo_contagem.items():
+        fig4.add_trace(go.Bar(
+            x=[quantidade_total],
+            y=[str(tipo_sem_traco)],
+            orientation='h',
+            marker=dict(color="#D3D3D3", line=dict(width=0)),
+            text=str(quantidade),
+            textposition='inside',
+            insidetextanchor='end',
+            hoverinfo='none',
+            textfont=dict(size=16)
+        ))
+
+    # Estilo do gráfico
+    fig4.update_layout(
+        title_text='Card type distribution',
+        title_x=0.0,
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        font=dict(color='white'),
+        xaxis=dict(
+            visible=False,
+            showticklabels=False,
+            showgrid=False,
+            ticks=""
+        ),
+        yaxis=dict(showticklabels=True, title=None),
+        margin=dict(l=100, r=30, t=40, b=30),
+        showlegend=False
+    )
 
     col1, col2 = st.columns([1, 1])  # proporções iguais
 
@@ -485,7 +505,7 @@ elif st.session_state["aba_atual"] == "Dashboard":
 
     with col2:
         st.plotly_chart(fig3, use_container_width=True)
-        st.pyplot(fig4, use_container_width=True)
+        st.plotly_chart(fig4, use_container_width=True)
 
 elif st.session_state["aba_atual"] == "Add Card":
     st.header("Add card manually or by code")

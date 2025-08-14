@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 import plotly.graph_objects as go
+from PIL import Image
 
 from config import CSV_PATH, REPO, GITHUB_TOKEN
 from utils.api import buscar_detalhes_com_lotes, get_usd_to_brl
@@ -17,19 +18,11 @@ st.set_page_config(page_title="MTG Card Collection", layout="wide")
 aba_atual = st.sidebar.radio("Pages", ["Collection", "Dashboard", "Add Card", "Import File", "Card Manager"])
 st.session_state["aba_atual"] = aba_atual
 
-st.markdown(
-    """
-    <style>
-        .header-img {
-            width: 100%;
-            height: auto;
-            margin-bottom: -50px;
-        }
-    </style>
-    <img src="doc/capa.png" class="header-img">
-    """,
-    unsafe_allow_html=True
-)
+# Carrega a imagem da pasta local
+image = Image.open("doc/capa.png")
+
+# Exibe a imagem no topo
+st.image(image, use_column_width=True)
 
 st.markdown("""
 **Made by Allan Ruivo Wildner | https://github.com/a-ruivo**  

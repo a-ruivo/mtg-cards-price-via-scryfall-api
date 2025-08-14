@@ -310,25 +310,26 @@ elif st.session_state["aba_atual"] == "Dashboard":
             orientation='h',
             marker=dict(
                 color=mana_colors_soft.get(cor, "#999999"),
-                line=dict(width=0)  # sem borda
+                line=dict(width=0)
             ),
             text=str(valor),
             textposition='inside',
             insidetextanchor='end',
-            hoverinfo='none'
+            hoverinfo='none',
+            textfont=dict(size=16)  # ⬅ aumenta a fonte dos números
         ))
 
-        # Adiciona ícone ao lado da barra
+        # Adiciona ícone no lugar do rótulo do eixo Y
         fig1.add_layout_image(
             dict(
                 source=mana_icons.get(cor),
                 xref="paper",
                 yref="y",
-                x=0.01,
+                x=0.0,
                 y=cor,
                 sizex=0.04,
                 sizey=0.4,
-                xanchor="left",
+                xanchor="right",
                 yanchor="middle",
                 layer="above"
             )
@@ -342,11 +343,15 @@ elif st.session_state["aba_atual"] == "Dashboard":
         paper_bgcolor='rgba(0,0,0,0)',
         font=dict(color='white'),
         xaxis=dict(visible=False),
-        yaxis=dict(title='Mana color', showticklabels=True),
-        margin=dict(l=60, r=30, t=40, b=30)
+        yaxis=dict(
+            showticklabels=False,  # ⬅ remove os rótulos de texto
+            title=None             # ⬅ remove o nome do eixo
+        ),
+        margin=dict(l=80, r=30, t=40, b=30)  # ⬅ mais espaço à esquerda para os ícones
     )
 
     fig1.update_layout(showlegend=False)
+
 
     # Cartas por coleção
     colecao_contagem = df.groupby("colecao_nome")["quantidade_total"].sum().sort_values(ascending=False)

@@ -610,10 +610,9 @@ elif st.session_state["aba_atual"] == "Add Card":
                     if ja_existe:
                         st.warning("This card already is in the collection.")
                     else:
-                        df_add = pd.concat([df_existente, nova], ignore_index=True)
-                        sucesso = salvar_csv_em_github(df_add, REPO, CSV_PATH, GITHUB_TOKEN)
+                        sucesso = salvar_csv_em_github(nova, REPO, CSV_PATH, GITHUB_TOKEN)
                         if sucesso:
-                            st.session_state["df"] = df_add
+                            st.session_state["df"] = nova
                             st.success("Card added!")
                         else:
                             st.error("Error saving in GitHub.")
@@ -657,10 +656,9 @@ elif st.session_state["aba_atual"] == "Add Card":
                 if ja_existe:
                     st.warning("This card already is in the collection.")
                 else:
-                    df_form = pd.concat([df_existente, nova_carta], ignore_index=True)
-                    sucesso, mensagem = salvar_csv_em_github(df_form, REPO, CSV_PATH, GITHUB_TOKEN)
+                    sucesso, mensagem = salvar_csv_em_github(nova_carta, REPO, CSV_PATH, GITHUB_TOKEN)
                     if sucesso:
-                        st.session_state["df"] = df_form
+                        st.session_state["df"] = nova_carta
                         st.success("Card added!")
                     else:
                         st.error(f"Error saving in GitHub: {mensagem}")
@@ -695,8 +693,7 @@ elif st.session_state["aba_atual"] == "Import File":
 
         df_manager = extrair_detalhes_cartas(df_file, todos_detalhes2, cotacao_file)
 
-        df_final = pd.concat([df_file, df_manager], axis=1)
-        sucesso, mensagem = salvar_csv_em_github(df_final, REPO, CSV_PATH, GITHUB_TOKEN)
+        sucesso, mensagem = salvar_csv_em_github(df_manager, REPO, CSV_PATH, GITHUB_TOKEN)
 
         if sucesso:
             st.success("Cards add!")

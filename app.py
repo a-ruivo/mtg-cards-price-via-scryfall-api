@@ -568,7 +568,7 @@ elif st.session_state["aba_atual"] == "Add Card":
         padrao_add = st.number_input("Regular quantity", min_value=0)
         foil_add = st.number_input("Foil quantity", min_value=0)
 
-        col1, col2, col3 = st.columns([1])  # proporções iguais
+        col1, col2, col3 = st.columns([1,1,1])  # proporções iguais
 
         with col1:
             verificar = st.button("See card before add")

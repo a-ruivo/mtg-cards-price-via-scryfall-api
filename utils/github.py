@@ -22,17 +22,23 @@ def salvar_csv_em_github(df_novo, repo, path, token):
     if r_get.status_code == 200:
         conteudo_atual = base64.b64decode(r_get.json()["content"]).decode()
         sha = r_get.json()["sha"]
-        df_atual = pd.read_csv(StringIO(conteudo_atual))
+        try:
+            df_atual = pd.read_csv(StringIO(conteudo_atual))
+        except Exception as e:
+            return False, f"Erro ao ler CSV existente: {e}"
 
-        # Junta os dados novos com os existentes
-        df_final = pd.concat([df_atual, df_novo], ignore_index=True)
+        # Remove duplicatas com base em colunas-chave (ajuste conforme necessário)
+        df_final = pd.concat([df_atual, df_novo], ignore_index=True).drop_duplicates()
     else:
         sha = None
         df_final = df_novo
 
     # Prepara conteúdo para upload
-    conteudo_csv = df_final.to_csv(index=False)
-    conteudo_base64 = base64.b64encode(conteudo_csv.encode()).decode()
+    try:
+        conteudo_csv = df_final.to_csv(index=False)
+        conteudo_base64 = base64.b64encode(conteudo_csv.encode()).decode()
+    except Exception as e:
+        return False, f"Erro ao converter DataFrame para CSV: {e}"
 
     data = {
         "message": "Atualização incremental via Streamlit",
@@ -52,6 +58,7 @@ def salvar_csv_em_github(df_novo, repo, path, token):
         except Exception:
             erro = "Erro ao decodificar resposta da API"
         return False, erro
+
 
 def alterar_csv_em_github(df_novo, repo, path, token):
     import base64, requests

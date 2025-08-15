@@ -748,6 +748,7 @@ snc,259,4,0,,Waterfront District,,,https://cards.scryfall.io/normal/front/d/e/de
 snc,270,1,0,,Forest,,,https://cards.scryfall.io/normal/front/c/0/c086cb5e-3146-4a41-a471-fcbbf8fa4e09.jpg?1664414844,,,Streets of New Capenna,,common,Basic Land — Forest,0.49,0.43
 snc,28,5,0,Story,Revelation of Power,{1}{W},W,https://cards.scryfall.io/normal/front/7/e/7e010b11-8f3e-4792-afe4-0a376650b6c4.jpg?1664409933,,,Streets of New Capenna,,common,Instant,0.22,0.27
 snc,31,1,0,,Sky Crier,{1}{W},W,https://cards.scryfall.io/normal/front/9/8/98e01fa9-9127-4250-94f1-39e71cc3c2bc.jpg?1664409991,,,Streets of New Capenna,,common,Creature — Bird Citizen,0.32,0.76
+snc,320,0,1,,"Mr. Orfeo, the Boulder",{1}{B}{R}{G},"B, G, R",https://cards.scryfall.io/normal/front/0/5/0524fc64-f51c-4991-9e43-da56afd28c00.jpg?1664582981,,,Streets of New Capenna,,uncommon,Legendary Creature — Rhino Warrior,0.49,1.08
 snc,326,1,0,,"Queza, Augur of Agonies",{1}{W}{U}{B},"B, U, W",https://cards.scryfall.io/normal/front/8/b/8be62891-93fa-4642-ad44-8c8695a9c960.jpg?1664582993,,,Streets of New Capenna,,uncommon,Legendary Creature — Octopus Advisor,0.7,1.46
 snc,333,1,0,,Shattered Seraph,{4}{W}{U}{B},"B, U, W",https://cards.scryfall.io/normal/front/d/e/de23dfcb-9e17-42bf-9a86-f9e3ce8b4b9c.jpg?1664415707,,,Streets of New Capenna,,common,Creature — Angel Rogue,0.32,0.65
 snc,350,4,0,,Botanical Plaza,,,https://cards.scryfall.io/normal/front/a/c/ac068b57-568b-41f6-90d2-7b0eef99a74d.jpg?1664415860,,,Streets of New Capenna,,common,Land,0.32,0.7
@@ -963,4 +964,3 @@ znr,107,1,0,,Highborn Vampire,{3}{B},B,https://cards.scryfall.io/normal/front/2/
 znr,171,1,0,,Thundering Sparkmage,{3}{R},R,https://cards.scryfall.io/normal/front/a/9/a9e6de80-3516-426b-8a1b-bda45f8c0cac.jpg?1604198226,,,Zendikar Rising,,uncommon,Creature — Human Wizard,0.16,0.32
 znr,28,1,0,,Mesa Lynx,{1}{W},W,https://cards.scryfall.io/normal/front/f/6/f65af09b-656f-4d81-b95d-b4f902e56bb7.jpg?1604192681,,,Zendikar Rising,,common,Creature — Cat,0.32,0.54
 znr,7,1,0,,Canyon Jerboa,{2}{W},W,https://cards.scryfall.io/normal/front/2/6/26b3938e-ebd7-4668-be3a-422c02ff5b08.jpg?1604195520,,,Zendikar Rising,,uncommon,Creature — Mouse,0.81,1.24
-snc,320,0,1,,"Mr. Orfeo, the Boulder",{1}{B}{R}{G},"B, G, R",https://cards.scryfall.io/normal/front/0/5/0524fc64-f51c-4991-9e43-da56afd28c00.jpg?1664582981,,,Streets of New Capenna,,uncommon,Legendary Creature — Rhino Warrior,0.49,1.08

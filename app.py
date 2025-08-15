@@ -567,7 +567,21 @@ elif st.session_state["aba_atual"] == "Add Card":
         numero_carta_add = st.text_input("Card number")
         padrao_add = st.number_input("Regular quantity", min_value=0)
         foil_add = st.number_input("Foil quantity", min_value=0)
-        buscar = st.button("Search and save")
+
+        col1, col2, col3 = st.columns([1])  # proporções iguais
+
+        with col1:
+            verificar = st.button("See card before add")
+        with col2:
+            buscar = st.button("Search and save")
+        with col3:
+            if verificar:
+                identificador = [{"set": codigo_colecao_add.lower(), "collector_number": numero_carta_add}]
+                dados = buscar_detalhes_com_lotes(identificador)
+                if dados:
+                    carta_add = dados[0]
+                    imagem_add = carta_add.get("image_uris", {}).get("normal")
+                    st.image(imagem_add, use_container_width=True)
 
         if buscar and codigo_colecao_add and numero_carta_add:
             if padrao_add == 0 and foil_add == 0:

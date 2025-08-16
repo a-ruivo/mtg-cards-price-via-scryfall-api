@@ -3,11 +3,20 @@ from io import StringIO
 import streamlit as st
 from config import CSV_PATH, REPO, GITHUB_TOKEN, TTL
 
-def carregar_csv():
-    return pd.read_csv(CSV_PATH)
+def carregar_csv_do_github(repo, path, token):
+    import base64, requests, pandas as pd
+    from io import StringIO
 
-def carregar_csv_sem_cache():
-    return pd.read_csv(CSV_PATH)
+    url = f"https://api.github.com/repos/{repo}/contents/{path}"
+    headers = {"Authorization": f"token {token}"}
+
+    r = requests.get(url, headers=headers)
+    if r.status_code == 200:
+        conteudo_base64 = r.json()["content"]
+        conteudo_csv = base64.b64decode(conteudo_base64).decode()
+        return pd.read_csv(StringIO(conteudo_csv))
+    else:
+        raise Exception(f"Erro ao carregar CSV do GitHub: {r.status_code} - {r.text}")
 
 def salvar_csv_em_github(df_novo, repo, path, token):
     import base64, requests, pandas as pd

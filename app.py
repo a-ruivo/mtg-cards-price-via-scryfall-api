@@ -7,7 +7,7 @@ from PIL import Image
 
 from config import CSV_PATH, REPO, GITHUB_TOKEN
 from utils.api import buscar_detalhes_com_lotes, get_usd_to_brl
-from utils.github import carregar_csv, salvar_csv_em_github, alterar_csv_em_github, carregar_csv_sem_cache
+from utils.github import salvar_csv_em_github, alterar_csv_em_github, carregar_csv_do_github
 from utils.helpers import gerar_icones, preparar_dataframe, limpar_e_enriquecer_dataframe, autenticar, get_mana_map, extrair_detalhes_cartas
 
 if "aba_atual" not in st.session_state:
@@ -44,7 +44,7 @@ with col2:
 
     if reprocessar:
         st.session_state.pop("df", None)
-        df = carregar_csv_sem_cache()
+        df = carregar_csv_do_github(REPO, CSV_PATH, GITHUB_TOKEN)
 
         # Remove duplicatas antes de qualquer processamento
         df = df.drop_duplicates(subset=["colecao", "numero"], keep="last")
@@ -70,7 +70,7 @@ with col2:
 
     else:
         if "df" not in st.session_state:
-            st.session_state["df"] = carregar_csv()
+            st.session_state["df"] = df = carregar_csv_do_github(REPO, CSV_PATH, GITHUB_TOKEN)
 
 with col3:
     # Executa autenticação uma vez

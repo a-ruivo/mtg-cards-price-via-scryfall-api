@@ -103,7 +103,7 @@ if st.session_state["aba_atual"] == "Collection":
         "Rarity": "raridade",
         "Card Number": "numero",
         "Quantity Regular": "padrao",
-        "Quantity Foil": "foil"
+        "Quantity Foil": "foil",
         "Quantity Total": "quantidade_total"
     }[ordenar_por]
 

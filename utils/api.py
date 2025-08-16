@@ -3,7 +3,6 @@ import time
 import streamlit as st
 from config import TTL
 
-@st.cache_data(ttl=TTL)
 def get_usd_to_brl():
     try:
         r = requests.get("https://economia.awesomeapi.com.br/json/last/USD-BRL")
@@ -11,7 +10,6 @@ def get_usd_to_brl():
     except:
         return 5.0
 
-@st.cache_data(ttl=TTL)
 def buscar_detalhes_com_lotes(identificadores, tamanho_lote=75, mostrar_progresso=True):
     todos_detalhes = []
     lotes = [identificadores[i:i + tamanho_lote] for i in range(0, len(identificadores), tamanho_lote)]

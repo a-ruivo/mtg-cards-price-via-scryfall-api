@@ -3,7 +3,6 @@ from io import StringIO
 import streamlit as st
 from config import CSV_PATH, REPO, GITHUB_TOKEN, TTL
 
-@st.cache_data(ttl=TTL)
 def carregar_csv():
     return pd.read_csv(CSV_PATH)
 

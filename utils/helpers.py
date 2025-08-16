@@ -2,12 +2,10 @@ import streamlit as st
 import pandas as pd
 from config import TTL
 
-@st.cache_data(ttl=TTL)
 def dividir_em_lotes(lista, tamanho):
     for i in range(0, len(lista), tamanho):
         yield lista[i:i + tamanho]
 
-@st.cache_data(ttl=TTL)
 def gerar_icones(valores, mapa):
     icones = []
     for v in str(valores).split(","):

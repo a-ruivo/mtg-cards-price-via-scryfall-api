@@ -726,31 +726,28 @@ elif st.session_state["aba_atual"] == "Card Manager":
             st.warning("Enter the password to access this page.")
             st.stop()
 
-        if st.button("Edit"):
+        if "df" not in st.session_state:
+            st.session_state["df"] = carregar_csv_do_github(REPO, CSV_PATH, GITHUB_TOKEN)
 
-            if "df" not in st.session_state:
-                st.session_state["df"] = carregar_csv_do_github(REPO, CSV_PATH, GITHUB_TOKEN)
+        df_manager = st.session_state["df"]
 
-            df_manager = st.session_state["df"]
-
-            # Converte colunas numéricas com segurança
-            df_manager["padrao"] = pd.to_numeric(df_manager["padrao"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int) 
-            df_manager["foil"] = pd.to_numeric(df_manager["foil"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int)
+        # Converte colunas numéricas com segurança
+        df_manager["padrao"] = pd.to_numeric(df_manager["padrao"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int) 
+        df_manager["foil"] = pd.to_numeric(df_manager["foil"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int)
 
 
-            # Editor completo
-            df_editado = st.data_editor(
-                df_manager,
-                num_rows="dynamic",
-                use_container_width=True,
-                key="editor"
-            )
-
-            # Botão de salvar
-            if st.button("Save"):
-                sucesso, mensagem = alterar_csv_em_github(df_editado, REPO, CSV_PATH, GITHUB_TOKEN)
-                if sucesso:
-                    st.session_state["df"] = df_editado
-                    st.success("Changes saved!")
-                else:
-                    st.error(f"Error saving in GitHub: {mensagem}")
+        # Editor completo
+        df_editado = st.data_editor(
+            df_manager,
+            num_rows="dynamic",
+            use_container_width=True,
+            key="editor"
+        )
+        # Botão de salvar
+        if st.button("Save"):
+            sucesso, mensagem = alterar_csv_em_github(df_editado, REPO, CSV_PATH, GITHUB_TOKEN)
+            if sucesso:
+                st.session_state["df"] = df_editado
+                st.success("Changes saved!")
+            else:
+                st.error(f"Error saving in GitHub: {mensagem}")

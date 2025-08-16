@@ -43,6 +43,7 @@ with col2:
     reprocessar = st.button("Refresh Data", help="Reprocess the data from the CSV file and update the collection.")
 
     if reprocessar:
+        st.session_state.pop("df", None)
         df = carregar_csv_sem_cache()
 
         # Remove duplicatas antes de qualquer processamento

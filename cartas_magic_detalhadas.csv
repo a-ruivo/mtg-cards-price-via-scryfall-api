@@ -403,6 +403,7 @@ eld,102,1,0,,Reaper of Night,{5}{B}{B},,https://cards.scryfall.io/normal/front/4
 eld,103,1,0,,Reave Soul,{1}{B},B,https://cards.scryfall.io/normal/front/c/e/ce7ff657-aa44-4336-895a-87518159cef6.jpg?1572490229,,,Throne of Eldraine,,common,Sorcery,0.22,0.38
 eld,126,4,0,,Fling,{1}{R},R,https://cards.scryfall.io/normal/front/c/b/cb28fe03-8269-41de-b766-42c3421aeaef.jpg?1572490367,,,Throne of Eldraine,,common,Instant,0.76,1.19
 eld,248,1,0,,Tournament Grounds,,,https://cards.scryfall.io/normal/front/c/d/cd438d51-a778-4b38-8b4b-a6a9cd9b4b22.jpg?1572491245,,,Throne of Eldraine,,uncommon,Land,0.81,2.05
+eld,44,1,0,,Fae of Wishes,{1}{U},,https://cards.scryfall.io/normal/front/e/3/e3435fd6-8f51-4d99-a278-4ddb088acfe1.jpg?1572489870,Granted,,Throne of Eldraine,,rare,Creature — Faerie Wizard // Sorcery — Adventure,0.81,2.0
 eld,45,1,0,,Faerie Vandal,{1}{U},U,https://cards.scryfall.io/normal/front/7/8/789c5c2b-3e51-4f6c-ac76-d276facf716f.jpg?1572489876,,,Throne of Eldraine,,uncommon,Creature — Faerie Rogue,0.65,1.67
 eld,52,4,0,,Mantle of Tides,{U},U,https://cards.scryfall.io/normal/front/c/0/c058d01e-f705-4407-bd9e-a2d127afdf04.jpg?1572489923,,,Throne of Eldraine,,common,Artifact — Equipment,0.16,0.59
 eld,53,4,0,,Merfolk Secretkeeper,{U},,https://cards.scryfall.io/normal/front/c/e/ceb7308d-608c-4ede-9496-d795fc5bb271.jpg?1572489928,Venture Deeper,,Throne of Eldraine,,common,Creature — Merfolk Wizard // Sorcery — Adventure,0.49,1.19
@@ -476,7 +477,7 @@ iko,23,1,0,,Maned Serval,{1}{W},W,https://cards.scryfall.io/normal/front/5/a/5ac
 iko,26,1,0,,Patagia Tiger,{4}{W},W,https://cards.scryfall.io/normal/front/b/e/be398100-89e2-432b-8017-74fb7e4dbc26.jpg?1591230347,,,Ikoria: Lair of Behemoths,,common,Creature — Cat,0.27,1.89
 iko,48,1,0,,Escape Protocol,{1}{U},U,https://cards.scryfall.io/normal/front/2/d/2d3eeddd-c86d-4f35-ba57-3caa9565fcb0.jpg?1591230498,,,Ikoria: Lair of Behemoths,,uncommon,Enchantment,0.59,1.19
 iko,55,1,0,,Hampering Snare,{1}{U},U,https://cards.scryfall.io/normal/front/5/f/5f7b331a-bd21-429b-a49f-88da9a31c98e.jpg?1591226361,,,Ikoria: Lair of Behemoths,,common,Instant,0.27,0.22
-iko,59,2,0,,Neutralize,{1}{U}{U},U,https://cards.scryfall.io/normal/front/0/4/0430da3c-9460-4b62-ae28-2e7e6f4d06a4.jpg?1591226400,,,Ikoria: Lair of Behemoths,,uncommon,Instant,0.59,1.56
+iko,59,1,0,,Neutralize,{1}{U}{U},U,https://cards.scryfall.io/normal/front/0/4/0430da3c-9460-4b62-ae28-2e7e6f4d06a4.jpg?1591226400,,,Ikoria: Lair of Behemoths,,uncommon,Instant,0.59,1.56
 iko,75,1,0,,Blood Curdle,{3}{B},B,https://cards.scryfall.io/normal/front/4/1/4184c851-1419-476c-ba9c-9f0cb1137114.jpg?1591226609,,,Ikoria: Lair of Behemoths,,common,Instant,0.27,1.3
 iko,79,1,0,,Cavern Whisperer,{4}{B},B,https://cards.scryfall.io/normal/front/6/4/64ae7651-4a5c-41f3-b528-41b9b0f2e5d8.jpg?1591226663,,,Ikoria: Lair of Behemoths,,common,Creature — Nightmare,0.22,0.27
 iko,89,1,0,,Gloom Pangolin,{2}{B},B,https://cards.scryfall.io/normal/front/3/f/3f135dd7-2a4f-4c83-9a90-76bcab3cc33d.jpg?1591226794,,,Ikoria: Lair of Behemoths,,common,Creature — Nightmare Pangolin,0.16,0.43
@@ -1019,3 +1020,15 @@ znr,107,1,0,,Highborn Vampire,{3}{B},B,https://cards.scryfall.io/normal/front/2/
 znr,171,1,0,,Thundering Sparkmage,{3}{R},R,https://cards.scryfall.io/normal/front/a/9/a9e6de80-3516-426b-8a1b-bda45f8c0cac.jpg?1604198226,,,Zendikar Rising,,uncommon,Creature — Human Wizard,0.16,0.32
 znr,28,1,0,,Mesa Lynx,{1}{W},W,https://cards.scryfall.io/normal/front/f/6/f65af09b-656f-4d81-b95d-b4f902e56bb7.jpg?1604192681,,,Zendikar Rising,,common,Creature — Cat,0.32,0.54
 znr,7,1,0,,Canyon Jerboa,{2}{W},W,https://cards.scryfall.io/normal/front/2/6/26b3938e-ebd7-4668-be3a-422c02ff5b08.jpg?1604195520,,,Zendikar Rising,,uncommon,Creature — Mouse,0.81,1.24
+vow,85,1,0,,Thirst for Discovery,{2}{U},U,https://cards.scryfall.io/normal/front/1/e/1ea179e9-9c0d-46c1-9ee8-60be68e1f79c.jpg?1643588791,,,Innistrad: Crimson Vow,,uncommon,Instant,0.97,1.51
+c20,34,1,0,,Ethereal Forager,{4}{U}{U},U,https://cards.scryfall.io/normal/front/9/7/97543d69-547e-41f8-9a4f-908e5eb0ee4a.jpg?1591319443,,,Commander 2020,,rare,Creature — Elemental Whale,1.3,0.0
+dmu,44,1,0,,Combat Research,{U},U,https://cards.scryfall.io/normal/front/6/c/6c44738c-706f-40b2-a09d-b21cd0889049.jpg?1673306670,,,Dominaria United,,uncommon,Enchantment — Aura,1.78,3.24
+akh,71,1,0,,Slither Blade,{U},U,https://cards.scryfall.io/normal/front/6/3/63cf067e-4d76-4676-85fa-ebfb0755440a.jpg?1663214104,,,Amonkhet,,common,Creature — Snake Rogue,1.3,31.19
+otp,8,1,0,,Archmage's Charm,{U}{U}{U},U,https://cards.scryfall.io/normal/front/4/4/44fe86de-c131-41b2-a06a-827b4d374a6d.jpg?1712353415,,,Breaking News,,rare,Instant,3.02,5.4
+xln,81,1,0,,Spell Pierce,{U},U,https://cards.scryfall.io/normal/front/6/b/6bf4dfc0-c58b-4535-b660-54ceaa6e0217.jpg?1562557054,,,Ixalan,,common,Instant,0.86,7.39
+uma,45,1,0,,Archaeomancer,{2}{U}{U},U,https://cards.scryfall.io/normal/front/c/c/cc258713-6ce3-44e0-9b4b-8fa7d1d093a1.jpg?1547516110,,,Ultimate Masters,,common,Creature — Human Wizard,1.08,9.66
+dom,42,1,0,,The Antiquities War,{3}{U},U,https://cards.scryfall.io/normal/front/b/b/bbda670a-00a7-419c-b4b5-bfdb323f006d.jpg?1562741999,,,Dominaria,,rare,Enchantment — Saga,1.3,4.59
+mom,77,1,0,,See Double,{2}{U}{U},U,https://cards.scryfall.io/normal/front/4/1/41634103-7b58-4feb-84b7-90a07a7b474f.jpg?1682203410,,,March of the Machine,,rare,Instant,2.75,3.99
+mm3,33,1,0,,Compulsive Research,{2}{U},U,https://cards.scryfall.io/normal/front/d/5/d5987001-abe9-4418-956e-3a360483cab7.jpg?1593813006,,,Modern Masters 2017,,uncommon,Sorcery,0.59,5.4
+grn,38,1,0,,Dream Eater,{4}{U}{U},U,https://cards.scryfall.io/normal/front/9/f/9f3a4677-7683-4f63-af31-b76491ec9f9c.jpg?1572892731,,,Guilds of Ravnica,,mythic,Creature — Nightmare Sphinx,1.56,8.04
+ss1,8,1,0,,Threads of Disloyalty,{1}{U}{U},U,https://cards.scryfall.io/normal/front/e/2/e207a353-bf66-41c3-ab52-b858e57776f0.jpg?1682721536,,,Signature Spellbook: Jace,,rare,Enchantment — Aura,1.08,2.97

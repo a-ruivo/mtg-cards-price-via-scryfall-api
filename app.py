@@ -70,7 +70,7 @@ with col2:
 
     else:
         if "df" not in st.session_state:
-            st.session_state["df"] = df = carregar_csv_do_github(REPO, CSV_PATH, GITHUB_TOKEN)
+            st.session_state["df"] = carregar_csv_do_github(REPO, CSV_PATH, GITHUB_TOKEN)
 
 with col3:
     # Executa autenticação uma vez
@@ -721,17 +721,17 @@ elif st.session_state["aba_atual"] == "Import File":
 
 elif st.session_state["aba_atual"] == "Card Manager":
         st.header("Card Manager")
-        df_manager = st.session_state["df"]
 
         if acesso_restrito:
             st.warning("Enter the password to access this page.")
             st.stop()
 
-        try:
-            def csv(path):
-                return pd.read_csv(path)
+        if st.button("Edit"):
 
-            df_manager = csv(CSV_PATH)
+            if "df" not in st.session_state:
+                st.session_state["df"] = carregar_csv_do_github(REPO, CSV_PATH, GITHUB_TOKEN)
+
+            df_manager = st.session_state["df"]
 
             # Converte colunas numéricas com segurança
             df_manager["padrao"] = pd.to_numeric(df_manager["padrao"], errors="coerce").fillna(0).replace([float("inf"), float("-inf")], 0).astype(int) 
@@ -754,6 +754,3 @@ elif st.session_state["aba_atual"] == "Card Manager":
                     st.success("Changes saved!")
                 else:
                     st.error(f"Error saving in GitHub: {mensagem}")
-
-        except:
-            st.warning("Data not found.")

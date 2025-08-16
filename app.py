@@ -85,14 +85,18 @@ if st.session_state["aba_atual"] == "Collection":
     df, colecao_map = limpar_e_enriquecer_dataframe(df)
     mana_map = get_mana_map()
 
+    df["quantidade_total"] = df["padrao"] + df["foil"]
+    df["valor_medio_por_carta"] = df["valor_total_brl"] / df["quantidade_total"].replace(0, 1)
+
     # Ordenação
-    ordenar_por = st.sidebar.selectbox("Order by", ["Name", "Color", "Value", "Mana Cost","Collection", "Type", "Rarity", "Card Number", "Quantity Regular", "Quantity Foil"])
+    ordenar_por = st.sidebar.selectbox("Order by", ["Name", "Color", "Value 1 card","Value all cards", "Mana Cost","Collection", "Type", "Rarity", "Card Number", "Quantity Regular", "Quantity Foil","Quantity Total"])
     ordem = st.sidebar.radio("Order", ["Ascending", "Decreasing"])
 
     coluna_ordem = {
         "Name": "nome",
         "Color": "cores",
-        "Value": "valor_total_brl",
+        "Value 1 card": "valor_medio_por_carta",
+        "Value all cards": "valor_total_brl",
         "Mana Cost": "mana_cost",
         "Collection": "colecao",
         "Type": "tipo",
@@ -100,6 +104,7 @@ if st.session_state["aba_atual"] == "Collection":
         "Card Number": "numero",
         "Quantity Regular": "padrao",
         "Quantity Foil": "foil"
+        "Quantity Total": "quantidade_total"
     }[ordenar_por]
 
     df = df.sort_values(by=coluna_ordem, ascending=(ordem == "Ascending"))

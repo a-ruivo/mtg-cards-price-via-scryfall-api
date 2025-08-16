@@ -483,7 +483,7 @@ kld,77,1,0,,Dukhara Scavenger,{5}{B},B,https://cards.scryfall.io/normal/front/8/
 kld,81,1,0,,Fortuitous Find,{2}{B},B,https://cards.scryfall.io/normal/front/7/7/7706bbb1-c94a-4169-9f12-a54cfcc3a7ad.jpg?1576381634,,,Kaladesh,,common,Sorcery,0.54,2.32
 kld,82,1,0,,Foundry Screecher,{2}{B},B,https://cards.scryfall.io/normal/front/4/3/4313802f-b969-47d0-b4aa-b049df0755c0.jpg?1576381644,,,Kaladesh,,common,Creature — Bat,0.27,1.84
 ktk,109,1,0,,Goblinslide,{2}{R},R,https://cards.scryfall.io/normal/front/a/9/a9d80e96-3956-4408-84fb-5f94a364eb41.jpg?1562791695,,,Khans of Tarkir,,uncommon,Enchantment,0.97,2.43
-ktk,137,1,0,,Hooting Mandrills,{5}{G},G,https://cards.scryfall.io/normal/front/0/9/090d678c-f0e4-4757-8900-93dfe67aefe9.jpg?1562782269,,,Khans of Tarkir,,common,Creature — Ape,0.65,3.73
+ktk,137,2,0,,Hooting Mandrills,{5}{G},G,https://cards.scryfall.io/normal/front/0/9/090d678c-f0e4-4757-8900-93dfe67aefe9.jpg?1562782269,,,Khans of Tarkir,,common,Creature — Ape,0.65,3.73
 ktk,148,1,0,,Scout the Borders,{2}{G},G,https://cards.scryfall.io/normal/front/e/b/eb15c6c7-8fe6-496c-9977-3e7942b920c4.jpg?1562795470,,,Khans of Tarkir,,common,Sorcery,0.22,1.24
 ktk,183,1,0,,Kin-Tree Invocation,{B}{G},"B, G",https://cards.scryfall.io/normal/front/9/2/926b49a1-f220-41ab-8c67-8354a91a15e8.jpg?1562790454,,,Khans of Tarkir,,uncommon,Sorcery,0.65,1.57
 ktk,197,1,0,,Savage Knuckleblade,{G}{U}{R},"G, R, U",https://cards.scryfall.io/normal/front/4/c/4c9dddd3-7c8d-4669-8298-58149b142b8a.jpg?1562786291,,,Khans of Tarkir,,rare,Creature — Ogre Warrior,0.7,3.94
@@ -1001,29 +1001,3 @@ c20,252,1,0,,Sol Ring,{1},,https://cards.scryfall.io/normal/front/2/8/286bea73-8
 c20,254,1,0,,Swiftfoot Boots,{2},,https://cards.scryfall.io/normal/front/5/8/5819a8bc-1e4f-4274-b1ee-e583337acdf8.jpg?1591321751,,,Commander 2020,,uncommon,Artifact — Equipment,8.32,0.0
 vow,250,2,0,,Vilespawn Spider,{G}{U},"G, U",https://cards.scryfall.io/normal/front/6/a/6ad9ae64-6526-4747-9b0c-77d113f58c33.jpg?1643594495,,,Innistrad: Crimson Vow,,uncommon,Creature — Spider,0.76,0.97
 clb,852,2,0,,Sprite Dragon,{U}{R},"R, U",https://cards.scryfall.io/normal/front/3/6/361385d8-d9c7-4de8-a5c8-683e682779f4.jpg?1674142522,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Creature — Faerie Dragon,3.62,0.0
-mid,391,0,2,,Join the Dance,{G}{W},"G, W",https://cards.scryfall.io/normal/front/d/b/dbbcd0f3-933d-4e73-9ac5-c743b8394e80.jpg?1640827180,,,Innistrad: Midnight Hunt,,uncommon,Sorcery,0.86,1.57
-mh1,214,1,0,,Soulherder,{1}{W}{U},"U, W",https://cards.scryfall.io/normal/front/e/a/ea23111b-ccc1-4d5c-a9d2-9db14c728820.jpg?1562202409,,,Modern Horizons,,uncommon,Creature — Spirit,6.43,46.22
-pca,92,1,0,,Fires of Yavimaya,{1}{R}{G},"G, R",https://cards.scryfall.io/normal/front/7/2/7294e30f-0356-4bcc-a264-4cd46d8f13a6.jpg?1562916275,,,Planechase Anthology,,uncommon,Enchantment,4.27,0.0
-rtr,214,1,0,,Dryad Militant,{G/W},"G, W",https://cards.scryfall.io/normal/front/2/b/2bb8cb8c-0d03-4cbf-b7f2-a97324817698.jpg?1562784181,,,Return to Ravnica,,uncommon,Creature — Dryad Soldier,0.81,12.04
-mkm,424,1,0,,Gleaming Geardrake,{U}{R},"R, U",https://cards.scryfall.io/normal/front/0/0/00b6cd91-8178-4c5c-9cb1-f3d970fe3b03.jpg?1706242826,,,Murders at Karlov Manor,,uncommon,Artifact Creature — Drake,1.46,2.11
-snc,227,1,0,,Tainted Indulgence,{U}{B},"B, U",https://cards.scryfall.io/normal/front/3/4/347d883c-84ab-4547-813b-f4385366fbce.jpg?1664413873,,,Streets of New Capenna,,uncommon,Instant,1.62,2.97
-snc,188,1,0,,Fleetfoot Dancer,{1}{R}{G}{W},"G, R, W",https://cards.scryfall.io/normal/front/2/4/2473d738-fe15-402a-ad24-0d6e5c4dfda3.jpg?1664413054,,,Streets of New Capenna,,rare,Creature — Elf Druid,0.43,0.54
-dmu,218,1,0,,"Shanna, Purifying Blade",{G}{W}{U},"G, U, W",https://cards.scryfall.io/normal/front/7/2/7261c443-8d27-4d85-8027-2a0271b85e07.jpg?1673308081,,,Dominaria United,,mythic,Legendary Creature — Human Warrior,1.78,1.94
-grn,208,1,0,,Trostani Discordant,{3}{G}{W},"G, W",https://cards.scryfall.io/normal/front/f/a/fa1190a4-3d7e-4500-991f-e36ec3d1d9dc.jpg?1572893872,,,Guilds of Ravnica,,mythic,Legendary Creature — Dryad,1.67,8.69
-snc,202,1,0,,Meeting of the Five,{3}{W}{U}{B}{R}{G},"B, G, R, U, W",https://cards.scryfall.io/normal/front/d/6/d6c3c08f-ae9d-4932-ba0e-65652b8b318b.jpg?1674125027,,,Streets of New Capenna,,mythic,Sorcery,1.03,1.78
-wwk,141,1,0,,Raging Ravine,,,https://cards.scryfall.io/normal/front/c/b/cb7b6fb5-4d38-4734-b46f-923322cff24e.jpg?1562296161,,,Worldwake,,rare,Land,3.29,29.0
-mid,242,1,0,,"Slogurk, the Overslime",{1}{G}{U},"G, U",https://cards.scryfall.io/normal/front/f/9/f94e888b-6eeb-4ef3-ab21-5ed2bf0036a3.jpg?1637114233,,,Innistrad: Midnight Hunt,,rare,Legendary Creature — Ooze,1.51,2.0
-grn,204,1,0,,"Tajic, Legion's Edge",{1}{R}{W},"R, W",https://cards.scryfall.io/normal/front/5/e/5e669a01-84d3-4fcc-8396-9e987bd89b4f.jpg?1572893845,,,Guilds of Ravnica,,rare,Legendary Creature — Human Soldier,1.51,3.56
-afr,234,1,0,,"Targ Nar, Demon-Fang Gnoll",{R}{G},"G, R",https://cards.scryfall.io/normal/front/5/f/5fe57856-9d35-470e-9138-360b02ac0c90.jpg?1627709448,,,Adventures in the Forgotten Realms,,uncommon,Legendary Creature — Gnoll,0.49,1.03
-stx,222,1,0,,Reconstruct History,{2}{R}{W},"R, W",https://cards.scryfall.io/normal/front/3/e/3e565e38-43d5-482e-a911-ce525dfee74f.jpg?1624739675,,,Strixhaven: School of Mages,,uncommon,Sorcery,0.65,0.76
-snc,166,1,0,,Aven Heartstabber,{U}{B},"B, U",https://cards.scryfall.io/normal/front/a/c/acef329c-61e6-41c1-8d89-ff2417949839.jpg?1664412646,,,Streets of New Capenna,,rare,Creature — Bird Assassin,0.81,1.19
-khm,225,1,0,,Niko Aris,{X}{W}{U}{U},"U, W",https://cards.scryfall.io/normal/front/6/c/6c4e9cfe-e72e-46a1-a8d8-9fda5f2bae73.jpg?1631051773,,,Kaldheim,,mythic,Legendary Planeswalker — Niko,2.92,3.24
-a25,219,1,0,,Vindicate,{1}{W}{B},"B, W",https://cards.scryfall.io/normal/front/1/6/1658f12b-8ac5-4d29-86d5-f20c4d5f7e48.jpg?1562433024,,,Masters 25,,rare,Sorcery,5.89,13.23
-khm,206,1,0,,Binding the Old Gods,{2}{B}{G},"B, G",https://cards.scryfall.io/normal/front/d/9/d93ee644-d7d7-48d8-a04b-fb479b74edb0.jpg?1631051255,,,Kaldheim,,uncommon,Enchantment — Saga,1.08,13.66
-c21,204,1,0,,Rampant Growth,{1}{G},G,https://cards.scryfall.io/normal/front/d/2/d2e16cbe-b52b-46d7-8532-2068684b3491.jpg?1625977236,,,Commander 2021,,common,Sorcery,2.65,0.0
-m12,190,1,0,,Rampant Growth,{1}{G},G,https://cards.scryfall.io/normal/front/f/e/fe45a787-6d8a-48d7-ad6c-fb20a9b468a4.jpg?1562667937,,,Magic 2012,,common,Sorcery,3.08,18.3
-snc,467,2,0,,Courier's Briefcase,{1}{G},G,https://cards.scryfall.io/normal/front/b/d/bd325574-cdc9-48b1-bdcb-98afde83c6b9.jpg?1655490581,,,Streets of New Capenna,,uncommon,Artifact — Treasure,0.59,2.16
-c20,170,3,0,,Cultivate,{2}{G},G,https://cards.scryfall.io/normal/front/6/9/69c90a17-42ad-4f27-ab1b-3790bc0813b3.jpg?1591320806,,,Commander 2020,,common,Sorcery,3.94,0.0
-2xm,183,2,0,,Thragtusk,{4}{G},G,https://cards.scryfall.io/normal/front/d/9/d9a8459b-4dea-4dc9-8b95-a3748472f699.jpg?1599707616,,,Double Masters,,rare,Creature — Beast,1.08,1.03
-c16,166,1,0,,Scavenging Ooze,{1}{G},G,https://cards.scryfall.io/normal/front/4/a/4ad5310b-8756-4644-adc1-9503c6950142.jpg?1562398496,,,Commander 2016,,rare,Creature — Ooze,1.35,0.0
-m14,195,1,0,,Scavenging Ooze,{1}{G},G,https://cards.scryfall.io/normal/front/e/c/ec30153a-36b5-42f8-beed-9efab09f1051.jpg?1562836833,,,Magic 2014,,rare,Creature — Ooze,1.57,2.7

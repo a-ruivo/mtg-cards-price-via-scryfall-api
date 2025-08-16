@@ -750,6 +750,7 @@ elif st.session_state["aba_atual"] == "Card Manager":
             if st.button("Save"):
                 sucesso, mensagem = alterar_csv_em_github(df_editado, REPO, CSV_PATH, GITHUB_TOKEN)
                 if sucesso:
+                    st.session_state["df"] = df_editado
                     st.success("Changes saved!")
                 else:
                     st.error(f"Error saving in GitHub: {mensagem}")

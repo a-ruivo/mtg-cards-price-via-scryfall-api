@@ -615,7 +615,7 @@ elif st.session_state["aba_atual"] == "Add Card":
                         "mana_cost": carta_add.get("mana_cost"),
                         "nome_2": None
                     }])
-
+                    df_existente = st.session_state["df"]
                     ja_existe = (
                         (df_existente["colecao"] == nova["colecao"].iloc[0]) &
                         (df_existente["numero"] == nova["numero"].iloc[0])
@@ -662,7 +662,7 @@ elif st.session_state["aba_atual"] == "Add Card":
                     "numero": numero_form, "colecao_nome": colecao_nome_form, "icone_colecao": icone_colecao_form,
                     "raridade": raridade_form, "cores": cores_form, "mana_cost": mana_cost_form, "nome_2": nome_2_form
                 }])
-
+                df_existente = st.session_state["df"]
                 ja_existe = (
                     (df_existente["colecao"] == nova_carta["colecao"].iloc[0]) &
                     (df_existente["numero"] == nova_carta["numero"].iloc[0])

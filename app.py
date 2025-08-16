@@ -140,7 +140,7 @@ if st.session_state["aba_atual"] == "Collection":
         df = df[df["tipo"].isin(tipo_escolhido)]
 
     # Filtro por valor
-    valor_maximo = float(df["valor_total_brl"].dropna().max())
+    valor_maximo = float(df["valor_medio_por_carta"].dropna().max())
     if pd.isna(valor_maximo) or valor_maximo == 0.0:
         valor_maximo = 1.0  # fallback seguro
     valor_min, valor_max = st.sidebar.slider(
@@ -154,7 +154,7 @@ if st.session_state["aba_atual"] == "Collection":
     if valor_min == valor_max:
         valor_max += 1.0
 
-    df = df[(df["valor_total_brl"] >= valor_min) & (df["valor_total_brl"] <= valor_max)]
+    df = df[(df["valor_medio_por_carta"] >= valor_min) & (df["valor_medio_por_carta"] <= valor_max)]
 
 
     # Filtro por tipo de posse

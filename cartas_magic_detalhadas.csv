@@ -1,7 +1,7 @@
 colecao,numero,padrao,foil,obs,nome,mana_cost,cores,imagem,nome_2,imagem_2,colecao_nome,icone_colecao,raridade,tipo,preco_brl,preco_brl_foil
 10e,240,1,0,,Stun,{1}{R},R,https://cards.scryfall.io/normal/front/0/f/0f4e2c82-cdb8-4745-9af6-804717c541d7.jpg?1562543836,,,Tenth Edition,,common,Instant,1.89,48.51
-2xm,269,2,0,,Magnifying Glass,{3},,https://cards.scryfall.io/normal/front/7/a/7a0c879b-c566-431e-a8fa-6104c39b6d7c.jpg?1599709480,,,Double Masters,,common,Artifact,0.16,0.54
-2xm,293,1,0,,Sunforger,{3},,https://cards.scryfall.io/normal/front/3/9/3945c488-6966-4c7d-a0b7-487a2c1837aa.jpg?1604303624,,,Double Masters,,rare,Artifact — Equipment,17.75,35.45
+2xm,269,2,0,,Magnifying Glass,{3},C,https://cards.scryfall.io/normal/front/7/a/7a0c879b-c566-431e-a8fa-6104c39b6d7c.jpg?1599709480,,,Double Masters,,common,Artifact,0.16,0.54
+2xm,293,1,0,,Sunforger,{3},C,https://cards.scryfall.io/normal/front/3/9/3945c488-6966-4c7d-a0b7-487a2c1837aa.jpg?1604303624,,,Double Masters,,rare,Artifact — Equipment,17.75,35.45
 a25,29,1,0,,Path of Peace,{3}{W},W,https://cards.scryfall.io/normal/front/4/1/41369848-ba9a-40ef-931e-1a65bc979209.jpg?1562434966,,,Masters 25,,common,Sorcery,0.11,1.24
 a25,59,1,0,,Genju of the Falls,{U},U,https://cards.scryfall.io/normal/front/c/6/c6ba3a2f-0224-4ace-bb49-8dc41b34fb57.jpg?1562440756,,,Masters 25,,uncommon,Enchantment — Aura,0.65,2.7
 a25,64,2,0,,Man-o'-War,{2}{U},U,https://cards.scryfall.io/normal/front/9/f/9fac7b68-db59-4b38-80e6-fcba3e3c91bf.jpg?1562439078,,,Masters 25,,common,Creature — Jellyfish,0.54,1.4
@@ -14,16 +14,16 @@ afr,88,1,0,,Asmodeus the Archfiend,{4}{B}{B},B,https://cards.scryfall.io/normal/
 akh,134,1,0,,Glorybringer,{3}{R}{R},R,https://cards.scryfall.io/normal/front/3/2/3277ad99-5682-4baa-b106-de15721876a6.jpg?1543675596,,,Amonkhet,,rare,Creature — Dragon,1.67,7.72
 akh,18,1,0,,Impeccable Timing,{1}{W},W,https://cards.scryfall.io/normal/front/a/9/a98cee1e-64d8-4662-a911-009b031dc888.jpg?1543674690,,,Amonkhet,,common,Instant,0.16,1.08
 akh,188,1,0,,Spidery Grasp,{2}{G},G,https://cards.scryfall.io/normal/front/0/c/0c64b40f-f99a-4e35-821f-9d87b4c759a7.jpg?1543675985,,,Amonkhet,,common,Instant,0.38,1.51
-akh,264,1,0,,Mountain,,,https://cards.scryfall.io/normal/front/3/7/37827425-f304-43eb-979b-1ec5b923a2b5.jpg?1576800144,,,Amonkhet,,common,Basic Land — Mountain,0.49,2.64
-akh,265,1,0,,Mountain,,,https://cards.scryfall.io/normal/front/2/e/2eced8a4-67ce-403c-a567-82ace69d1cf1.jpg?1561779205,,,Amonkhet,,common,Basic Land — Mountain,0.38,2.7
-akh,266,1,0,,Mountain,,,https://cards.scryfall.io/normal/front/9/e/9eb742de-57fa-49f5-977e-bee1b8186e9a.jpg?1561796855,,,Amonkhet,,common,Basic Land — Mountain,0.43,4.8
+akh,264,1,0,,Mountain,,L,https://cards.scryfall.io/normal/front/3/7/37827425-f304-43eb-979b-1ec5b923a2b5.jpg?1576800144,,,Amonkhet,,common,Basic Land — Mountain,0.49,2.64
+akh,265,1,0,,Mountain,,L,https://cards.scryfall.io/normal/front/2/e/2eced8a4-67ce-403c-a567-82ace69d1cf1.jpg?1561779205,,,Amonkhet,,common,Basic Land — Mountain,0.38,2.7
+akh,266,1,0,,Mountain,,L,https://cards.scryfall.io/normal/front/9/e/9eb742de-57fa-49f5-977e-bee1b8186e9a.jpg?1561796855,,,Amonkhet,,common,Basic Land — Mountain,0.43,4.8
 akh,71,1,0,,Slither Blade,{U},U,https://cards.scryfall.io/normal/front/6/3/63cf067e-4d76-4676-85fa-ebfb0755440a.jpg?1663214104,,,Amonkhet,,common,Creature — Snake Rogue,1.3,31.19
 akh,82,1,0,,Bontu the Glorified,{2}{B},B,https://cards.scryfall.io/normal/front/4/b/4bc07386-909f-4946-9120-3acb58622e2f.jpg?1543675209,,,Amonkhet,,mythic,Legendary Creature — God,9.93,97.88
-ala,241,2,0,,Swamp,,,https://cards.scryfall.io/normal/front/e/3/e3133726-0eda-480c-9d67-64719cb77f1d.jpg?1562710039,,,Shards of Alara,,common,Basic Land — Swamp,1.67,3.99
+ala,241,2,0,,Swamp,,L,https://cards.scryfall.io/normal/front/e/3/e3133726-0eda-480c-9d67-64719cb77f1d.jpg?1562710039,,,Shards of Alara,,common,Basic Land — Swamp,1.67,3.99
 avr,14,1,0,,Cursebreak,{1}{W},W,https://cards.scryfall.io/normal/front/c/7/c71a0883-316c-4870-a029-25f16952fbc0.jpg?1592708254,,,Avacyn Restored,,common,Instant,0.38,1.73
 avr,15,1,0,,Defang,{1}{W},W,https://cards.scryfall.io/normal/front/f/1/f12fee0b-c237-4188-a718-1572f72c63ba.jpg?1592708261,,,Avacyn Restored,,common,Enchantment — Aura,0.16,1.19
 avr,21,1,0,,Farbog Explorer,{2}{W},W,https://cards.scryfall.io/normal/front/4/8/489c6a2f-38b4-4ff9-95f7-431384480ed9.jpg?1592708304,,,Avacyn Restored,,common,Creature — Human Scout,0.16,3.72
-avr,235,1,0,,Island,,,https://cards.scryfall.io/normal/front/5/c/5cf3685e-0ed3-4dc3-9033-8faa10b17c27.jpg?1592709696,,,Avacyn Restored,,common,Basic Land — Island,0.54,10.74
+avr,235,1,0,,Island,,L,https://cards.scryfall.io/normal/front/5/c/5cf3685e-0ed3-4dc3-9033-8faa10b17c27.jpg?1592709696,,,Avacyn Restored,,common,Basic Land — Island,0.54,10.74
 avr,39,1,0,,Thraben Valiant,{1}{W},W,https://cards.scryfall.io/normal/front/2/0/20558f69-9240-49b9-9695-caf75ee2db1b.jpg?1592708429,,,Avacyn Restored,,common,Creature — Human Soldier,0.22,1.62
 avr,4,1,0,,Angelic Wall,{1}{W},W,https://cards.scryfall.io/normal/front/d/7/d7b2450d-87a7-46dc-b43a-2db2abeca44f.jpg?1592708188,,,Avacyn Restored,,common,Creature — Wall,0.54,5.07
 avr,73,1,0,,Scrapskin Drake,{2}{U},U,https://cards.scryfall.io/normal/front/c/9/c9f03bae-1d23-43ea-9079-4b09d61bbadd.jpg?1592708680,,,Avacyn Restored,,common,Creature — Zombie Drake,0.16,1.35
@@ -36,9 +36,9 @@ bfz,146,1,0,,Goblin War Paint,{1}{R},R,https://cards.scryfall.io/normal/front/b/
 bfz,182,1,0,,Oran-Rief Invoker,{1}{G},G,https://cards.scryfall.io/normal/front/0/9/0957875c-e1a2-4d14-8b61-c806903fc760.jpg?1562897105,,,Battle for Zendikar,,common,Creature — Human Shaman,0.22,0.49
 bfz,185,1,0,,Reclaiming Vines,{2}{G}{G},G,https://cards.scryfall.io/normal/front/1/8/18be4c1a-58d7-409e-b7e0-aadb5ccf814d.jpg?1562900909,,,Battle for Zendikar,,common,Sorcery,0.49,1.62
 bfz,20,1,0,,Cliffside Lookout,{W},W,https://cards.scryfall.io/normal/front/8/c/8c755ae6-badc-4dc8-bfa6-fdebcb00bfba.jpg?1562928116,,,Battle for Zendikar,,common,Creature — Kor Scout Ally,0.16,1.56
-bfz,226,1,0,,Pilgrim's Eye,{3},,https://cards.scryfall.io/normal/front/9/e/9e7dbd56-95a0-4697-9599-3f6110daf6bc.jpg?1562932488,,,Battle for Zendikar,,uncommon,Artifact Creature — Thopter,0.38,2.16
-bfz,233,1,0,,Blighted Woodland,,,https://cards.scryfall.io/normal/front/7/5/7508d531-da52-41fb-a729-3f5704c9a194.jpg?1562922639,,,Battle for Zendikar,,uncommon,Land,1.4,12.68
-bfz,253,1,0,,Plains,,,https://cards.scryfall.io/normal/front/b/1/b11c9a26-3234-480b-94cf-49f15f2b0002.jpg?1562936851,,,Battle for Zendikar,,common,Basic Land — Plains,1.03,7.55
+bfz,226,1,0,,Pilgrim's Eye,{3},C,https://cards.scryfall.io/normal/front/9/e/9e7dbd56-95a0-4697-9599-3f6110daf6bc.jpg?1562932488,,,Battle for Zendikar,,uncommon,Artifact Creature — Thopter,0.38,2.16
+bfz,233,1,0,,Blighted Woodland,,L,https://cards.scryfall.io/normal/front/7/5/7508d531-da52-41fb-a729-3f5704c9a194.jpg?1562922639,,,Battle for Zendikar,,uncommon,Land,1.4,12.68
+bfz,253,1,0,,Plains,,L,https://cards.scryfall.io/normal/front/b/1/b11c9a26-3234-480b-94cf-49f15f2b0002.jpg?1562936851,,,Battle for Zendikar,,common,Basic Land — Plains,1.03,7.55
 bfz,48,1,0,,Sheer Drop,{2}{W},W,https://cards.scryfall.io/normal/front/7/5/75c85fa4-862d-4f94-9531-b62775838ab9.jpg?1562922839,,,Battle for Zendikar,,common,Sorcery,0.11,1.19
 bfz,49,1,0,,Smite the Monstrous,{3}{W},W,https://cards.scryfall.io/normal/front/7/6/766aad27-e987-45ab-82aa-e5f44fcc34ef.jpg?1562922992,,,Battle for Zendikar,,common,Instant,0.32,0.81
 bfz,87,1,0,,Ugin's Insight,{3}{U}{U},U,https://cards.scryfall.io/normal/front/f/3/f37d5938-9c8f-4203-8f3f-d6e89ced28ef.jpg?1562952785,,,Battle for Zendikar,,rare,Sorcery,1.3,2.75
@@ -108,52 +108,52 @@ blb,232,1,0,,Seedpod Squire,{3}{W/U},"U, W",https://cards.scryfall.io/normal/fro
 blb,234,2,0,,Stormcatch Mentor,{U}{R},"R, U",https://cards.scryfall.io/normal/front/9/9/99754055-6d67-4fde-aff3-41f6af6ea764.jpg?1721427197,,,Bloomburrow,,uncommon,Creature — Otter Wizard,1.56,11.17
 blb,241,1,0,,"Ygra, Eater of All",{3}{B}{G},"B, G",https://cards.scryfall.io/normal/front/b/9/b9ac7673-eae8-4c4b-889e-5025213a6151.jpg?1721427242,,,Bloomburrow,,mythic,Legendary Creature — Elemental Cat,36.58,39.55
 blb,242,1,0,,"Zoraline, Cosmos Caller",{1}{W}{B},"B, W",https://cards.scryfall.io/normal/front/b/7/b7f99fd5-5298-4b27-923d-9d31203c931a.jpg?1721427252,,,Bloomburrow,,rare,Legendary Creature — Bat Cleric,2.21,4.59
-blb,243,1,0,,Barkform Harvester,{3},,https://cards.scryfall.io/normal/front/f/7/f77049a6-0f22-415b-bc89-20bcb32accf6.jpg?1721427262,,,Bloomburrow,,common,Artifact Creature — Shapeshifter,0.54,0.81
-blb,244,1,0,,Bumbleflower's Sharepot,{2},,https://cards.scryfall.io/normal/front/5/f/5f0affd5-5dcd-4dd1-a694-37a9aedf4084.jpg?1721427267,,,Bloomburrow,,common,Artifact,0.27,0.59
-blb,246,1,0,,Heirloom Epic,{1},,https://cards.scryfall.io/normal/front/7/8/7839ce48-0175-494a-ab89-9bdfb7a50cb1.jpg?1721427279,,,Bloomburrow,,uncommon,Artifact,0.32,0.7
+blb,243,1,0,,Barkform Harvester,{3},C,https://cards.scryfall.io/normal/front/f/7/f77049a6-0f22-415b-bc89-20bcb32accf6.jpg?1721427262,,,Bloomburrow,,common,Artifact Creature — Shapeshifter,0.54,0.81
+blb,244,1,0,,Bumbleflower's Sharepot,{2},C,https://cards.scryfall.io/normal/front/5/f/5f0affd5-5dcd-4dd1-a694-37a9aedf4084.jpg?1721427267,,,Bloomburrow,,common,Artifact,0.27,0.59
+blb,246,1,0,,Heirloom Epic,{1},C,https://cards.scryfall.io/normal/front/7/8/7839ce48-0175-494a-ab89-9bdfb7a50cb1.jpg?1721427279,,,Bloomburrow,,uncommon,Artifact,0.32,0.7
 blb,25,3,0,,Pileated Provisioner,{4}{W},W,https://cards.scryfall.io/normal/front/a/e/ae442cd6-c4df-4aad-9b1d-ccd936c5ec96.jpg?1721425901,,,Bloomburrow,,common,Creature — Bird Scout,0.11,0.54
-blb,252,1,0,,Fabled Passage,,,https://cards.scryfall.io/normal/front/8/8/8809830f-d8e1-4603-9652-0ad8b00234e9.jpg?1721427315,,,Bloomburrow,,rare,Land,37.12,34.32
-blb,254,1,1,,Hidden Grotto,,,https://cards.scryfall.io/normal/front/4/b/4ba8f2e7-8357-4862-97dc-1942d066023a.jpg?1721427326,,,Bloomburrow,,common,Land,0.65,0.97
-blb,255,1,0,,Lilypad Village,,,https://cards.scryfall.io/normal/front/7/e/7e95a7cc-ed77-4ca4-80db-61c0fc68bf50.jpg?1721639529,,,Bloomburrow,,uncommon,Land,0.86,1.24
-blb,258,1,0,,Oakhollow Village,,,https://cards.scryfall.io/normal/front/0/d/0d49b016-b02b-459f-85e9-c04f6bdcb94e.jpg?1721639587,,,Bloomburrow,,uncommon,Land,1.78,1.89
+blb,252,1,0,,Fabled Passage,,L,https://cards.scryfall.io/normal/front/8/8/8809830f-d8e1-4603-9652-0ad8b00234e9.jpg?1721427315,,,Bloomburrow,,rare,Land,37.12,34.32
+blb,254,1,1,,Hidden Grotto,,L,https://cards.scryfall.io/normal/front/4/b/4ba8f2e7-8357-4862-97dc-1942d066023a.jpg?1721427326,,,Bloomburrow,,common,Land,0.65,0.97
+blb,255,1,0,,Lilypad Village,,L,https://cards.scryfall.io/normal/front/7/e/7e95a7cc-ed77-4ca4-80db-61c0fc68bf50.jpg?1721639529,,,Bloomburrow,,uncommon,Land,0.86,1.24
+blb,258,1,0,,Oakhollow Village,,L,https://cards.scryfall.io/normal/front/0/d/0d49b016-b02b-459f-85e9-c04f6bdcb94e.jpg?1721639587,,,Bloomburrow,,uncommon,Land,1.78,1.89
 blb,26,5,0,,Rabbit Response,{2}{W}{W},W,https://cards.scryfall.io/normal/front/c/4/c4ded450-346d-4917-917a-b62bc0267509.jpg?1721425917,,,Bloomburrow,,common,Instant,0.05,0.54
-blb,261,2,0,,Uncharted Haven,,,https://cards.scryfall.io/normal/front/6/8/68b90f54-d629-4126-82cc-13b51d6c1c3e.jpg?1722073883,,,Bloomburrow,,common,Land,0.38,0.81
-blb,262,2,0,,Plains,,,https://cards.scryfall.io/normal/front/3/6/3663ff0c-d02f-49ac-bb88-6f0dbd684337.jpg?1721427370,,,Bloomburrow,,common,Basic Land — Plains,1.51,1.3
-blb,263,0,1,,Plains,,,https://cards.scryfall.io/normal/front/a/b/ab53b300-38b2-436c-834c-b0162dd3b757.jpg?1721427378,,,Bloomburrow,,common,Basic Land — Plains,2.05,2.54
-blb,265,1,0,,Plains,,,https://cards.scryfall.io/normal/front/1/1/11a94c04-b6d3-4118-b252-5146eedae4e8.jpg?1721427388,,,Bloomburrow,,common,Basic Land — Plains,3.02,5.94
-blb,266,2,0,,Island,,,https://cards.scryfall.io/normal/front/1/0/106a5332-0104-4ec9-9e1f-806381ae4cad.jpg?1721427389,,,Bloomburrow,,common,Basic Land — Island,1.13,1.83
-blb,267,1,1,,Island,,,https://cards.scryfall.io/normal/front/f/7/f7b92adb-a384-4e03-8ba7-1e41b9fb2516.jpg?1721427398,,,Bloomburrow,,common,Basic Land — Island,1.24,1.73
-blb,268,3,0,,Island,,,https://cards.scryfall.io/normal/front/4/0/408eb23f-13fa-4f98-b316-18e3057f9136.jpg?1721427408,,,Bloomburrow,,common,Basic Land — Island,1.46,4.05
-blb,269,1,0,,Island,,,https://cards.scryfall.io/normal/front/2/a/2a9db98e-9f1d-4139-95c5-49f9d17a2107.jpg?1721427408,,,Bloomburrow,,common,Basic Land — Island,2.32,3.67
+blb,261,2,0,,Uncharted Haven,,L,https://cards.scryfall.io/normal/front/6/8/68b90f54-d629-4126-82cc-13b51d6c1c3e.jpg?1722073883,,,Bloomburrow,,common,Land,0.38,0.81
+blb,262,2,0,,Plains,,L,https://cards.scryfall.io/normal/front/3/6/3663ff0c-d02f-49ac-bb88-6f0dbd684337.jpg?1721427370,,,Bloomburrow,,common,Basic Land — Plains,1.51,1.3
+blb,263,0,1,,Plains,,L,https://cards.scryfall.io/normal/front/a/b/ab53b300-38b2-436c-834c-b0162dd3b757.jpg?1721427378,,,Bloomburrow,,common,Basic Land — Plains,2.05,2.54
+blb,265,1,0,,Plains,,L,https://cards.scryfall.io/normal/front/1/1/11a94c04-b6d3-4118-b252-5146eedae4e8.jpg?1721427388,,,Bloomburrow,,common,Basic Land — Plains,3.02,5.94
+blb,266,2,0,,Island,,L,https://cards.scryfall.io/normal/front/1/0/106a5332-0104-4ec9-9e1f-806381ae4cad.jpg?1721427389,,,Bloomburrow,,common,Basic Land — Island,1.13,1.83
+blb,267,1,1,,Island,,L,https://cards.scryfall.io/normal/front/f/7/f7b92adb-a384-4e03-8ba7-1e41b9fb2516.jpg?1721427398,,,Bloomburrow,,common,Basic Land — Island,1.24,1.73
+blb,268,3,0,,Island,,L,https://cards.scryfall.io/normal/front/4/0/408eb23f-13fa-4f98-b316-18e3057f9136.jpg?1721427408,,,Bloomburrow,,common,Basic Land — Island,1.46,4.05
+blb,269,1,0,,Island,,L,https://cards.scryfall.io/normal/front/2/a/2a9db98e-9f1d-4139-95c5-49f9d17a2107.jpg?1721427408,,,Bloomburrow,,common,Basic Land — Island,2.32,3.67
 blb,27,3,0,,Repel Calamity,{1}{W},W,https://cards.scryfall.io/normal/front/d/0/d068192a-6270-4981-819d-4945fa4a2b83.jpg?1721425920,,,Bloomburrow,,uncommon,Instant,0.27,0.76
-blb,270,1,0,,Swamp,,,https://cards.scryfall.io/normal/front/f/a/faa54bef-c90e-4e9b-b94b-942ea829e0d2.jpg?1721427418,,,Bloomburrow,,common,Basic Land — Swamp,1.13,1.56
-blb,271,0,1,,Swamp,,,https://cards.scryfall.io/normal/front/d/c/dcdbc78a-7854-4a66-911f-a40b33e25f39.jpg?1721427427,,,Bloomburrow,,common,Basic Land — Swamp,1.13,1.51
-blb,272,1,0,,Swamp,,,https://cards.scryfall.io/normal/front/0/2/0223cf7f-4c6e-487f-babb-a740a15e1f0c.jpg?1721427429,,,Bloomburrow,,common,Basic Land — Swamp,1.08,2.43
-blb,273,1,0,,Swamp,,,https://cards.scryfall.io/normal/front/4/6/4650ebaf-8e9f-431c-998d-e0f426b24d41.jpg?1721427438,,,Bloomburrow,,common,Basic Land — Swamp,3.45,7.01
-blb,274,2,0,,Mountain,,,https://cards.scryfall.io/normal/front/c/1/c1bba8fb-d763-4efa-8db1-e5e81994b5f9.jpg?1721427449,,,Bloomburrow,,common,Basic Land — Mountain,1.08,1.51
-blb,275,1,1,,Mountain,,,https://cards.scryfall.io/normal/front/0/2/02244055-cbeb-4074-9482-42ec20721312.jpg?1721427451,,,Bloomburrow,,common,Basic Land — Mountain,1.35,2.37
-blb,276,1,0,,Mountain,,,https://cards.scryfall.io/normal/front/0/b/0b384d24-8771-4860-8fc1-1b74217f1c4c.jpg?1721427460,,,Bloomburrow,,common,Basic Land — Mountain,1.35,2.59
-blb,277,1,0,,Mountain,,,https://cards.scryfall.io/normal/front/8/a/8a38bea4-2d1b-442b-aad5-ab1a0ae67aac.jpg?1721427461,,,Bloomburrow,,common,Basic Land — Mountain,2.27,8.58
-blb,278,1,0,,Forest,,,https://cards.scryfall.io/normal/front/f/7/f791876a-f3fb-45b8-90a9-af846d8b8f74.jpg?1721427476,,,Bloomburrow,,common,Basic Land — Forest,1.51,2.16
-blb,279,1,1,,Forest,,,https://cards.scryfall.io/normal/front/3/a/3a7a2a54-47e1-4694-b4f6-b7d659bb2b1f.jpg?1721427479,,,Bloomburrow,,common,Basic Land — Forest,1.46,1.4
-blb,280,1,0,,Forest,,,https://cards.scryfall.io/normal/front/0/0/0000419b-0bba-4488-8f7a-6194544ce91e.jpg?1721427487,,,Bloomburrow,,common,Basic Land — Forest,1.3,3.18
-blb,281,1,0,,Forest,,,https://cards.scryfall.io/normal/front/2/0/208014f4-eed8-4856-a9d9-dbac10c4aa6a.jpg?1721427489,,,Bloomburrow,,common,Basic Land — Forest,3.13,7.55
+blb,270,1,0,,Swamp,,L,https://cards.scryfall.io/normal/front/f/a/faa54bef-c90e-4e9b-b94b-942ea829e0d2.jpg?1721427418,,,Bloomburrow,,common,Basic Land — Swamp,1.13,1.56
+blb,271,0,1,,Swamp,,L,https://cards.scryfall.io/normal/front/d/c/dcdbc78a-7854-4a66-911f-a40b33e25f39.jpg?1721427427,,,Bloomburrow,,common,Basic Land — Swamp,1.13,1.51
+blb,272,1,0,,Swamp,,L,https://cards.scryfall.io/normal/front/0/2/0223cf7f-4c6e-487f-babb-a740a15e1f0c.jpg?1721427429,,,Bloomburrow,,common,Basic Land — Swamp,1.08,2.43
+blb,273,1,0,,Swamp,,L,https://cards.scryfall.io/normal/front/4/6/4650ebaf-8e9f-431c-998d-e0f426b24d41.jpg?1721427438,,,Bloomburrow,,common,Basic Land — Swamp,3.45,7.01
+blb,274,2,0,,Mountain,,L,https://cards.scryfall.io/normal/front/c/1/c1bba8fb-d763-4efa-8db1-e5e81994b5f9.jpg?1721427449,,,Bloomburrow,,common,Basic Land — Mountain,1.08,1.51
+blb,275,1,1,,Mountain,,L,https://cards.scryfall.io/normal/front/0/2/02244055-cbeb-4074-9482-42ec20721312.jpg?1721427451,,,Bloomburrow,,common,Basic Land — Mountain,1.35,2.37
+blb,276,1,0,,Mountain,,L,https://cards.scryfall.io/normal/front/0/b/0b384d24-8771-4860-8fc1-1b74217f1c4c.jpg?1721427460,,,Bloomburrow,,common,Basic Land — Mountain,1.35,2.59
+blb,277,1,0,,Mountain,,L,https://cards.scryfall.io/normal/front/8/a/8a38bea4-2d1b-442b-aad5-ab1a0ae67aac.jpg?1721427461,,,Bloomburrow,,common,Basic Land — Mountain,2.27,8.58
+blb,278,1,0,,Forest,,L,https://cards.scryfall.io/normal/front/f/7/f791876a-f3fb-45b8-90a9-af846d8b8f74.jpg?1721427476,,,Bloomburrow,,common,Basic Land — Forest,1.51,2.16
+blb,279,1,1,,Forest,,L,https://cards.scryfall.io/normal/front/3/a/3a7a2a54-47e1-4694-b4f6-b7d659bb2b1f.jpg?1721427479,,,Bloomburrow,,common,Basic Land — Forest,1.46,1.4
+blb,280,1,0,,Forest,,L,https://cards.scryfall.io/normal/front/0/0/0000419b-0bba-4488-8f7a-6194544ce91e.jpg?1721427487,,,Bloomburrow,,common,Basic Land — Forest,1.3,3.18
+blb,281,1,0,,Forest,,L,https://cards.scryfall.io/normal/front/2/0/208014f4-eed8-4856-a9d9-dbac10c4aa6a.jpg?1721427489,,,Bloomburrow,,common,Basic Land — Forest,3.13,7.55
 blb,3,1,0,,Brave-Kin Duo,{W},W,https://cards.scryfall.io/normal/front/b/8/b8dd4693-424d-4d6e-86cf-24401a23d6b1.jpg?1721425770,,,Bloomburrow,,common,Creature — Rabbit Mouse,0.38,0.43
 blb,31,2,0,,Shrike Force,{2}{W},W,https://cards.scryfall.io/normal/front/3/0/306fec2c-d8b7-4f4b-8f58-10e3b9f3158f.jpg?1721425946,,,Bloomburrow,,uncommon,Creature — Bird Knight,0.76,1.19
 blb,32,0,1,,Sonar Strike,{1}{W},W,https://cards.scryfall.io/normal/front/a/5/a50da179-751f-47a8-a547-8c4a291ed381.jpg?1721425953,,,Bloomburrow,,common,Instant,0.27,0.43
 blb,323,1,0,,Mistbreath Elder,{G},G,https://cards.scryfall.io/normal/front/f/2/f2ed58e4-b612-483e-9c0e-f1fbfaa5950c.jpg?1721427729,,,Bloomburrow,,rare,Creature — Frog Warrior,2.7,3.99
 blb,35,1,0,,Thistledown Players,{2}{W},W,https://cards.scryfall.io/normal/front/a/f/afa8d83f-8586-4127-8b55-9715e9547488.jpg?1721425974,,,Bloomburrow,,common,Creature — Mouse Bard,0.11,0.65
-blb,369,6,1,,Plains,,,https://cards.scryfall.io/normal/front/4/4/449d4122-ee9d-477c-976a-809ba8cb1443.jpg?1721427984,,,Bloomburrow,,common,Basic Land — Plains,0.59,0.86
+blb,369,6,1,,Plains,,L,https://cards.scryfall.io/normal/front/4/4/449d4122-ee9d-477c-976a-809ba8cb1443.jpg?1721427984,,,Bloomburrow,,common,Basic Land — Plains,0.59,0.86
 blb,37,5,0,,Warren Elder,{1}{W},W,https://cards.scryfall.io/normal/front/4/b/4bf20069-5a20-4f95-976b-6af2b69f3ad0.jpg?1721425988,,,Bloomburrow,,common,Creature — Rabbit Cleric,0.16,0.22
-blb,370,6,1,,Plains,,,https://cards.scryfall.io/normal/front/0/3/031b61a1-db66-416d-8187-edc32123131f.jpg?1721427984,,,Bloomburrow,,common,Basic Land — Plains,0.81,0.92
-blb,371,6,1,,Island,,,https://cards.scryfall.io/normal/front/4/6/46848fc2-ba58-4738-b4ce-0399d9053f48.jpg?1721427993,,,Bloomburrow,,common,Basic Land — Island,0.49,0.76
-blb,372,5,1,,Island,,,https://cards.scryfall.io/normal/front/1/0/10125dab-fe82-4796-b5db-3bd6ad389e1d.jpg?1721427994,,,Bloomburrow,,common,Basic Land — Island,0.43,0.76
-blb,373,0,1,,Swamp,,,https://cards.scryfall.io/normal/front/6/1/6125ffe3-4e48-4e0f-8390-7462446fc8bf.jpg?1721428002,,,Bloomburrow,,common,Basic Land — Swamp,0.92,1.13
-blb,374,0,1,,Swamp,,,https://cards.scryfall.io/normal/front/4/d/4dbfdbdd-6322-4ea6-9680-d4e480d78437.jpg?1721428003,,,Bloomburrow,,common,Basic Land — Swamp,0.86,1.03
-blb,375,6,1,,Mountain,,,https://cards.scryfall.io/normal/front/4/b/4b827c54-8bfe-4ef5-830e-e17b8690bbe7.jpg?1721428012,,,Bloomburrow,,common,Basic Land — Mountain,0.7,0.65
-blb,376,6,1,,Mountain,,,https://cards.scryfall.io/normal/front/6/2/62aaa129-69ff-4e22-861e-b2efd1cd5a10.jpg?1721428013,,,Bloomburrow,,common,Basic Land — Mountain,0.59,0.81
-blb,377,6,1,,Forest,,,https://cards.scryfall.io/normal/front/4/3/43b3be4a-973d-4aeb-a94e-37e2710ac178.jpg?1721428022,,,Bloomburrow,,common,Basic Land — Forest,0.43,0.86
-blb,378,5,1,,Forest,,,https://cards.scryfall.io/normal/front/b/d/bddc66f7-4e94-4857-ba7d-6b0083d0bfa0.jpg?1721428024,,,Bloomburrow,,common,Basic Land — Forest,0.43,0.86
+blb,370,6,1,,Plains,,L,https://cards.scryfall.io/normal/front/0/3/031b61a1-db66-416d-8187-edc32123131f.jpg?1721427984,,,Bloomburrow,,common,Basic Land — Plains,0.81,0.92
+blb,371,6,1,,Island,,L,https://cards.scryfall.io/normal/front/4/6/46848fc2-ba58-4738-b4ce-0399d9053f48.jpg?1721427993,,,Bloomburrow,,common,Basic Land — Island,0.49,0.76
+blb,372,5,1,,Island,,L,https://cards.scryfall.io/normal/front/1/0/10125dab-fe82-4796-b5db-3bd6ad389e1d.jpg?1721427994,,,Bloomburrow,,common,Basic Land — Island,0.43,0.76
+blb,373,0,1,,Swamp,,L,https://cards.scryfall.io/normal/front/6/1/6125ffe3-4e48-4e0f-8390-7462446fc8bf.jpg?1721428002,,,Bloomburrow,,common,Basic Land — Swamp,0.92,1.13
+blb,374,0,1,,Swamp,,L,https://cards.scryfall.io/normal/front/4/d/4dbfdbdd-6322-4ea6-9680-d4e480d78437.jpg?1721428003,,,Bloomburrow,,common,Basic Land — Swamp,0.86,1.03
+blb,375,6,1,,Mountain,,L,https://cards.scryfall.io/normal/front/4/b/4b827c54-8bfe-4ef5-830e-e17b8690bbe7.jpg?1721428012,,,Bloomburrow,,common,Basic Land — Mountain,0.7,0.65
+blb,376,6,1,,Mountain,,L,https://cards.scryfall.io/normal/front/6/2/62aaa129-69ff-4e22-861e-b2efd1cd5a10.jpg?1721428013,,,Bloomburrow,,common,Basic Land — Mountain,0.59,0.81
+blb,377,6,1,,Forest,,L,https://cards.scryfall.io/normal/front/4/3/43b3be4a-973d-4aeb-a94e-37e2710ac178.jpg?1721428022,,,Bloomburrow,,common,Basic Land — Forest,0.43,0.86
+blb,378,5,1,,Forest,,L,https://cards.scryfall.io/normal/front/b/d/bddc66f7-4e94-4857-ba7d-6b0083d0bfa0.jpg?1721428024,,,Bloomburrow,,common,Basic Land — Forest,0.43,0.86
 blb,379,1,0,,"Bria, Riptide Rogue",{2}{U}{R},"R, U",https://cards.scryfall.io/normal/front/3/9/390c96b3-68da-4a42-89ab-d9ccc79ce0dd.jpg?1724104634,,,Bloomburrow,,mythic,Legendary Creature — Otter Rogue,0.0,69.45
 blb,380,1,0,,"Byrke, Long Ear of the Law",{4}{G}{W},"G, W",https://cards.scryfall.io/normal/front/6/4/6441abd3-320b-424a-9753-61e3581fe1a9.jpg?1726396879,,,Bloomburrow,,mythic,Legendary Creature — Rabbit Soldier,0.0,6.91
 blb,386,0,1,Bundle,Thundertrap Trainer,{1}{U},U,https://cards.scryfall.io/normal/front/e/5/e52caa08-34ae-4c74-83ad-008d17005576.jpg?1724104649,,,Bloomburrow,,rare,Creature — Otter Wizard,0.0,8.53
@@ -165,9 +165,9 @@ blb,391,3,0,,Flame Lash,{3}{R},R,https://cards.scryfall.io/normal/front/c/6/c644
 blb,392,1,0,,Colossification,{5}{G}{G},G,https://cards.scryfall.io/normal/front/c/2/c2cad902-ffd2-4bab-b114-b4b6df2ac6b3.jpg?1721428099,,,Bloomburrow,,rare,Enchantment — Aura,1.51,0.0
 blb,393,2,0,,Giant Growth,{G},G,https://cards.scryfall.io/normal/front/e/7/e70722d6-b4d5-45c2-9488-9a5eb0bdb9bd.jpg?1721428103,,,Bloomburrow,,common,Instant,0.76,0.0
 blb,394,2,0,,Rabid Bite,{1}{G},G,https://cards.scryfall.io/normal/front/5/3/53a73200-b798-4bfd-a431-8b94e17b70be.jpg?1721428112,,,Bloomburrow,,common,Sorcery,0.59,0.0
-blb,395,1,0,,Sword of Vengeance,{3},,https://cards.scryfall.io/normal/front/f/2/f21b5fc1-7611-44ac-ad8d-1f0c6d4fc9a3.jpg?1721428115,,,Bloomburrow,,rare,Artifact — Equipment,3.51,0.0
-blb,396,4,0,,Blossoming Sands,,,https://cards.scryfall.io/normal/front/e/c/ecfa2cc9-e427-4104-bad7-b0294e392b1f.jpg?1721428122,,,Bloomburrow,,common,Land,0.7,0.0
-blb,397,4,0,,Swiftwater Cliffs,,,https://cards.scryfall.io/normal/front/8/9/89e43510-c444-4b2e-b2a0-528dcc09c899.jpg?1721428123,,,Bloomburrow,,common,Land,0.65,0.0
+blb,395,1,0,,Sword of Vengeance,{3},C,https://cards.scryfall.io/normal/front/f/2/f21b5fc1-7611-44ac-ad8d-1f0c6d4fc9a3.jpg?1721428115,,,Bloomburrow,,rare,Artifact — Equipment,3.51,0.0
+blb,396,4,0,,Blossoming Sands,,L,https://cards.scryfall.io/normal/front/e/c/ecfa2cc9-e427-4104-bad7-b0294e392b1f.jpg?1721428122,,,Bloomburrow,,common,Land,0.7,0.0
+blb,397,4,0,,Swiftwater Cliffs,,L,https://cards.scryfall.io/normal/front/8/9/89e43510-c444-4b2e-b2a0-528dcc09c899.jpg?1721428123,,,Bloomburrow,,common,Land,0.65,0.0
 blb,4,1,0,,Brightblade Stoat,{1}{W},W,https://cards.scryfall.io/normal/front/d/f/df7fea2e-7414-4bc8-adb0-9342e174c009.jpg?1721425778,,,Bloomburrow,,uncommon,Creature — Weasel Soldier,0.38,0.65
 blb,42,4,0,,Bellowing Crier,{1}{U},U,https://cards.scryfall.io/normal/front/c/a/ca2215dd-6300-49cf-b9b2-3a840b786c31.jpg?1721426026,,,Bloomburrow,,common,Creature — Frog Advisor,0.16,1.13
 blb,44,1,0,,Daring Waverider,{4}{U}{U},U,https://cards.scryfall.io/normal/front/1/9/19422406-0c1a-497e-bed1-708bc556491a.jpg?1721426039,,,Bloomburrow,,uncommon,Creature — Otter Wizard,0.43,0.86
@@ -192,82 +192,82 @@ blb,93,0,1,,Early Winter,{4}{B},B,https://cards.scryfall.io/normal/front/5/0/503
 bro,103,2,0,Story,Gruesome Realization,{1}{B}{B},B,https://cards.scryfall.io/normal/front/2/1/21cd0ece-a267-42ab-b95a-6e7931bd837a.jpg?1674426283,,,The Brothers' War,,uncommon,Sorcery,0.38,1.03
 bro,104,1,0,,Gurgling Anointer,{2}{B},B,https://cards.scryfall.io/normal/front/9/c/9ce0d139-2bea-48df-a007-cee7c8ce07bd.jpg?1674420917,,,The Brothers' War,,uncommon,Creature — Phyrexian Horror,0.38,0.7
 bro,108,1,0,,Moment of Defiance,{2}{B},B,https://cards.scryfall.io/normal/front/0/e/0e99fb27-a1e9-491f-ab2a-3ccb493168cb.jpg?1674420944,,,The Brothers' War,,common,Instant,0.38,0.49
-bro,123,1,0,,Scrapwork Rager,{4},,https://cards.scryfall.io/normal/front/e/2/e28de770-7975-4aa9-b656-e7dbe6bff290.jpg?1676318800,,,The Brothers' War,,common,Artifact Creature — Phyrexian Horror,0.38,0.32
+bro,123,1,0,,Scrapwork Rager,{4},C,https://cards.scryfall.io/normal/front/e/2/e28de770-7975-4aa9-b656-e7dbe6bff290.jpg?1676318800,,,The Brothers' War,,common,Artifact Creature — Phyrexian Horror,0.38,0.32
 bro,157,1,0,,Whirling Strike,{1}{R},R,https://cards.scryfall.io/normal/front/b/1/b17950ae-43aa-4d03-a41e-726ca96eb1ba.jpg?1674421310,,,The Brothers' War,,common,Instant,0.32,0.43
 bro,190,1,0,Story,Shoot Down,{3}{G},G,https://cards.scryfall.io/normal/front/2/0/20014a1c-197c-4e04-94b2-874886183e2f.jpg?1674421625,,,The Brothers' War,,common,Sorcery,0.22,0.32
 bro,209,3,1,,Evangel of Synthesis,{U}{B},"B, U",https://cards.scryfall.io/normal/front/e/8/e8b60003-a987-49b0-a0f8-bb825c97da4d.jpg?1674421763,,,The Brothers' War,,uncommon,Creature — Phyrexian Human Cleric,0.38,0.49
 bro,228,1,0,,Yotian Tactician,{2}{W}{U},"U, W",https://cards.scryfall.io/normal/front/7/6/760c0369-c2e4-4bd7-a301-9f707f5f48a8.jpg?1674421911,,,The Brothers' War,,uncommon,Creature — Human Soldier,0.49,0.76
-bro,242,1,0,,Reconstructed Thopter,{3},,https://cards.scryfall.io/normal/front/b/c/bcc8a8d8-6d8e-44b3-a29b-5fa4a851a25b.jpg?1674422018,,,The Brothers' War,,uncommon,Artifact Creature — Thopter,0.22,0.32
-bro,266,1,0,,Tocasia's Dig Site,,,https://cards.scryfall.io/normal/front/2/3/23d4b90c-95b1-4828-bc08-7067da0d5364.jpg?1674422231,,,The Brothers' War,,common,Land,0.54,0.86
+bro,242,1,0,,Reconstructed Thopter,{3},C,https://cards.scryfall.io/normal/front/b/c/bcc8a8d8-6d8e-44b3-a29b-5fa4a851a25b.jpg?1674422018,,,The Brothers' War,,uncommon,Artifact Creature — Thopter,0.22,0.32
+bro,266,1,0,,Tocasia's Dig Site,,L,https://cards.scryfall.io/normal/front/2/3/23d4b90c-95b1-4828-bc08-7067da0d5364.jpg?1674422231,,,The Brothers' War,,common,Land,0.54,0.86
 bro,31,1,0,,Union of the Third Path,{2}{W},W,https://cards.scryfall.io/normal/front/4/8/486a0745-7360-4cc9-9cc2-30c0eda6e00c.jpg?1674420357,,,The Brothers' War,,common,Instant,0.7,1.19
-bro,37,1,0,,Scrapwork Cohort,{4},,https://cards.scryfall.io/normal/front/9/1/91b0f17e-603a-4840-b2c3-381ec6f102f3.jpg?1674420409,,,The Brothers' War,,common,Artifact Creature — Soldier,0.22,0.22
+bro,37,1,0,,Scrapwork Cohort,{4},C,https://cards.scryfall.io/normal/front/9/1/91b0f17e-603a-4840-b2c3-381ec6f102f3.jpg?1674420409,,,The Brothers' War,,common,Artifact Creature — Soldier,0.22,0.22
 bro,64,1,0,,Stern Lesson,{2}{U},U,https://cards.scryfall.io/normal/front/3/1/3151caa2-10ed-4f30-83eb-cd1bd3f642ce.jpg?1674420610,,,The Brothers' War,,common,Instant,0.38,0.97
 bro,96,1,0,,Gix's Caress,{2}{B},B,https://cards.scryfall.io/normal/front/f/1/f1140cb9-6c48-4054-966e-5cc02aa7d5a4.jpg?1674420856,,,The Brothers' War,,common,Sorcery,0.22,0.76
-brr,25,1,0,,Journeyer's Kite,{2},,https://cards.scryfall.io/normal/front/5/3/5304ad0c-47ab-45da-a44f-0a80d1e2ea28.jpg?1674091966,,,The Brothers' War Retro Artifacts,,rare,Artifact,0.86,1.03
-brr,42,1,0,,Precursor Golem,{5},,https://cards.scryfall.io/normal/front/1/8/182c80d0-3ce2-42cd-8dd7-e28b10e2a9a1.jpg?1674092103,,,The Brothers' War Retro Artifacts,,rare,Artifact Creature — Golem,0.65,1.19
+brr,25,1,0,,Journeyer's Kite,{2},C,https://cards.scryfall.io/normal/front/5/3/5304ad0c-47ab-45da-a44f-0a80d1e2ea28.jpg?1674091966,,,The Brothers' War Retro Artifacts,,rare,Artifact,0.86,1.03
+brr,42,1,0,,Precursor Golem,{5},C,https://cards.scryfall.io/normal/front/1/8/182c80d0-3ce2-42cd-8dd7-e28b10e2a9a1.jpg?1674092103,,,The Brothers' War Retro Artifacts,,rare,Artifact Creature — Golem,0.65,1.19
 c14,173,1,0,,Bogardan Hellkite,{6}{R}{R},R,https://cards.scryfall.io/normal/front/4/9/49d0aa90-9026-49a8-a9da-3f711b3356c4.jpg?1561941207,,,Commander 2014,,mythic,Creature — Dragon,1.4,0.0
-c14,321,1,0,,Plains,,,https://cards.scryfall.io/normal/front/3/e/3efd25bb-853c-47fd-822c-02ca6fdc8bcf.jpg?1561939380,,,Commander 2014,,common,Basic Land — Plains,0.86,0.0
-c14,332,2,0,,Mountain,,,https://cards.scryfall.io/normal/front/6/8/687611bf-b200-457b-a139-63502c93ea69.jpg?1561945334,,,Commander 2014,,common,Basic Land — Mountain,0.76,0.0
-c15,338,2,0,,Mountain,,,https://cards.scryfall.io/normal/front/e/5/e58a9634-c2c5-4bf2-b694-86b23f8cf923.jpg?1562710852,,,Commander 2015,,common,Basic Land — Mountain,0.97,0.0
+c14,321,1,0,,Plains,,L,https://cards.scryfall.io/normal/front/3/e/3efd25bb-853c-47fd-822c-02ca6fdc8bcf.jpg?1561939380,,,Commander 2014,,common,Basic Land — Plains,0.86,0.0
+c14,332,2,0,,Mountain,,L,https://cards.scryfall.io/normal/front/6/8/687611bf-b200-457b-a139-63502c93ea69.jpg?1561945334,,,Commander 2014,,common,Basic Land — Mountain,0.76,0.0
+c15,338,2,0,,Mountain,,L,https://cards.scryfall.io/normal/front/e/5/e58a9634-c2c5-4bf2-b694-86b23f8cf923.jpg?1562710852,,,Commander 2015,,common,Basic Land — Mountain,0.97,0.0
 c16,114,1,0,,Languish,{2}{B}{B},B,https://cards.scryfall.io/normal/front/7/c/7cf7bf85-851c-4bd3-92b7-e1f1601d4a51.jpg?1562407278,,,Commander 2016,,rare,Sorcery,1.83,0.0
 c16,136,1,0,,Trash for Treasure,{2}{R},R,https://cards.scryfall.io/normal/front/f/1/f1c031c7-656b-4bd5-9b59-c03420cc2399.jpg?1562425343,,,Commander 2016,,rare,Sorcery,4.48,0.0
 c16,76,1,0,Promo,Sanctum Gargoyle,{3}{W},W,https://cards.scryfall.io/normal/front/c/4/c4cc7983-2454-417f-a817-e1bd663ba3d0.jpg?1562418613,,,Commander 2016,,common,Artifact Creature — Gargoyle,0.54,0.0
 c17,172,4,0,,Fleecemane Lion,{G}{W},"G, W",https://cards.scryfall.io/normal/front/e/5/e5c834ad-14d4-4c2f-88d3-a6a892299c4c.jpg?1562626967,,,Commander 2017,,rare,Creature — Cat,2.1,0.0
 c18,12,1,0,,Primordial Mist,{4}{U},U,https://cards.scryfall.io/normal/front/e/6/e6e8229f-a47e-4492-8f4b-10de141eb821.jpg?1592710097,,,Commander 2018,,rare,Enchantment,3.18,0.0
-c18,302,2,0,,Mountain,,,https://cards.scryfall.io/normal/front/9/3/937f96ed-dbf1-4ff2-bc55-6b0cd3795ccb.jpg?1592711821,,,Commander 2018,,common,Basic Land — Mountain,1.24,0.0
+c18,302,2,0,,Mountain,,L,https://cards.scryfall.io/normal/front/9/3/937f96ed-dbf1-4ff2-bc55-6b0cd3795ccb.jpg?1592711821,,,Commander 2018,,common,Basic Land — Mountain,1.24,0.0
 c19,28,2,0,,Skyfire Phoenix,{2}{R}{R},R,https://cards.scryfall.io/normal/front/6/0/605b0d7d-4ece-4ad8-bf59-86ac121ccafe.jpg?1568003562,,,Commander 2019,,rare,Creature — Phoenix,1.51,0.0
 c19,83,1,0,,Deep Analysis,{3}{U},U,https://cards.scryfall.io/normal/front/7/a/7a7a6d2d-be31-474b-811d-3802e32f3768.jpg?1568003973,,,Commander 2019,,common,Sorcery,0.81,0.0
-c20,252,1,0,,Sol Ring,{1},,https://cards.scryfall.io/normal/front/2/8/286bea73-8ad8-4423-8a7c-8497420fdb54.jpg?1591321726,,,Commander 2020,,uncommon,Artifact,7.88,0.0
-c20,254,1,0,,Swiftfoot Boots,{2},,https://cards.scryfall.io/normal/front/5/8/5819a8bc-1e4f-4274-b1ee-e583337acdf8.jpg?1591321751,,,Commander 2020,,uncommon,Artifact — Equipment,8.31,0.0
-c20,261,3,0,,Canopy Vista,,,https://cards.scryfall.io/normal/front/d/6/d625f96a-6d61-4fe8-8fe3-6205c86b6846.jpg?1591321850,,,Commander 2020,,rare,Land — Forest Plains,1.19,0.0
-c20,264,1,0,,Command Tower,,,https://cards.scryfall.io/normal/front/3/7/37691c08-7763-42bd-b882-3cb0624a2098.jpg?1591321893,,,Commander 2020,,common,Land,1.67,0.0
-c20,318,3,0,,Sunken Hollow,,,https://cards.scryfall.io/normal/front/b/b/bba559bc-dcbf-41a1-b5c0-e1fc850d657b.jpg?1591322490,,,Commander 2020,,rare,Land — Island Swamp,1.94,0.0
+c20,252,1,0,,Sol Ring,{1},C,https://cards.scryfall.io/normal/front/2/8/286bea73-8ad8-4423-8a7c-8497420fdb54.jpg?1591321726,,,Commander 2020,,uncommon,Artifact,7.88,0.0
+c20,254,1,0,,Swiftfoot Boots,{2},C,https://cards.scryfall.io/normal/front/5/8/5819a8bc-1e4f-4274-b1ee-e583337acdf8.jpg?1591321751,,,Commander 2020,,uncommon,Artifact — Equipment,8.31,0.0
+c20,261,3,0,,Canopy Vista,,L,https://cards.scryfall.io/normal/front/d/6/d625f96a-6d61-4fe8-8fe3-6205c86b6846.jpg?1591321850,,,Commander 2020,,rare,Land — Forest Plains,1.19,0.0
+c20,264,1,0,,Command Tower,,L,https://cards.scryfall.io/normal/front/3/7/37691c08-7763-42bd-b882-3cb0624a2098.jpg?1591321893,,,Commander 2020,,common,Land,1.67,0.0
+c20,318,3,0,,Sunken Hollow,,L,https://cards.scryfall.io/normal/front/b/b/bba559bc-dcbf-41a1-b5c0-e1fc850d657b.jpg?1591322490,,,Commander 2020,,rare,Land — Island Swamp,1.94,0.0
 c20,34,1,0,,Ethereal Forager,{4}{U}{U},U,https://cards.scryfall.io/normal/front/9/7/97543d69-547e-41f8-9a4f-908e5eb0ee4a.jpg?1591319443,,,Commander 2020,,rare,Creature — Elemental Whale,1.3,0.0
 c21,113,1,0,,Aether Gale,{3}{U}{U},U,https://cards.scryfall.io/normal/front/9/f/9f04015b-0286-4230-a72f-36c511d89f45.jpg?1625975933,,,Commander 2021,,rare,Sorcery,1.19,0.0
 c21,157,6,0,,Vampire Nighthawk,{1}{B}{B},B,https://cards.scryfall.io/normal/front/4/8/48d19aeb-d60f-411c-b83b-389aa575fa9a.jpg?1625193479,,,Commander 2021,,uncommon,Creature — Vampire Shaman,1.3,0.0
-c21,234,2,0,,Arcane Signet,{2},,https://cards.scryfall.io/normal/front/0/1/01b186af-8825-4257-80fd-9c1ecdb21414.jpg?1625978253,,,Commander 2021,,common,Artifact,2.48,0.0
-c21,239,2,0,,Commander's Sphere,{3},,https://cards.scryfall.io/normal/front/1/c/1c1fda5d-f519-4b27-9fc6-1a617d0fc79b.jpg?1625978436,,,Commander 2021,,common,Artifact,1.3,0.0
-c21,253,2,0,,Myr Battlesphere,{7},,https://cards.scryfall.io/normal/front/7/9/79d3ab85-0de2-4a6f-8ed0-c32853025520.jpg?1625978952,,,Commander 2021,,rare,Artifact Creature — Myr Construct,1.13,0.0
+c21,234,2,0,,Arcane Signet,{2},C,https://cards.scryfall.io/normal/front/0/1/01b186af-8825-4257-80fd-9c1ecdb21414.jpg?1625978253,,,Commander 2021,,common,Artifact,2.48,0.0
+c21,239,2,0,,Commander's Sphere,{3},C,https://cards.scryfall.io/normal/front/1/c/1c1fda5d-f519-4b27-9fc6-1a617d0fc79b.jpg?1625978436,,,Commander 2021,,common,Artifact,1.3,0.0
+c21,253,2,0,,Myr Battlesphere,{7},C,https://cards.scryfall.io/normal/front/7/9/79d3ab85-0de2-4a6f-8ed0-c32853025520.jpg?1625978952,,,Commander 2021,,rare,Artifact Creature — Myr Construct,1.13,0.0
 c21,93,1,0,,"Gideon, Champion of Justice",{2}{W}{W},W,https://cards.scryfall.io/normal/front/c/f/cf6d8ac0-4dd2-4a34-bb12-7cfede95e14b.jpg?1625193106,,,Commander 2021,,mythic,Legendary Planeswalker — Gideon,2.27,0.0
-chk,304,2,0,,Forest,,,https://cards.scryfall.io/normal/front/b/9/b9cf9a4b-be51-4f5d-ac0e-e4f79bbfaecd.jpg?1562763748,,,Champions of Kamigawa,,common,Basic Land — Forest,2.54,24.71
+chk,304,2,0,,Forest,,L,https://cards.scryfall.io/normal/front/b/9/b9cf9a4b-be51-4f5d-ac0e-e4f79bbfaecd.jpg?1562763748,,,Champions of Kamigawa,,common,Basic Land — Forest,2.54,24.71
 clb,116,1,0,,Blood Money,{5}{B}{B},B,https://cards.scryfall.io/normal/front/5/d/5d45c18c-b8eb-465c-8dfc-fd6da73e25b5.jpg?1674135993,,,Commander Legends: Battle for Baldur's Gate,,mythic,Sorcery,15.05,11.6
 clb,122,1,0,,Criminal Past,{2}{B},B,https://cards.scryfall.io/normal/front/6/4/6410a2a2-48d9-4032-b585-4eaa5bc06581.jpg?1674136050,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Legendary Enchantment — Background,0.38,1.13
 clb,141,1,0,,Passageway Seer,{3}{B},B,https://cards.scryfall.io/normal/front/8/a/8aeee54a-5e16-4519-b04a-49eaaf896b9a.jpg?1674136228,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Creature — Tiefling Warlock,0.54,0.92
 clb,156,1,0,,"Viconia, Drow Apostate",{2}{B},B,https://cards.scryfall.io/normal/front/f/6/f631762a-e833-40a5-a6e9-b6cde38f62f0.jpg?1674136381,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Legendary Creature — Elf Cleric,0.59,0.92
 clb,158,1,0,,Zhentarim Bandit,{1}{B},B,https://cards.scryfall.io/normal/front/b/d/bd1a27c1-ff44-47a7-991d-c294e30eea34.jpg?1674136400,,,Commander Legends: Battle for Baldur's Gate,,common,Creature — Halfling Rogue,0.38,0.92
-clb,173,0,1,,Fang Dragon,{5}{R}{R},,https://cards.scryfall.io/normal/front/3/d/3d74937b-c87f-4894-8f00-36e4d6844ebd.jpg?1674136535,Forktail Sweep,,Commander Legends: Battle for Baldur's Gate,,common,Creature — Dragon // Sorcery — Adventure,0.76,1.08
+clb,173,0,1,,Fang Dragon,{5}{R}{R},C,https://cards.scryfall.io/normal/front/3/d/3d74937b-c87f-4894-8f00-36e4d6844ebd.jpg?1674136535,Forktail Sweep,,Commander Legends: Battle for Baldur's Gate,,common,Creature — Dragon // Sorcery — Adventure,0.76,1.08
 clb,176,1,0,,"Ganax, Astral Hunter",{4}{R},R,https://cards.scryfall.io/normal/front/9/f/9f5bb319-29b2-4a7c-82e9-f8b5e47909a1.jpg?1674136563,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Legendary Creature — Dragon,3.78,31.08
 clb,180,1,0,,"Gut, True Soul Zealot",{2}{R},R,https://cards.scryfall.io/normal/front/3/d/3d8ca18d-9099-4f1e-95c1-f04da58a26bd.jpg?1674136598,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Legendary Creature — Goblin Shaman,0.59,0.97
 clb,187,1,0,,Lightning Bolt,{R},R,https://cards.scryfall.io/normal/front/a/e/ae5f9fb1-5a55-4db3-98a1-2628e3598c18.jpg?1674136663,,,Commander Legends: Battle for Baldur's Gate,,common,Instant,15.43,24.34
-clb,203,1,0,,Two-Handed Axe,{2}{R},,https://cards.scryfall.io/normal/front/2/1/21e34888-f57c-4f5d-bb5c-b82be980d145.jpg?1674136811,Sweeping Cleave,,Commander Legends: Battle for Baldur's Gate,,uncommon,Artifact — Equipment // Instant — Adventure,4.21,13.27
+clb,203,1,0,,Two-Handed Axe,{2}{R},C,https://cards.scryfall.io/normal/front/2/1/21e34888-f57c-4f5d-bb5c-b82be980d145.jpg?1674136811,Sweeping Cleave,,Commander Legends: Battle for Baldur's Gate,,uncommon,Artifact — Equipment // Instant — Adventure,4.21,13.27
 clb,216,1,0,,Band Together,{2}{G},G,https://cards.scryfall.io/normal/front/c/4/c454312c-ba0d-4b93-a3f5-e7764fcfbe20.jpg?1674136966,,,Commander Legends: Battle for Baldur's Gate,,common,Instant,0.22,0.76
 clb,22,2,0,,Greatsword of Tyr,{1}{W},W,https://cards.scryfall.io/normal/front/5/0/50088a60-642b-47ed-a289-ef0b617b688f.jpg?1674135062,,,Commander Legends: Battle for Baldur's Gate,,common,Artifact — Equipment,0.7,1.03
-clb,225,1,0,,Dread Linnorm,{6}{G},,https://cards.scryfall.io/normal/front/1/7/174ee9e7-8040-4b53-8d0d-177ce924521c.jpg?1674137040,Scale Deflection,,Commander Legends: Battle for Baldur's Gate,,common,Creature — Snake Dragon // Instant — Adventure,0.59,1.24
+clb,225,1,0,,Dread Linnorm,{6}{G},C,https://cards.scryfall.io/normal/front/1/7/174ee9e7-8040-4b53-8d0d-177ce924521c.jpg?1674137040,Scale Deflection,,Commander Legends: Battle for Baldur's Gate,,common,Creature — Snake Dragon // Instant — Adventure,0.59,1.24
 clb,233,1,0,,Giant Ankheg,{6}{G}{G},G,https://cards.scryfall.io/normal/front/b/c/bc420f2c-09fa-4f90-a1c3-7d151ecaa8b3.jpg?1674137119,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Creature — Insect,1.19,1.13
 clb,241,1,0,,Master Chef,{2}{G},G,https://cards.scryfall.io/normal/front/b/5/b534b1cb-0cd7-4b8c-bb25-42207fcba209.jpg?1674137194,,,Commander Legends: Battle for Baldur's Gate,,common,Legendary Enchantment — Background,0.7,0.7
 clb,282,1,0,,"Mahadi, Emporium Master",{1}{B}{R},"B, R",https://cards.scryfall.io/normal/front/c/3/c3da2b1a-76c5-4d36-bdf8-025b86f61eb5.jpg?1699601213,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Legendary Creature — Devil,3.02,24.28
-clb,297,1,0,,Arcane Encyclopedia,{3},,https://cards.scryfall.io/normal/front/0/0/00ff4cb8-a0e0-4527-a77d-03394065ffe0.jpg?1674137703,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Artifact,0.49,0.43
-clb,305,1,0,,Charcoal Diamond,{2},,https://cards.scryfall.io/normal/front/f/0/f0475c79-bc7f-4de8-a020-226bc658d303.jpg?1674137772,,,Commander Legends: Battle for Baldur's Gate,,common,Artifact,1.51,9.33
-clb,313,1,0,,Fire Diamond,{2},,https://cards.scryfall.io/normal/front/5/a/5a561484-438b-4ce9-911e-97078ac5b0fa.jpg?1674137837,,,Commander Legends: Battle for Baldur's Gate,,common,Artifact,1.67,9.6
-clb,314,1,0,,Fraying Line,{4},,https://cards.scryfall.io/normal/front/7/5/75bf7702-c97d-4b88-b815-769c4906e014.jpg?1674137845,,,Commander Legends: Battle for Baldur's Gate,,rare,Artifact,0.49,0.81
-clb,329,1,0,,Navigation Orb,{3},,https://cards.scryfall.io/normal/front/d/5/d512a77e-2435-4695-9408-df8e17dd1fbd.jpg?1674137971,,,Commander Legends: Battle for Baldur's Gate,,common,Artifact,0.86,1.46
-clb,336,1,0,,Rug of Smothering,{3},,https://cards.scryfall.io/normal/front/a/7/a73d1cb0-d0dc-4f2a-9cf2-954d5889dd08.jpg?1674138031,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Artifact Creature — Construct,1.62,1.78
-clb,341,1,0,,Treasure Keeper,{4},,https://cards.scryfall.io/normal/front/b/6/b68ab416-3394-4cb6-bfc6-33e62964dd1c.jpg?1674138077,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Artifact Creature — Construct,0.43,0.38
-clb,351,1,0,,Command Tower,,,https://cards.scryfall.io/normal/front/7/e/7eafe88e-ab38-442c-b147-bb01cc81178d.jpg?1674138161,,,Commander Legends: Battle for Baldur's Gate,,common,Land,1.56,5.56
+clb,297,1,0,,Arcane Encyclopedia,{3},C,https://cards.scryfall.io/normal/front/0/0/00ff4cb8-a0e0-4527-a77d-03394065ffe0.jpg?1674137703,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Artifact,0.49,0.43
+clb,305,1,0,,Charcoal Diamond,{2},C,https://cards.scryfall.io/normal/front/f/0/f0475c79-bc7f-4de8-a020-226bc658d303.jpg?1674137772,,,Commander Legends: Battle for Baldur's Gate,,common,Artifact,1.51,9.33
+clb,313,1,0,,Fire Diamond,{2},C,https://cards.scryfall.io/normal/front/5/a/5a561484-438b-4ce9-911e-97078ac5b0fa.jpg?1674137837,,,Commander Legends: Battle for Baldur's Gate,,common,Artifact,1.67,9.6
+clb,314,1,0,,Fraying Line,{4},C,https://cards.scryfall.io/normal/front/7/5/75bf7702-c97d-4b88-b815-769c4906e014.jpg?1674137845,,,Commander Legends: Battle for Baldur's Gate,,rare,Artifact,0.49,0.81
+clb,329,1,0,,Navigation Orb,{3},C,https://cards.scryfall.io/normal/front/d/5/d512a77e-2435-4695-9408-df8e17dd1fbd.jpg?1674137971,,,Commander Legends: Battle for Baldur's Gate,,common,Artifact,0.86,1.46
+clb,336,1,0,,Rug of Smothering,{3},C,https://cards.scryfall.io/normal/front/a/7/a73d1cb0-d0dc-4f2a-9cf2-954d5889dd08.jpg?1674138031,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Artifact Creature — Construct,1.62,1.78
+clb,341,1,0,,Treasure Keeper,{4},C,https://cards.scryfall.io/normal/front/b/6/b68ab416-3394-4cb6-bfc6-33e62964dd1c.jpg?1674138077,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Artifact Creature — Construct,0.43,0.38
+clb,351,1,0,,Command Tower,,L,https://cards.scryfall.io/normal/front/7/e/7eafe88e-ab38-442c-b147-bb01cc81178d.jpg?1674138161,,,Commander Legends: Battle for Baldur's Gate,,common,Land,1.56,5.56
 clb,436,1,0,,"Oji, the Exquisite Blade",{2}{W}{U},"U, W",https://cards.scryfall.io/normal/front/f/1/f1d41d4f-d2e0-490c-bde0-ce57eb8fda22.jpg?1674138867,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Legendary Creature — Human Monk,0.49,0.59
-clb,448,1,0,,Moss Diamond,{2},,https://cards.scryfall.io/normal/front/8/9/89149fb5-3afd-4da0-9a44-9366feb20804.jpg?1674138963,,,Commander Legends: Battle for Baldur's Gate,,common,Artifact,0.49,0.59
-clb,450,1,0,,Stonespeaker Crystal,{4},,https://cards.scryfall.io/normal/front/7/6/7654eb50-4ac1-4388-aea6-373aa2b361ae.jpg?1674138977,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Artifact,0.97,1.46
-clb,464,1,0,,Mountain,,,https://cards.scryfall.io/normal/front/b/4/b4376426-c901-44eb-8186-c009a3657893.jpg?1674139094,,,Commander Legends: Battle for Baldur's Gate,,common,Basic Land — Mountain,0.54,0.59
+clb,448,1,0,,Moss Diamond,{2},C,https://cards.scryfall.io/normal/front/8/9/89149fb5-3afd-4da0-9a44-9366feb20804.jpg?1674138963,,,Commander Legends: Battle for Baldur's Gate,,common,Artifact,0.49,0.59
+clb,450,1,0,,Stonespeaker Crystal,{4},C,https://cards.scryfall.io/normal/front/7/6/7654eb50-4ac1-4388-aea6-373aa2b361ae.jpg?1674138977,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Artifact,0.97,1.46
+clb,464,1,0,,Mountain,,L,https://cards.scryfall.io/normal/front/b/4/b4376426-c901-44eb-8186-c009a3657893.jpg?1674139094,,,Commander Legends: Battle for Baldur's Gate,,common,Basic Land — Mountain,0.54,0.59
 clb,48,1,0,,Veteran Soldier,{1}{W},W,https://cards.scryfall.io/normal/front/3/f/3f4f074e-914e-4924-8b5e-b80b247bc341.jpg?1674135321,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Legendary Enchantment — Background,0.49,0.76
 clb,53,1,0,,You're Confronted by Robbers,{3}{W},W,https://cards.scryfall.io/normal/front/f/7/f76e5d23-a45f-4100-8638-fce33f290fc6.jpg?1674135370,,,Commander Legends: Battle for Baldur's Gate,,common,Instant,0.16,0.7
 clb,738,1,0,,Will Kenrith,{4}{U}{U},U,https://cards.scryfall.io/normal/front/4/0/406a3ae5-f57e-40ff-8eac-a01781f2329f.jpg?1674141488,,,Commander Legends: Battle for Baldur's Gate,,mythic,Legendary Planeswalker — Will,3.89,0.0
 clb,805,1,0,,Rowan Kenrith,{4}{R}{R},R,https://cards.scryfall.io/normal/front/b/c/bcf0514e-63b3-4695-93ae-527524d48c25.jpg?1674142098,,,Commander Legends: Battle for Baldur's Gate,,mythic,Legendary Planeswalker — Rowan,3.24,0.0
 clb,852,2,0,,Sprite Dragon,{U}{R},"R, U",https://cards.scryfall.io/normal/front/3/6/361385d8-d9c7-4de8-a5c8-683e682779f4.jpg?1674142522,,,Commander Legends: Battle for Baldur's Gate,,uncommon,Creature — Faerie Dragon,3.62,0.0
 clb,87,1,0,,Oceanus Dragon,{4}{U}{U},U,https://cards.scryfall.io/normal/front/3/f/3fda8b66-fdf1-43e9-9d65-60b991348aac.jpg?1674135716,,,Commander Legends: Battle for Baldur's Gate,,common,Creature — Dragon,0.38,0.59
-clb,99,1,0,,Sword Coast Serpent,{5}{U}{U},,https://cards.scryfall.io/normal/front/0/b/0bbfb7ae-9a32-428d-903c-99d0d8669b8d.jpg?1674135829,Capsizing Wave,,Commander Legends: Battle for Baldur's Gate,,common,Creature — Serpent Dragon // Instant — Adventure,0.7,0.76
-cm2,304,2,0,,Mountain,,,https://cards.scryfall.io/normal/front/0/b/0b2f797a-0c9a-46a0-9f07-0f6af1846552.jpg?1562272398,,,Commander Anthology Volume II,,common,Basic Land — Mountain,0.97,0.0
+clb,99,1,0,,Sword Coast Serpent,{5}{U}{U},C,https://cards.scryfall.io/normal/front/0/b/0bbfb7ae-9a32-428d-903c-99d0d8669b8d.jpg?1674135829,Capsizing Wave,,Commander Legends: Battle for Baldur's Gate,,common,Creature — Serpent Dragon // Instant — Adventure,0.7,0.76
+cm2,304,2,0,,Mountain,,L,https://cards.scryfall.io/normal/front/0/b/0b2f797a-0c9a-46a0-9f07-0f6af1846552.jpg?1562272398,,,Commander Anthology Volume II,,common,Basic Land — Mountain,0.97,0.0
 cma,58,2,0,,Evincar's Justice,{2}{B}{B},B,https://cards.scryfall.io/normal/front/2/e/2e0fffc6-4395-441e-95a9-c9cf33af7907.jpg?1592672652,,,Commander Anthology,,common,Sorcery,0.81,0.0
-cmd,308,2,0,,Swamp,,,https://cards.scryfall.io/normal/front/1/3/138a04f4-29b2-4c56-b420-cf834505a4e8.jpg?1592714829,,,Commander 2011,,common,Basic Land — Swamp,1.4,0.0
+cmd,308,2,0,,Swamp,,L,https://cards.scryfall.io/normal/front/1/3/138a04f4-29b2-4c56-b420-cf834505a4e8.jpg?1592714829,,,Commander 2011,,common,Basic Land — Swamp,1.4,0.0
 cmm,822,1,0,,Gideon Jura,{3}{W}{W},W,https://cards.scryfall.io/normal/front/d/6/d608df31-bcc6-4fec-89f1-5cefe5c2ec99.jpg?1690004093,,,Commander Masters,,mythic,Legendary Planeswalker — Gideon,1.19,0.0
 cmr,109,1,0,,Bitter Revelation,{3}{B},B,https://cards.scryfall.io/normal/front/2/5/25657da2-e7bc-4e9b-8ec2-5a5779738436.jpg?1608909577,,,Commander Legends,,common,Sorcery,0.16,0.38
 cmr,113,1,0,,Corpse Churn,{1}{B},B,https://cards.scryfall.io/normal/front/6/f/6fedb37f-4f3c-477c-84c0-aa864e87c111.jpg?1608909610,,,Commander Legends,,common,Instant,0.38,1.24
@@ -279,13 +279,13 @@ cmr,194,1,0,,Portent of Betrayal,{3}{R},R,https://cards.scryfall.io/normal/front
 cmr,202,1,0,,Sparktongue Dragon,{3}{R}{R},R,https://cards.scryfall.io/normal/front/2/8/289a3c60-c740-4e2e-a622-a749ed230c5b.jpg?1608910420,,,Commander Legends,,common,Creature — Dragon,0.43,0.86
 cmr,253,1,0,,Sentinel Spider,{3}{G}{G},G,https://cards.scryfall.io/normal/front/0/1/01e7af76-e505-49ca-a91e-8167027560ff.jpg?1608910895,,,Commander Legends,,common,Creature — Spider,0.43,0.97
 cmr,282,1,0,,"Juri, Master of the Revue",{B}{R},"B, R",https://cards.scryfall.io/normal/front/a/e/aec6b2b7-625a-451d-bc0b-4456f5bf2719.jpg?1608911166,,,Commander Legends,,uncommon,Legendary Creature — Human Shaman,0.97,0.97
-cmr,303,1,0,,Charcoal Diamond,{2},,https://cards.scryfall.io/normal/front/3/d/3d99f4cd-7f6d-4f1a-a1d9-f8c3b6645038.jpg?1608911357,,,Commander Legends,,common,Artifact,1.13,2.0
-cmr,306,1,0,,Commander's Sphere,{3},,https://cards.scryfall.io/normal/front/a/0/a01c16a5-bc50-406f-9ab1-e8346acffbca.jpg?1608911388,,,Commander Legends,,common,Artifact,1.08,1.62
-cmr,309,4,0,,Fire Diamond,{2},,https://cards.scryfall.io/normal/front/3/f/3f65f1fa-4196-40ba-8ca3-e68560fef392.jpg?1608911413,,,Commander Legends,,common,Artifact,1.19,2.0
-cmr,323,2,0,,Marble Diamond,{2},,https://cards.scryfall.io/normal/front/7/2/72125260-f4b7-4317-99f1-cbb78646296d.jpg?1608911542,,,Commander Legends,,common,Artifact,0.76,1.51
-cmr,341,4,0,,Sky Diamond,{2},,https://cards.scryfall.io/normal/front/6/b/6bc62a1e-830b-4b07-91e4-303e66d93648.jpg?1608911710,,,Commander Legends,,common,Artifact,0.81,1.83
+cmr,303,1,0,,Charcoal Diamond,{2},C,https://cards.scryfall.io/normal/front/3/d/3d99f4cd-7f6d-4f1a-a1d9-f8c3b6645038.jpg?1608911357,,,Commander Legends,,common,Artifact,1.13,2.0
+cmr,306,1,0,,Commander's Sphere,{3},C,https://cards.scryfall.io/normal/front/a/0/a01c16a5-bc50-406f-9ab1-e8346acffbca.jpg?1608911388,,,Commander Legends,,common,Artifact,1.08,1.62
+cmr,309,4,0,,Fire Diamond,{2},C,https://cards.scryfall.io/normal/front/3/f/3f65f1fa-4196-40ba-8ca3-e68560fef392.jpg?1608911413,,,Commander Legends,,common,Artifact,1.19,2.0
+cmr,323,2,0,,Marble Diamond,{2},C,https://cards.scryfall.io/normal/front/7/2/72125260-f4b7-4317-99f1-cbb78646296d.jpg?1608911542,,,Commander Legends,,common,Artifact,0.76,1.51
+cmr,341,4,0,,Sky Diamond,{2},C,https://cards.scryfall.io/normal/front/6/b/6bc62a1e-830b-4b07-91e4-303e66d93648.jpg?1608911710,,,Commander Legends,,common,Artifact,0.81,1.83
 cmr,398,1,0,,Ior Ruin Expedition,{1}{U},U,https://cards.scryfall.io/normal/front/f/d/fd466b20-d11d-419e-8765-9befb9590299.jpg?1608912113,,,Commander Legends,,common,Enchantment,0.49,0.0
-cmr,459,1,0,,Boros Signet,{2},,https://cards.scryfall.io/normal/front/a/2/a2ae6081-1876-42ea-a6f8-d18dbe55c4c4.jpg?1608917766,,,Commander Legends,,common,Artifact,2.86,0.0
+cmr,459,1,0,,Boros Signet,{2},C,https://cards.scryfall.io/normal/front/a/2/a2ae6081-1876-42ea-a6f8-d18dbe55c4c4.jpg?1608917766,,,Commander Legends,,common,Artifact,2.86,0.0
 cmr,51,1,0,,Squad Captain,{4}{W},W,https://cards.scryfall.io/normal/front/2/4/24c98bc7-f6a9-4aaf-a6dc-7067c3d8a41a.jpg?1608909045,,,Commander Legends,,common,Creature — Human Soldier,0.16,0.11
 cmr,57,1,0,,Aven Surveyor,{3}{U}{U},U,https://cards.scryfall.io/normal/front/f/4/f4981d99-c33d-4451-8f6a-28fffb3dcd1c.jpg?1608909102,,,Commander Legends,,common,Creature — Bird Scout,0.11,0.27
 cmr,6,1,0,,Angel of the Dawn,{4}{W},W,https://cards.scryfall.io/normal/front/d/0/d00ffeb5-195c-45ad-a791-ec67f463d552.jpg?1612228551,,,Commander Legends,,common,Creature — Angel,0.43,1.24
@@ -295,10 +295,10 @@ cn2,159,1,0,,Goblin Balloon Brigade,{R},R,https://cards.scryfall.io/normal/front
 cns,138,3,0,,Brimstone Volley,{2}{R},R,https://cards.scryfall.io/normal/front/1/0/1016fde6-663f-47f4-8fe4-9989f10b9237.jpg?1562864463,,,Conspiracy,,common,Instant,0.65,2.64
 cns,143,1,0,,Flowstone Blade,{R},R,https://cards.scryfall.io/normal/front/0/8/08ffbdce-bf74-4366-a4c5-422e3d5c92b4.jpg?1562864455,,,Conspiracy,,common,Enchantment — Aura,0.22,1.3
 ddk,63,1,0,,Recoup,{1}{R},R,https://cards.scryfall.io/normal/front/7/7/77ac0e4e-71ae-4a4b-aa73-64079bd50308.jpg?1592714608,,,Duel Decks: Sorin vs. Tibalt,,uncommon,Sorcery,1.19,0.0
-ddn,36,3,0,,Mountain,,,https://cards.scryfall.io/normal/front/8/9/8956585b-1268-4eb4-b97e-74ffb9f82688.jpg?1592754791,,,Duel Decks: Speed vs. Cunning,,common,Basic Land — Mountain,1.56,0.0
+ddn,36,3,0,,Mountain,,L,https://cards.scryfall.io/normal/front/8/9/8956585b-1268-4eb4-b97e-74ffb9f82688.jpg?1592754791,,,Duel Decks: Speed vs. Cunning,,common,Basic Land — Mountain,1.56,0.0
 ddn,6,1,0,,Goblin Deathraiders,{B}{R},"B, R",https://cards.scryfall.io/normal/front/0/c/0c0b85d3-ce46-4f12-8315-4cbf338eb8f0.jpg?1592754611,,,Duel Decks: Speed vs. Cunning,,common,Creature — Goblin Warrior,0.7,0.0
-dds,62,4,0,,Mountain,,,https://cards.scryfall.io/normal/front/8/6/865ace8b-9e12-4f20-ac3c-d07a323b40dd.jpg?1592761890,,,Duel Decks: Mind vs. Might,,common,Basic Land — Mountain,0.43,0.0
-ddu,30,3,0,,Treetop Village,,,https://cards.scryfall.io/normal/front/1/4/14394198-0993-46ee-a3ea-5c7084a78772.jpg?1561758885,,,Duel Decks: Elves vs. Inventors,,uncommon,Land,2.1,0.0
+dds,62,4,0,,Mountain,,L,https://cards.scryfall.io/normal/front/8/6/865ace8b-9e12-4f20-ac3c-d07a323b40dd.jpg?1592761890,,,Duel Decks: Mind vs. Might,,common,Basic Land — Mountain,0.43,0.0
+ddu,30,3,0,,Treetop Village,,L,https://cards.scryfall.io/normal/front/1/4/14394198-0993-46ee-a3ea-5c7084a78772.jpg?1561758885,,,Duel Decks: Elves vs. Inventors,,uncommon,Land,2.1,0.0
 dgm,117,1,0,,Warped Physique,{U}{B},"B, U",https://cards.scryfall.io/normal/front/1/3/134802b2-7c5c-4eda-a879-b29bc06faaed.jpg?1562898703,,,Dragon's Maze,,uncommon,Instant,0.27,0.97
 dka,128,2,0,,Tracker's Instincts,{1}{G},G,https://cards.scryfall.io/normal/front/5/9/59960387-3adf-4b9a-b0e6-c441579f7388.jpg?1562916070,,,Dark Ascension,,uncommon,Sorcery,0.54,2.7
 dka,76,1,0,,Tragic Slip,{B},B,https://cards.scryfall.io/normal/front/0/9/09666671-601e-4fca-bdfb-fb288bf2672c.jpg?1562897122,,,Dark Ascension,,common,Instant,1.08,9.44
@@ -346,16 +346,16 @@ dmu,217,1,0,,"Rulik Mons, Warren Chief",{1}{R}{G}{G},"G, R",https://cards.scryfa
 dmu,22,1,0,,Juniper Order Rootweaver,{1}{W},W,https://cards.scryfall.io/normal/front/c/5/c56cf82f-8bbb-49ae-ad93-291cbec9126e.jpg?1673306482,,,Dominaria United,,common,Creature — Human Druid,0.11,0.22
 dmu,223,1,0,,"Tori D'Avenant, Fury Rider",{1}{R}{R}{W},"R, W",https://cards.scryfall.io/normal/front/9/c/9c873c5b-61f6-49b9-8993-2d5e9823de62.jpg?1673308121,,,Dominaria United,,uncommon,Legendary Creature — Human Knight,0.7,5.07
 dmu,226,1,0,,"Vohar, Vodalian Desecrator",{U}{B},"B, U",https://cards.scryfall.io/normal/front/8/0/807c7812-c108-45a7-a5b2-08cc693bc500.jpg?1673308144,,,Dominaria United,,uncommon,Legendary Creature — Phyrexian Merfolk Wizard,0.59,1.51
-dmu,246,2,0,,Crystal Grotto,,,https://cards.scryfall.io/normal/front/b/d/bd250c9d-c65f-4293-a6b0-007fac634d3d.jpg?1673308300,,,Dominaria United,,common,Land,0.43,1.24
-dmu,247,1,0,,Geothermal Bog,,,https://cards.scryfall.io/normal/front/1/e/1e62fe57-4fa4-4bfd-8e31-9f6db774d7e2.jpg?1673308307,,,Dominaria United,,common,Land — Swamp Mountain,0.97,1.83
-dmu,248,1,0,,Haunted Mire,,,https://cards.scryfall.io/normal/front/1/6/16f5e958-56e6-4666-a534-24deba6f652d.jpg?1673308314,,,Dominaria United,,common,Land — Swamp Forest,0.97,2.27
-dmu,249,1,0,,Idyllic Beachfront,,,https://cards.scryfall.io/normal/front/c/5/c50ec22c-decb-419f-ae52-78ea1706eb11.jpg?1740486476,,,Dominaria United,,common,Land — Plains Island,1.08,1.67
-dmu,251,1,0,,Molten Tributary,,,https://cards.scryfall.io/normal/front/2/0/20aff4af-5128-432f-a8c8-65b6909d31ac.jpg?1673308337,,,Dominaria United,,common,Land — Island Mountain,1.51,3.18
-dmu,253,1,0,,Radiant Grove,,,https://cards.scryfall.io/normal/front/e/0/e0f9dca6-e5ae-4714-8a59-2ef1d8f1e82d.jpg?1673308352,,,Dominaria United,,common,Land — Forest Plains,1.13,1.73
-dmu,258,1,0,,Tangled Islet,,,https://cards.scryfall.io/normal/front/4/a/4a325fb4-fe71-47f1-9a2f-05b8cfe88fe6.jpg?1673308388,,,Dominaria United,,common,Land — Forest Island,0.86,2.1
-dmu,262,1,0,,Plains,,,https://cards.scryfall.io/normal/front/5/8/5822b027-369d-46da-b6dd-c31207e2f449.jpg?1674073704,,,Dominaria United,,common,Basic Land — Plains,0.32,0.59
-dmu,270,2,0,,Swamp,,,https://cards.scryfall.io/normal/front/0/3/0306607d-2a42-4008-ac84-8d3ed91fe3aa.jpg?1674073774,,,Dominaria United,,common,Basic Land — Swamp,0.54,0.65
-dmu,271,1,0,,Mountain,,,https://cards.scryfall.io/normal/front/a/8/a82f782e-abc8-4b92-a193-17b2c383f765.jpg?1674073783,,,Dominaria United,,common,Basic Land — Mountain,0.38,0.59
+dmu,246,2,0,,Crystal Grotto,,L,https://cards.scryfall.io/normal/front/b/d/bd250c9d-c65f-4293-a6b0-007fac634d3d.jpg?1673308300,,,Dominaria United,,common,Land,0.43,1.24
+dmu,247,1,0,,Geothermal Bog,,L,https://cards.scryfall.io/normal/front/1/e/1e62fe57-4fa4-4bfd-8e31-9f6db774d7e2.jpg?1673308307,,,Dominaria United,,common,Land — Swamp Mountain,0.97,1.83
+dmu,248,1,0,,Haunted Mire,,L,https://cards.scryfall.io/normal/front/1/6/16f5e958-56e6-4666-a534-24deba6f652d.jpg?1673308314,,,Dominaria United,,common,Land — Swamp Forest,0.97,2.27
+dmu,249,1,0,,Idyllic Beachfront,,L,https://cards.scryfall.io/normal/front/c/5/c50ec22c-decb-419f-ae52-78ea1706eb11.jpg?1740486476,,,Dominaria United,,common,Land — Plains Island,1.08,1.67
+dmu,251,1,0,,Molten Tributary,,L,https://cards.scryfall.io/normal/front/2/0/20aff4af-5128-432f-a8c8-65b6909d31ac.jpg?1673308337,,,Dominaria United,,common,Land — Island Mountain,1.51,3.18
+dmu,253,1,0,,Radiant Grove,,L,https://cards.scryfall.io/normal/front/e/0/e0f9dca6-e5ae-4714-8a59-2ef1d8f1e82d.jpg?1673308352,,,Dominaria United,,common,Land — Forest Plains,1.13,1.73
+dmu,258,1,0,,Tangled Islet,,L,https://cards.scryfall.io/normal/front/4/a/4a325fb4-fe71-47f1-9a2f-05b8cfe88fe6.jpg?1673308388,,,Dominaria United,,common,Land — Forest Island,0.86,2.1
+dmu,262,1,0,,Plains,,L,https://cards.scryfall.io/normal/front/5/8/5822b027-369d-46da-b6dd-c31207e2f449.jpg?1674073704,,,Dominaria United,,common,Basic Land — Plains,0.32,0.59
+dmu,270,2,0,,Swamp,,L,https://cards.scryfall.io/normal/front/0/3/0306607d-2a42-4008-ac84-8d3ed91fe3aa.jpg?1674073774,,,Dominaria United,,common,Basic Land — Swamp,0.54,0.65
+dmu,271,1,0,,Mountain,,L,https://cards.scryfall.io/normal/front/a/8/a82f782e-abc8-4b92-a193-17b2c383f765.jpg?1674073783,,,Dominaria United,,common,Basic Land — Mountain,0.38,0.59
 dmu,295,2,0,,"Balmor, Battlemage Captain",{U}{R},"R, U",https://cards.scryfall.io/normal/front/2/5/25e3ba0f-0879-4eea-9911-14b874f039b3.jpg?1674073953,,,Dominaria United,,uncommon,Legendary Creature — Bird Wizard,0.76,1.24
 dmu,304,1,0,,"Lagomos, Hand of Hatred",{1}{B}{R},"B, R",https://cards.scryfall.io/normal/front/9/3/93dd512f-9f77-4f54-9081-f14ae0aa8c7a.jpg?1674074024,,,Dominaria United,,uncommon,Legendary Creature — Human Shaman,0.65,1.56
 dmu,307,1,0,,"Najal, the Storm Runner",{2}{U}{U}{R},"R, U",https://cards.scryfall.io/normal/front/e/d/edf2ec7b-7cac-49aa-8fab-f9280548573b.jpg?1674074046,,,Dominaria United,,uncommon,Legendary Creature — Efreet Wizard,0.43,0.7
@@ -402,22 +402,22 @@ dpa,33,1,0,,Severed Legion,{1}{B}{B},B,https://cards.scryfall.io/normal/front/1/
 dtk,169,1,0,,Zurgo Bellstriker,{R},R,https://cards.scryfall.io/normal/front/b/b/bbac6d75-59ab-4d7d-87ae-46875abf8cc7.jpg?1748271654,,,Dragons of Tarkir,,rare,Legendary Creature — Orc Warrior,1.67,4.64
 dtk,185,1,0,,Epic Confrontation,{1}{G},G,https://cards.scryfall.io/normal/front/f/5/f587436e-51ff-4c9c-a6ce-e2768844a71a.jpg?1562795707,,,Dragons of Tarkir,,common,Sorcery,0.22,1.35
 dtk,193,1,0,,Naturalize,{1}{G},G,https://cards.scryfall.io/normal/front/4/a/4a766442-bbfd-4869-9cf5-918d9117c359.jpg?1562785736,,,Dragons of Tarkir,,common,Instant,0.27,2.59
-dtk,251,2,0,,Plains,,,https://cards.scryfall.io/normal/front/2/4/2484c9db-44bc-411c-af43-bfe0e30f0ffa.jpg?1562783746,,,Dragons of Tarkir,,common,Basic Land — Plains,0.43,2.0
+dtk,251,2,0,,Plains,,L,https://cards.scryfall.io/normal/front/2/4/2484c9db-44bc-411c-af43-bfe0e30f0ffa.jpg?1562783746,,,Dragons of Tarkir,,common,Basic Land — Plains,0.43,2.0
 e01,48,1,0,,Flametongue Kavu,{3}{R},R,https://cards.scryfall.io/normal/front/2/8/28e3923c-f124-4476-ad2d-e57b99edcef0.jpg?1592765668,,,Archenemy: Nicol Bolas,,uncommon,Creature — Kavu,0.54,0.0
 e01,50,1,0,,Grim Lavamancer,{R},R,https://cards.scryfall.io/normal/front/e/7/e7979d38-88a6-4062-b725-52c91f170083.jpg?1592765683,,,Archenemy: Nicol Bolas,,rare,Creature — Human Wizard,1.3,0.0
 e01,54,2,0,,Lightning Bolt,{R},R,https://cards.scryfall.io/normal/front/c/c/ccee0b4c-0cb0-4c0f-8ddc-bc74b8b97273.jpg?1592765716,,,Archenemy: Nicol Bolas,,uncommon,Instant,6.04,0.0
-eld,102,1,0,,Reaper of Night,{5}{B}{B},,https://cards.scryfall.io/normal/front/4/d/4dc774b4-3f70-4351-b1b8-8a0193cb3a50.jpg?1572490223,Harvest Fear,,Throne of Eldraine,,common,Creature — Specter // Sorcery — Adventure,0.22,1.24
+eld,102,1,0,,Reaper of Night,{5}{B}{B},C,https://cards.scryfall.io/normal/front/4/d/4dc774b4-3f70-4351-b1b8-8a0193cb3a50.jpg?1572490223,Harvest Fear,,Throne of Eldraine,,common,Creature — Specter // Sorcery — Adventure,0.22,1.24
 eld,103,1,0,,Reave Soul,{1}{B},B,https://cards.scryfall.io/normal/front/c/e/ce7ff657-aa44-4336-895a-87518159cef6.jpg?1572490229,,,Throne of Eldraine,,common,Sorcery,0.22,0.38
 eld,126,4,0,,Fling,{1}{R},R,https://cards.scryfall.io/normal/front/c/b/cb28fe03-8269-41de-b766-42c3421aeaef.jpg?1572490367,,,Throne of Eldraine,,common,Instant,0.76,1.19
-eld,248,1,0,,Tournament Grounds,,,https://cards.scryfall.io/normal/front/c/d/cd438d51-a778-4b38-8b4b-a6a9cd9b4b22.jpg?1572491245,,,Throne of Eldraine,,uncommon,Land,0.81,2.05
-eld,44,1,0,,Fae of Wishes,{1}{U},,https://cards.scryfall.io/normal/front/e/3/e3435fd6-8f51-4d99-a278-4ddb088acfe1.jpg?1572489870,Granted,,Throne of Eldraine,,rare,Creature — Faerie Wizard // Sorcery — Adventure,0.81,2.0
+eld,248,1,0,,Tournament Grounds,,L,https://cards.scryfall.io/normal/front/c/d/cd438d51-a778-4b38-8b4b-a6a9cd9b4b22.jpg?1572491245,,,Throne of Eldraine,,uncommon,Land,0.81,2.05
+eld,44,1,0,,Fae of Wishes,{1}{U},C,https://cards.scryfall.io/normal/front/e/3/e3435fd6-8f51-4d99-a278-4ddb088acfe1.jpg?1572489870,Granted,,Throne of Eldraine,,rare,Creature — Faerie Wizard // Sorcery — Adventure,0.81,2.0
 eld,45,1,0,,Faerie Vandal,{1}{U},U,https://cards.scryfall.io/normal/front/7/8/789c5c2b-3e51-4f6c-ac76-d276facf716f.jpg?1572489876,,,Throne of Eldraine,,uncommon,Creature — Faerie Rogue,0.65,1.67
 eld,52,4,0,,Mantle of Tides,{U},U,https://cards.scryfall.io/normal/front/c/0/c058d01e-f705-4407-bd9e-a2d127afdf04.jpg?1572489923,,,Throne of Eldraine,,common,Artifact — Equipment,0.16,0.59
-eld,53,4,0,,Merfolk Secretkeeper,{U},,https://cards.scryfall.io/normal/front/c/e/ceb7308d-608c-4ede-9496-d795fc5bb271.jpg?1572489928,Venture Deeper,,Throne of Eldraine,,common,Creature — Merfolk Wizard // Sorcery — Adventure,0.49,1.19
+eld,53,4,0,,Merfolk Secretkeeper,{U},C,https://cards.scryfall.io/normal/front/c/e/ceb7308d-608c-4ede-9496-d795fc5bb271.jpg?1572489928,Venture Deeper,,Throne of Eldraine,,common,Creature — Merfolk Wizard // Sorcery — Adventure,0.49,1.19
 eld,59,4,0,,Opt,{U},U,https://cards.scryfall.io/normal/front/c/3/c3669391-8f64-4904-b432-0f0582f30449.jpg?1572489962,,,Throne of Eldraine,,common,Instant,0.7,1.89
 eld,65,1,0,,Steelgaze Griffin,{4}{U},U,https://cards.scryfall.io/normal/front/6/d/6d361328-8b0a-40a0-b5c0-215398fdfb47.jpg?1572489997,,,Throne of Eldraine,,common,Creature — Griffin,0.16,0.27
 ema,161,1,0,,Civic Wayfinder,{2}{G},G,https://cards.scryfall.io/normal/front/c/e/cee03108-036b-4996-a256-7c772a801492.jpg?1580014745,,,Eternal Masters,,common,Creature — Elf Druid Warrior,0.32,1.13
-ema,228,1,0,,Nevinyrral's Disk,{4},,https://cards.scryfall.io/normal/front/8/f/8f72584d-f65e-4c8f-be05-f44389c2381d.jpg?1580015244,,,Eternal Masters,,rare,Artifact,2.48,4.59
+ema,228,1,0,,Nevinyrral's Disk,{4},C,https://cards.scryfall.io/normal/front/8/f/8f72584d-f65e-4c8f-be05-f44389c2381d.jpg?1580015244,,,Eternal Masters,,rare,Artifact,2.48,4.59
 eve,16,1,0,,Suture Spirit,{1}{W},W,https://cards.scryfall.io/normal/front/0/8/08520f97-e7f5-45fc-9423-fa6a3a507671.jpg?1562896798,,,Eventide,,uncommon,Creature — Spirit,1.08,2.16
 exo,14,1,0,,Pegasus Stampede,{1}{W},W,https://cards.scryfall.io/normal/front/3/b/3b941576-8254-4d69-85ae-c748c7921ce5.jpg?1562087818,,,Exodus,,uncommon,Sorcery,0.86,0.0
 f14,6,1,0,,Dissolve,{1}{U}{U},U,https://cards.scryfall.io/normal/front/f/2/f2068083-5d53-43c3-af22-79bf617ccf1b.jpg?1562640127,,,Friday Night Magic 2014,,rare,Instant,0.0,3.08
@@ -444,7 +444,7 @@ grn,210,1,0,,Undercity Uprising,{2}{B}{G},"B, G",https://cards.scryfall.io/norma
 grn,216,1,0,,Fresh-Faced Recruit,{1}{R/W},"R, W",https://cards.scryfall.io/normal/front/a/8/a8b19518-7752-4673-a7d8-ae2e0070129c.jpg?1572893924,,,Guilds of Ravnica,,common,Creature — Human Soldier,0.22,0.0
 grn,218,1,0,,Pitiless Gorgon,{1}{B/G}{B/G},"B, G",https://cards.scryfall.io/normal/front/c/1/c1a925a0-9d26-441b-8b4a-0614a0485fe6.jpg?1572893938,,,Guilds of Ravnica,,common,Creature — Gorgon,0.32,1.83
 grn,219,1,0,,Vernadi Shieldmate,{1}{G/W},"G, W",https://cards.scryfall.io/normal/front/e/f/efddad21-553e-4947-80d2-833b42c45f77.jpg?1572893945,,,Guilds of Ravnica,,common,Creature — Human Soldier,0.16,0.27
-grn,244,1,0,,Boros Guildgate,,,https://cards.scryfall.io/normal/front/9/5/95f52d32-c04b-4711-9edc-8fd1d3547a44.jpg?1572894118,,,Guilds of Ravnica,,common,Land — Gate,0.27,3.02
+grn,244,1,0,,Boros Guildgate,,L,https://cards.scryfall.io/normal/front/9/5/95f52d32-c04b-4711-9edc-8fd1d3547a44.jpg?1572894118,,,Guilds of Ravnica,,common,Land — Gate,0.27,3.02
 grn,29,1,0,,Tenth District Guard,{1}{W},W,https://cards.scryfall.io/normal/front/8/2/829f959e-91cd-42ea-8644-ce828a304d01.jpg?1572892668,,,Guilds of Ravnica,,common,Creature — Human Soldier,0.27,1.3
 grn,3,1,0,,Candlelight Vigil,{3}{W},W,https://cards.scryfall.io/normal/front/e/9/e920a75f-7dec-4815-a358-e174401da83b.jpg?1636491648,,,Guilds of Ravnica,,common,Enchantment — Aura,0.27,0.97
 grn,38,1,0,,Dream Eater,{4}{U}{U},U,https://cards.scryfall.io/normal/front/9/f/9f3a4677-7683-4f63-af31-b76491ec9f9c.jpg?1572892731,,,Guilds of Ravnica,,mythic,Creature — Nightmare Sphinx,1.56,8.04
@@ -497,14 +497,14 @@ ima,14,1,0,,Burrenton Forge-Tender,{W},W,https://cards.scryfall.io/normal/front/
 ima,140,4,0,,Monastery Swiftspear,{R},R,https://cards.scryfall.io/normal/front/5/8/58db2f81-6ff5-402c-8aef-0b667e82cdc4.jpg?1562849346,,,Iconic Masters,,uncommon,Creature — Human Monk,2.0,4.53
 ima,177,1,0,,Nature's Claim,{G},G,https://cards.scryfall.io/normal/front/d/2/d24b6640-ef2f-4c92-beb3-afdf78f9c2d5.jpg?1562854212,,,Iconic Masters,,common,Instant,5.67,29.41
 ima,185,3,0,,Search for Tomorrow,{2}{G},G,https://cards.scryfall.io/normal/front/a/1/a1a950b3-5083-474a-8f56-fec7637cc402.jpg?1562852474,,,Iconic Masters,,common,Sorcery,1.4,2.43
-ima,219,3,0,,Mind Stone,{2},,https://cards.scryfall.io/normal/front/c/5/c54814f1-3598-4859-b956-b39d8335e6d3.jpg?1562853712,,,Iconic Masters,,common,Artifact,1.56,2.21
+ima,219,3,0,,Mind Stone,{2},C,https://cards.scryfall.io/normal/front/c/5/c54814f1-3598-4859-b956-b39d8335e6d3.jpg?1562853712,,,Iconic Masters,,common,Artifact,1.56,2.21
 ima,25,1,0,,Iona's Judgment,{4}{W},W,https://cards.scryfall.io/normal/front/d/3/d35ad15a-82c8-4cdd-84e7-02ef66fd0d19.jpg?1562854219,,,Iconic Masters,,common,Sorcery,0.16,1.89
 ima,57,1,0,,Frost Lynx,{2}{U},U,https://cards.scryfall.io/normal/front/f/c/fce19a8d-ab1b-415a-ab55-c402c78da5f0.jpg?1562856127,,,Iconic Masters,,common,Creature — Elemental Cat,0.16,1.08
 ima,84,1,0,,Butcher's Glee,{2}{B},B,https://cards.scryfall.io/normal/front/9/2/92a00c8d-9dac-4edc-b66c-ab3245d80969.jpg?1562851578,,,Iconic Masters,,common,Instant,0.22,1.13
 inv,122,1,0,,Recover,{2}{B},B,https://cards.scryfall.io/normal/front/7/7/771e695b-24e1-4c65-81e0-1624bda646e7.jpg?1562918903,,,Invasion,,common,Sorcery,0.38,3.56
 inv,63,1,0,,Metathran Zombie,{1}{U},U,https://cards.scryfall.io/normal/front/6/6/6676a0f7-8213-4547-b2ac-b904cd418073.jpg?1562915761,,,Invasion,,common,Creature — Metathran Zombie,0.76,2.91
 isd,170,1,0,,Avacyn's Pilgrim,{G},G,https://cards.scryfall.io/normal/front/7/e/7eb39e97-53c2-4df0-9fb3-a3d6a24ec41f.jpg?1562832870,,,Innistrad,,common,Creature — Human Monk,2.48,27.3
-isd,247,1,0,,Stensia Bloodhall,,,https://cards.scryfall.io/normal/front/c/c/cc2741d8-2c02-4acd-8ca2-55b4bf6aef1c.jpg?1562837116,,,Innistrad,,rare,Land,1.24,4.59
+isd,247,1,0,,Stensia Bloodhall,,L,https://cards.scryfall.io/normal/front/c/c/cc2741d8-2c02-4acd-8ca2-55b4bf6aef1c.jpg?1562837116,,,Innistrad,,rare,Land,1.24,4.59
 isd,5,1,0,,Bonds of Faith,{1}{W},W,https://cards.scryfall.io/normal/front/c/c/cc8d1ce0-78c5-4e97-9cca-33e7b6ff3440.jpg?1562837140,,,Innistrad,,common,Enchantment — Aura,0.32,7.34
 isd,96,2,0,,Dead Weight,{B},B,https://cards.scryfall.io/normal/front/7/9/7933987e-7b8c-4d5a-804a-708d6bb6d231.jpg?1562832510,,,Innistrad,,common,Enchantment — Aura,0.38,4.91
 jmp,406,1,0,,Irresistible Prey,{G},G,https://cards.scryfall.io/normal/front/e/b/eb613e46-af18-4195-883b-cdd35b2eaf50.jpg?1601079704,,,Jumpstart,,uncommon,Sorcery,0.65,0.0
@@ -522,7 +522,7 @@ khm,99,1,0,,Infernal Pet,{2}{B},B,https://cards.scryfall.io/normal/front/8/0/803
 kld,1,1,0,,Acrobatic Maneuver,{2}{W},W,https://cards.scryfall.io/normal/front/7/4/74f92174-f38f-4623-a5f7-f5be7f7dcc9d.jpg?1576380687,,,Kaladesh,,common,Instant,0.7,6.91
 kld,104,1,0,,Underhanded Designs,{1}{B},B,https://cards.scryfall.io/normal/front/4/3/4392fe0a-a15e-46c6-9a3d-8e30e4dab17f.jpg?1576381911,,,Kaladesh,,uncommon,Enchantment,0.81,5.72
 kld,173,1,0,,Wild Wanderer,{3}{G},G,https://cards.scryfall.io/normal/front/0/d/0d20e020-30e1-4deb-8dfc-4c5fe056193d.jpg?1576382724,,,Kaladesh,,common,Creature — Elf Druid,0.22,2.37
-kld,202,1,0,,Consulate Skygate,{2},,https://cards.scryfall.io/normal/front/9/a/9a7922c3-1baa-41ed-bd06-b5a97cddb90e.jpg?1576383054,,,Kaladesh,,common,Artifact Creature — Wall,0.22,3.94
+kld,202,1,0,,Consulate Skygate,{2},C,https://cards.scryfall.io/normal/front/9/a/9a7922c3-1baa-41ed-bd06-b5a97cddb90e.jpg?1576383054,,,Kaladesh,,common,Artifact Creature — Wall,0.22,3.94
 kld,23,1,0,,Pressure Point,{1}{W},W,https://cards.scryfall.io/normal/front/5/d/5d28b806-88a3-4852-982e-0d6be0a2edac.jpg?1576380948,,,Kaladesh,,common,Instant,0.22,1.3
 kld,77,1,0,,Dukhara Scavenger,{5}{B},B,https://cards.scryfall.io/normal/front/8/1/81591264-1342-418d-b5c6-9d700b729c51.jpg?1576381586,,,Kaladesh,,common,Creature — Crocodile,0.27,1.08
 kld,81,1,0,,Fortuitous Find,{2}{B},B,https://cards.scryfall.io/normal/front/7/7/7706bbb1-c94a-4169-9f12-a54cfcc3a7ad.jpg?1576381634,,,Kaladesh,,common,Sorcery,0.54,2.32
@@ -533,10 +533,10 @@ ktk,137,1,0,,Hooting Mandrills,{5}{G},G,https://cards.scryfall.io/normal/front/0
 ktk,148,1,0,,Scout the Borders,{2}{G},G,https://cards.scryfall.io/normal/front/e/b/eb15c6c7-8fe6-496c-9977-3e7942b920c4.jpg?1562795470,,,Khans of Tarkir,,common,Sorcery,0.22,1.24
 ktk,183,1,0,,Kin-Tree Invocation,{B}{G},"B, G",https://cards.scryfall.io/normal/front/9/2/926b49a1-f220-41ab-8c67-8354a91a15e8.jpg?1562790454,,,Khans of Tarkir,,uncommon,Sorcery,0.65,1.56
 ktk,197,1,0,,Savage Knuckleblade,{G}{U}{R},"G, R, U",https://cards.scryfall.io/normal/front/4/c/4c9dddd3-7c8d-4669-8298-58149b142b8a.jpg?1562786291,,,Khans of Tarkir,,rare,Creature — Ogre Warrior,0.7,3.94
-ktk,241,1,0,,Sandsteppe Citadel,,,https://cards.scryfall.io/normal/front/2/d/2dd40d90-c939-458a-9a98-27d10da6ff2f.jpg?1562784373,,,Khans of Tarkir,,uncommon,Land,1.78,9.39
-ktk,250,2,0,,Plains,,,https://cards.scryfall.io/normal/front/2/5/2576dc74-1847-44b8-aef9-9d74f333b9cc.jpg?1728342386,,,Khans of Tarkir,,common,Basic Land — Plains,0.38,3.02
-ktk,252,1,0,,Plains,,,https://cards.scryfall.io/normal/front/a/5/a5bfb654-ab99-4272-a184-b95e1022af5c.jpg?1562791517,,,Khans of Tarkir,,common,Basic Land — Plains,0.65,4.1
-ktk,268,1,0,,Forest,,,https://cards.scryfall.io/normal/front/1/a/1abe7f25-71c5-4fd2-8696-0a4ce8c4b0b6.jpg?1562783257,,,Khans of Tarkir,,common,Basic Land — Forest,0.54,3.02
+ktk,241,1,0,,Sandsteppe Citadel,,L,https://cards.scryfall.io/normal/front/2/d/2dd40d90-c939-458a-9a98-27d10da6ff2f.jpg?1562784373,,,Khans of Tarkir,,uncommon,Land,1.78,9.39
+ktk,250,2,0,,Plains,,L,https://cards.scryfall.io/normal/front/2/5/2576dc74-1847-44b8-aef9-9d74f333b9cc.jpg?1728342386,,,Khans of Tarkir,,common,Basic Land — Plains,0.38,3.02
+ktk,252,1,0,,Plains,,L,https://cards.scryfall.io/normal/front/a/5/a5bfb654-ab99-4272-a184-b95e1022af5c.jpg?1562791517,,,Khans of Tarkir,,common,Basic Land — Plains,0.65,4.1
+ktk,268,1,0,,Forest,,L,https://cards.scryfall.io/normal/front/1/a/1abe7f25-71c5-4fd2-8696-0a4ce8c4b0b6.jpg?1562783257,,,Khans of Tarkir,,common,Basic Land — Forest,0.54,3.02
 ktk,31,3,0,,Wingmate Roc,{3}{W}{W},W,https://cards.scryfall.io/normal/front/2/5/25f0f6a2-b392-45e6-97c4-4f00016144d3.jpg?1562783827,,,Khans of Tarkir,,mythic,Creature — Bird,2.43,8.9
 ktk,40,1,0,,Force Away,{1}{U},U,https://cards.scryfall.io/normal/front/d/d/dda70b3e-4b70-404e-a579-41dd126be084.jpg?1562794644,,,Khans of Tarkir,,common,Instant,0.22,1.4
 ktk,81,1,0,,Murderous Cut,{4}{B},B,https://cards.scryfall.io/normal/front/b/2/b2dadff2-883f-4134-a881-be145cdcbd84.jpg?1562792142,,,Khans of Tarkir,,uncommon,Instant,1.4,29.08
@@ -564,9 +564,9 @@ ltr,197,1,0,,"Butterbur, Bree Innkeeper",{2}{G}{W},"G, W",https://cards.scryfall
 ltr,205,1,0,,Frodo Baggins,{G}{W},"G, W",https://cards.scryfall.io/normal/front/d/e/de1c0399-9db8-4901-b72e-0010eb9b92b0.jpg?1686969787,,,The Lord of the Rings: Tales of Middle-earth,,uncommon,Legendary Creature — Halfling Scout,0.38,0.92
 ltr,208,1,0,,Gandalf's Sanction,{1}{U}{R},"R, U",https://cards.scryfall.io/normal/front/8/e/8ebf2a25-9bee-4146-af83-f22aab6db2a8.jpg?1688134626,,,The Lord of the Rings: Tales of Middle-earth,,uncommon,Sorcery,0.54,2.37
 ltr,229,1,0,,"Sharkey, Tyrant of the Shire",{2}{U}{B},"B, U",https://cards.scryfall.io/normal/front/e/0/e0e446bd-8295-4fca-957a-e4710a15d8e8.jpg?1686970050,,,The Lord of the Rings: Tales of Middle-earth,,rare,Legendary Creature — Avatar Rogue,0.7,1.03
-ltr,243,1,0,,Lembas,{2},,https://cards.scryfall.io/normal/front/3/b/3b46aacf-b31a-4380-9e4b-82795fbaba3b.jpg?1686970202,,,The Lord of the Rings: Tales of Middle-earth,,common,Artifact — Food,3.62,3.18
-ltr,264,1,0,,Island,,,https://cards.scryfall.io/normal/front/b/b/bbeca27a-6c5b-40b9-83a4-a3a2096ff6f8.jpg?1686970455,,,The Lord of the Rings: Tales of Middle-earth,,common,Basic Land — Island,0.43,0.86
-ltr,281,1,0,,Forest,,,https://cards.scryfall.io/normal/front/3/e/3efeaa30-9db9-4e68-a658-9064d6e67516.jpg?1686970665,,,The Lord of the Rings: Tales of Middle-earth,,common,Basic Land — Forest,2.05,2.91
+ltr,243,1,0,,Lembas,{2},C,https://cards.scryfall.io/normal/front/3/b/3b46aacf-b31a-4380-9e4b-82795fbaba3b.jpg?1686970202,,,The Lord of the Rings: Tales of Middle-earth,,common,Artifact — Food,3.62,3.18
+ltr,264,1,0,,Island,,L,https://cards.scryfall.io/normal/front/b/b/bbeca27a-6c5b-40b9-83a4-a3a2096ff6f8.jpg?1686970455,,,The Lord of the Rings: Tales of Middle-earth,,common,Basic Land — Island,0.43,0.86
+ltr,281,1,0,,Forest,,L,https://cards.scryfall.io/normal/front/3/e/3efeaa30-9db9-4e68-a658-9064d6e67516.jpg?1686970665,,,The Lord of the Rings: Tales of Middle-earth,,common,Basic Land — Forest,2.05,2.91
 ltr,29,1,0,,Second Breakfast,{2}{W},W,https://cards.scryfall.io/normal/front/0/0/002f647a-25f8-461b-8617-52674f5d577c.jpg?1686967911,,,The Lord of the Rings: Tales of Middle-earth,,common,Instant,0.32,0.65
 ltr,416,1,0,,Nasty End,{1}{B},B,https://cards.scryfall.io/normal/front/3/7/37271b8b-3c58-43aa-b120-f0aa12fb3ad5.jpg?1686972264,,,The Lord of the Rings: Tales of Middle-earth,,common,Instant,0.54,1.19
 ltr,417,0,1,,Foray of Orcs,{3}{R},R,https://cards.scryfall.io/normal/front/e/f/ef083f43-4748-42e6-bc22-fc2570db5ca3.jpg?1686972278,,,The Lord of the Rings: Tales of Middle-earth,,uncommon,Sorcery,0.59,0.97
@@ -581,8 +581,8 @@ m10,10,1,0,,Excommunicate,{2}{W},W,https://cards.scryfall.io/normal/front/1/2/12
 m10,104,1,0,,Megrim,{2}{B},B,https://cards.scryfall.io/normal/front/3/b/3b04fca4-b4de-4343-ba58-d8aea39edc19.jpg?1561976802,,,Magic 2010,,uncommon,Enchantment,4.21,71.71
 m11,109,1,0,,Nightwing Shade,{4}{B},B,https://cards.scryfall.io/normal/front/b/a/ba6232c3-f840-450a-8583-540aec0f17ed.jpg?1562473153,,,Magic 2011,,common,Creature — Shade,0.16,0.7
 m11,127,1,0,,Chandra Nalaar,{3}{R}{R},R,https://cards.scryfall.io/normal/front/a/c/ac44125d-28de-4ecf-a55b-1299daa5539e.jpg?1562471392,,,Magic 2011,,mythic,Legendary Planeswalker — Chandra,4.53,20.45
-m11,203,1,0,,Crystal Ball,{3},,https://cards.scryfall.io/normal/front/5/6/56dc98fb-a956-46f7-aca2-97929b4236ee.jpg?1562460576,,,Magic 2011,,uncommon,Artifact,3.83,24.61
-m11,237,1,0,,Island,,,https://cards.scryfall.io/normal/front/3/1/3114ce5d-c99c-4c60-b088-48ec440eafdb.jpg?1562455106,,,Magic 2011,,common,Basic Land — Island,0.54,5.07
+m11,203,1,0,,Crystal Ball,{3},C,https://cards.scryfall.io/normal/front/5/6/56dc98fb-a956-46f7-aca2-97929b4236ee.jpg?1562460576,,,Magic 2011,,uncommon,Artifact,3.83,24.61
+m11,237,1,0,,Island,,L,https://cards.scryfall.io/normal/front/3/1/3114ce5d-c99c-4c60-b088-48ec440eafdb.jpg?1562455106,,,Magic 2011,,common,Basic Land — Island,0.54,5.07
 m11,31,1,0,,Silvercoat Lion,{1}{W},W,https://cards.scryfall.io/normal/front/e/3/e37523d3-7719-48e1-9b3e-2670772a509b.jpg?1562478656,,,Magic 2011,,common,Creature — Cat,0.38,1.51
 m11,55,2,0,,Frost Titan,{4}{U}{U},U,https://cards.scryfall.io/normal/front/0/6/065addc8-c235-43cc-a54f-b582826e5df1.jpg?1562449808,,,Magic 2011,,mythic,Creature — Giant,3.99,13.33
 m12,134,1,0,,Fling,{1}{R},R,https://cards.scryfall.io/normal/front/3/a/3a439015-0c1c-4322-a6f1-a34040162ac4.jpg?1562639151,,,Magic 2012,,common,Instant,0.49,2.64
@@ -590,8 +590,8 @@ m12,146,1,0,,Incinerate,{1}{R},R,https://cards.scryfall.io/normal/front/1/a/1af9
 m12,182,2,0,,Llanowar Elves,{G},G,https://cards.scryfall.io/normal/front/0/1/01c6f877-6b00-4d57-8a88-36cd3b16edbc.jpg?1562630529,,,Magic 2012,,common,Creature — Elf Druid,1.24,3.13
 m12,55,2,0,,Frost Titan,{4}{U}{U},U,https://cards.scryfall.io/normal/front/3/5/358baa9f-390f-4b99-a274-d28f3bd56824.jpg?1562638614,,,Magic 2012,,mythic,Creature — Giant,2.97,8.58
 m13,117,3,0,,Wit's End,{5}{B}{B},B,https://cards.scryfall.io/normal/front/7/1/71298c75-533e-4ccd-a1f5-875f63a1e89b.jpg?1692012420,,,Magic 2013,,rare,Sorcery,1.35,2.43
-m13,246,1,0,,Forest,,,https://cards.scryfall.io/normal/front/5/1/51a55233-2e1a-4515-8fd1-354605c0c36b.jpg?1562553767,,,Magic 2013,,common,Basic Land — Forest,0.38,1.62
-m13,247,3,0,,Forest,,,https://cards.scryfall.io/normal/front/2/f/2fdf7380-56cb-4d34-ad05-43029341a57a.jpg?1562552105,,,Magic 2013,,common,Basic Land — Forest,0.49,1.89
+m13,246,1,0,,Forest,,L,https://cards.scryfall.io/normal/front/5/1/51a55233-2e1a-4515-8fd1-354605c0c36b.jpg?1562553767,,,Magic 2013,,common,Basic Land — Forest,0.38,1.62
+m13,247,3,0,,Forest,,L,https://cards.scryfall.io/normal/front/2/f/2fdf7380-56cb-4d34-ad05-43029341a57a.jpg?1562552105,,,Magic 2013,,common,Basic Land — Forest,0.49,1.89
 m14,134,3,0,,Chandra's Phoenix,{1}{R}{R},R,https://cards.scryfall.io/normal/front/c/a/ca08d3ce-a3a7-49ca-aa2f-4dcdacbf923d.jpg?1562835067,,,Magic 2014,,rare,Creature — Phoenix,0.97,1.67
 m14,144,1,0,,Lightning Talons,{2}{R},R,https://cards.scryfall.io/normal/front/8/7/87186a8a-45da-4cde-a167-c16a6abc4d24.jpg?1562831852,,,Magic 2014,,common,Enchantment — Aura,0.32,2.05
 m14,153,1,0,,Shiv's Embrace,{2}{R}{R},R,https://cards.scryfall.io/normal/front/8/a/8a42fcd6-32ce-4a20-af4d-83bd32a7ed3e.jpg?1562832028,,,Magic 2014,,uncommon,Enchantment — Aura,0.32,1.03
@@ -600,9 +600,9 @@ m14,71,1,0,,Sensory Deprivation,{U},U,https://cards.scryfall.io/normal/front/7/0
 m15,136,1,0,,Clear a Path,{R},R,https://cards.scryfall.io/normal/front/3/7/3738b0d1-06c0-4d6d-a307-478d994ff36e.jpg?1562785137,,,Magic 2015,,common,Sorcery,0.16,0.0
 m15,164,1,0,,Stoke the Flames,{2}{R}{R},R,https://cards.scryfall.io/normal/front/1/d/1d94c000-52e0-4215-83af-6351dc43e636.jpg?1562783509,,,Magic 2015,,uncommon,Instant,1.13,5.72
 m15,22,1,0,,Oreskos Swiftclaw,{1}{W},W,https://cards.scryfall.io/normal/front/2/d/2d32e198-8ddd-44bc-be57-17e1ff72d666.jpg?1593860926,,,Magic 2015,,common,Creature — Cat Warrior,0.43,0.97
-m15,252,1,0,,Plains,,,https://cards.scryfall.io/normal/front/1/3/1358ef70-1dae-4bb6-a2e2-88ff30d43b99.jpg?1562782887,,,Magic 2015,,common,Basic Land — Plains,0.59,1.03
-m15,254,2,0,,Island,,,https://cards.scryfall.io/normal/front/1/c/1c9f55eb-2c9e-4bc7-a67c-ab2eeb127201.jpg?1562783451,,,Magic 2015,,common,Basic Land — Island,0.38,2.54
-m15,255,1,0,,Island,,,https://cards.scryfall.io/normal/front/a/f/af9ffcc0-ca8a-43ad-8e9e-31e5b94dd6e6.jpg?1562792775,,,Magic 2015,,common,Basic Land — Island,0.54,6.42
+m15,252,1,0,,Plains,,L,https://cards.scryfall.io/normal/front/1/3/1358ef70-1dae-4bb6-a2e2-88ff30d43b99.jpg?1562782887,,,Magic 2015,,common,Basic Land — Plains,0.59,1.03
+m15,254,2,0,,Island,,L,https://cards.scryfall.io/normal/front/1/c/1c9f55eb-2c9e-4bc7-a67c-ab2eeb127201.jpg?1562783451,,,Magic 2015,,common,Basic Land — Island,0.38,2.54
+m15,255,1,0,,Island,,L,https://cards.scryfall.io/normal/front/a/f/af9ffcc0-ca8a-43ad-8e9e-31e5b94dd6e6.jpg?1562792775,,,Magic 2015,,common,Basic Land — Island,0.54,6.42
 m15,85,1,0,,Accursed Spirit,{3}{B},B,https://cards.scryfall.io/normal/front/2/5/2513fe72-4e20-49e6-9970-839f1c635792.jpg?1562784005,,,Magic 2015,,common,Creature — Spirit,0.22,0.81
 m15,92,1,0,Japanese,Crippling Blight,{B},B,https://cards.scryfall.io/normal/front/3/f/3f9c1ba3-8b7c-413b-865d-0ca4b2f55903.jpg?1562785713,,,Magic 2015,,common,Enchantment — Aura,0.32,1.3
 m15,97,1,0,,Festergloom,{2}{B},B,https://cards.scryfall.io/normal/front/f/3/f3125137-bd18-488e-b45e-6fc23828c5bd.jpg?1562796922,,,Magic 2015,,common,Sorcery,0.49,2.64
@@ -611,10 +611,10 @@ m19,105,1,0,,Lich's Caress,{3}{B}{B},B,https://cards.scryfall.io/normal/front/3/
 m19,127,1,0,,Act of Treason,{2}{R},R,https://cards.scryfall.io/normal/front/9/1/9160dde8-cd77-4967-a5f3-a676376c58f7.jpg?1562302975,,,Core Set 2019,,common,Sorcery,0.38,1.19
 m19,143,1,0,,Goblin Motivator,{R},R,https://cards.scryfall.io/normal/front/9/4/94b3a4fb-9024-45ef-a54b-cf3a9fa5b9c2.jpg?1562303343,,,Core Set 2019,,common,Creature — Goblin Warrior,0.7,5.5
 m19,19,1,0,,Knight's Pledge,{1}{W},W,https://cards.scryfall.io/normal/front/7/3/734ff6ac-000d-4fc6-b97b-07b9b21f745c.jpg?1562302703,,,Core Set 2019,,common,Enchantment — Aura,0.43,1.08
-m19,234,1,0,,Field Creeper,{2},,https://cards.scryfall.io/normal/front/e/1/e148c1bf-84a2-48cd-882e-ad0fd74b8f0f.jpg?1562304812,,,Core Set 2019,,common,Artifact Creature — Scarecrow,0.22,2.32
-m19,239,1,0,,Manalith,{3},,https://cards.scryfall.io/normal/front/9/d/9dfba61f-9a6d-43e3-ad28-f74f737ef186.jpg?1615331277,,,Core Set 2019,,common,Artifact,0.38,2.21
-m19,267,2,0,,Island,,,https://cards.scryfall.io/normal/front/4/2/42044efb-b6a8-46c3-90dc-b7a745e819e5.jpg?1562301735,,,Core Set 2019,,common,Basic Land — Island,0.27,1.67
-m19,268,2,0,,Island,,,https://cards.scryfall.io/normal/front/e/3/e3a0c382-23c4-44a5-a689-1f65fed388b7.jpg?1562304829,,,Core Set 2019,,common,Basic Land — Island,0.54,0.86
+m19,234,1,0,,Field Creeper,{2},C,https://cards.scryfall.io/normal/front/e/1/e148c1bf-84a2-48cd-882e-ad0fd74b8f0f.jpg?1562304812,,,Core Set 2019,,common,Artifact Creature — Scarecrow,0.22,2.32
+m19,239,1,0,,Manalith,{3},C,https://cards.scryfall.io/normal/front/9/d/9dfba61f-9a6d-43e3-ad28-f74f737ef186.jpg?1615331277,,,Core Set 2019,,common,Artifact,0.38,2.21
+m19,267,2,0,,Island,,L,https://cards.scryfall.io/normal/front/4/2/42044efb-b6a8-46c3-90dc-b7a745e819e5.jpg?1562301735,,,Core Set 2019,,common,Basic Land — Island,0.27,1.67
+m19,268,2,0,,Island,,L,https://cards.scryfall.io/normal/front/e/3/e3a0c382-23c4-44a5-a689-1f65fed388b7.jpg?1562304829,,,Core Set 2019,,common,Basic Land — Island,0.54,0.86
 m19,38,1,0,,Star-Crowned Stag,{3}{W},W,https://cards.scryfall.io/normal/front/c/5/c57417c7-867b-4b64-bfe3-1744dfe9b44d.jpg?1562304312,,,Core Set 2019,,common,Creature — Elk,0.27,1.62
 m19,40,1,0,,Take Vengeance,{1}{W},W,https://cards.scryfall.io/normal/front/6/6/66fbde22-d98d-4f12-b4d8-1bad2a9878b2.jpg?1562302645,,,Core Set 2019,,common,Sorcery,0.16,1.19
 m19,44,1,0,,Anticipate,{1}{U},U,https://cards.scryfall.io/normal/front/a/0/a07b1d89-1e6a-4e95-be89-1f03182fc470.jpg?1562303423,,,Core Set 2019,,common,Instant,0.22,0.0
@@ -635,8 +635,8 @@ m21,168,1,0,,Turn to Slag,{3}{R}{R},R,https://cards.scryfall.io/normal/front/3/8
 m21,187,1,0,,Gnarled Sage,{3}{G}{G},G,https://cards.scryfall.io/normal/front/5/f/5f22116a-8b6a-4bbe-999f-7329e1e2b2d9.jpg?1594737027,,,Core Set 2021,,common,Creature — Treefolk Druid,0.11,0.49
 m21,194,1,0,,Ornery Dilophosaur,{3}{G},G,https://cards.scryfall.io/normal/front/c/2/c2c4a0e7-9ca4-4291-94de-165cc2ded822.jpg?1594737108,,,Core Set 2021,,common,Creature — Dinosaur,0.22,0.81
 m21,20,1,0,,Gale Swooper,{3}{W},W,https://cards.scryfall.io/normal/front/d/2/d2e3b99c-e48e-4f4d-ba7a-e9218137b432.jpg?1594734966,,,Core Set 2021,,common,Creature — Griffin,0.11,0.38
-m21,235,1,0,,Prismite,{2},,https://cards.scryfall.io/normal/front/e/e/eedce8ab-771a-4247-9504-72ae0629df83.jpg?1594737532,,,Core Set 2021,,common,Artifact Creature — Golem,0.32,0.76
-m21,238,1,0,,Skyscanner,{3},,https://cards.scryfall.io/normal/front/c/a/cab69fbd-0179-4b02-adba-71d2a0eeea5c.jpg?1594737556,,,Core Set 2021,,common,Artifact Creature — Thopter,0.54,1.62
+m21,235,1,0,,Prismite,{2},C,https://cards.scryfall.io/normal/front/e/e/eedce8ab-771a-4247-9504-72ae0629df83.jpg?1594737532,,,Core Set 2021,,common,Artifact Creature — Golem,0.32,0.76
+m21,238,1,0,,Skyscanner,{3},C,https://cards.scryfall.io/normal/front/c/a/cab69fbd-0179-4b02-adba-71d2a0eeea5c.jpg?1594737556,,,Core Set 2021,,common,Artifact Creature — Thopter,0.54,1.62
 m21,51,1,0,,Frost Breath,{2}{U},U,https://cards.scryfall.io/normal/front/3/9/393fc485-d3c1-4826-933d-89f66df769d4.jpg?1594735496,,,Core Set 2021,,common,Instant,0.16,1.13
 m21,90,1,0,,Blood Glutton,{4}{B},B,https://cards.scryfall.io/normal/front/2/8/28ff52a2-4223-4551-b388-b4dd21cc1437.jpg?1594736007,,,Core Set 2021,,common,Creature — Vampire,0.22,0.7
 m21,91,1,0,,Caged Zombie,{2}{B},B,https://cards.scryfall.io/normal/front/f/8/f8067745-35b6-4abd-9ae9-712159a26c89.jpg?1594736024,,,Core Set 2021,,common,Creature — Zombie,0.27,0.97
@@ -652,8 +652,8 @@ mh1,50,2,0,,Fact or Fiction,{3}{U},U,https://cards.scryfall.io/normal/front/5/5/
 mh1,73,1,0,,Tribute Mage,{2}{U},U,https://cards.scryfall.io/normal/front/6/c/6c180888-6acd-401b-815a-6ed434482681.jpg?1562201528,,,Modern Horizons,,uncommon,Creature — Human Wizard,4.75,25.47
 mh1,87,2,0,,Diabolic Edict,{1}{B},B,https://cards.scryfall.io/normal/front/4/e/4eabbed2-1399-4cf1-9eba-b53c56caced4.jpg?1591104828,,,Modern Horizons,,common,Instant,0.54,1.94
 mh2,4,1,0,,Arcbound Prototype,{1}{W},W,https://cards.scryfall.io/normal/front/1/c/1cb0a1a4-9216-47f8-a4e3-20fe0de6a518.jpg?1626093282,,,Modern Horizons 2,,common,Artifact Creature — Assembly-Worker,0.16,0.81
-mh2,481,2,0,,Plains,,,https://cards.scryfall.io/normal/front/d/5/d5aa2449-6b74-4319-858f-caa9282da5c1.jpg?1626103988,,,Modern Horizons 2,,common,Basic Land — Plains,0.54,0.7
-mh2,482,2,0,,Plains,,,https://cards.scryfall.io/normal/front/e/1/e14e6193-f60b-46c8-a7eb-02a437138568.jpg?1626104013,,,Modern Horizons 2,,common,Basic Land — Plains,0.38,0.65
+mh2,481,2,0,,Plains,,L,https://cards.scryfall.io/normal/front/d/5/d5aa2449-6b74-4319-858f-caa9282da5c1.jpg?1626103988,,,Modern Horizons 2,,common,Basic Land — Plains,0.54,0.7
+mh2,482,2,0,,Plains,,L,https://cards.scryfall.io/normal/front/e/1/e14e6193-f60b-46c8-a7eb-02a437138568.jpg?1626104013,,,Modern Horizons 2,,common,Basic Land — Plains,0.38,0.65
 mh2,76,1,0,,Bone Shards,{B},B,https://cards.scryfall.io/normal/front/1/e/1ee98955-4c47-4d45-9377-608dfa755337.jpg?1626095299,,,Modern Horizons 2,,common,Sorcery,0.76,1.3
 mic,134,1,0,,Bestial Menace,{3}{G}{G},G,https://cards.scryfall.io/normal/front/1/4/14003109-ec2c-40ad-b005-67218ec75cbd.jpg?1637630963,,,Midnight Hunt Commander,,uncommon,Sorcery,0.22,0.0
 mid,107,4,0,,Infernal Grasp,{1}{B},B,https://cards.scryfall.io/normal/front/1/7/17824929-f131-4b8d-addb-66c25323155e.jpg?1634349911,,,Innistrad: Midnight Hunt,,uncommon,Instant,1.94,3.99
@@ -664,12 +664,12 @@ mid,144,1,0,,Immolation,{R},R,https://cards.scryfall.io/normal/front/6/0/606b114
 mid,156,4,0,,Raze the Effigy,{R},R,https://cards.scryfall.io/normal/front/e/0/e0dd378c-5050-48c9-9a16-6d91afa62d21.jpg?1636223415,,,Innistrad: Midnight Hunt,,common,Instant,0.43,1.19
 mid,212,2,0,,Bladestitched Skaab,{U}{B},"B, U",https://cards.scryfall.io/normal/front/b/8/b8a73f77-aab5-47e3-bfc1-97f6374f40fc.jpg?1636683786,,,Innistrad: Midnight Hunt,,uncommon,Creature — Zombie Soldier,0.54,1.56
 mid,301,0,2,,Dawnhart Rejuvenator,{3}{G},G,https://cards.scryfall.io/normal/front/1/9/19b0e267-c361-4224-9b7a-2a3d1c5ac8b4.jpg?1636415446,,,Innistrad: Midnight Hunt,,common,Creature — Human Warlock,0.22,0.38
-mid,380,0,2,,Plains,,,https://cards.scryfall.io/normal/front/4/6/46b94de4-099e-43d7-8f24-d5450b09f1f1.jpg?1637115240,,,Innistrad: Midnight Hunt,,common,Basic Land — Plains,0.54,0.7
+mid,380,0,2,,Plains,,L,https://cards.scryfall.io/normal/front/4/6/46b94de4-099e-43d7-8f24-d5450b09f1f1.jpg?1637115240,,,Innistrad: Midnight Hunt,,common,Basic Land — Plains,0.54,0.7
 mid,50,0,2,,Drownyard Amalgam,{4}{U},U,https://cards.scryfall.io/normal/front/7/1/71b05d44-d987-45e1-bbd9-842dbe58c2b5.jpg?1634348796,,,Innistrad: Midnight Hunt,,common,Creature — Zombie Horror,0.16,0.54
 mkm,135,1,0,,"Krenko, Baron of Tin Street",{2}{R},R,https://cards.scryfall.io/normal/front/5/5/5524b712-c67d-4d2e-9344-9e85a6ce3227.jpg?1706241890,,,Murders at Karlov Manor,,rare,Legendary Creature — Goblin,0.86,2.05
-mkm,281,10,0,,Swamp,,,https://cards.scryfall.io/normal/front/7/0/70d0ef58-c0b3-4bcd-b470-0cf41219a4e6.jpg?1706242402,,,Murders at Karlov Manor,,common,Basic Land — Swamp,0.32,0.49
-mkm,282,12,0,,Swamp,,,https://cards.scryfall.io/normal/front/b/1/b1cbccfc-3585-4895-94d1-c3a67205e5fe.jpg?1706242403,,,Murders at Karlov Manor,,common,Basic Land — Swamp,0.59,0.76
-mm2,225,1,0,,Precursor Golem,{5},,https://cards.scryfall.io/normal/front/d/c/dc90d632-fc78-4ae6-83c6-314ee5744de5.jpg?1562268361,,,Modern Masters 2015,,rare,Artifact Creature — Golem,1.67,3.24
+mkm,281,10,0,,Swamp,,L,https://cards.scryfall.io/normal/front/7/0/70d0ef58-c0b3-4bcd-b470-0cf41219a4e6.jpg?1706242402,,,Murders at Karlov Manor,,common,Basic Land — Swamp,0.32,0.49
+mkm,282,12,0,,Swamp,,L,https://cards.scryfall.io/normal/front/b/1/b1cbccfc-3585-4895-94d1-c3a67205e5fe.jpg?1706242403,,,Murders at Karlov Manor,,common,Basic Land — Swamp,0.59,0.76
+mm2,225,1,0,,Precursor Golem,{5},C,https://cards.scryfall.io/normal/front/d/c/dc90d632-fc78-4ae6-83c6-314ee5744de5.jpg?1562268361,,,Modern Masters 2015,,rare,Artifact Creature — Golem,1.67,3.24
 mm2,50,4,0,,Mana Leak,{1}{U},U,https://cards.scryfall.io/normal/front/e/a/ea345b5d-3b4b-4b59-876b-bc56fbe8578a.jpg?1562268836,,,Modern Masters 2015,,common,Instant,1.19,2.27
 mm3,123,1,0,,Death-Hood Cobra,{1}{G},G,https://cards.scryfall.io/normal/front/d/5/d556f696-5914-497e-8c84-8888cdf18b8f.jpg?1593813751,,,Modern Masters 2017,,common,Creature — Phyrexian Snake,0.16,1.08
 mm3,209,1,0,,Gift of Orzhova,{1}{W/B}{W/B},"B, W",https://cards.scryfall.io/normal/front/d/a/da824204-a7ed-46f1-b890-f21fcc39ce7e.jpg?1593814807,,,Modern Masters 2017,,common,Enchantment — Aura,0.86,2.43
@@ -682,7 +682,7 @@ mom,192,1,0,,Invasion of Muraganda,{4}{G},G,https://cards.scryfall.io/normal/fro
 mom,64,1,0,,Invasion of Vryn,{3}{U},U,https://cards.scryfall.io/normal/front/c/0/c0ef6737-8e85-42ca-8ee6-6a34f9462de3.jpg?1739657380,Overloaded Mage-Ring,https://cards.scryfall.io/normal/back/c/0/c0ef6737-8e85-42ca-8ee6-6a34f9462de3.jpg?1739657380,March of the Machine,,uncommon,Battle — Siege // Artifact,0.32,1.35
 mom,77,1,0,,See Double,{2}{U}{U},U,https://cards.scryfall.io/normal/front/4/1/41634103-7b58-4feb-84b7-90a07a7b474f.jpg?1682203410,,,March of the Machine,,rare,Instant,2.75,3.99
 mrd,135,4,0,,Troll Ascetic,{1}{G}{G},G,https://cards.scryfall.io/normal/front/f/0/f01233c2-6df0-4f0e-8668-3855868731ea.jpg?1562162512,,,Mirrodin,,rare,Creature — Troll Shaman,2.97,9.66
-mrd,252,1,0,,Synod Sanctum,{1},,https://cards.scryfall.io/normal/front/4/5/45f2ab6e-019e-4e72-be06-9c8cd97d54d4.jpg?1562142387,,,Mirrodin,,uncommon,Artifact,1.13,11.12
+mrd,252,1,0,,Synod Sanctum,{1},C,https://cards.scryfall.io/normal/front/4/5/45f2ab6e-019e-4e72-be06-9c8cd97d54d4.jpg?1562142387,,,Mirrodin,,uncommon,Artifact,1.13,11.12
 ncc,324,1,0,,Ajani Unyielding,{4}{G}{W},"G, W",https://cards.scryfall.io/normal/front/4/1/41000308-144d-4d3b-afec-e3928d20edfc.jpg?1673484913,,,New Capenna Commander,,mythic,Legendary Planeswalker — Ajani,2.32,0.0
 nec,93,1,0,,"Jace, Architect of Thought",{2}{U}{U},U,https://cards.scryfall.io/normal/front/c/2/c2be221c-76e2-4b18-a3c1-90ced436d01f.jpg?1651655718,,,Neon Dynasty Commander,,mythic,Legendary Planeswalker — Jace,1.4,0.0
 neo,11,1,0,,Era of Enlightenment,{1}{W},W,https://cards.scryfall.io/normal/front/7/4/74f43827-2b9b-4fc9-a6e2-c682dfbf14f7.jpg?1669724056,Hand of Enlightenment,https://cards.scryfall.io/normal/back/7/4/74f43827-2b9b-4fc9-a6e2-c682dfbf14f7.jpg?1669724056,Kamigawa: Neon Dynasty,,common,Enchantment — Saga // Enchantment Creature — Human Monk,0.27,0.43
@@ -701,20 +701,20 @@ neo,64,1,0,,Mnemonic Sphere,{1}{U},U,https://cards.scryfall.io/normal/front/1/a/
 neo,78,1,0,,Short Circuit,{1}{U},U,https://cards.scryfall.io/normal/front/7/4/74fe0fb5-e994-41b1-a73d-4e68f7afdf34.jpg?1654566946,,,Kamigawa: Neon Dynasty,,common,Enchantment — Aura,0.22,0.16
 nph,110,1,0,,Glissa's Scorn,{1}{G},G,https://cards.scryfall.io/normal/front/f/1/f11187c1-de35-4e85-87c3-656f978b2d7e.jpg?1562882673,,,New Phyrexia,,common,Instant,0.7,1.62
 nph,114,1,0,,Maul Splicer,{6}{G},G,https://cards.scryfall.io/normal/front/2/d/2d2c6a6d-5b59-47d7-b290-df3640d9555f.jpg?1562876329,,,New Phyrexia,,common,Creature — Phyrexian Human Artificer,0.7,9.93
-nph,163,1,0,,Trespassing Souleater,{3},,https://cards.scryfall.io/normal/front/b/5/b5263269-9f64-43de-9e82-408644dbc628.jpg?1562880897,,,New Phyrexia,,common,Artifact Creature — Phyrexian Construct,0.54,1.46
+nph,163,1,0,,Trespassing Souleater,{3},C,https://cards.scryfall.io/normal/front/b/5/b5263269-9f64-43de-9e82-408644dbc628.jpg?1562880897,,,New Phyrexia,,common,Artifact Creature — Phyrexian Construct,0.54,1.46
 nph,40,1,0,,Numbing Dose,{3}{U}{U},U,https://cards.scryfall.io/normal/front/8/f/8f28a0f4-43e1-46df-8b6a-d588c5cceb88.jpg?1562879688,,,New Phyrexia,,common,Enchantment — Aura,0.27,0.54
 nph,52,1,0,,Blind Zealot,{1}{B}{B},B,https://cards.scryfall.io/normal/front/9/b/9bd04df1-5131-455d-b497-fcce4f9af552.jpg?1562880110,,,New Phyrexia,,common,Creature — Phyrexian Human Cleric,0.49,3.02
 nph,99,1,0,,Victorious Destruction,{4}{R},R,https://cards.scryfall.io/normal/front/7/b/7b81cb30-e9f8-41f3-a10b-26e0ba2503aa.jpg?1562879001,,,New Phyrexia,,common,Sorcery,0.32,0.0
 ogw,135,1,0,,Loam Larva,{1}{G},G,https://cards.scryfall.io/normal/front/a/f/affa9314-0021-445e-9496-349254b16bf8.jpg?1562930420,,,Oath of the Gatewatch,,common,Creature — Insect,0.32,0.76
 ogw,146,1,0,,Vines of the Recluse,{G},G,https://cards.scryfall.io/normal/front/e/0/e0a1fc4b-ec68-4fd1-af0f-6ccc8c6dee89.jpg?1562940116,,,Oath of the Gatewatch,,common,Instant,0.22,1.03
-ogw,179,1,0,,Timber Gorge,,,https://cards.scryfall.io/normal/front/5/5/55d05ff7-f071-4eb3-b10a-203741abdf10.jpg?1562912496,,,Oath of the Gatewatch,,uncommon,Land,0.59,1.94
+ogw,179,1,0,,Timber Gorge,,L,https://cards.scryfall.io/normal/front/5/5/55d05ff7-f071-4eb3-b10a-203741abdf10.jpg?1562912496,,,Oath of the Gatewatch,,uncommon,Land,0.59,1.94
 one,138,1,0,,"Koth, Fire of Resistance",{2}{R}{R},R,https://cards.scryfall.io/normal/front/6/5/6528e012-4091-4722-b706-c51772676167.jpg?1675957094,,,Phyrexia: All Will Be One,,rare,Legendary Planeswalker — Koth,1.3,2.43
 one,165,1,0,,Copper Longlegs,{1}{G},G,https://cards.scryfall.io/normal/front/f/8/f8855fbf-4f1e-4c44-9653-bbbfc3f2fafd.jpg?1675957136,,,Phyrexia: All Will Be One,,common,Creature — Phyrexian Spider,0.32,0.81
 one,173,1,0,,Lattice-Blade Mantis,{3}{G},G,https://cards.scryfall.io/normal/front/f/7/f7427def-c4b2-475a-8dc9-7e89409d9abb.jpg?1675957148,,,Phyrexia: All Will Be One,,common,Creature — Phyrexian Insect,0.22,0.32
 one,183,1,0,,Skyscythe Engulfer,{5}{G},G,https://cards.scryfall.io/normal/front/d/7/d7898399-3c52-402c-9cd7-baad2cb7f00e.jpg?1675957163,,,Phyrexia: All Will Be One,,common,Creature — Phyrexian Beast,0.27,0.54
 one,205,1,0,,"Kaya, Intangible Slayer",{3}{W}{W}{B}{B},"B, W",https://cards.scryfall.io/normal/front/6/8/6865b8c7-b260-48e8-a905-64cbf06b7e57.jpg?1675957195,,,Phyrexia: All Will Be One,,rare,Legendary Planeswalker — Kaya,1.3,2.81
-one,229,1,0,Promo,"Graaz, Unstoppable Juggernaut",{8},,https://cards.scryfall.io/normal/front/e/0/e0e73b63-17cc-4dca-abd6-728b74bc37a8.jpg?1675957233,,,Phyrexia: All Will Be One,,rare,Legendary Artifact Creature — Juggernaut,0.97,1.3
-one,252,1,0,,The Fair Basilica,,,https://cards.scryfall.io/normal/front/0/1/01d6ba55-7bc0-41c6-84be-8cd528e46a05.jpg?1675957270,,,Phyrexia: All Will Be One,,common,Land — Sphere,0.38,1.03
+one,229,1,0,Promo,"Graaz, Unstoppable Juggernaut",{8},C,https://cards.scryfall.io/normal/front/e/0/e0e73b63-17cc-4dca-abd6-728b74bc37a8.jpg?1675957233,,,Phyrexia: All Will Be One,,rare,Legendary Artifact Creature — Juggernaut,0.97,1.3
+one,252,1,0,,The Fair Basilica,,L,https://cards.scryfall.io/normal/front/0/1/01d6ba55-7bc0-41c6-84be-8cd528e46a05.jpg?1675957270,,,Phyrexia: All Will Be One,,common,Land — Sphere,0.38,1.03
 one,340,1,0,,"Kaito, Dancing Shadow",{2}{U}{B},"B, U",https://cards.scryfall.io/normal/front/0/6/06f04ee2-dd29-4ce8-98a6-d8b669c71308.jpg?1675957382,,,Phyrexia: All Will Be One,,rare,Legendary Planeswalker — Kaito,1.73,2.27
 one,53,1,0,,Gitaxian Raptor,{2}{U},U,https://cards.scryfall.io/normal/front/4/f/4f5e95f8-c04d-405f-bba4-e83a8f6bf463.jpg?1675956964,,,Phyrexia: All Will Be One,,common,Creature — Phyrexian Bird,0.16,0.11
 one,59,1,0,,Meldweb Curator,{3}{U},U,https://cards.scryfall.io/normal/front/f/0/f0d392b2-1dac-432d-930c-66b238f7512b.jpg?1675956975,,,Phyrexia: All Will Be One,,common,Creature — Phyrexian Wizard,0.16,0.32
@@ -724,20 +724,20 @@ ons,174,1,0,,Swat,{1}{B}{B},B,https://cards.scryfall.io/normal/front/c/e/cec3a26
 ori,114,2,0,,Read the Bones,{2}{B},B,https://cards.scryfall.io/normal/front/0/c/0cc51b90-7f1e-4e20-bc36-e3a198bc71bf.jpg?1562006962,,,Magic Origins,,common,Sorcery,0.97,5.77
 ori,127,4,0,,Abbot of Keral Keep,{1}{R},R,https://cards.scryfall.io/normal/front/c/b/cb7a2770-9a20-4f52-aac4-24502f50e374.jpg?1571661132,,,Magic Origins,,rare,Creature — Human Monk,0.86,1.78
 ori,134,1,0,,Call of the Full Moon,{1}{R},R,https://cards.scryfall.io/normal/front/3/6/369d837a-a19b-457c-8146-cc1766a63ec1.jpg?1562014726,,,Magic Origins,,uncommon,Enchantment — Aura,0.38,1.51
-ori,253,2,0,,Plains,,,https://cards.scryfall.io/normal/front/8/8/88f96591-4f22-451e-bfb5-32561cc4640d.jpg?1562029787,,,Magic Origins,,common,Basic Land — Plains,0.38,2.7
-ori,254,1,0,,Plains,,,https://cards.scryfall.io/normal/front/7/6/763c1eaa-fe29-4b24-8e41-96b94e5a75a4.jpg?1562026214,,,Magic Origins,,common,Basic Land — Plains,0.38,3.67
-ori,256,2,0,,Plains,,,https://cards.scryfall.io/normal/front/e/d/ed4f7329-9c72-4369-8b66-2a89423e957d.jpg?1562048285,,,Magic Origins,,common,Basic Land — Plains,0.38,2.81
-ori,257,1,0,,Island,,,https://cards.scryfall.io/normal/front/d/3/d3a9df3b-b542-4915-96ac-0c9027f6870a.jpg?1562043653,,,Magic Origins,,common,Basic Land — Island,0.38,2.43
-ori,259,5,0,,Island,,,https://cards.scryfall.io/normal/front/7/8/7880b12e-948b-4f3a-bb0b-604e3dd66f78.jpg?1562026714,,,Magic Origins,,common,Basic Land — Island,0.43,10.09
-ori,260,2,0,,Island,,,https://cards.scryfall.io/normal/front/0/3/03f845b1-3b8a-4387-aae3-fd497acf193c.jpg?1562005105,,,Magic Origins,,common,Basic Land — Island,0.65,1.4
-ori,262,1,0,,Swamp,,,https://cards.scryfall.io/normal/front/b/5/b56d4e89-93aa-4b1e-84f6-8addef529a3f.jpg?1562037539,,,Magic Origins,,common,Basic Land — Swamp,0.54,2.27
+ori,253,2,0,,Plains,,L,https://cards.scryfall.io/normal/front/8/8/88f96591-4f22-451e-bfb5-32561cc4640d.jpg?1562029787,,,Magic Origins,,common,Basic Land — Plains,0.38,2.7
+ori,254,1,0,,Plains,,L,https://cards.scryfall.io/normal/front/7/6/763c1eaa-fe29-4b24-8e41-96b94e5a75a4.jpg?1562026214,,,Magic Origins,,common,Basic Land — Plains,0.38,3.67
+ori,256,2,0,,Plains,,L,https://cards.scryfall.io/normal/front/e/d/ed4f7329-9c72-4369-8b66-2a89423e957d.jpg?1562048285,,,Magic Origins,,common,Basic Land — Plains,0.38,2.81
+ori,257,1,0,,Island,,L,https://cards.scryfall.io/normal/front/d/3/d3a9df3b-b542-4915-96ac-0c9027f6870a.jpg?1562043653,,,Magic Origins,,common,Basic Land — Island,0.38,2.43
+ori,259,5,0,,Island,,L,https://cards.scryfall.io/normal/front/7/8/7880b12e-948b-4f3a-bb0b-604e3dd66f78.jpg?1562026714,,,Magic Origins,,common,Basic Land — Island,0.43,10.09
+ori,260,2,0,,Island,,L,https://cards.scryfall.io/normal/front/0/3/03f845b1-3b8a-4387-aae3-fd497acf193c.jpg?1562005105,,,Magic Origins,,common,Basic Land — Island,0.65,1.4
+ori,262,1,0,,Swamp,,L,https://cards.scryfall.io/normal/front/b/5/b56d4e89-93aa-4b1e-84f6-8addef529a3f.jpg?1562037539,,,Magic Origins,,common,Basic Land — Swamp,0.54,2.27
 ori,50,1,0,,Claustrophobia,{1}{U}{U},U,https://cards.scryfall.io/normal/front/4/d/4d249de3-4a84-4e98-9557-06e23e78de15.jpg?1562018959,,,Magic Origins,,common,Enchantment — Aura,0.16,0.65
 otp,8,1,0,,Archmage's Charm,{U}{U}{U},U,https://cards.scryfall.io/normal/front/4/4/44fe86de-c131-41b2-a06a-827b4d374a6d.jpg?1712353415,,,Breaking News,,rare,Instant,3.02,5.4
 pc2,55,2,0,,Aura Gnarlid,{2}{G},G,https://cards.scryfall.io/normal/front/1/8/185a6693-3a9e-4948-a865-beff718667cb.jpg?1575571793,,,Planechase 2012,,common,Creature — Beast,1.08,0.0
-pw24,11,0,1,,Transmutation Font,{5},,https://cards.scryfall.io/normal/front/9/e/9e0834f7-e7fc-4f47-9d45-d555b50990a0.jpg?1738044469,,,Wizards Play Network 2024,,mythic,Artifact,0.0,4.64
+pw24,11,0,1,,Transmutation Font,{5},C,https://cards.scryfall.io/normal/front/9/e/9e0834f7-e7fc-4f47-9d45-d555b50990a0.jpg?1738044469,,,Wizards Play Network 2024,,mythic,Artifact,0.0,4.64
 rav,221,1,0,,Putrefy,{1}{B}{G},"B, G",https://cards.scryfall.io/normal/front/0/a/0a16086c-5a74-45d0-8b38-e832cfbc80f7.jpg?1598917276,,,Ravnica: City of Guilds,,uncommon,Instant,1.24,10.25
 rix,19,1,0,,Raptor Companion,{1}{W},W,https://cards.scryfall.io/normal/front/e/1/e16f2ffb-2780-47d2-bcdf-9cef82716b20.jpg?1555039769,,,Rivals of Ixalan,,common,Creature — Dinosaur,0.27,1.24
-rix,195,4,0,,Mountain,,,https://cards.scryfall.io/normal/front/5/f/5fd9acc5-0088-4621-8f48-e997da5f27c5.jpg?1555041140,,,Rivals of Ixalan,,common,Basic Land — Mountain,4.59,26.66
+rix,195,4,0,,Mountain,,L,https://cards.scryfall.io/normal/front/5/f/5fd9acc5-0088-4621-8f48-e997da5f27c5.jpg?1555041140,,,Rivals of Ixalan,,common,Basic Land — Mountain,4.59,26.66
 rix,20,1,0,,Sanguine Glorifier,{3}{W},W,https://cards.scryfall.io/normal/front/1/2/12993e53-8790-4d6f-9da1-a259f67aa5bf.jpg?1555039777,,,Rivals of Ixalan,,common,Creature — Vampire Cleric,0.27,3.67
 rix,44,1,0,,Negate,{1}{U},U,https://cards.scryfall.io/normal/front/3/1/31534f45-43e6-4103-bf58-ad8fa688e4b0.jpg?1555039942,,,Rivals of Ixalan,,common,Instant,1.24,7.01
 rix,65,1,0,,Dark Inquiry,{2}{B},B,https://cards.scryfall.io/normal/front/4/2/42eaa634-0add-4e3d-9eee-5712598dda3f.jpg?1555040160,,,Rivals of Ixalan,,common,Sorcery,0.22,1.67
@@ -754,7 +754,7 @@ rna,172,1,0,,Fireblade Artist,{B}{R},"B, R",https://cards.scryfall.io/normal/fro
 rna,176,1,0,,Get the Point,{3}{B}{R},"B, R",https://cards.scryfall.io/normal/front/8/2/821c4ab5-eb75-445a-bbec-e50af54dba7a.jpg?1584831541,,,Ravnica Allegiance,,common,Instant,0.22,1.62
 rna,217,1,0,,Rubble Slinger,{2}{R/G},"G, R",https://cards.scryfall.io/normal/front/f/0/f006255f-b18d-4d52-b97a-17909b67decc.jpg?1584831962,,,Ravnica Allegiance,,common,Creature — Human Warrior,0.16,0.65
 rna,220,1,0,,Vizkopa Vampire,{2}{W/B},"B, W",https://cards.scryfall.io/normal/front/6/1/61245466-694f-4a80-b556-4e7f876aedca.jpg?1584831998,,,Ravnica Allegiance,,common,Creature — Vampire,0.59,1.89
-rna,250,2,0,,Gruul Guildgate,,,https://cards.scryfall.io/normal/front/8/f/8fffd445-de4f-45de-95b9-6e0855926a6a.jpg?1584832269,,,Ravnica Allegiance,,common,Land — Gate,0.38,4.05
+rna,250,2,0,,Gruul Guildgate,,L,https://cards.scryfall.io/normal/front/8/f/8fffd445-de4f-45de-95b9-6e0855926a6a.jpg?1584832269,,,Ravnica Allegiance,,common,Land — Gate,0.38,4.05
 rna,26,1,0,,Tenth District Veteran,{2}{W},W,https://cards.scryfall.io/normal/front/e/f/ef573e92-3106-4b42-90e8-0e165de0659f.jpg?1584830058,,,Ravnica Allegiance,,common,Creature — Human Soldier,0.32,0.7
 rna,28,1,0,,Twilight Panther,{W},W,https://cards.scryfall.io/normal/front/5/f/5fb149cc-74ca-4bc3-8efc-10ce872b59fb.jpg?1584830080,,,Ravnica Allegiance,,common,Creature — Cat Spirit,0.22,1.94
 rna,38,1,0,,Eyes Everywhere,{2}{U},U,https://cards.scryfall.io/normal/front/1/f/1fdbf073-3ee6-402b-bd40-4781f40a6cae.jpg?1584830199,,,Ravnica Allegiance,,uncommon,Enchantment,0.43,2.43
@@ -778,12 +778,12 @@ roe,74,1,0,,Lay Bare,{2}{U}{U},U,https://cards.scryfall.io/normal/front/0/4/0454
 roe,78,1,0,,Mnemonic Wall,{4}{U},U,https://cards.scryfall.io/normal/front/f/f/ffaebb4a-cb9b-4ac8-b661-3e63d9d984f4.jpg?1562710683,,,Rise of the Eldrazi,,common,Creature — Wall,0.92,10.9
 rtr,120,3,0,,Deadbridge Goliath,{2}{G}{G},G,https://cards.scryfall.io/normal/front/6/a/6ad03e99-25d3-4a09-819b-9192dfd8c9d2.jpg?1562787704,,,Return to Ravnica,,rare,Creature — Insect,1.03,3.18
 rtr,148,1,0,,Centaur Healer,{1}{G}{W},"G, W",https://cards.scryfall.io/normal/front/8/3/833835d1-9beb-4ad8-b675-7adebdbd7d82.jpg?1562789154,,,Return to Ravnica,,common,Creature — Centaur Cleric,0.22,0.86
-rtr,253,1,0,,Plains,,,https://cards.scryfall.io/normal/front/d/2/d293ea0f-8b87-4d8a-ad8f-650131c83c20.jpg?1562793625,,,Return to Ravnica,,common,Basic Land — Plains,0.65,1.35
+rtr,253,1,0,,Plains,,L,https://cards.scryfall.io/normal/front/d/2/d293ea0f-8b87-4d8a-ad8f-650131c83c20.jpg?1562793625,,,Return to Ravnica,,common,Basic Land — Plains,0.65,1.35
 rtr,26,1,0,,Swift Justice,{W},W,https://cards.scryfall.io/normal/front/a/9/a94801ba-0295-4611-abda-4c6508d69cc3.jpg?1562791274,,,Return to Ravnica,,common,Instant,0.22,2.43
 rtr,32,1,0,,Chronic Flooding,{1}{U},U,https://cards.scryfall.io/normal/front/1/a/1a757425-3cf2-4aca-b415-5ec2d5f753fe.jpg?1562783330,,,Return to Ravnica,,common,Enchantment — Aura,0.86,5.5
 rtr,4,1,0,,Avenging Arrow,{2}{W},W,https://cards.scryfall.io/normal/front/6/9/696678ff-44dc-4fe4-bf17-024e86cd0220.jpg?1562787572,,,Return to Ravnica,,common,Instant,0.32,1.13
 rvr,194,1,0,,"Kaya, Orzhov Usurper",{1}{W}{B},"B, W",https://cards.scryfall.io/normal/front/3/0/307efe3d-291c-4c9f-8ce6-4bd2ba1452ad.jpg?1702429656,,,Ravnica Remastered,,rare,Legendary Planeswalker — Kaya,1.89,2.43
-scd,341,1,0,,Swamp,,,https://cards.scryfall.io/normal/front/f/e/feb9faf5-8f7b-4d0d-a3ca-963832e7f711.jpg?1674676741,,,Starter Commander Decks,,common,Basic Land — Swamp,0.49,0.0
+scd,341,1,0,,Swamp,,L,https://cards.scryfall.io/normal/front/f/e/feb9faf5-8f7b-4d0d-a3ca-963832e7f711.jpg?1674676741,,,Starter Commander Decks,,common,Basic Land — Swamp,0.49,0.0
 scg,116,1,0,,Divergent Growth,{G},G,https://cards.scryfall.io/normal/front/0/e/0e609448-7868-4e28-b399-3750556a693c.jpg?1562525426,,,Scourge,,common,Instant,0.59,2.27
 snc,100,2,0,,Antagonize,{1}{R},R,https://cards.scryfall.io/normal/front/8/b/8bac1d2a-99dd-40b3-8823-ce9225efcdcf.jpg?1664411369,,,Streets of New Capenna,,common,Instant,0.43,0.76
 snc,111,1,0,,Jackhammer,{1}{R},R,https://cards.scryfall.io/normal/front/d/7/d74ba9fe-2dcb-4da7-ba64-cd932edb5b24.jpg?1664411585,,,Streets of New Capenna,,common,Artifact — Equipment,0.16,0.22
@@ -804,18 +804,18 @@ snc,212,3,0,,"Queza, Augur of Agonies",{1}{W}{U}{B},"B, U, W",https://cards.scry
 snc,22,1,0,,Mysterious Limousine,{3}{W}{W},W,https://cards.scryfall.io/normal/front/a/5/a58cb742-0ba7-4795-9772-25d4db0bc4ce.jpg?1664409826,,,Streets of New Capenna,,rare,Artifact — Vehicle,0.54,0.65
 snc,221,1,0,,Shattered Seraph,{4}{W}{U}{B},"B, U, W",https://cards.scryfall.io/normal/front/c/c/cc75ba0d-230e-4ca4-bb40-bd05af2a4457.jpg?1664413745,,,Streets of New Capenna,,common,Creature — Angel Rogue,0.27,0.43
 snc,226,1,0,,Syndicate Infiltrator,{2}{U}{B},"B, U",https://cards.scryfall.io/normal/front/b/f/bf86c5f2-0caf-48ca-b7ad-a1cdcd014539.jpg?1664413852,,,Streets of New Capenna,,uncommon,Creature — Vampire Wizard,0.27,0.54
-snc,242,1,0,,Paragon of Modernity,{4},,https://cards.scryfall.io/normal/front/9/3/939450d7-1107-4645-ad23-68749b1ec4c2.jpg?1664414284,,,Streets of New Capenna,,common,Artifact Creature — Angel Warrior,0.22,0.7
-snc,256,7,0,,Skybridge Towers,,,https://cards.scryfall.io/normal/front/e/2/e28c871f-a96a-4e7d-a159-2e93aeb276d4.jpg?1664414567,,,Streets of New Capenna,,common,Land,0.49,0.65
-snc,259,4,0,,Waterfront District,,,https://cards.scryfall.io/normal/front/d/e/debf7aac-4d31-49b4-955b-79036258df69.jpg?1664414632,,,Streets of New Capenna,,common,Land,0.49,1.03
-snc,270,1,0,,Forest,,,https://cards.scryfall.io/normal/front/c/0/c086cb5e-3146-4a41-a471-fcbbf8fa4e09.jpg?1664414844,,,Streets of New Capenna,,common,Basic Land — Forest,0.49,0.43
+snc,242,1,0,,Paragon of Modernity,{4},C,https://cards.scryfall.io/normal/front/9/3/939450d7-1107-4645-ad23-68749b1ec4c2.jpg?1664414284,,,Streets of New Capenna,,common,Artifact Creature — Angel Warrior,0.22,0.7
+snc,256,7,0,,Skybridge Towers,,L,https://cards.scryfall.io/normal/front/e/2/e28c871f-a96a-4e7d-a159-2e93aeb276d4.jpg?1664414567,,,Streets of New Capenna,,common,Land,0.49,0.65
+snc,259,4,0,,Waterfront District,,L,https://cards.scryfall.io/normal/front/d/e/debf7aac-4d31-49b4-955b-79036258df69.jpg?1664414632,,,Streets of New Capenna,,common,Land,0.49,1.03
+snc,270,1,0,,Forest,,L,https://cards.scryfall.io/normal/front/c/0/c086cb5e-3146-4a41-a471-fcbbf8fa4e09.jpg?1664414844,,,Streets of New Capenna,,common,Basic Land — Forest,0.49,0.43
 snc,28,5,0,Story,Revelation of Power,{1}{W},W,https://cards.scryfall.io/normal/front/7/e/7e010b11-8f3e-4792-afe4-0a376650b6c4.jpg?1664409933,,,Streets of New Capenna,,common,Instant,0.22,0.27
 snc,31,1,0,,Sky Crier,{1}{W},W,https://cards.scryfall.io/normal/front/9/8/98e01fa9-9127-4250-94f1-39e71cc3c2bc.jpg?1664409991,,,Streets of New Capenna,,common,Creature — Bird Citizen,0.32,0.76
 snc,320,0,1,,"Mr. Orfeo, the Boulder",{1}{B}{R}{G},"B, G, R",https://cards.scryfall.io/normal/front/0/5/0524fc64-f51c-4991-9e43-da56afd28c00.jpg?1664582981,,,Streets of New Capenna,,uncommon,Legendary Creature — Rhino Warrior,0.49,1.08
 snc,326,1,0,,"Queza, Augur of Agonies",{1}{W}{U}{B},"B, U, W",https://cards.scryfall.io/normal/front/8/b/8be62891-93fa-4642-ad44-8c8695a9c960.jpg?1664582993,,,Streets of New Capenna,,uncommon,Legendary Creature — Octopus Advisor,0.7,1.46
 snc,333,1,0,,Shattered Seraph,{4}{W}{U}{B},"B, U, W",https://cards.scryfall.io/normal/front/d/e/de23dfcb-9e17-42bf-9a86-f9e3ce8b4b9c.jpg?1664415707,,,Streets of New Capenna,,common,Creature — Angel Rogue,0.32,0.65
-snc,350,4,0,,Botanical Plaza,,,https://cards.scryfall.io/normal/front/a/c/ac068b57-568b-41f6-90d2-7b0eef99a74d.jpg?1664415860,,,Streets of New Capenna,,common,Land,0.32,0.7
-snc,356,4,0,,Tramway Station,,,https://cards.scryfall.io/normal/front/6/8/688c5428-0ec0-4778-801b-a5ea83c88691.jpg?1664415974,,,Streets of New Capenna,,common,Land,0.32,0.59
-snc,39,2,0,,Disdainful Stroke,{1}{U},U,https://cards.scryfall.io/normal/front/4/9/492aa24c-61c4-48bc-b7b7-f423be2662da.jpg?1664410153,,,Streets of New Capenna,,common,Instant,0.38,1.13
+snc,350,4,0,,Botanical Plaza,,L,https://cards.scryfall.io/normal/front/a/c/ac068b57-568b-41f6-90d2-7b0eef99a74d.jpg?1664415860,,,Streets of New Capenna,,common,Land,0.32,0.7
+snc,356,4,0,,Tramway Station,,L,https://cards.scryfall.io/normal/front/6/8/688c5428-0ec0-4778-801b-a5ea83c88691.jpg?1664415974,,,Streets of New Capenna,,common,Land,0.32,0.59
+snc,39,3,0,,Disdainful Stroke,{1}{U},U,https://cards.scryfall.io/normal/front/4/9/492aa24c-61c4-48bc-b7b7-f423be2662da.jpg?1664410153,,,Streets of New Capenna,,common,Instant,0.38,1.13
 snc,41,1,0,Promo,"Errant, Street Artist",{U},U,https://cards.scryfall.io/normal/front/6/1/61d23407-9fe0-4cbf-b4b5-bc1e132c36e4.jpg?1664410193,,,Streets of New Capenna,,rare,Legendary Creature — Human Rogue,0.86,1.51
 snc,44,4,1,,Faerie Vandal,{1}{U},U,https://cards.scryfall.io/normal/front/7/6/7645247b-e65a-4912-ac22-e6a0fa806dd7.jpg?1664410253,,,Streets of New Capenna,,uncommon,Creature — Faerie Rogue,0.7,1.13
 snc,465,1,0,Promo,Incriminate,{1}{B},B,https://cards.scryfall.io/normal/front/6/1/61b46ca6-6fbd-41c5-9434-b18bce32165c.jpg?1655490546,,,Streets of New Capenna,,common,Sorcery,0.54,0.97
@@ -856,15 +856,15 @@ soi,80,1,0,,Press for Answers,{1}{U},U,https://cards.scryfall.io/normal/front/5/
 soi,94,1,0,,Uninvited Geist,{2}{U},U,https://cards.scryfall.io/normal/front/4/d/4dea7c9f-ce66-447b-9f1b-d9bca5806153.jpg?1576384303,Unimpeded Trespasser,https://cards.scryfall.io/normal/back/4/d/4dea7c9f-ce66-447b-9f1b-d9bca5806153.jpg?1576384303,Shadows over Innistrad,,uncommon,Creature — Spirit // Creature — Spirit,0.43,2.21
 soi,95,1,0,,Vessel of Paramnesia,{1}{U},U,https://cards.scryfall.io/normal/front/b/4/b4596140-1113-4349-aabe-4e828ea574e8.jpg?1576384309,,,Shadows over Innistrad,,common,Enchantment,0.49,0.86
 som,29,1,0,,Bonds of Quicksilver,{3}{U},U,https://cards.scryfall.io/normal/front/c/0/c071dca0-fccb-48b8-b65a-74741b12e3f0.jpg?1562822608,,,Scars of Mirrodin,,common,Enchantment — Aura,0.38,1.08
-spg,62,1,0,,Sword of Fire and Ice,{3},,https://cards.scryfall.io/normal/front/0/6/065cd3b9-b5aa-44d3-93f4-3a43694d7a1a.jpg?1721165909,,,Special Guests,,mythic,Artifact — Equipment,216.65,270.93
+spg,62,1,0,,Sword of Fire and Ice,{3},C,https://cards.scryfall.io/normal/front/0/6/065cd3b9-b5aa-44d3-93f4-3a43694d7a1a.jpg?1721165909,,,Special Guests,,mythic,Artifact — Equipment,216.65,270.93
 ss1,8,1,0,,Threads of Disloyalty,{1}{U}{U},U,https://cards.scryfall.io/normal/front/e/2/e207a353-bf66-41c3-ab52-b858e57776f0.jpg?1682721536,,,Signature Spellbook: Jace,,rare,Enchantment — Aura,1.08,2.97
 tblb,2,2,0,,Intrepid Rabbit,{2}{W},W,https://cards.scryfall.io/normal/front/3/b/3b1cd58d-c0bc-48e5-b6fa-fb222fba77ab.jpg?1721442347,,,Bloomburrow Tokens,,common,Token Creature — Rabbit Soldier,0.0,0.0
 tblb,23,1,0,,Squirrel,,G,https://cards.scryfall.io/normal/front/5/a/5a6ec62e-0e9b-4312-bfe8-cc85d76fd9e0.jpg?1721425294,,,Bloomburrow Tokens,,common,Token Creature — Squirrel,0.0,0.0
-tblb,27,1,0,,Food,,,https://cards.scryfall.io/normal/front/0/d/0dce2241-e58b-41d4-b57c-9794fc8ee004.jpg?1721425221,,,Bloomburrow Tokens,,common,Token Artifact — Food,0.0,0.0
-tblb,28,1,0,,Sword,,,https://cards.scryfall.io/normal/front/b/b/bb1e78e6-a9e7-48a4-9231-61fb331c5837.jpg?1721426299,,,Bloomburrow Tokens,,common,Token Artifact — Equipment,0.0,0.0
+tblb,27,1,0,,Food,,C,https://cards.scryfall.io/normal/front/0/d/0dce2241-e58b-41d4-b57c-9794fc8ee004.jpg?1721425221,,,Bloomburrow Tokens,,common,Token Artifact — Food,0.0,0.0
+tblb,28,1,0,,Sword,,C,https://cards.scryfall.io/normal/front/b/b/bb1e78e6-a9e7-48a4-9231-61fb331c5837.jpg?1721426299,,,Bloomburrow Tokens,,common,Token Artifact — Equipment,0.0,0.0
 tblb,3,2,0,,Rabbit,,W,https://cards.scryfall.io/normal/front/8/1/81de52ef-7515-4958-abea-fb8ebdcef93c.jpg?1721431122,,,Bloomburrow Tokens,,common,Token Creature — Rabbit,0.0,0.0
 tblb,5,1,0,,Warren Warleader,{2}{W}{W},W,https://cards.scryfall.io/normal/front/5/c/5cc9b628-0a3a-4d09-ae4a-57c7f6f9ac36.jpg?1721431130,,,Bloomburrow Tokens,,common,Token Creature — Rabbit Knight,0.0,0.0
-tblc,1,2,0,,Copy,,,https://cards.scryfall.io/normal/front/d/b/db388be3-ff31-4415-bc4b-de62f7223b1f.jpg?1721161180,,,Bloomburrow Commander Tokens,,common,Token,0.0,0.0
+tblc,1,2,0,,Copy,,C,https://cards.scryfall.io/normal/front/d/b/db388be3-ff31-4415-bc4b-de62f7223b1f.jpg?1721161180,,,Bloomburrow Commander Tokens,,common,Token,0.0,0.0
 tclb,6,1,0,,Faerie Dragon,,U,https://cards.scryfall.io/normal/front/6/f/6f1eb498-8496-4234-8e87-78dc3f647534.jpg?1675455783,,,Battle for Baldur's Gate Tokens,,common,Token Creature — Faerie Dragon,2.27,0.0
 thb,102,1,0,,Inevitable End,{2}{B},B,https://cards.scryfall.io/normal/front/a/6/a6522f01-ae7a-467e-9a05-530a5ccd304d.jpg?1581479841,,,Theros Beyond Death,,uncommon,Enchantment — Aura,0.32,0.76
 thb,120,1,0,,Underworld Charger,{2}{B},B,https://cards.scryfall.io/normal/front/f/2/f2dd847f-0db2-4f6a-bdfb-5c88ce7802f9.jpg?1581480014,,,Theros Beyond Death,,common,Creature — Nightmare Horse,0.16,0.97
@@ -876,7 +876,7 @@ thb,166,1,0,,The Binding of the Titans,{1}{G},G,https://cards.scryfall.io/normal
 thb,176,1,0,,Klothys's Design,{5}{G},G,https://cards.scryfall.io/normal/front/b/1/b1b6b7a7-0ac8-470a-949b-4779ded95359.jpg?1581480664,,,Theros Beyond Death,,uncommon,Sorcery,0.43,0.76
 thb,177,1,0,,Loathsome Chimera,{2}{G},G,https://cards.scryfall.io/normal/front/3/a/3afe6283-3642-4883-ac6e-83ae3280af9c.jpg?1581480674,,,Theros Beyond Death,,common,Creature — Chimera,0.11,0.59
 thb,22,1,0,,Hero of the Pride,{1}{W},W,https://cards.scryfall.io/normal/front/8/1/81b56863-a52a-4559-a662-f6d9145d5804.jpg?1581479124,,,Theros Beyond Death,,common,Creature — Cat Soldier,0.32,1.46
-thb,241,1,0,,Wings of Hubris,{2},,https://cards.scryfall.io/normal/front/e/3/e3ef8f96-3e3c-4b1b-8180-3b38c7deaaff.jpg?1581481238,,,Theros Beyond Death,,common,Artifact — Equipment,0.22,1.19
+thb,241,1,0,,Wings of Hubris,{2},C,https://cards.scryfall.io/normal/front/e/3/e3ef8f96-3e3c-4b1b-8180-3b38c7deaaff.jpg?1581481238,,,Theros Beyond Death,,common,Artifact — Equipment,0.22,1.19
 thb,270,1,0,Promo,"Elspeth, Undaunted Hero",{2}{W}{W}{W},W,https://cards.scryfall.io/normal/front/b/f/bf9867e5-9d69-400c-a84f-3b085a4fd510.jpg?1581481499,,,Theros Beyond Death,,mythic,Legendary Planeswalker — Elspeth,1.67,2.05
 thb,28,1,0,,Leonin of the Lost Pride,{1}{W},W,https://cards.scryfall.io/normal/front/e/1/e1be3729-7970-45df-8c26-4fe09e56629d.jpg?1581479169,,,Theros Beyond Death,,common,Creature — Cat Warrior,0.16,0.43
 thb,41,1,0,Story,Triumphant Surge,{3}{W},W,https://cards.scryfall.io/normal/front/7/5/75d6eb18-a49d-4fa5-a333-78aafbc4abcb.jpg?1581479273,,,Theros Beyond Death,,common,Instant,0.32,0.92
@@ -904,23 +904,23 @@ ths,179,1,0,,Staunch-Hearted Warrior,{3}{G},G,https://cards.scryfall.io/normal/f
 ths,182,1,0,,Voyaging Satyr,{1}{G},G,https://cards.scryfall.io/normal/front/1/5/155ae6c0-5085-45f1-ba9f-508d501fee2c.jpg?1562815022,,,Theros,,common,Creature — Satyr Druid,0.49,24.77
 ths,194,1,0,,Horizon Chimera,{2}{G}{U},"G, U",https://cards.scryfall.io/normal/front/7/3/73b0e296-d556-4e76-bb2e-5a640e070bb5.jpg?1562819887,,,Theros,,uncommon,Creature — Chimera,0.43,2.75
 ths,203,1,0,,Shipwreck Singer,{U}{B},"B, U",https://cards.scryfall.io/normal/front/1/3/13ad0c03-66d9-4fe3-bc0d-ca67d959c285.jpg?1562814945,,,Theros,,uncommon,Creature — Siren,0.22,0.81
-ths,216,1,0,,Fleetfeather Sandals,{2},,https://cards.scryfall.io/normal/front/2/2/2222f499-09f9-45a6-8255-9de79df76f1c.jpg?1562815650,,,Theros,,common,Artifact — Equipment,0.54,5.67
-ths,217,1,0,,Guardians of Meletis,{3},,https://cards.scryfall.io/normal/front/8/5/85284586-7a9d-4344-aebd-f0e072c1f266.jpg?1562820812,,,Theros,,common,Artifact Creature — Golem,0.27,1.03
-ths,218,1,0,,Opaline Unicorn,{3},,https://cards.scryfall.io/normal/front/c/f/cfba304c-9cb8-4d5c-b70d-b7f61a365977.jpg?1562831841,,,Theros,,common,Artifact Creature — Unicorn,0.7,2.48
-ths,230,1,0,,Plains,,,https://cards.scryfall.io/normal/front/1/8/18013a78-d156-42bf-89b7-72e7070872c0.jpg?1562815128,,,Theros,,common,Basic Land — Plains,0.38,2.05
-ths,232,2,0,,Plains,,,https://cards.scryfall.io/normal/front/2/f/2fa4b03f-60f1-441f-8066-8bc13d5637d1.jpg?1562816328,,,Theros,,common,Basic Land — Plains,0.32,2.59
-ths,236,1,0,,Island,,,https://cards.scryfall.io/normal/front/e/9/e9c266e3-d403-434a-b645-dcb9cf441680.jpg?1562836221,,,Theros,,common,Basic Land — Island,0.49,4.64
-ths,237,3,0,,Island,,,https://cards.scryfall.io/normal/front/5/1/51852e9d-9183-4f9a-a724-cb60cf677e38.jpg?1562818054,,,Theros,,common,Basic Land — Island,0.43,3.45
-ths,246,4,0,,Forest,,,https://cards.scryfall.io/normal/front/d/d/ddfd1469-94b9-4964-ada6-4fb43b0b9282.jpg?1562834028,,,Theros,,common,Basic Land — Forest,0.49,2.48
-ths,247,3,0,,Forest,,,https://cards.scryfall.io/normal/front/b/3/b3a37f57-5d3e-488e-a909-f53bd4c2576b.jpg?1562825870,,,Theros,,common,Basic Land — Forest,0.54,1.83
-ths,248,4,0,,Forest,,,https://cards.scryfall.io/normal/front/f/1/f13b34d7-e2a6-4cbc-9d5f-b6fe05a1c701.jpg?1562837609,,,Theros,,common,Basic Land — Forest,0.7,14.35
-ths,249,3,0,,Forest,,,https://cards.scryfall.io/normal/front/7/a/7a80d346-84e3-4eaf-9635-09da472475d8.jpg?1562820296,,,Theros,,common,Basic Land — Forest,0.49,2.7
+ths,216,1,0,,Fleetfeather Sandals,{2},C,https://cards.scryfall.io/normal/front/2/2/2222f499-09f9-45a6-8255-9de79df76f1c.jpg?1562815650,,,Theros,,common,Artifact — Equipment,0.54,5.67
+ths,217,1,0,,Guardians of Meletis,{3},C,https://cards.scryfall.io/normal/front/8/5/85284586-7a9d-4344-aebd-f0e072c1f266.jpg?1562820812,,,Theros,,common,Artifact Creature — Golem,0.27,1.03
+ths,218,1,0,,Opaline Unicorn,{3},C,https://cards.scryfall.io/normal/front/c/f/cfba304c-9cb8-4d5c-b70d-b7f61a365977.jpg?1562831841,,,Theros,,common,Artifact Creature — Unicorn,0.7,2.48
+ths,230,1,0,,Plains,,L,https://cards.scryfall.io/normal/front/1/8/18013a78-d156-42bf-89b7-72e7070872c0.jpg?1562815128,,,Theros,,common,Basic Land — Plains,0.38,2.05
+ths,232,2,0,,Plains,,L,https://cards.scryfall.io/normal/front/2/f/2fa4b03f-60f1-441f-8066-8bc13d5637d1.jpg?1562816328,,,Theros,,common,Basic Land — Plains,0.32,2.59
+ths,236,1,0,,Island,,L,https://cards.scryfall.io/normal/front/e/9/e9c266e3-d403-434a-b645-dcb9cf441680.jpg?1562836221,,,Theros,,common,Basic Land — Island,0.49,4.64
+ths,237,3,0,,Island,,L,https://cards.scryfall.io/normal/front/5/1/51852e9d-9183-4f9a-a724-cb60cf677e38.jpg?1562818054,,,Theros,,common,Basic Land — Island,0.43,3.45
+ths,246,4,0,,Forest,,L,https://cards.scryfall.io/normal/front/d/d/ddfd1469-94b9-4964-ada6-4fb43b0b9282.jpg?1562834028,,,Theros,,common,Basic Land — Forest,0.49,2.48
+ths,247,3,0,,Forest,,L,https://cards.scryfall.io/normal/front/b/3/b3a37f57-5d3e-488e-a909-f53bd4c2576b.jpg?1562825870,,,Theros,,common,Basic Land — Forest,0.54,1.83
+ths,248,4,0,,Forest,,L,https://cards.scryfall.io/normal/front/f/1/f13b34d7-e2a6-4cbc-9d5f-b6fe05a1c701.jpg?1562837609,,,Theros,,common,Basic Land — Forest,0.7,14.35
+ths,249,3,0,,Forest,,L,https://cards.scryfall.io/normal/front/7/a/7a80d346-84e3-4eaf-9635-09da472475d8.jpg?1562820296,,,Theros,,common,Basic Land — Forest,0.49,2.7
 ths,77,1,0,,Asphodel Wanderer,{B},B,https://cards.scryfall.io/normal/front/6/7/675112db-c477-43f4-b755-54162445fb49.jpg?1562819248,,,Theros,,common,Creature — Skeleton Soldier,0.22,1.35
 ths,82,1,0,,Cutthroat Maneuver,{3}{B},B,https://cards.scryfall.io/normal/front/6/2/62497880-64dc-4911-8513-f95b73086136.jpg?1562818977,,,Theros,,uncommon,Instant,0.22,1.62
 tltr,1,1,0,,Human Soldier,,W,https://cards.scryfall.io/normal/front/d/b/dbab4309-daca-42d9-ad0b-0457717c4503.jpg?1686265039,,,Tales of Middle-earth Tokens,,common,Token Creature — Human Soldier,0.0,0.0
-tltr,H13,1,0,,The Ring,,,https://cards.scryfall.io/normal/front/7/2/7215460e-8c06-47d0-94e5-d1832d0218af.jpg?1742651318,The Ring Tempts You,https://cards.scryfall.io/normal/back/7/2/7215460e-8c06-47d0-94e5-d1832d0218af.jpg?1742651318,Tales of Middle-earth Tokens,,common,Emblem // Card,0.0,0.0
-tsoi,15,1,0,,Clue,,,https://cards.scryfall.io/normal/front/b/2/b2d16818-7812-4d36-b1bf-fb954e5ac958.jpg?1562086877,,,Shadows over Innistrad Tokens,,common,Token Artifact — Clue,0.38,0.0
-tsoi,CH1,1,0,,Shadows Over Innistrad Checklist 1,,,https://cards.scryfall.io/normal/front/4/d/4d323ead-24f5-42e4-9e23-aa14eb66264d.jpg?1559900812,,,Shadows over Innistrad Tokens,,common,Card,0.22,0.0
+tltr,H13,1,0,,The Ring,,C,https://cards.scryfall.io/normal/front/7/2/7215460e-8c06-47d0-94e5-d1832d0218af.jpg?1742651318,The Ring Tempts You,https://cards.scryfall.io/normal/back/7/2/7215460e-8c06-47d0-94e5-d1832d0218af.jpg?1742651318,Tales of Middle-earth Tokens,,common,Emblem // Card,0.0,0.0
+tsoi,15,1,0,,Clue,,C,https://cards.scryfall.io/normal/front/b/2/b2d16818-7812-4d36-b1bf-fb954e5ac958.jpg?1562086877,,,Shadows over Innistrad Tokens,,common,Token Artifact — Clue,0.38,0.0
+tsoi,CH1,1,0,,Shadows Over Innistrad Checklist 1,,C,https://cards.scryfall.io/normal/front/4/d/4d323ead-24f5-42e4-9e23-aa14eb66264d.jpg?1559900812,,,Shadows over Innistrad Tokens,,common,Card,0.22,0.0
 tsr,101,1,0,,Assassinate,{2}{B},B,https://cards.scryfall.io/normal/front/a/c/ac0a1dc6-215f-4738-8ae4-7b6aa1c7d80b.jpg?1620236215,,,Time Spiral Remastered,,common,Sorcery,0.43,0.76
 tsr,113,1,0,,Enslave,{4}{B}{B},B,https://cards.scryfall.io/normal/front/a/0/a00440fc-e3e1-4a1c-b32b-f7946a76cd62.jpg?1619395410,,,Time Spiral Remastered,,uncommon,Enchantment — Aura,0.7,1.56
 tsr,177,1,0,,Needlepeak Spider,{3}{R},R,https://cards.scryfall.io/normal/front/0/0/00c7d94f-3760-4c97-b0bf-c895f4132c7f.jpg?1619397300,,,Time Spiral Remastered,,common,Creature — Spider,0.32,0.0
@@ -936,7 +936,7 @@ uma,178,1,0,,Prey Upon,{G},G,https://cards.scryfall.io/normal/front/0/e/0eb1b036
 uma,183,1,0,,Spider Spawning,{4}{G},G,https://cards.scryfall.io/normal/front/e/e/eef12c5a-deb9-48dd-9805-cba89aab51c1.jpg?1547517817,,,Ultimate Masters,,uncommon,Sorcery,1.13,1.51
 uma,188,1,0,,Travel Preparations,{1}{G},G,https://cards.scryfall.io/normal/front/c/b/cb41317e-9263-49a1-92d4-323613677e34.jpg?1547517889,,,Ultimate Masters,,uncommon,Sorcery,0.27,1.51
 uma,214,4,0,,Double Cleave,{1}{R/W},"R, W",https://cards.scryfall.io/normal/front/8/2/82505754-a22f-4ae9-8efd-75eff17cbed6.jpg?1547518194,,,Ultimate Masters,,common,Instant,0.49,1.3
-uma,242,1,0,,Desolate Lighthouse,,,https://cards.scryfall.io/normal/front/9/f/9f12cfe8-76cf-4709-bdc4-62c059f4eebd.jpg?1547522201,,,Ultimate Masters,,rare,Land,1.19,1.83
+uma,242,1,0,,Desolate Lighthouse,,L,https://cards.scryfall.io/normal/front/9/f/9f12cfe8-76cf-4709-bdc4-62c059f4eebd.jpg?1547522201,,,Ultimate Masters,,rare,Land,1.19,1.83
 uma,30,1,0,,Resurrection,{2}{W}{W},W,https://cards.scryfall.io/normal/front/a/1/a176b295-9406-4d6b-b15c-e81a72e66874.jpg?1629745911,,,Ultimate Masters,,common,Sorcery,0.86,1.24
 uma,39,1,0,,Swift Reckoning,{1}{W},W,https://cards.scryfall.io/normal/front/8/2/820096b5-0d64-47a0-88a4-17d3f24cb165.jpg?1547515964,,,Ultimate Masters,,uncommon,Sorcery,0.22,1.08
 uma,45,1,0,,Archaeomancer,{2}{U}{U},U,https://cards.scryfall.io/normal/front/c/c/cc258713-6ce3-44e0-9b4b-8fa7d1d093a1.jpg?1547516110,,,Ultimate Masters,,common,Creature — Human Wizard,1.08,9.66
@@ -956,9 +956,9 @@ vow,219,1,0,,Snarling Wolf,{G},G,https://cards.scryfall.io/normal/front/e/c/ecd2
 vow,227,1,0,,Witch's Web,{1}{G},G,https://cards.scryfall.io/normal/front/0/d/0d021207-76be-4bc9-bb71-df991a04d8d8.jpg?1643593642,,,Innistrad: Crimson Vow,,common,Instant,0.16,0.49
 vow,228,1,0,,Wolf Strike,{2}{G},G,https://cards.scryfall.io/normal/front/0/2/02e9cd00-7ffd-44e1-aa0f-c94489ff4a0f.jpg?1643593665,,,Innistrad: Crimson Vow,,common,Instant,0.38,0.97
 vow,250,2,0,,Vilespawn Spider,{G}{U},"G, U",https://cards.scryfall.io/normal/front/6/a/6ad9ae64-6526-4747-9b0c-77d113f58c33.jpg?1643594495,,,Innistrad: Crimson Vow,,uncommon,Creature — Spider,0.76,0.97
-vow,253,1,0,,Boarded Window,{3},,https://cards.scryfall.io/normal/front/f/0/f02cf94c-94d3-4c4c-a7ae-b4d48ef5b14e.jpg?1643594610,,,Innistrad: Crimson Vow,,uncommon,Artifact,0.22,0.22
-vow,263,1,0,,Evolving Wilds,,,https://cards.scryfall.io/normal/front/e/8/e80fe230-745d-42ae-a1f5-a8cc950783d0.jpg?1643594919,,,Innistrad: Crimson Vow,,common,Land,0.38,1.3
-vow,268,1,0,,Plains,,,https://cards.scryfall.io/normal/front/d/e/deabdaa1-6227-48e4-82d5-63a1771320b2.jpg?1643595060,,,Innistrad: Crimson Vow,,common,Basic Land — Plains,1.89,4.37
+vow,253,1,0,,Boarded Window,{3},C,https://cards.scryfall.io/normal/front/f/0/f02cf94c-94d3-4c4c-a7ae-b4d48ef5b14e.jpg?1643594610,,,Innistrad: Crimson Vow,,uncommon,Artifact,0.22,0.22
+vow,263,1,0,,Evolving Wilds,,L,https://cards.scryfall.io/normal/front/e/8/e80fe230-745d-42ae-a1f5-a8cc950783d0.jpg?1643594919,,,Innistrad: Crimson Vow,,common,Land,0.38,1.3
+vow,268,1,0,,Plains,,L,https://cards.scryfall.io/normal/front/d/e/deabdaa1-6227-48e4-82d5-63a1771320b2.jpg?1643595060,,,Innistrad: Crimson Vow,,common,Basic Land — Plains,1.89,4.37
 vow,306,1,0,,Falkenrath Celebrants,{4}{R},R,https://cards.scryfall.io/normal/front/6/a/6aacc8fa-9440-494b-a3d9-7b1678c5a9f6.jpg?1645055120,,,Innistrad: Crimson Vow,,common,Creature — Vampire,0.43,1.35
 vow,31,2,0,,Radiant Grace,{W},W,https://cards.scryfall.io/normal/front/4/a/4a708243-42a1-4fa7-8b0b-9d5163da84bb.jpg?1643586915,Radiant Restraints,https://cards.scryfall.io/normal/back/4/a/4a708243-42a1-4fa7-8b0b-9d5163da84bb.jpg?1643586915,Innistrad: Crimson Vow,,uncommon,Enchantment — Aura // Enchantment — Aura Curse,0.43,1.13
 vow,48,1,0,,Binding Geist,{2}{U},U,https://cards.scryfall.io/normal/front/7/3/730e4629-dc54-415d-9493-88885788ca19.jpg?1643587483,Spectral Binding,https://cards.scryfall.io/normal/back/7/3/730e4629-dc54-415d-9493-88885788ca19.jpg?1643587483,Innistrad: Crimson Vow,,common,Creature — Spirit // Enchantment — Aura,0.11,0.16
@@ -1018,10 +1018,10 @@ xln,200,1,0,,Pounce,{1}{G},G,https://cards.scryfall.io/normal/front/2/b/2b96cba6
 xln,202,1,0,,Ravenous Daggertooth,{2}{G},G,https://cards.scryfall.io/normal/front/3/0/309b204b-774a-47bc-aead-c78db90f3be2.jpg?1562552903,,,Ixalan,,common,Creature — Dinosaur,0.43,1.83
 xln,209,1,0,,Spike-Tailed Ceratops,{4}{G},G,https://cards.scryfall.io/normal/front/4/1/41a3b5f2-0b0b-42e0-a15b-4bb2fce05927.jpg?1562554159,,,Ixalan,,common,Creature — Dinosaur,0.32,2.16
 xln,23,1,0,,Looming Altisaur,{3}{W},W,https://cards.scryfall.io/normal/front/c/f/cfcff1c6-0db6-4ff6-b4af-d7048b426368.jpg?1562564237,,,Ixalan,,common,Creature — Dinosaur,0.16,1.62
-xln,233,1,0,,Cobbled Wings,{2},,https://cards.scryfall.io/normal/front/3/b/3b2ff4f0-0dd1-4551-826b-68e8ff1e5860.jpg?1562553698,,,Ixalan,,common,Artifact — Equipment,0.22,2.21
-xln,240,1,0,,Hierophant's Chalice,{3},,https://cards.scryfall.io/normal/front/6/e/6e8be52c-25ce-49da-8435-58797550f058.jpg?1562557259,,,Ixalan,,common,Artifact,0.43,2.0
-xln,274,4,0,,Mountain,,,https://cards.scryfall.io/normal/front/9/6/96328602-bf67-42a5-8cca-1fcea5656b8a.jpg?1562560345,,,Ixalan,,common,Basic Land — Mountain,0.49,2.37
-xln,275,4,0,,Mountain,,,https://cards.scryfall.io/normal/front/d/f/df190cfa-ebb6-48e8-9980-950a26d0f2d8.jpg?1562565316,,,Ixalan,,common,Basic Land — Mountain,0.54,3.51
+xln,233,1,0,,Cobbled Wings,{2},C,https://cards.scryfall.io/normal/front/3/b/3b2ff4f0-0dd1-4551-826b-68e8ff1e5860.jpg?1562553698,,,Ixalan,,common,Artifact — Equipment,0.22,2.21
+xln,240,1,0,,Hierophant's Chalice,{3},C,https://cards.scryfall.io/normal/front/6/e/6e8be52c-25ce-49da-8435-58797550f058.jpg?1562557259,,,Ixalan,,common,Artifact,0.43,2.0
+xln,274,4,0,,Mountain,,L,https://cards.scryfall.io/normal/front/9/6/96328602-bf67-42a5-8cca-1fcea5656b8a.jpg?1562560345,,,Ixalan,,common,Basic Land — Mountain,0.49,2.37
+xln,275,4,0,,Mountain,,L,https://cards.scryfall.io/normal/front/d/f/df190cfa-ebb6-48e8-9980-950a26d0f2d8.jpg?1562565316,,,Ixalan,,common,Basic Land — Mountain,0.54,3.51
 xln,35,1,0,,Sheltering Light,{W},W,https://cards.scryfall.io/normal/front/b/0/b0c945c7-6c31-4c4f-9203-3dc2aef50820.jpg?1562562304,,,Ixalan,,uncommon,Instant,1.08,3.29
 xln,37,1,0,,Skyblade of the Legion,{1}{W},W,https://cards.scryfall.io/normal/front/6/7/67e788e2-12e9-4041-8210-753aaef2576c.jpg?1562556870,,,Ixalan,,common,Creature — Vampire Soldier,0.27,2.1
 xln,8,1,0,,Demystify,{W},W,https://cards.scryfall.io/normal/front/e/3/e3979b88-ac58-420a-8c03-37ea5d93d0f1.jpg?1562565654,,,Ixalan,,common,Instant,0.22,3.51

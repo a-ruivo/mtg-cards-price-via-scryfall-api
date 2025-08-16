@@ -196,7 +196,7 @@ if st.session_state["aba_atual"] == "Collection":
                     st.markdown(f"**Collection Code:** {carta.colecao}")
                     st.markdown(f"**Card Number:** {carta.numero}")
                     st.markdown(f"**Rarity:** {carta.raridade.capitalize()}")
-                    st.markdown(f"**Price (BRL):** R${carta.preco_brl}")
+                    st.markdown(f"**Price (BRL):** R${carta.valor_medio_por_carta}")
                     st.markdown(f"**Quantity (Regular):** {carta.padrao}")
                     st.markdown(f"**Quantity (Foil):** {carta.foil}")
                     tem_segunda_face = "No" if pd.notna(getattr(carta, "nome_2", None)) else "Yes"

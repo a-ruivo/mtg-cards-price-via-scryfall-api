@@ -403,6 +403,7 @@ eld,102,1,0,,Reaper of Night,{5}{B}{B},,https://cards.scryfall.io/normal/front/4
 eld,103,1,0,,Reave Soul,{1}{B},B,https://cards.scryfall.io/normal/front/c/e/ce7ff657-aa44-4336-895a-87518159cef6.jpg?1572490229,,,Throne of Eldraine,,common,Sorcery,0.22,0.38
 eld,126,4,0,,Fling,{1}{R},R,https://cards.scryfall.io/normal/front/c/b/cb28fe03-8269-41de-b766-42c3421aeaef.jpg?1572490367,,,Throne of Eldraine,,common,Instant,0.76,1.19
 eld,248,1,0,,Tournament Grounds,,,https://cards.scryfall.io/normal/front/c/d/cd438d51-a778-4b38-8b4b-a6a9cd9b4b22.jpg?1572491245,,,Throne of Eldraine,,uncommon,Land,0.81,2.05
+eld,44,1,0,,Fae of Wishes,{1}{U},,https://cards.scryfall.io/normal/front/e/3/e3435fd6-8f51-4d99-a278-4ddb088acfe1.jpg?1572489870,Granted,,Throne of Eldraine,,rare,Creature — Faerie Wizard // Sorcery — Adventure,0.81,2.0
 eld,45,1,0,,Faerie Vandal,{1}{U},U,https://cards.scryfall.io/normal/front/7/8/789c5c2b-3e51-4f6c-ac76-d276facf716f.jpg?1572489876,,,Throne of Eldraine,,uncommon,Creature — Faerie Rogue,0.65,1.67
 eld,52,4,0,,Mantle of Tides,{U},U,https://cards.scryfall.io/normal/front/c/0/c058d01e-f705-4407-bd9e-a2d127afdf04.jpg?1572489923,,,Throne of Eldraine,,common,Artifact — Equipment,0.16,0.59
 eld,53,4,0,,Merfolk Secretkeeper,{U},,https://cards.scryfall.io/normal/front/c/e/ceb7308d-608c-4ede-9496-d795fc5bb271.jpg?1572489928,Venture Deeper,,Throne of Eldraine,,common,Creature — Merfolk Wizard // Sorcery — Adventure,0.49,1.19
@@ -1019,4 +1020,3 @@ znr,107,1,0,,Highborn Vampire,{3}{B},B,https://cards.scryfall.io/normal/front/2/
 znr,171,1,0,,Thundering Sparkmage,{3}{R},R,https://cards.scryfall.io/normal/front/a/9/a9e6de80-3516-426b-8a1b-bda45f8c0cac.jpg?1604198226,,,Zendikar Rising,,uncommon,Creature — Human Wizard,0.16,0.32
 znr,28,1,0,,Mesa Lynx,{1}{W},W,https://cards.scryfall.io/normal/front/f/6/f65af09b-656f-4d81-b95d-b4f902e56bb7.jpg?1604192681,,,Zendikar Rising,,common,Creature — Cat,0.32,0.54
 znr,7,1,0,,Canyon Jerboa,{2}{W},W,https://cards.scryfall.io/normal/front/2/6/26b3938e-ebd7-4668-be3a-422c02ff5b08.jpg?1604195520,,,Zendikar Rising,,uncommon,Creature — Mouse,0.81,1.24
-eld,44,1,0,,Fae of Wishes // Granted,{1}{U} // {3}{U},U,https://cards.scryfall.io/normal/front/e/3/e3435fd6-8f51-4d99-a278-4ddb088acfe1.jpg?1572489870,,,Throne of Eldraine,,rare,Creature — Faerie Wizard // Sorcery — Adventure,0.81,2.0

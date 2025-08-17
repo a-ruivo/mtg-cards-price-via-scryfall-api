@@ -90,7 +90,7 @@ if st.session_state["aba_atual"] == "Collection":
 
     # Ordenação
     ordenar_por = st.sidebar.selectbox("Order by", ["Name", "Color", "Value 1 card","Value all cards", "Mana Cost","Collection", "Type", "Rarity", "Card Number", "Quantity Regular", "Quantity Foil","Quantity Total"])
-    ordem = st.sidebar.radio("Order", ["Ascending", "Decreasing"])
+    ordem = st.sidebar.radio("Order", ["Ascending", "Descending"])
 
     coluna_ordem = {
         "Name": "nome",
